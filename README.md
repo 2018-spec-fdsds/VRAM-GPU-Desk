@@ -37,7 +37,7 @@ Idle temperature is **not** the temperature limit under sustained load. Ambient 
 
 ## Hardware and requirements
 
-For NVIDIA GeForce **RTX 5000 Series** GPUs; hardware-tested on **RTX 5090**. Other RTX 5000 models have not been individually verified. Monitoring and available controls depend on the GPU and driver; unsupported controls remain unavailable rather than being simulated.
+For NVIDIA GeForce **RTX 5000 Series** GPUs. Monitoring and available controls depend on the GPU and driver; unsupported controls remain unavailable rather than being simulated.
 
 Windows 10/11 x64, .NET Framework 4.8 and a supported NVIDIA driver. The installer includes its Java runtime, so a separate Java installation is not required. GPU control may require a normal Windows UAC confirmation. A changed driver revision may require a reviewed application update because the GPU control library is verified before use.
 
