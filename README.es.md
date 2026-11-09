@@ -4,13 +4,17 @@
 
 **Supervisión local de memoria GPU y control de temperatura para Windows x64.**
 
-Versión **1.10** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.10-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.10-Installer.zip)
+Versión **1.11** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+
+![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
+
+El estado activado es solo ilustrativo. Esta opción de emergencia está DESACTIVADA en cada inicio.
+
 
 > **Control de GPU:** El control de los parámetros de temperatura de la GPU requiere una confirmación UAC al instalar el componente de control. Después, activar el control de temperatura y la refrigeración no genera nuevas solicitudes UAC. La supervisión por sí sola no requiere UAC.
 
 > **Control simultáneo de GPU:** El control de los parámetros de temperatura de la GPU puede entrar en conflicto con otros programas que cambien al mismo tiempo la potencia, las frecuencias o la velocidad de los ventiladores, como MSI Afterburner. Utilice un único controlador activo para estos ajustes. La advertencia se refiere a cambios simultáneos, no a la supervisión pasiva.
 
-![VRAM GPU Desk — tema del sistema](images/dashboard-system.png)
 
 ## Funciones
 
@@ -26,13 +30,24 @@ Versión **1.10** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.10-Setup-x64
 - Puede avisar cuando la temperatura permanece estrictamente por encima del umbral elegido de 75–92 °C al menos diez segundos. Los picos breves no generan avisos.
 - Opción de emergencia independiente, inicialmente desactivada, para la aplicación seleccionada expresamente. Cerrar/terminar puede perder trabajo sin guardar; se excluyen procesos protegidos o no verificables.
 
-![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
 
 ## Cuatro botones de acción rápida
 
 Asigne **Cerrar aplicación** o **Terminar proceso** a uno de los cuatro botones y cambie la asignación mediante el menú `⋮` adyacente. Cada vínculo identifica únicamente la instancia seleccionada por PID, hora de creación y ruta del ejecutable. Cuando termina, no se selecciona automáticamente otro proceso ni un PID reutilizado.
 
 El botón configurado actúa con un clic **sin confirmación adicional**. Puede perderse trabajo sin guardar. Se conservan las comprobaciones nativas de procesos protegidos, críticos o no verificables. La opción de emergencia separada empieza desactivada y mantiene su comportamiento para la aplicación elegida.
+
+![VRAM GPU Desk — tema del sistema](images/dashboard-system.png)
+
+## Emergencia: terminar procesos con alta carga GPU — 1.11
+
+Una opción **separada y desactivada en cada inicio** puede terminar los procesos accesibles con alta carga de la GPU seleccionada cuando la temperatura permanece estrictamente por encima del umbral de sobrecalentamiento durante al menos **diez segundos**. El límite de carga es **20 % por defecto**, ajustable entre **10 y 100 %**; cada proceso debe mantener esa carga al menos **tres segundos**. Se mide su motor GPU más ocupado, **no la cantidad de VRAM**.
+
+**Advertencia: puede terminar tanto aplicaciones necesarias como no deseadas y perder trabajo sin guardar.** Actúa una sola vez y se desactiva después del intento. Para otro intento debe activarse expresamente de nuevo. No puede activarse sin datos de carga de procesos confirmados y un sensor válido; los datos desconocidos o antiguos no autorizan una terminación.
+
+Se vincula una GPU inequívoca y se vuelven a comprobar temperatura e identidad antes de actuar. PID, hora de creación, ruta EXE y el mismo identificador de proceso impiden seleccionar automáticamente un PID reutilizado. Se omiten componentes protegidos de Windows/NVIDIA, procesos críticos o no verificables y la propia herramienta. No termina árboles de procesos, no detiene servicios ni solicita más privilegios. La opción de emergencia existente para una aplicación seleccionada permanece independiente. Es una medida adicional, no una garantía contra daños GPU.
+
+Comprobado en 1.11: 40 pruebas CPU nativas con terminaciones simuladas, 256 comprobaciones Java/catálogos/guardas, 673 comprobaciones de interfaz en 48 casos de doce idiomas y dos temas, lectura de contadores PDH reales, revisión nativa independiente, los 164 archivos y hashes de brokers, instalación/desinstalación aislada y arranque empaquetado con Java incluida en rutas Unicode. **Estas pruebas no terminaron aplicaciones reales ni modificaron ajustes GPU.** No confirman el flujo completo de instalación de producción ni la eficacia térmica real.
 
 ## Objetivos de temperatura e histéresis
 

@@ -4,13 +4,17 @@
 
 **Theo dõi bộ nhớ GPU và điều khiển nhiệt độ cục bộ cho Windows x64.**
 
-Phiên bản **1.10** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.10-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.10-Installer.zip)
+Phiên bản **1.11** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+
+![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
+
+Trạng thái bật chỉ để minh họa. Tùy chọn khẩn cấp này tắt ở mỗi lần khởi động.
+
 
 > **Điều khiển GPU:** Điều khiển các tham số nhiệt độ GPU cần xác nhận UAC một lần khi cài thành phần điều khiển. Sau đó, bật điều khiển nhiệt độ và làm mát không yêu cầu UAC lần nữa. Chỉ giám sát thì không cần UAC.
 
 > **Điều khiển GPU đồng thời:** Điều khiển các tham số nhiệt độ GPU có thể xung đột với chương trình khác đồng thời thay đổi công suất, xung nhịp hoặc tốc độ quạt, chẳng hạn MSI Afterburner. Chỉ sử dụng một bộ điều khiển đang hoạt động cho các tham số này. Cảnh báo này nói về việc thay đổi cài đặt đồng thời, không phải giám sát thụ động.
 
-![VRAM GPU Desk — giao diện hệ thống](images/dashboard-system.png)
 
 ## Chức năng
 
@@ -26,13 +30,24 @@ Phiên bản **1.10** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.10-Setup-
 - Cảnh báo khi nhiệt độ cao hơn ngưỡng 75–92 °C đã chọn trong ít nhất mười giây. Đỉnh nhiệt ngắn không gây cảnh báo.
 - Tùy chọn khẩn cấp riêng, ban đầu tắt, cho ứng dụng được chọn rõ ràng. Đóng/kết thúc có thể mất công việc chưa lưu; loại trừ tiến trình được bảo vệ hoặc không xác minh được.
 
-![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
 
 ## Bốn nút thao tác nhanh
 
 Gán **Đóng ứng dụng** hoặc **Kết thúc tiến trình** cho một trong bốn nút nhỏ; thay đổi bằng menu `⋮` bên cạnh. Mỗi liên kết chỉ áp dụng cho phiên bản tiến trình đã chọn, nhận dạng bằng PID, thời điểm tạo và đường dẫn tệp thực thi. Khi tiến trình kết thúc, ứng dụng không tự chọn tiến trình khác hoặc PID được tái sử dụng.
 
 Nút đã gán thực hiện bằng một lần nhấp **không xác nhận thêm**. Có thể mất công việc chưa lưu. Các kiểm tra gốc đối với tiến trình được bảo vệ, quan trọng hoặc không xác minh được vẫn giữ nguyên. Tùy chọn khẩn cấp riêng ban đầu tắt và vẫn chỉ áp dụng cho ứng dụng đã chọn.
+
+![VRAM GPU Desk — giao diện hệ thống](images/dashboard-system.png)
+
+## Khẩn cấp: kết thúc tiến trình có tải GPU cao — 1.11
+
+Một tùy chọn **riêng, tắt ở mỗi lần khởi động**, có thể kết thúc các tiến trình có thể truy cập đang tải nặng GPU đã chọn sau ít nhất **mười giây** nhiệt độ xác nhận cao hơn ngưỡng quá nhiệt. Ngưỡng tải mặc định **20%**, chỉnh từ **10 đến 100%**; mỗi tiến trình phải giữ mức tải đó ít nhất **ba giây**. Đo GPU engine bận nhất của tiến trình, **không dùng lượng VRAM**.
+
+**Cảnh báo: có thể kết thúc cả ứng dụng cần thiết lẫn không cần thiết và làm mất công việc chưa lưu.** Tùy chọn chỉ thực hiện một lần rồi tự tắt sau lần thử. Muốn thử lại phải chủ động bật lại. Không thể bật nếu chưa có dữ liệu tải tiến trình được xác nhận và cảm biến hợp lệ; dữ liệu không rõ hoặc cũ không cho phép kết thúc tiến trình.
+
+GPU được gắn duy nhất; nhiệt độ và danh tính tiến trình được kiểm tra lại trước khi thực hiện. PID, thời điểm tạo, đường dẫn EXE và cùng handle tiến trình ngăn việc tự chọn PID đã tái sử dụng. Bỏ qua thành phần Windows/NVIDIA được bảo vệ, tiến trình quan trọng hoặc không xác minh được và chính tiện ích. Không kết thúc cây tiến trình, không dừng dịch vụ hay yêu cầu nâng quyền thêm. Tùy chọn khẩn cấp hiện có dành cho một ứng dụng đã chọn vẫn tách biệt. Đây là biện pháp bổ sung, không bảo đảm ngăn hư hại GPU.
+
+Đã kiểm tra cho 1.11: 40 bài kiểm tra CPU gốc với hành động kết thúc mô phỏng, 256 kiểm tra Java/danh mục/bảo vệ, 673 kiểm tra giao diện trong 48 trường hợp bao phủ mười hai ngôn ngữ và hai giao diện, đọc bộ đếm PDH thật, rà soát mã gốc độc lập, đủ 164 tệp và hash broker, cài/gỡ cô lập và khởi chạy gói với Java đi kèm qua đường dẫn Unicode. **Các bài thử không kết thúc ứng dụng thật và không ghi cài đặt GPU.** Chưa xác nhận toàn bộ bộ cài sản xuất hay hiệu quả nhiệt thực tế.
 
 ## Nhiệt độ mục tiêu và độ trễ chuyển trạng thái
 

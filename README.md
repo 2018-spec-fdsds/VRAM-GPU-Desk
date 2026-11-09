@@ -4,13 +4,26 @@
 
 **Local GPU memory monitoring and temperature control for Windows x64.**
 
-Version **1.10** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.10-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.10-Installer.zip)
+Version **1.11** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+
+![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
+
+The armed state is shown only as an illustration. This emergency option is OFF at every launch.
+
 
 > **GPU control:** GPU temperature parameter control requires one UAC confirmation when installing the control component. Subsequent enabling of temperature control and cooling proceeds without further UAC prompts. Monitoring itself does not require UAC.
 
 > **Concurrent GPU control:** GPU temperature parameter control may conflict with other programs that change power limits, clocks or fan speeds at the same time, such as MSI Afterburner. Use only one active controller for these settings. This warning concerns simultaneous changes to settings, not passive monitoring.
 
-![VRAM GPU Desk — system theme](images/dashboard-system.png)
+
+## New in 1.11: emergency GPU-load process termination
+
+A separate checkbox is **OFF at every launch**. After confirmed temperature stays strictly above the configured overheat threshold for **10 seconds**, it can terminate accessible processes that have loaded the selected GPU at or above **20% by default (adjustable 10–100%) for at least 3 seconds**. This uses the process’s busiest GPU engine, **not VRAM allocation**. It is one-shot and switches OFF after the attempt; another attempt needs explicit reactivation. Confirmed process-load data and a valid sensor are required.
+
+**Warning: this may terminate useful as well as unwanted applications and lose unsaved work.** Fresh temperature, GPU identity, PID, creation time, EXE path and the same process handle are checked. Protected Windows/NVIDIA components, critical or unverifiable processes and the utility itself are excluded. It does not terminate process trees, stop services or request more elevation. The older selected-application emergency option remains separate. This is an additional measure, not a guarantee against GPU damage.
+
+Verified for 1.11: **40 native CPU checks**, **256 Java/catalog/guard checks**, **673 UI assertions in 48 cases** across twelve languages and two themes, read-only access to **710 valid PDH counter instances**, independent native review, all **164 package files**, **87 compiled Java classes**, embedded broker pins, isolated installation/uninstallation, and the packaged Unicode launcher with its bundled runtime. **No real applications were terminated and no GPU settings were written by these tests.** The full production installation and actual thermal effectiveness were not established by those checks.
+
 
 ## What it does
 
@@ -26,7 +39,8 @@ Version **1.10** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.10-Se
 - Can show an alert after temperature stays strictly above the selected 75–92°C threshold for at least 10 seconds. Short spikes do not produce an alert.
 - Provides a separate, initially disabled emergency option for the explicitly selected application. Closing or terminating an application can lose unsaved work; protected or unverifiable processes cannot be selected for this action.
 
-![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
+
+![VRAM GPU Desk — system theme](images/dashboard-system.png)
 
 ## Four quick action buttons
 

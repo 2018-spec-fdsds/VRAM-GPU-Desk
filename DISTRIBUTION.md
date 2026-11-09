@@ -2,11 +2,11 @@
 
 This repository publishes compiled Windows x64 installers and documentation. Application source code, source archives, private diagnostic reports, user settings and history are not included.
 
-The 1.10 EXE includes a Java runtime and local Windows helpers. The installer ZIP contains the same sealed installer plus its checksum and instructions; it is not a portable installation. Installation uses a fixed protected Program Files directory and requires the currently signed-in split-token administrator. The application and installer are not signed with a personal publisher certificate.
+The 1.11 EXE includes a Java runtime and local Windows helpers. The installer ZIP contains the same sealed installer plus its checksum, instructions and LICENSE.md; it is not a portable installation. Installation uses a fixed protected Program Files directory and requires the currently signed-in split-token administrator. The application and installer are not signed with a personal publisher certificate.
 
 Java runtime third-party license notices are retained under runtime/legal in the installed application. NVIDIA driver libraries are not bundled or downloaded: the installed system library must pass the application's offline signature, path and API checks.
 
-SHA256SUMS.txt covers downloadable packages. Published images are synthetic interface demonstrations, not measurements from a private process list or evidence of thermal performance.
+SHA256SUMS.txt covers downloadable packages. Published images use synthetic demonstration data and simulated controller state. They illustrate the interface and do not demonstrate hardware operation or thermal performance.
 
 ## License
 
