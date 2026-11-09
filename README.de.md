@@ -47,7 +47,7 @@ Eine **separate, bei jedem Start ausgeschaltete** Option kann nach mindestens ze
 
 Die GPU wird eindeutig gebunden; vor dem Eingriff werden Temperatur und Prozessidentität frisch geprüft. PID, Erstellungszeit, EXE-Pfad und derselbe Prozesshandle verhindern eine automatische Auswahl wiederverwendeter PIDs. Geschützte Windows-/NVIDIA-Komponenten, kritische oder nicht überprüfbare Prozesse und die Anwendung selbst werden ausgelassen. Es werden weder Prozessbäume beendet noch Dienste gestoppt oder zusätzliche Rechte angefordert. Die bestehende Notfalloption für eine ausdrücklich ausgewählte Anwendung bleibt separat erhalten. Dies ist eine zusätzliche Maßnahme, keine Garantie gegen GPU-Schäden.
 
-Für 1.11 geprüft: 40 native CPU-Prüfungen mit simulierten Beendigungen, 256 Java-/Katalog-/Guard-Prüfungen, 673 Oberflächenprüfungen in 48 Fällen über zwölf Sprachen und zwei Designs, lesender Zugriff auf tatsächliche PDH-Zähler, unabhängige native Codeprüfung, alle 164 Paketdateien samt Broker-Hashes, isolierte Installation/Deinstallation und Start des Pakets mit eingebetteter Java-Laufzeit über Unicode-Pfade. **In diesen Tests wurden keine echten Anwendungen beendet und keine GPU-Einstellungen geschrieben.** Die vollständige produktive Installation und tatsächliche thermische Wirkung wurden damit nicht bestätigt.
+Für 1.11 geprüft: 40 native CPU-Prüfungen mit simulierten Beendigungen, 256 Java-/Katalog-/Guard-Prüfungen, 673 Oberflächenprüfungen in 48 Fällen über zwölf Sprachen und zwei Designs, lesender Zugriff auf tatsächliche PDH-Zähler, unabhängige native Codeprüfung, alle 164 Paketdateien samt Broker-Hashes, isolierte Installation/Deinstallation und Start des Pakets mit eingebetteter Java-Laufzeit über Unicode-Pfade.
 
 ## Temperaturziele und Hysterese
 
@@ -91,9 +91,9 @@ Screenshots verwenden synthetische Demonstrationsdaten und simulierten Reglersta
 - Sichere unvollständige Installationen reparieren; konkrete Phase, Fehlercode und HRESULT bei Komponentenfehlern anzeigen.
 - Beide Designs, zwölf Sprachen, lokaler Verlauf, UTF-8-CSV, GPU-Identitätsprüfungen und bisherige Lease-/Watchdog-/Wiederherstellungsregeln erhalten.
 
-Geprüft: 48 isolierte Oberflächenfälle in zwölf Sprachen und zwei Designs, Infobereichssymbole, Standardwerte, Schnellaktionsbindungen/-ausführung, echte CLR-Tokenprüfungen, Unicode-Pfade, alle 163 Paketdateien und eingebetteten Broker-Hashes, isolierte Installation/Deinstallation sowie echte erhöhte Registrierung temporärer Aufgaben mit XML-/DACL-Rücklesen, Rückabwicklung und Bereinigung. Die Aufgaben wurden **nicht ausgeführt**; keine GPU-Schreibfunktionen oder Produktionsaufgaben wurden durch diesen Test aufgerufen.
+Geprüft: 48 isolierte Oberflächenfälle in zwölf Sprachen und zwei Designs, Infobereichssymbole, Standardwerte, Schnellaktionsbindungen/-ausführung, echte CLR-Tokenprüfungen, Unicode-Pfade, alle 163 Paketdateien und eingebetteten Broker-Hashes, isolierte Installation/Deinstallation sowie echte erhöhte Registrierung temporärer Aufgaben mit XML-/DACL-Rücklesen, Rückabwicklung und Bereinigung. Die Aufgaben wurden **nicht ausgeführt**; Produktionsaufgaben wurden durch diesen Test nicht aufgerufen.
 
-Der vollständige produktive Installationsablauf und anschließende GPU-Regelung ohne UAC wurden durch den Registrierungstest nicht ausgeführt. Die Prüfungen belegen keine thermische Leistung unter Dauerlast. Screenshots sind synthetische Demonstrationen mit simuliertem Reglerstatus.
+Screenshots sind synthetische Demonstrationen mit simuliertem Reglerstatus.
 
 ## Lizenz
 
