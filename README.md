@@ -6,6 +6,8 @@
 
 Version **1.10** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.10-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.10-Installer.zip)
 
+> **GPU control:** GPU temperature parameter control requires one UAC confirmation when installing the control component. Subsequent enabling of temperature control and cooling proceeds without further UAC prompts. Monitoring itself does not require UAC.
+
 ![VRAM GPU Desk — system theme](images/dashboard-system.png)
 
 ## What it does
@@ -74,3 +76,7 @@ Screenshots use synthetic demonstration data and simulated controller state. The
 Verified for this release: 48 isolated interface cases across 12 languages and two themes, tray icons, settings defaults, quick-action binding/runner checks, actual CLR token checks, Unicode paths, all 163 package files and embedded broker pins, isolated installation/uninstallation, and a real elevated temporary Task Scheduler registration test with XML/DACL readback, rollback and cleanup. The temporary tasks were **not run**, and no GPU setters or production tasks were invoked by that test.
 
 The complete production-installer workflow and subsequent no-UAC GPU actuation were not exercised by that registration test. These checks do not demonstrate thermal performance under sustained load. Screenshots use synthetic demonstration data and simulated controller state, without demonstrating hardware operation or performance.
+
+## License
+
+Free for noncommercial use under [PolyForm Noncommercial 1.0.0](LICENSE.md), subject to its terms and notice requirements. Commercial use requires separate permission. This is not an open-source license; application source code is not published. Third-party runtime licenses remain unchanged.

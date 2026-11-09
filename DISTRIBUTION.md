@@ -7,3 +7,7 @@ The 1.10 EXE includes a Java runtime and local Windows helpers. The installer ZI
 Java runtime third-party license notices are retained under runtime/legal in the installed application. NVIDIA driver libraries are not bundled or downloaded: the installed system library must pass the application's offline signature, path and API checks.
 
 SHA256SUMS.txt covers downloadable packages. Published images are synthetic interface demonstrations, not measurements from a private process list or evidence of thermal performance.
+
+## License
+
+Free for noncommercial use under [PolyForm Noncommercial 1.0.0](LICENSE.md), subject to its terms and notice requirements. Commercial use requires separate permission. This is not an open-source license; application source code is not published. Third-party runtime licenses remain unchanged.
