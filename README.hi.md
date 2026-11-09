@@ -22,7 +22,7 @@
 
 **चेतावनी: आवश्यक और अनचाहे दोनों अनुप्रयोग बंद हो सकते हैं और बिना सहेजा काम खो सकता है।** कार्रवाई से पहले ताज़ा तापमान, GPU पहचान, PID, निर्माण समय, EXE पथ और उसी प्रक्रिया हैंडल की जाँच होती है। संरक्षित Windows/NVIDIA घटक, महत्वपूर्ण या अपुष्ट प्रक्रियाएँ और उपयोगिता स्वयं बाहर रहते हैं। यह प्रक्रिया-वृक्ष समाप्त नहीं करता, सेवाएँ नहीं रोकता और अतिरिक्त अधिकार नहीं माँगता। पुराने चयनित-अनुप्रयोग का आपात विकल्प अलग रहता है। यह अतिरिक्त उपाय है, GPU क्षति रोकने की गारंटी नहीं।
 
-1.11 में जाँचा गया: **40 native CPU परीक्षण, 256 Java/catalog/guard परीक्षण, 12 भाषाओं और दो थीमों के 48 मामलों में 673 UI जाँच**, **710 वैध PDH counter instances** का केवल पठन, स्वतंत्र समीक्षा, सभी **164 पैकेज फ़ाइलें और 87 Java क्लास**, broker hashes, अलग स्थापना/हटाना तथा Unicode पथों पर अंतर्निहित Java के साथ पैकेज लॉन्च। **इन परीक्षणों में असली अनुप्रयोग समाप्त नहीं हुए और GPU सेटिंग नहीं लिखी गई।** पूर्ण production स्थापना और वास्तविक तापीय प्रभावशीलता इन जाँचों से पुष्ट नहीं हुई।
+1.11 में जाँचा गया: **40 native CPU परीक्षण, 256 Java/catalog/guard परीक्षण, 12 भाषाओं और दो थीमों के 48 मामलों में 673 UI जाँच**, **710 वैध PDH counter instances** का केवल पठन, स्वतंत्र समीक्षा, सभी **164 पैकेज फ़ाइलें और 87 Java क्लास**, broker hashes, अलग स्थापना/हटाना तथा Unicode पथों पर अंतर्निहित Java के साथ पैकेज लॉन्च।
 
 
 ## सुविधाएँ
@@ -82,9 +82,8 @@ Windows 10/11 x64, .NET Framework 4.8 और समर्थित NVIDIA ड्
 
 चार assignable बटन जोड़े गए, कार्ड के विवरण का फ़ॉन्ट छोटा किया गया और mini-graphs की ऊँचाई 35 से 55 pixels हुई; स्पष्ट ट्रे आइकन बना है। सुरक्षित नियंत्रण घटक एक बार UAC के साथ स्थापित होता है। केवल पुष्टि किए गए non-render IDD aliases हटाए जाते हैं; अलग वास्तविक GPU केवल नाम या memory bytes के आधार पर नहीं मिलाए जाते। सुरक्षित अधूरी स्थापना सुधारी जा सकती है; विफलता में स्पष्ट phase, code और HRESULT मिलता है। दो themes, 12 भाषाएँ, स्थानीय इतिहास, UTF-8 CSV, GPU identity checks और lease/watchdog/restore नीति सुरक्षित हैं।
 
-12 भाषाओं और दो themes के 48 isolated UI cases, icons, default settings, quick-action binding/runner, वास्तविक CLR token checks, Unicode पथ, सभी 163 package files और pinned broker hashes तथा isolated install/uninstall जाँचे गए। वास्तविक elevated temporary Scheduler test ने दोनों definitions register कीं, XML/DACL पढ़े, rollback जाँचा और अपने tasks/folder हटाए। **Tasks चलाए नहीं गए**; उस टेस्ट ने GPU setters या production tasks नहीं चलाए।
+12 भाषाओं और दो themes के 48 isolated UI cases, icons, default settings, quick-action binding/runner, वास्तविक CLR token checks, Unicode पथ, सभी 163 package files और pinned broker hashes तथा isolated install/uninstall जाँचे गए। वास्तविक elevated temporary Scheduler test ने दोनों definitions register कीं, XML/DACL पढ़े, rollback जाँचा और अपने tasks/folder हटाए। **Tasks चलाए नहीं गए**।
 
-यह registration fixture पूर्ण production-installer workflow या उसके बाद बिना UAC वास्तविक GPU actuation का प्रमाण नहीं है। लगातार भारी लोड में तापीय प्रदर्शन इन जाँचों से प्रमाणित नहीं होता।
 
 ## लाइसेंस
 

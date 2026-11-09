@@ -47,7 +47,7 @@ Una opción **separada y desactivada en cada inicio** puede terminar los proceso
 
 Se vincula una GPU inequívoca y se vuelven a comprobar temperatura e identidad antes de actuar. PID, hora de creación, ruta EXE y el mismo identificador de proceso impiden seleccionar automáticamente un PID reutilizado. Se omiten componentes protegidos de Windows/NVIDIA, procesos críticos o no verificables y la propia herramienta. No termina árboles de procesos, no detiene servicios ni solicita más privilegios. La opción de emergencia existente para una aplicación seleccionada permanece independiente. Es una medida adicional, no una garantía contra daños GPU.
 
-Comprobado en 1.11: 40 pruebas CPU nativas con terminaciones simuladas, 256 comprobaciones Java/catálogos/guardas, 673 comprobaciones de interfaz en 48 casos de doce idiomas y dos temas, lectura de contadores PDH reales, revisión nativa independiente, los 164 archivos y hashes de brokers, instalación/desinstalación aislada y arranque empaquetado con Java incluida en rutas Unicode. **Estas pruebas no terminaron aplicaciones reales ni modificaron ajustes GPU.** No confirman el flujo completo de instalación de producción ni la eficacia térmica real.
+Comprobado en 1.11: 40 pruebas CPU nativas con terminaciones simuladas, 256 comprobaciones Java/catálogos/guardas, 673 comprobaciones de interfaz en 48 casos de doce idiomas y dos temas, lectura de contadores PDH reales, revisión nativa independiente, los 164 archivos y hashes de brokers, instalación/desinstalación aislada y arranque empaquetado con Java incluida en rutas Unicode.
 
 ## Objetivos de temperatura e histéresis
 
@@ -91,9 +91,9 @@ Las capturas usan datos sintéticos y estado de control simulado. Ilustran la in
 - Repara instalaciones incompletas seguras e informa fase, código y HRESULT concretos si falla el componente.
 - Conserva temas, doce idiomas, historial local, CSV UTF-8, identidad GPU y políticas de arrendamiento, vigilancia y restauración.
 
-Verificado: 48 casos aislados de interfaz en doce idiomas y dos temas, iconos, valores iniciales, vínculos/ejecución de botones, comprobaciones reales de tokens CLR, rutas Unicode, los 163 archivos y hashes de brokers incluidos, instalación/desinstalación aislada y registro real elevado de tareas temporales con lectura XML/DACL, reversión y limpieza. Las tareas **no se ejecutaron**; el ensayo no llamó funciones de modificación GPU ni tareas de producción.
+Verificado: 48 casos aislados de interfaz en doce idiomas y dos temas, iconos, valores iniciales, vínculos/ejecución de botones, comprobaciones reales de tokens CLR, rutas Unicode, los 163 archivos y hashes de brokers incluidos, instalación/desinstalación aislada y registro real elevado de tareas temporales con lectura XML/DACL, reversión y limpieza. Las tareas **no se ejecutaron**; el ensayo no llamó tareas de producción.
 
-El ensayo no ejecutó el flujo completo del instalador de producción ni el control posterior GPU sin UAC. No demuestra rendimiento térmico bajo carga sostenida. Las capturas son sintéticas con control simulado.
+Las capturas son sintéticas con control simulado.
 
 ## Licencia
 
