@@ -1,1 +1,3 @@
 9c5d75480d2b581673770f99d677c7cdd2b4131fd209e6b2e23e7ab2fc2b411c  downloads/VRAM-GPU-Desk-1.6-Setup-x64.exe
+7d477ffa94e9189fb3b6f851aee25e533a876b4f0c76f1d34b84f9d0eca66efb  downloads/VRAM-GPU-Desk-1.10-Setup-x64.exe
+eebd3d8e1b1714ca660d891273d1281e810132bdf6aac2dfbdbc2ae282805d50  downloads/VRAM-GPU-Desk-1.10-Installer.zip
