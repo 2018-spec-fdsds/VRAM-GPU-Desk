@@ -8,6 +8,8 @@ Versión **1.10** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.10-Setup-x64
 
 > **Control de GPU:** El control de los parámetros de temperatura de la GPU requiere una confirmación UAC al instalar el componente de control. Después, activar el control de temperatura y la refrigeración no genera nuevas solicitudes UAC. La supervisión por sí sola no requiere UAC.
 
+> **Control simultáneo de GPU:** El control de los parámetros de temperatura de la GPU puede entrar en conflicto con otros programas que cambien al mismo tiempo la potencia, las frecuencias o la velocidad de los ventiladores, como MSI Afterburner. Utilice un único controlador activo para estos ajustes. La advertencia se refiere a cambios simultáneos, no a la supervisión pasiva.
+
 ![VRAM GPU Desk — tema del sistema](images/dashboard-system.png)
 
 ## Funciones
