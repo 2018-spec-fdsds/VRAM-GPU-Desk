@@ -1,9 +1,13 @@
-# VRAM GPU Desk 1.6
+# VRAM GPU Desk 1.10
 
-Driver-independent NVML admission, clear UAC startup/failure feedback, refreshed GPU icon and one Start-menu shortcut. Existing settings and controller policies are preserved.
+- Four configurable process-instance quick buttons: close or terminate in one click, with explicit reassignment and native process guards. Unsaved work may be lost.
+- Taller 55 px mini-graphs, smaller dashboard descriptions, and a high-contrast tray icon.
+- Protected fixed GPU-control tasks installed with one UAC prompt; fresh thermal/idle-cooling settings on, saved OFF preserved.
+- Conservative indirect-display alias correction, without name/byte-based GPU merging.
+- Safe incomplete-installation repair, exact CLR token access, Scheduler missing-path handling, protected ACL recognition, and concrete setup diagnostics.
 
-The system driver library is checked offline through Windows trust validation and its verified NVIDIA publisher. There is no list of allowed driver versions or DLL hashes. Available hardware and API support are still required; this is not a promise of universal GPU support.
+## Checks and limits
 
-Validation: live sensors; elevated read-only power/fan driver admission; 12 UI languages, two themes, UTF-8 CSV and settings/tray tests; CPU planners 33/440/5709 checks. No actual hardware-setting writes or sustained GPU load test were performed for this release. The installer is unsigned.
+The final installer and ZIP hashes are listed in SHA256SUMS.txt. All 163 package files, embedded broker pins, unchanged tested Java classes, Unicode paths, isolated install/uninstall and process guards were checked. A real elevated temporary Scheduler test registered both definitions, checked XML/DACL, exercised rollback and removed its tasks/folder. No Task.Run, GPU setters, installed-file changes or production-task changes were performed by that test.
 
-Compiled binaries only. No application sources, user settings, private process lists or user media are included. Screenshots contain synthetic demonstration data.
+Full production installation and subsequent no-UAC GPU actuation were not proven by the registration fixture. Screenshots use synthetic demonstration data and simulated controller state; they do not demonstrate hardware operation or performance. Source code and private diagnostic reports are not published.
