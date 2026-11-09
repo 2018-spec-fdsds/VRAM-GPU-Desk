@@ -1,16 +1,20 @@
-# VRAM GPU Desk 1.10
+# VRAM GPU Desk 1.11
 
-- Four configurable process-instance quick buttons: close or terminate in one click, with explicit reassignment and native process guards. Unsaved work may be lost.
-- Taller 55 px mini-graphs, smaller dashboard descriptions, and a high-contrast tray icon.
-- Protected fixed GPU-control tasks installed with one UAC prompt; fresh thermal/idle-cooling settings on, saved OFF preserved.
-- Conservative indirect-display alias correction, without name/byte-based GPU merging.
-- Safe incomplete-installation repair, exact CLR token access, Scheduler missing-path handling, protected ACL recognition, and concrete setup diagnostics.
+- Adds a separate opt-in emergency checkbox for GPU-heavy applications. It is **OFF at every launch**; the existing selected-application emergency option remains independent.
+- The per-application GPU load threshold defaults to **20%**, configurable from **10–100%**. Only the threshold is saved. One attempt automatically turns the mode OFF, including cancellation or no eligible applications. Changing either threshold disarms it.
+- Acts only after the selected GPU stays **strictly above the temperature-alert threshold for 10 seconds**, and an eligible application has met the GPU load threshold for **at least 3 seconds**.
+- Uses read-only per-process GPU engine load, **not VRAM usage or memory-based heuristics**. Fresh measurements, unique physical GPU binding, process creation time, executable path and adapter LUID are checked. Native execution rechecks the exact instance and uses its validated handle.
+- Unknown or stale data and protected, critical or unverifiable processes are skipped. Counter availability is required to arm the mode.
+- **Useful or unwanted applications may be terminated, losing unsaved work.** Enable the option only when you accept this risk.
+- Retains four instance-bound quick buttons, both themes, 12 languages, local history, UTF-8 CSV, temperature/idle cooling defaults and saved manual OFF choices. The protected installation model still uses one UAC prompt at installation.
 
 ## Checks and limits
 
-The final installer and ZIP hashes are listed in SHA256SUMS.txt. All 163 package files, embedded broker pins, unchanged tested Java classes, Unicode paths, isolated install/uninstall and process guards were checked. A real elevated temporary Scheduler test registered both definitions, checked XML/DACL, exercised rollback and removed its tasks/folder. No Task.Run, GPU setters, installed-file changes or production-task changes were performed by that test.
+Verification covers all **164 package files and 87 Java classes**, **40 isolated native checks**, **256 Java/settings/catalog checks**, and **673 UI checks across 48 language/theme/window-size cases**. The minimum window remains 1200×900 with the warning fully visible.
 
-Full production installation and subsequent no-UAC GPU actuation were not proven by the registration fixture. Screenshots use synthetic demonstration data and simulated controller state; they do not demonstrate hardware operation or performance. Source code and private diagnostic reports are not published.
+A read-only PDH check observed **710 valid GPU engine instances**, with **zero process-identity reads and no process termination**. Emergency behavior was tested with owned synthetic snapshots and fake RPC/actions. These checks performed **no actual process kills or GPU-setting writes**. They do not demonstrate sustained-load thermal performance or full production-installation hardware operation.
+
+Screenshots contain synthetic demonstration data and simulated controller state. They illustrate the interface, not hardware operation or performance. Application source code and private diagnostic reports are not published. Download hashes are listed in [SHA256SUMS.txt](SHA256SUMS.txt).
 
 ## License
 
