@@ -8,6 +8,8 @@ Version **1.10** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.10-Se
 
 > **GPU control:** GPU temperature parameter control requires one UAC confirmation when installing the control component. Subsequent enabling of temperature control and cooling proceeds without further UAC prompts. Monitoring itself does not require UAC.
 
+> **Concurrent GPU control:** GPU temperature parameter control may conflict with other programs that change power limits, clocks or fan speeds at the same time, such as MSI Afterburner. Use only one active controller for these settings. This warning concerns simultaneous changes to settings, not passive monitoring.
+
 ![VRAM GPU Desk — system theme](images/dashboard-system.png)
 
 ## What it does
