@@ -11,3 +11,7 @@
 The final installer and ZIP hashes are listed in SHA256SUMS.txt. All 163 package files, embedded broker pins, unchanged tested Java classes, Unicode paths, isolated install/uninstall and process guards were checked. A real elevated temporary Scheduler test registered both definitions, checked XML/DACL, exercised rollback and removed its tasks/folder. No Task.Run, GPU setters, installed-file changes or production-task changes were performed by that test.
 
 Full production installation and subsequent no-UAC GPU actuation were not proven by the registration fixture. Screenshots use synthetic demonstration data and simulated controller state; they do not demonstrate hardware operation or performance. Source code and private diagnostic reports are not published.
+
+## License
+
+Free for noncommercial use under [PolyForm Noncommercial 1.0.0](LICENSE.md), subject to its terms and notice requirements. Commercial use requires separate permission. This is not an open-source license; application source code is not published. Third-party runtime licenses remain unchanged.

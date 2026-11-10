@@ -6,6 +6,8 @@
 
 Phiên bản **1.10** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.10-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.10-Installer.zip)
 
+> **Điều khiển GPU:** Điều khiển các tham số nhiệt độ GPU cần xác nhận UAC một lần khi cài thành phần điều khiển. Sau đó, bật điều khiển nhiệt độ và làm mát không yêu cầu UAC lần nữa. Chỉ giám sát thì không cần UAC.
+
 ![VRAM GPU Desk — giao diện hệ thống](images/dashboard-system.png)
 
 ## Chức năng
@@ -75,3 +77,7 @@ Bộ cài không có chữ ký. Phân phối ứng dụng dạng nhị phân đ�
 Đã kiểm tra: 48 trường hợp giao diện cô lập trong mười hai ngôn ngữ và hai giao diện, biểu tượng, mặc định cài đặt, liên kết/thực thi nút nhanh, kiểm tra token CLR thực tế, đường dẫn Unicode, đủ 163 tệp và hash broker nhúng, cài/gỡ cô lập và đăng ký tác vụ tạm thời thực tế với quyền nâng cao, đọc lại XML/DACL, rollback và dọn dẹp. Các tác vụ **không chạy**; thử nghiệm không gọi hàm thay đổi GPU hay tác vụ sản xuất.
 
 Thử nghiệm chưa chạy toàn bộ bộ cài sản xuất và điều khiển GPU không UAC sau cài. Các kiểm tra không chứng minh hiệu quả nhiệt khi tải kéo dài. Ảnh chụp là minh họa tổng hợp với điều khiển mô phỏng.
+
+## Giấy phép
+
+Được sử dụng miễn phí cho mục đích phi thương mại theo [PolyForm Noncommercial 1.0.0](LICENSE.md), với điều kiện tuân thủ các điều khoản và yêu cầu thông báo. Sử dụng thương mại cần được cho phép riêng. Đây không phải giấy phép mã nguồn mở; mã nguồn ứng dụng không được công bố. Giấy phép của runtime bên thứ ba không thay đổi.
