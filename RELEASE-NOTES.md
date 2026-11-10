@@ -7,7 +7,7 @@ Compiled application distribution. Application source code is not included.
 - Optional load-aware fan cooling, soft power/core-clock temperature control, sustained-overheat alerts and selected-process emergency termination.
 - Aligned settings fields, consistent °C units, readable technical-parameters window, visible version badge.
 
-Hardware-tested on RTX 5090. Other RTX 5000 models are not individually verified.
+GPU monitoring and available controls depend on the installed hardware and driver.
 
 Idle cooling uses a 4°C restart hysteresis and a 3-second hold at/below its target; the idle target is not a load-temperature ceiling. Temperature alerts require at least 10 seconds above their threshold.
 
