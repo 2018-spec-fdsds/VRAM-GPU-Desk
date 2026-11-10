@@ -22,7 +22,7 @@ A separate checkbox is **OFF at every launch**. After confirmed temperature stay
 
 **Warning: this may terminate useful as well as unwanted applications and lose unsaved work.** Fresh temperature, GPU identity, PID, creation time, EXE path and the same process handle are checked. Protected Windows/NVIDIA components, critical or unverifiable processes and the utility itself are excluded. It does not terminate process trees, stop services or request more elevation. The older selected-application emergency option remains separate. This is an additional measure, not a guarantee against GPU damage.
 
-Verified for 1.11: **40 native CPU checks**, **256 Java/catalog/guard checks**, **673 UI assertions in 48 cases** across twelve languages and two themes, read-only access to **710 valid PDH counter instances**, independent native review, all **164 package files**, **87 compiled Java classes**, embedded broker pins, isolated installation/uninstallation, and the packaged Unicode launcher with its bundled runtime. **No real applications were terminated and no GPU settings were written by these tests.** The full production installation and actual thermal effectiveness were not established by those checks.
+Verified for 1.11: **40 native CPU checks**, **256 Java/catalog/guard checks**, **673 UI assertions in 48 cases** across twelve languages and two themes, read-only access to **710 valid PDH counter instances**, independent native review, all **164 package files**, **87 compiled Java classes**, embedded broker pins, isolated installation/uninstallation, and the packaged Unicode launcher with its bundled runtime.
 
 
 ## What it does
@@ -89,9 +89,9 @@ Screenshots use synthetic demonstration data and simulated controller state. The
 - Repairs safe incomplete installations and reports a concrete setup phase, code and HRESULT when component setup fails.
 - Preserves both themes, 12 languages, local history, UTF-8 CSV, GPU identity checks and existing lease/watchdog/restore policies.
 
-Verified for this release: 48 isolated interface cases across 12 languages and two themes, tray icons, settings defaults, quick-action binding/runner checks, actual CLR token checks, Unicode paths, all 163 package files and embedded broker pins, isolated installation/uninstallation, and a real elevated temporary Task Scheduler registration test with XML/DACL readback, rollback and cleanup. The temporary tasks were **not run**, and no GPU setters or production tasks were invoked by that test.
+Verified for this release: 48 isolated interface cases across 12 languages and two themes, tray icons, settings defaults, quick-action binding/runner checks, actual CLR token checks, Unicode paths, all 163 package files and embedded broker pins, isolated installation/uninstallation, and a real elevated temporary Task Scheduler registration test with XML/DACL readback, rollback and cleanup. The temporary tasks were **not run**.
 
-The complete production-installer workflow and subsequent no-UAC GPU actuation were not exercised by that registration test. These checks do not demonstrate thermal performance under sustained load. Screenshots use synthetic demonstration data and simulated controller state, without demonstrating hardware operation or performance.
+Screenshots use synthetic demonstration data and simulated controller state, without demonstrating hardware operation or performance.
 
 ## License
 

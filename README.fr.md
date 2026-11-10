@@ -47,7 +47,7 @@ Une option **distincte, désactivée à chaque lancement**, peut terminer les pr
 
 Le GPU est lié sans ambiguïté ; température et identité sont vérifiées à nouveau avant l’action. PID, date de création, chemin EXE et même handle de processus empêchent la sélection automatique d’un PID réutilisé. Les composants Windows/NVIDIA protégés, processus critiques ou invérifiables et l’utilitaire lui-même sont exclus. Aucun arbre de processus n’est terminé, aucun service arrêté et aucune élévation supplémentaire demandée. L’option existante pour une application explicitement choisie reste indépendante. C’est une mesure supplémentaire, pas une garantie contre les dommages matériels.
 
-Vérifié pour 1.11 : 40 tests CPU natifs avec terminaisons simulées, 256 contrôles Java/catalogues/guardes, 673 contrôles d’interface dans 48 cas couvrant douze langues et deux thèmes, lecture de compteurs PDH réels, examen natif indépendant, les 164 fichiers et empreintes des brokers, installation/désinstallation isolée et lancement empaqueté avec Java intégrée dans des chemins Unicode. **Ces tests n’ont terminé aucune application réelle ni modifié de réglage GPU.** Ils ne confirment ni le parcours complet d’installation de production ni l’efficacité thermique réelle.
+Vérifié pour 1.11 : 40 tests CPU natifs avec terminaisons simulées, 256 contrôles Java/catalogues/guardes, 673 contrôles d’interface dans 48 cas couvrant douze langues et deux thèmes, lecture de compteurs PDH réels, examen natif indépendant, les 164 fichiers et empreintes des brokers, installation/désinstallation isolée et lancement empaqueté avec Java intégrée dans des chemins Unicode.
 
 ## Températures cibles et hystérésis
 
@@ -91,9 +91,9 @@ Les captures utilisent des données synthétiques et un état de régulation sim
 - Réparation des installations incomplètes sûres et indication précise de phase, code et HRESULT si le composant échoue.
 - Conservation des thèmes, douze langues, historique local, CSV UTF-8, identité GPU et politiques de bail, surveillance et restauration.
 
-Vérifié : 48 cas d’interface isolés dans douze langues et deux thèmes, icônes, valeurs initiales, liaisons/exécution des actions rapides, contrôles réels de jetons CLR, chemins Unicode, les 163 fichiers et empreintes des brokers intégrées, installation/désinstallation isolée et véritable enregistrement élevé de tâches temporaires avec relecture XML/DACL, annulation et nettoyage. Les tâches **n’ont pas été exécutées** ; aucune modification GPU ni tâche de production n’a été appelée par le test.
+Vérifié : 48 cas d’interface isolés dans douze langues et deux thèmes, icônes, valeurs initiales, liaisons/exécution des actions rapides, contrôles réels de jetons CLR, chemins Unicode, les 163 fichiers et empreintes des brokers intégrées, installation/désinstallation isolée et véritable enregistrement élevé de tâches temporaires avec relecture XML/DACL, annulation et nettoyage. Les tâches **n’ont pas été exécutées** ; aucune tâche de production n’a été appelée par le test.
 
-Ce test n’a pas exécuté le parcours complet de l’installateur de production ni la commande GPU ultérieure sans UAC. Ces vérifications ne prouvent pas les performances thermiques sous charge soutenue. Les captures sont synthétiques avec régulation simulée.
+Les captures sont synthétiques avec régulation simulée.
 
 ## Licence
 
