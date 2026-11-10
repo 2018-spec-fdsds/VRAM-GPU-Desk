@@ -2,7 +2,7 @@
 
 **Local GPU memory monitoring and temperature control for Windows x64.**
 
-Version **1.4** · [Русское описание](README.ru.md) · [Download Windows installer](downloads/VRAM-GPU-Desk-1.4-Setup-x64.exe)
+Version **1.6** · [Русское описание](README.ru.md) · [Download Windows installer](downloads/VRAM-GPU-Desk-1.6-Setup-x64.exe)
 
 ![VRAM GPU Desk — system theme](images/dashboard-system.png)
 
@@ -39,7 +39,7 @@ Idle temperature is **not** the temperature limit under sustained load. Ambient 
 
 For NVIDIA GeForce **RTX 5000 Series** GPUs. Monitoring and available controls depend on the GPU and driver; unsupported controls remain unavailable rather than being simulated.
 
-Windows 10/11 x64, .NET Framework 4.8 and a supported NVIDIA driver. The installer includes its Java runtime, so a separate Java installation is not required. GPU control may require a normal Windows UAC confirmation. A changed driver revision may require a reviewed application update because the GPU control library is verified before use.
+Windows 10/11 x64, .NET Framework 4.8 and a supported NVIDIA driver. The installer includes its Java runtime, so a separate Java installation is not required. GPU control may require a normal Windows UAC confirmation. Driver versions and DLL hashes are not allowlisted. The installed system NVML library must pass offline Windows signature verification with a verified NVIDIA Corporation signer, safe-path checks and the required API checks. Driver updates do not require adding a new version or hash. Offline trust verification can fail when required trust data is not available locally; no certificates or drivers are downloaded by the application.
 
 ## Installation and privacy
 
@@ -52,3 +52,12 @@ The application uses local Windows/GPU interfaces. It contains no designed-in te
 The installer is unsigned. The application is distributed as compiled binaries; **application source code is not published in this repository**. Java bytecode is not encrypted or guaranteed to resist decompilation. Third-party runtime license notices are retained in the installed runtime.
 
 Screenshots use synthetic demonstration data, not a private application list. They illustrate the interface, not a performance benchmark.
+
+## Changes in 1.6
+
+- Restores monitoring and GPU-controller admission after supported NVIDIA driver updates without pinning driver versions or hashes.
+- Keeps the temperature checkbox selected and disabled while Windows UAC is pending; displays a localized reason if startup fails. Active control is shown only after a confirmed controller connection.
+- Adds the new GPU icon and creates one Start-menu shortcut. Themes stay inside the app.
+- Preserves settings, history and existing power/clock/fan safety policies.
+
+Verified for this release: live sensor reads, elevated read-only admission of both GPU drivers, 12 languages × 2 themes, UTF-8 CSV, settings/tray behavior, and 33/440/5709 CPU planner checks. Hardware-setting writes and a sustained GPU load test were not performed for 1.6. These checks do not demonstrate thermal performance under load.

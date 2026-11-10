@@ -1,14 +1,9 @@
-# VRAM GPU Desk 1.4 — Windows x64
+# VRAM GPU Desk 1.6
 
-Compiled application distribution. Application source code is not included.
+Driver-independent NVML admission, clear UAC startup/failure feedback, refreshed GPU icon and one Start-menu shortcut. Existing settings and controller policies are preserved.
 
-- Local VRAM/process monitoring, graphs, 30-day TOP10 + Others and 24-hour occupancy statistics.
-- System/graphite themes, 12 languages, tray/startup support, local UTF-8 CSV export.
-- Optional load-aware fan cooling, soft power/core-clock temperature control, sustained-overheat alerts and selected-process emergency termination.
-- Aligned settings fields, consistent °C units, readable technical-parameters window, visible version badge.
+The system driver library is checked offline through Windows trust validation and its verified NVIDIA publisher. There is no list of allowed driver versions or DLL hashes. Available hardware and API support are still required; this is not a promise of universal GPU support.
 
-GPU monitoring and available controls depend on the installed hardware and driver.
+Validation: live sensors; elevated read-only power/fan driver admission; 12 UI languages, two themes, UTF-8 CSV and settings/tray tests; CPU planners 33/440/5709 checks. No actual hardware-setting writes or sustained GPU load test were performed for this release. The installer is unsigned.
 
-Idle cooling uses a 4°C restart hysteresis and a 3-second hold at/below its target; the idle target is not a load-temperature ceiling. Temperature alerts require at least 10 seconds above their threshold.
-
-The installer includes its runtime. Windows 10/11 x64 and .NET Framework4.8 are required. GPU controls may need UAC and are driver-dependent. No hard temperature ceiling or OS-wide network-isolation guarantee is claimed.
+Compiled binaries only. No application sources, user settings, private process lists or user media are included. Screenshots contain synthetic demonstration data.
