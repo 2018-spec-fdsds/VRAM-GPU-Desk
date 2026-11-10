@@ -1,9 +1,9 @@
 # Distribution
 
-This repository publishes compiled VRAM GPU Desk binaries, documentation and screenshots. Application source code is not provided and no open-source license for the application is granted here.
+This repository publishes compiled Windows x64 installers and documentation. Application source code, source archives, private diagnostic reports, user settings and history are not included.
 
-The included Eclipse Temurin/OpenJDK runtime is a separate third-party component. Its licenses and notices remain under runtime/legal in the installed application. See the upstream binary and corresponding source information for Temurin 25.0.5+8:
+The 1.10 EXE includes a Java runtime and local Windows helpers. The installer ZIP contains the same sealed installer plus its checksum and instructions; it is not a portable installation. Installation uses a fixed protected Program Files directory and requires the currently signed-in split-token administrator. The application and installer are not signed with a personal publisher certificate.
 
-https://github.com/adoptium/temurin25-binaries/releases/tag/jdk-25.0.5%2B8
+Java runtime third-party license notices are retained under runtime/legal in the installed application. NVIDIA driver libraries are not bundled or downloaded: the installed system library must pass the application's offline signature, path and API checks.
 
-Java runtime licensing does not turn the VRAM GPU Desk application into an open-source project. The distribution does not bundle NVIDIA driver DLLs; it uses the locally installed, verified Windows System32 driver library.
+SHA256SUMS.txt covers downloadable packages. Published images are synthetic interface demonstrations, not measurements from a private process list or evidence of thermal performance.
