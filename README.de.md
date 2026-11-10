@@ -4,13 +4,17 @@
 
 **Lokale GPU-Speicherüberwachung und Temperaturregelung für Windows x64.**
 
-Version **1.10** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.10-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.10-Installer.zip)
+Version **1.11** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+
+![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
+
+Der aktivierte Zustand dient nur der Illustration. Diese Notfalloption ist bei jedem Start AUS.
+
 
 > **GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter erfordert eine einmalige UAC-Bestätigung bei der Installation der Steuerungskomponente. Danach lassen sich Temperatursteuerung und Kühlung ohne weitere UAC-Abfragen einschalten. Die reine Überwachung benötigt kein UAC.
 
 > **Gleichzeitige GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter kann mit anderen Programmen kollidieren, die gleichzeitig Leistungsgrenzen, Taktraten oder Lüfterdrehzahlen ändern, beispielsweise MSI Afterburner. Verwenden Sie nur einen aktiven Regler für diese Einstellungen. Gemeint sind gleichzeitige Änderungen, nicht die passive Überwachung.
 
-![VRAM GPU Desk — Systemdesign](images/dashboard-system.png)
 
 ## Funktionen
 
@@ -26,13 +30,24 @@ Version **1.10** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.10-Setup-x64.e
 - Warnung nach mindestens zehn Sekunden strikt oberhalb der gewählten Schwelle von 75–92 °C. Kurze Spitzen lösen keine Warnung aus.
 - Separate, zunächst ausgeschaltete Notfalloption für die ausdrücklich ausgewählte Anwendung. Schließen/Beenden kann ungespeicherte Arbeit verlieren lassen; geschützte oder nicht überprüfbare Prozesse sind ausgeschlossen.
 
-![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
 
 ## Vier Schnellaktionstasten
 
 Weisen Sie **Anwendung schließen** oder **Prozess beenden** einer der vier kleinen Tasten zu. Das benachbarte Menü `⋮` ändert die Zuweisung. Jede Bindung gilt nur für die ausdrücklich ausgewählte Prozessinstanz: PID, Erstellungszeit und EXE-Pfad. Nach deren Ende werden andere Prozesse oder wiederverwendete PIDs nicht automatisch ausgewählt.
 
 Die konfigurierte Taste arbeitet mit einem Klick **ohne zusätzliche Bestätigung**. Ungespeicherte Arbeit kann verloren gehen. Native Prüfungen geschützter, kritischer und nicht überprüfbarer Prozesse bleiben aktiv. Die separate Notfalloption ist zunächst aus und behält das Verhalten für die ausgewählte Anwendung.
+
+![VRAM GPU Desk — Systemdesign](images/dashboard-system.png)
+
+## Notfall: stark GPU-belastende Prozesse beenden — 1.11
+
+Eine **separate, bei jedem Start ausgeschaltete** Option kann nach mindestens zehn Sekunden bestätigter Temperatur strikt oberhalb der eingestellten Überhitzungsschwelle die zugänglichen, stark belastenden Prozesse der ausgewählten GPU beenden. Die Lastgrenze beträgt standardmäßig **20 %**, einstellbar von **10 bis 100 %**. Ein Prozess muss diese Last mindestens **drei Sekunden** halten. Gemessen wird sein am stärksten ausgelasteter GPU-Engine, **nicht die VRAM-Belegung**.
+
+**Warnung: Die Funktion kann sowohl benötigte als auch unerwünschte Anwendungen beenden und ungespeicherte Arbeit vernichten.** Sie arbeitet einmalig und schaltet sich nach dem Auslöseversuch wieder aus. Für einen weiteren Versuch muss sie ausdrücklich erneut aktiviert werden. Ohne bestätigte Prozesslastdaten und gültigen Sensor lässt sie sich nicht aktivieren; unbekannte oder veraltete Messungen lösen keine Beendigung aus.
+
+Die GPU wird eindeutig gebunden; vor dem Eingriff werden Temperatur und Prozessidentität frisch geprüft. PID, Erstellungszeit, EXE-Pfad und derselbe Prozesshandle verhindern eine automatische Auswahl wiederverwendeter PIDs. Geschützte Windows-/NVIDIA-Komponenten, kritische oder nicht überprüfbare Prozesse und die Anwendung selbst werden ausgelassen. Es werden weder Prozessbäume beendet noch Dienste gestoppt oder zusätzliche Rechte angefordert. Die bestehende Notfalloption für eine ausdrücklich ausgewählte Anwendung bleibt separat erhalten. Dies ist eine zusätzliche Maßnahme, keine Garantie gegen GPU-Schäden.
+
+Für 1.11 geprüft: 40 native CPU-Prüfungen mit simulierten Beendigungen, 256 Java-/Katalog-/Guard-Prüfungen, 673 Oberflächenprüfungen in 48 Fällen über zwölf Sprachen und zwei Designs, lesender Zugriff auf tatsächliche PDH-Zähler, unabhängige native Codeprüfung, alle 164 Paketdateien samt Broker-Hashes, isolierte Installation/Deinstallation und Start des Pakets mit eingebetteter Java-Laufzeit über Unicode-Pfade. **In diesen Tests wurden keine echten Anwendungen beendet und keine GPU-Einstellungen geschrieben.** Die vollständige produktive Installation und tatsächliche thermische Wirkung wurden damit nicht bestätigt.
 
 ## Temperaturziele und Hysterese
 
