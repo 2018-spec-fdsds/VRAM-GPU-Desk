@@ -47,7 +47,7 @@ Một tùy chọn **riêng, tắt ở mỗi lần khởi động**, có thể k�
 
 GPU được gắn duy nhất; nhiệt độ và danh tính tiến trình được kiểm tra lại trước khi thực hiện. PID, thời điểm tạo, đường dẫn EXE và cùng handle tiến trình ngăn việc tự chọn PID đã tái sử dụng. Bỏ qua thành phần Windows/NVIDIA được bảo vệ, tiến trình quan trọng hoặc không xác minh được và chính tiện ích. Không kết thúc cây tiến trình, không dừng dịch vụ hay yêu cầu nâng quyền thêm. Tùy chọn khẩn cấp hiện có dành cho một ứng dụng đã chọn vẫn tách biệt. Đây là biện pháp bổ sung, không bảo đảm ngăn hư hại GPU.
 
-Đã kiểm tra cho 1.11: 40 bài kiểm tra CPU gốc với hành động kết thúc mô phỏng, 256 kiểm tra Java/danh mục/bảo vệ, 673 kiểm tra giao diện trong 48 trường hợp bao phủ mười hai ngôn ngữ và hai giao diện, đọc bộ đếm PDH thật, rà soát mã gốc độc lập, đủ 164 tệp và hash broker, cài/gỡ cô lập và khởi chạy gói với Java đi kèm qua đường dẫn Unicode. **Các bài thử không kết thúc ứng dụng thật và không ghi cài đặt GPU.** Chưa xác nhận toàn bộ bộ cài sản xuất hay hiệu quả nhiệt thực tế.
+Đã kiểm tra cho 1.11: 40 bài kiểm tra CPU gốc với hành động kết thúc mô phỏng, 256 kiểm tra Java/danh mục/bảo vệ, 673 kiểm tra giao diện trong 48 trường hợp bao phủ mười hai ngôn ngữ và hai giao diện, đọc bộ đếm PDH thật, rà soát mã gốc độc lập, đủ 164 tệp và hash broker, cài/gỡ cô lập và khởi chạy gói với Java đi kèm qua đường dẫn Unicode.
 
 ## Nhiệt độ mục tiêu và độ trễ chuyển trạng thái
 
@@ -91,9 +91,9 @@ Bộ cài không có chữ ký. Phân phối ứng dụng dạng nhị phân đ�
 - Sửa cài đặt dở dang an toàn và báo giai đoạn, mã, HRESULT cụ thể khi thiết lập thành phần thất bại.
 - Giữ hai giao diện, mười hai ngôn ngữ, lịch sử cục bộ, CSV UTF-8, danh tính GPU và quy tắc lease, watchdog, khôi phục hiện có.
 
-Đã kiểm tra: 48 trường hợp giao diện cô lập trong mười hai ngôn ngữ và hai giao diện, biểu tượng, mặc định cài đặt, liên kết/thực thi nút nhanh, kiểm tra token CLR thực tế, đường dẫn Unicode, đủ 163 tệp và hash broker nhúng, cài/gỡ cô lập và đăng ký tác vụ tạm thời thực tế với quyền nâng cao, đọc lại XML/DACL, rollback và dọn dẹp. Các tác vụ **không chạy**; thử nghiệm không gọi hàm thay đổi GPU hay tác vụ sản xuất.
+Đã kiểm tra: 48 trường hợp giao diện cô lập trong mười hai ngôn ngữ và hai giao diện, biểu tượng, mặc định cài đặt, liên kết/thực thi nút nhanh, kiểm tra token CLR thực tế, đường dẫn Unicode, đủ 163 tệp và hash broker nhúng, cài/gỡ cô lập và đăng ký tác vụ tạm thời thực tế với quyền nâng cao, đọc lại XML/DACL, rollback và dọn dẹp. Các tác vụ **không chạy**; thử nghiệm không gọi tác vụ sản xuất.
 
-Thử nghiệm chưa chạy toàn bộ bộ cài sản xuất và điều khiển GPU không UAC sau cài. Các kiểm tra không chứng minh hiệu quả nhiệt khi tải kéo dài. Ảnh chụp là minh họa tổng hợp với điều khiển mô phỏng.
+Ảnh chụp là minh họa tổng hợp với điều khiển mô phỏng.
 
 ## Giấy phép
 
