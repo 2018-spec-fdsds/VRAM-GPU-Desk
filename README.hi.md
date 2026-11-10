@@ -6,6 +6,8 @@
 
 [Windows इंस्टॉलर डाउनलोड करें](downloads/VRAM-GPU-Desk-1.10-Setup-x64.exe) · [इंस्टॉलर ZIP](downloads/VRAM-GPU-Desk-1.10-Installer.zip)
 
+> **GPU नियंत्रण:** GPU के तापमान पैरामीटर नियंत्रित करने के लिए नियंत्रण घटक स्थापित करते समय एक बार UAC पुष्टि आवश्यक है। इसके बाद तापमान नियंत्रण और कूलिंग चालू करने पर दोबारा UAC नहीं पूछा जाता। केवल निगरानी के लिए UAC आवश्यक नहीं है।
+
 ![सिस्टम थीम में इंटरफ़ेस](images/dashboard-system.png)
 
 ## सुविधाएँ
@@ -67,3 +69,7 @@ Windows 10/11 x64, .NET Framework 4.8 और समर्थित NVIDIA ड्
 12 भाषाओं और दो themes के 48 isolated UI cases, icons, default settings, quick-action binding/runner, वास्तविक CLR token checks, Unicode पथ, सभी 163 package files और pinned broker hashes तथा isolated install/uninstall जाँचे गए। वास्तविक elevated temporary Scheduler test ने दोनों definitions register कीं, XML/DACL पढ़े, rollback जाँचा और अपने tasks/folder हटाए। **Tasks चलाए नहीं गए**; उस टेस्ट ने GPU setters या production tasks नहीं चलाए।
 
 यह registration fixture पूर्ण production-installer workflow या उसके बाद बिना UAC वास्तविक GPU actuation का प्रमाण नहीं है। लगातार भारी लोड में तापीय प्रदर्शन इन जाँचों से प्रमाणित नहीं होता।
+
+## लाइसेंस
+
+[PolyForm Noncommercial 1.0.0](LICENSE.md) की शर्तों और आवश्यक सूचनाओं का पालन करते हुए गैर-व्यावसायिक उपयोग निःशुल्क है। व्यावसायिक उपयोग के लिए अलग अनुमति चाहिए। यह open-source लाइसेंस नहीं है; ऐप का source code प्रकाशित नहीं है। तृतीय-पक्ष runtime लाइसेंस अपरिवर्तित हैं।
