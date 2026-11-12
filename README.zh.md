@@ -1,10 +1,10 @@
-# VRAM GPU Desk 1.11
+# VRAM GPU Desk 1.14
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
 **适用于 Windows x64 的本地 GPU 显存监控与温度控制工具。**
 
-[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — 石墨深色主题](images/dashboard-graphite.png)
 
@@ -15,6 +15,19 @@
 
 > **同时控制 GPU:** GPU 温度参数控制可能与同时更改功率、频率或风扇转速的其他程序发生冲突，例如 MSI Afterburner。请仅使用一个活动控制器来调节这些参数。此警告针对同时修改设置，不针对被动监控。
 
+
+
+## 1.14 新增：紧凑界面与便捷更新
+
+**Graphite Studio（1.12）。** 在 1200×900 窗口中同时显示全部主要设置与操作：七个进程列、至少六行进程、四个图表和完整的前十名图例。进程名称采用高对比度 14 px 粗体。新配置默认使用 Graphite；已保存的 System 或 Graphite 主题保持不变。四个可配置的一键按钮仍绑定到准确的进程实例，执行关闭或终止操作。
+
+**可见的冷却滞回（1.13）。** 冷却区域现在直接显示固定的 **4 °C** 滞回，提示中解释 32→36 °C 和 35→39 °C。这里只展示现有规则，不改变冷却算法。
+
+**安装与更新（1.14）。** 安装程序会询问是否正常关闭正在运行的目标副本。经同意后，通过 Windows Restart Manager 请求 JVM 正常退出，等待应用、启动器退出及控制器文件释放，再继续安装。仅针对经过核实的本安装实例，不强制结束进程。拒绝、取消、应用否决、文件仍被占用或超时都会阻止替换；静默安装不会自动关闭运行中的应用。
+
+最后一页的 **启动 VRAM GPU Desk** 默认勾选，也可取消。应用以当前登录用户的普通权限启动；若无法取得该上下文，请使用“开始”菜单中的普通快捷方式。这是安装后的一次启动，原有 Windows 开机启动选择保持不变。
+
+1.14 已验证 **9 个安装流程场景、107 项 Restart Manager/JDK 检查、17 项固定启动入口检查**，以及全部 **166 个包文件、88 个 Java 类**、代理哈希、Unicode 路径和内置运行时启动器。
 
 ## 功能
 
@@ -73,7 +86,7 @@
 ## 安装与隐私
 
 1. 下载安装程序，并与 [SHA256SUMS.txt](SHA256SUMS.txt) 中的 SHA-256 比较。
-2. 通过托盘菜单退出旧版本。从当前登录的管理员账户正常运行安装程序并确认 UAC。受保护的安装目录固定不变。
+2. 从当前登录的管理员账户正常运行安装程序并确认 UAC。若目标副本正在运行，请回答正常关闭提示；应用退出并释放文件后，安装程序继续。受保护的安装目录固定不变。
 3. 打开新的 VRAM GPU Desk 快捷方式，选择 GPU，并检查已确认的控制器状态。按需配置控制和快捷按钮。设置保存在本地；已保存的关闭选择仍保持关闭。
 
 应用使用本地 Windows/GPU 接口。程序未设计遥测上传、云端推理、自动更新或运行时模型下载。CSV、历史记录和设置保留在本地。这**不代表**整个操作系统具有网络隔离，也不保证第三方驱动、Windows 诊断或同步软件的行为。

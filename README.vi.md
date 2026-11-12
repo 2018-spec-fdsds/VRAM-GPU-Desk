@@ -4,7 +4,7 @@
 
 **Theo dõi bộ nhớ GPU và điều khiển nhiệt độ cục bộ cho Windows x64.**
 
-Phiên bản **1.11** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+Phiên bản **1.14** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
 
@@ -15,6 +15,18 @@ Trạng thái bật chỉ để minh họa. Tùy chọn khẩn cấp này tắt 
 
 > **Điều khiển GPU đồng thời:** Điều khiển các tham số nhiệt độ GPU có thể xung đột với chương trình khác đồng thời thay đổi công suất, xung nhịp hoặc tốc độ quạt, chẳng hạn MSI Afterburner. Chỉ sử dụng một bộ điều khiển đang hoạt động cho các tham số này. Cảnh báo này nói về việc thay đổi cài đặt đồng thời, không phải giám sát thụ động.
 
+
+## Điểm mới trong 1.14
+
+**1.12 – Graphite Studio:** Giao diện gọn hiển thị đủ 17 cài đặt và mười hai thao tác chính ở 1200×900, gồm bảy cột, sáu hàng tiến trình, bốn biểu đồ và lịch sử Top 10. Tên tiến trình dùng chữ đậm 14 pt, tương phản cao. Hồ sơ mới mặc định Graphite; lựa chọn System hoặc Graphite đã lưu rõ ràng được giữ nguyên.
+
+**1.13 – hiển thị khoảng trễ:** Khoảng trễ cố định 4 °C được hiển thị; chú giải động minh họa 32→36 °C và 35→39 °C. Thuật toán làm mát không thay đổi.
+
+**1.14 – cập nhật và mở ứng dụng:** Nếu phiên JVM thuộc ứng dụng đã xác minh chính xác còn chạy, bộ cài hỏi Có/Không/Hủy trước khi đóng. Windows Restart Manager dùng flags 0, không ép kết thúc. Bộ cài chờ các thành phần điều khiển thoát bình thường và tệp được mở khóa. Không, từ chối, hết thời gian hoặc tệp khóa sẽ chặn cập nhật; chế độ im lặng không tự đóng ứng dụng.
+
+«Mở VRAM GPU Desk sau khi cài đặt» **được chọn sẵn** và có thể bỏ chọn. Trình khởi chạy cố định cho phép mở bình thường bằng token Medium của cùng người dùng; nếu thiếu ngữ cảnh này, hãy dùng lối tắt thường trong menu Start. Lựa chọn khởi động cùng Windows là riêng biệt và được giữ nguyên.
+
+Đã xác minh 107 kiểm tra RM, 17 kiểm tra trình khởi chạy, chín ca tích hợp Pascal, 166 tệp, 88 lớp Java và khởi chạy gói qua đường dẫn Unicode.
 
 ## Chức năng
 
@@ -73,8 +85,8 @@ Không có danh sách cho phép theo phiên bản driver hoặc hash DLL. NVML h
 ## Cài đặt và quyền riêng tư
 
 1. Tải bộ cài và so SHA-256 với [SHA256SUMS.txt](SHA256SUMS.txt).
-2. Thoát bản cũ qua menu khay. Chạy bộ cài bình thường từ tài khoản quản trị đang đăng nhập và chấp nhận UAC. Thư mục cài được bảo vệ là cố định.
-3. Mở lối tắt mới, chọn GPU và kiểm tra trạng thái điều khiển đã xác nhận. Cấu hình điều khiển và nút nhanh. Cài đặt lưu cục bộ; lựa chọn tắt đã lưu vẫn tắt.
+2. Chạy bộ cài bình thường từ tài khoản quản trị đang đăng nhập và chấp nhận UAC. Nếu phiên riêng của ứng dụng còn chạy, hãy chọn có cho phép thoát bình thường hay không. Bộ cài chờ thành phần điều khiển thoát và tệp được mở khóa; Không, từ chối, timeout hoặc tệp khóa sẽ chặn cập nhật. Thư mục được bảo vệ là cố định.
+3. Giữ lựa chọn mở sau khi cài đặt hoặc bỏ chọn. Nếu không có ngữ cảnh Medium phù hợp, mở lối tắt thường trong menu Start. Chọn GPU và kiểm tra trạng thái đã xác nhận. Cài đặt vẫn cục bộ, lựa chọn tắt đã lưu được giữ nguyên. Lần mở này không bật khởi động cùng Windows.
 
 Ứng dụng dùng giao diện Windows/GPU cục bộ. Không thiết kế gửi telemetry, suy luận đám mây, tự cập nhật hoặc tải mô hình khi chạy. CSV, lịch sử và cài đặt ở cục bộ. Điều này **không bảo đảm** cách ly mạng toàn hệ thống hoặc hành vi driver bên thứ ba, chẩn đoán Windows hay phần mềm đồng bộ.
 

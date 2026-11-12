@@ -4,7 +4,7 @@
 
 **Supervisión local de memoria GPU y control de temperatura para Windows x64.**
 
-Versión **1.11** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+Versión **1.14** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
 
@@ -15,6 +15,18 @@ El estado activado es solo ilustrativo. Esta opción de emergencia está DESACTI
 
 > **Control simultáneo de GPU:** El control de los parámetros de temperatura de la GPU puede entrar en conflicto con otros programas que cambien al mismo tiempo la potencia, las frecuencias o la velocidad de los ventiladores, como MSI Afterburner. Utilice un único controlador activo para estos ajustes. La advertencia se refiere a cambios simultáneos, no a la supervisión pasiva.
 
+
+## Novedades de 1.14
+
+**1.12 – Graphite Studio:** La interfaz compacta muestra todos los 17 ajustes y doce acciones principales a 1200×900, con siete columnas, seis filas de procesos, cuatro gráficos y el historial Top 10. Los nombres de procesos usan 14 pt en negrita y alto contraste. Los perfiles nuevos usan Graphite; se conserva una selección explícita guardada de System o Graphite.
+
+**1.13 – histéresis visible:** Se muestra el margen fijo de 4 °C. La explicación dinámica incluye ejemplos como 32→36 °C y 35→39 °C. Este cambio no modifica el algoritmo de refrigeración.
+
+**1.14 – actualización y apertura:** Si sigue abierta la instancia JVM propia y verificada, el instalador pregunta Sí/No/Cancelar antes de cerrarla. Utiliza Windows Restart Manager con flags 0, sin forzar la terminación, y espera el cierre normal de los controladores y la liberación de archivos. No, rechazo, espera agotada o archivos bloqueados impiden actualizar. La instalación silenciosa no cierra aplicaciones automáticamente.
+
+«Abrir VRAM GPU Desk al terminar» está **marcado por defecto** y puede desmarcarse. Un lanzador fijo permite iniciar con token Medium del mismo usuario; si ese contexto no está disponible, abra el acceso directo normal del menú Inicio. Se conserva la elección independiente de inicio con Windows.
+
+Se verificaron 107 comprobaciones RM, 17 del lanzador y nueve casos de integración Pascal, además de los 166 archivos, 88 clases Java y arranques del paquete en rutas Unicode.
 
 ## Funciones
 
@@ -73,8 +85,8 @@ No se restringen versiones ni hashes DLL por listas de autorización. NVML del s
 ## Instalación y privacidad
 
 1. Descargue el instalador y compare SHA-256 con [SHA256SUMS.txt](SHA256SUMS.txt).
-2. Salga de la copia anterior desde la bandeja. Ejecute normalmente desde la cuenta administradora conectada y acepte UAC. La carpeta protegida es fija.
-3. Abra el acceso directo nuevo, seleccione GPU y compruebe el estado confirmado. Configure controles y botones. Los ajustes son locales; las desactivaciones guardadas se conservan.
+2. Ejecute normalmente desde la cuenta administradora conectada y acepte UAC. Si hay una instancia propia abierta, elija si permite su cierre normal. El instalador espera el cierre de los controladores y archivos libres; No, rechazo, timeout o bloqueos impiden actualizar. La carpeta protegida es fija.
+3. Mantenga marcado el lanzamiento al terminar o desmárquelo. Si no existe un contexto Medium adecuado, abra el acceso directo normal del menú Inicio. Seleccione GPU y compruebe el estado confirmado. Los ajustes son locales y se conservan las desactivaciones. Este lanzamiento no activa el inicio con Windows.
 
 Usa interfaces locales Windows/GPU. No incorpora envíos de telemetría, inferencia en la nube, actualizador ni descargas de modelos en ejecución. CSV, historial y ajustes permanecen locales. Esto **no** garantiza aislamiento de red del sistema ni comportamiento de drivers externos, diagnóstico Windows o sincronización.
 
