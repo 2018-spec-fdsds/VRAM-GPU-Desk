@@ -4,7 +4,7 @@
 
 **Local GPU memory monitoring and temperature control for Windows x64.**
 
-Version **1.11** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+Version **1.14** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
 
@@ -15,6 +15,19 @@ The armed state is shown only as an illustration. This emergency option is OFF a
 
 > **Concurrent GPU control:** GPU temperature parameter control may conflict with other programs that change power limits, clocks or fan speeds at the same time, such as MSI Afterburner. Use only one active controller for these settings. This warning concerns simultaneous changes to settings, not passive monitoring.
 
+
+
+## New in 1.14: compact workspace and easier updates
+
+**Graphite Studio (1.12).** All primary settings and actions stay visible together at 1200×900: seven process columns, at least six rows, four graphs and the complete top-10 legend. Process names use a high-contrast 14 px bold font. New profiles start in Graphite; an explicitly saved System or Graphite theme is preserved. Four editable one-click buttons retain their exact process-instance bindings and Close/Terminate actions.
+
+**Visible cooling hysteresis (1.13).** The cooling panel now shows the fixed **4 °C** hysteresis. Its tooltip explains 32→36 °C and 35→39 °C examples. This makes the existing rule visible without changing the cooling algorithm.
+
+**Installer flow (1.14).** Setup asks permission to close the running target copy. With consent it requests normal JVM shutdown through Windows Restart Manager, waits for the app, its launcher and controller files to be released, then continues. It targets verified instances of this installation, without forced termination. Declining, cancellation, a shutdown veto, remaining locks or a timeout blocks replacement; silent setup does not close a running app automatically.
+
+The final **Launch VRAM GPU Desk** checkbox is checked by default and can be cleared. Launch uses normal rights for the same signed-in user; if that context is unavailable, use the normal Start menu shortcut. This is a one-time launch after installation; the saved Windows startup choice is preserved.
+
+Verified for 1.14: **9 installer-flow cases, 107 Restart Manager/JDK checks and 17 fixed-launch gate checks**, all **166 package files and 88 Java classes**, broker pins, Unicode paths and the bundled-runtime launcher.
 
 ## New in 1.11: emergency GPU-load process termination
 
@@ -71,7 +84,7 @@ Windows 10/11 x64, .NET Framework 4.8 and a supported NVIDIA driver. The install
 ## Installation and privacy
 
 1. Download the installer and compare its SHA-256 with [SHA256SUMS.txt](SHA256SUMS.txt).
-2. Exit the previous copy through its tray menu. Run setup normally from the signed-in administrator account and approve its UAC prompt. The protected installation folder is fixed.
+2. Run setup normally from the signed-in administrator account and approve UAC. If the target copy is running, answer its shutdown question; setup continues after normal exit and released files. The protected installation folder is fixed.
 3. Open the new VRAM GPU Desk shortcut, select the GPU and check the confirmed controller status. Configure the controls and quick buttons as needed. Settings are saved locally; saved OFF choices remain OFF.
 
 The application uses local Windows/GPU interfaces. It contains no designed-in telemetry uploads, cloud inference, updater or runtime model downloads. CSV files, history and settings remain local. This is **not** a claim of OS-wide network isolation or a guarantee about third-party drivers, Windows diagnostics or synchronization software.

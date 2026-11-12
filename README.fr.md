@@ -4,7 +4,7 @@
 
 **Surveillance locale de mémoire GPU et régulation thermique pour Windows x64.**
 
-Version **1.11** · [Installation Windows](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+Version **1.14** · [Installation Windows](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — thème graphite](images/dashboard-graphite.png)
 
@@ -15,6 +15,18 @@ L’état activé est uniquement illustratif. Cette option d’urgence est désa
 
 > **Contrôle simultané du GPU:** Le contrôle des paramètres de température du GPU peut entrer en conflit avec des programmes qui modifient simultanément la puissance, les fréquences ou la vitesse des ventilateurs, par exemple MSI Afterburner. Utilisez un seul régulateur actif pour ces paramètres. Cet avertissement concerne les modifications simultanées, pas la surveillance passive.
 
+
+## Nouveautés de la version 1.14
+
+**1.12 – Graphite Studio :** L’interface compacte affiche les 17 réglages et douze actions principales à 1200×900, avec sept colonnes, six lignes de processus, quatre graphiques et l’historique Top 10. Les noms des processus sont en gras, 14 pt, avec un contraste élevé. Graphite est proposé aux nouveaux profils ; un choix explicite enregistré de System ou Graphite est conservé.
+
+**1.13 – hystérésis visible :** L’écart fixe de 4 °C est affiché. L’explication dynamique donne notamment 32→36 °C et 35→39 °C. Cet ajout ne change pas l’algorithme de refroidissement.
+
+**1.14 – mise à jour et lancement :** Si l’instance JVM propre à l’application et précisément vérifiée fonctionne encore, l’installation demande Oui/Non/Annuler avant de la fermer. Windows Restart Manager utilise les flags 0, sans arrêt forcé. L’installation attend la fin normale des composants de contrôle et la libération des fichiers. Non, refus, délai dépassé ou fichier verrouillé bloquent la mise à jour ; le mode silencieux ne ferme rien automatiquement.
+
+« Lancer VRAM GPU Desk après l’installation » est **coché par défaut** et peut être décoché. Un lanceur fixe autorise le démarrage normal avec le jeton Medium du même utilisateur. Si ce contexte manque, utilisez ensuite le raccourci normal du menu Démarrer. Le démarrage avec Windows reste un choix séparé, conservé.
+
+La validation couvre 107 contrôles RM, 17 du lanceur et neuf cas d’intégration Pascal, les 166 fichiers, 88 classes Java et des lancements empaquetés via des chemins Unicode.
 
 ## Fonctions
 
@@ -73,8 +85,8 @@ Pas de liste d’autorisation limitant versions de pilote ou empreintes DLL. NVM
 ## Installation et confidentialité
 
 1. Téléchargez l’installateur et comparez SHA-256 à [SHA256SUMS.txt](SHA256SUMS.txt).
-2. Quittez l’ancienne copie par son menu de notification. Lancez normalement depuis le compte administrateur connecté et acceptez UAC. Le dossier protégé est fixe.
-3. Ouvrez le nouveau raccourci, choisissez le GPU et vérifiez le statut confirmé du contrôle. Réglez commandes et boutons. Les réglages sont locaux ; les désactivations enregistrées restent désactivées.
+2. Lancez normalement depuis le compte administrateur connecté et acceptez UAC. Si une instance propre à l’application fonctionne, choisissez d’autoriser ou non sa fermeture normale. L’installation attend la fin des composants de contrôle et des fichiers libres ; Non, refus, délai dépassé ou verrouillage bloquent la mise à jour. Le dossier protégé est fixe.
+3. Conservez le lancement après installation coché ou décochez-le. Sans contexte Medium adapté, ouvrez le raccourci normal du menu Démarrer. Choisissez le GPU et vérifiez le statut confirmé. Les réglages restent locaux et les désactivations enregistrées sont conservées. Ce lancement ponctuel n’active pas le démarrage avec Windows.
 
 L’application utilise les interfaces locales Windows/GPU. Aucun envoi de télémétrie, inférence cloud, mise à jour automatique ou téléchargement de modèle à l’exécution n’est prévu. CSV, historique et réglages restent locaux. Cela **ne garantit pas** l’isolation réseau du système ni le comportement des pilotes tiers, diagnostics Windows ou logiciels de synchronisation.
 

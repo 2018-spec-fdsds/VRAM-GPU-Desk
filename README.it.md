@@ -4,7 +4,7 @@
 
 **Monitoraggio locale della memoria GPU e controllo della temperatura per Windows x64.**
 
-Versione **1.11** · [Installer Windows](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+Versione **1.14** · [Installer Windows](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — tema grafite](images/dashboard-graphite.png)
 
@@ -15,6 +15,18 @@ Lo stato attivo è solo illustrativo. Questa opzione di emergenza è disattivata
 
 > **Controllo simultaneo della GPU:** Il controllo dei parametri di temperatura della GPU può entrare in conflitto con altri programmi che modificano contemporaneamente potenza, frequenze o velocità delle ventole, ad esempio MSI Afterburner. Usare un solo regolatore attivo per questi parametri. L’avviso riguarda le modifiche simultanee, non il monitoraggio passivo.
 
+
+## Novità della versione 1.14
+
+**1.12 – Graphite Studio:** L’interfaccia compatta mostra tutti i 17 controlli e dodici azioni principali a 1200×900, con sette colonne, sei righe di processi, quattro grafici e la cronologia Top 10. I nomi dei processi sono in grassetto, 14 pt, ad alto contrasto. I nuovi profili usano Graphite; una scelta esplicita salvata di System o Graphite resta invariata.
+
+**1.13 – isteresi visibile:** Viene mostrato lo scarto fisso di 4 °C. La spiegazione dinamica riporta esempi quali 32→36 °C e 35→39 °C. Questo non cambia l’algoritmo di raffreddamento.
+
+**1.14 – aggiornamento e avvio:** Se è attiva l’istanza JVM propria e verificata esattamente, l’installer chiede Sì/No/Annulla prima di chiuderla. Usa Windows Restart Manager con flag 0, senza terminazione forzata, e attende la fine normale dei componenti di controllo e lo sblocco dei file. No, rifiuto, timeout o file bloccati impediscono l’aggiornamento. L’installazione silenziosa non chiude app automaticamente.
+
+«Avvia VRAM GPU Desk dopo l’installazione» è **selezionato per impostazione predefinita** e può essere deselezionato. Un launcher fisso consente l’avvio normale con token Medium dello stesso utente. Se tale contesto manca, usa il normale collegamento nel menu Start. La scelta separata di avvio con Windows viene conservata.
+
+Sono stati verificati 107 controlli RM, 17 del launcher e nove casi d’integrazione Pascal, oltre ai 166 file del pacchetto, 88 classi Java e avvii del pacchetto tramite percorsi Unicode.
 
 ## Funzioni
 
@@ -73,8 +85,8 @@ Versioni del driver e hash DLL non sono limitati da una lista autorizzata. NVML 
 ## Installazione e privacy
 
 1. Scarica l’installer e confronta SHA-256 con [SHA256SUMS.txt](SHA256SUMS.txt).
-2. Esci dalla copia precedente dal menu nell’area di notifica. Avvia normalmente dall’account amministratore connesso e approva UAC. La cartella protetta è fissa.
-3. Apri il nuovo collegamento, seleziona GPU e verifica lo stato confermato. Configura controlli e pulsanti. Le impostazioni sono locali; le disattivazioni salvate restano tali.
+2. Avvia normalmente dall’account amministratore connesso e approva UAC. Se è attiva un’istanza propria, scegli se consentirne la chiusura normale. L’installer attende la fine dei componenti di controllo e lo sblocco dei file; No, rifiuto, timeout o blocchi impediscono l’aggiornamento. La cartella protetta è fissa.
+3. Lascia selezionato l’avvio dopo l’installazione oppure deselezionalo. Senza un contesto Medium adatto, apri il normale collegamento del menu Start. Seleziona GPU e verifica lo stato confermato. Le impostazioni restano locali e le disattivazioni salvate si conservano. Questo avvio non attiva l’esecuzione con Windows.
 
 L’app usa interfacce locali Windows/GPU. Non prevede invii di telemetria, inferenza cloud, aggiornamento automatico o download di modelli in esecuzione. CSV, cronologia e impostazioni restano locali. Questo **non** garantisce isolamento di rete del sistema né comportamento di driver esterni, diagnostica Windows o sincronizzazione.
 

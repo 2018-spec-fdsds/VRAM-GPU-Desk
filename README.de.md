@@ -4,7 +4,7 @@
 
 **Lokale GPU-Speicherüberwachung und Temperaturregelung für Windows x64.**
 
-Version **1.11** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.11-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.11-Installer.zip)
+Version **1.14** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
 
@@ -15,6 +15,18 @@ Der aktivierte Zustand dient nur der Illustration. Diese Notfalloption ist bei j
 
 > **Gleichzeitige GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter kann mit anderen Programmen kollidieren, die gleichzeitig Leistungsgrenzen, Taktraten oder Lüfterdrehzahlen ändern, beispielsweise MSI Afterburner. Verwenden Sie nur einen aktiven Regler für diese Einstellungen. Gemeint sind gleichzeitige Änderungen, nicht die passive Überwachung.
 
+
+## Neu in 1.14
+
+**1.12 – Graphite Studio:** Die kompakte Oberfläche zeigt bei 1200×900 sämtliche 17 Einstellungen und zwölf Hauptaktionen, sieben Tabellenspalten, sechs Prozesszeilen, vier Diagramme und die Top-10-Historie. Prozessnamen sind kontrastreich und 14 pt fett. Neue Profile verwenden Graphite; eine ausdrücklich gespeicherte Wahl von System oder Graphite bleibt erhalten.
+
+**1.13 – sichtbare Hysterese:** Der feste Abstand von 4 °C wird angezeigt. Die dynamische Erläuterung zeigt beispielsweise 32→36 °C und 35→39 °C. Der Kühlalgorithmus wurde dadurch nicht geändert.
+
+**1.14 – Aktualisierung und Start:** Läuft die eigene, genau geprüfte JVM-Instanz, fragt Setup mit Ja/Nein/Abbrechen nach dem Schließen. Windows Restart Manager wird mit Flags 0 verwendet, ohne erzwungenes Beenden. Setup wartet auf das reguläre Ende der Steuerkomponenten und freie Dateien. Nein, verweigerter Ausgang, Zeitüberschreitung oder gesperrte Dateien blockieren die Aktualisierung; eine stille Installation schließt nichts automatisch.
+
+„VRAM GPU Desk nach der Installation starten“ ist standardmäßig **angekreuzt** und abwählbar. Ein fester Starter erlaubt den normalen Start mit Medium-Token desselben Benutzers. Fehlt dieser Kontext, verwenden Sie anschließend die normale Startmenü-Verknüpfung. Die unabhängige Einstellung „Mit Windows starten“ bleibt erhalten.
+
+Verifiziert wurden 107 RM-Fixture-Prüfungen, 17 Starterprüfungen und neun Pascal-Integrationsfälle sowie die 166 Paketdateien, 88 Java-Klassen und Paketstarts über Unicode-Pfade.
 
 ## Funktionen
 
@@ -73,8 +85,8 @@ Treiberversionen und DLL-Hashes werden nicht per Zulassungsliste eingeschränkt.
 ## Installation und Datenschutz
 
 1. Installer herunterladen und SHA-256 mit [SHA256SUMS.txt](SHA256SUMS.txt) vergleichen.
-2. Vorige Kopie über das Infobereichsmenü beenden. Setup normal vom angemeldeten Administratorkonto starten und UAC bestätigen. Der geschützte Installationspfad ist fest.
-3. Neue Verknüpfung öffnen, GPU wählen und bestätigten Reglerstatus prüfen. Regler und Schnelltasten konfigurieren. Einstellungen bleiben lokal; gespeichertes AUS bleibt AUS.
+2. Setup normal vom angemeldeten Administratorkonto starten und UAC bestätigen. Falls eine eigene Instanz läuft, entscheiden Sie über die angebotene normale Beendigung. Setup wartet auf das Ende der Steuerkomponenten und freie Dateien; bei Nein, Ablehnung, Zeitüberschreitung oder Sperren bleibt die Aktualisierung blockiert. Der geschützte Installationspfad ist fest.
+3. Lassen Sie den Start nach der Installation angekreuzt oder wählen Sie ihn ab. Ohne geeigneten Medium-Kontext öffnen Sie die normale Startmenü-Verknüpfung. GPU wählen und bestätigten Reglerstatus prüfen. Einstellungen bleiben lokal; gespeichertes AUS bleibt AUS. Der Windows-Autostart wird durch diesen einmaligen Start nicht eingeschaltet.
 
 Die Anwendung verwendet lokale Windows-/GPU-Schnittstellen. Keine vorgesehenen Telemetrie-Uploads, Cloud-Inferenz, automatische Aktualisierung oder Laufzeit-Modell-Downloads. CSV, Verlauf und Einstellungen bleiben lokal. Dies garantiert **keine** systemweite Netzwerksperre und nichts über Drittanbietertreiber, Windows-Diagnose oder Synchronisierungssoftware.
 
