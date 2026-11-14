@@ -4,6 +4,15 @@
 
 **Surveillance locale de mémoire et régulation thermique des GPU NVIDIA pour Windows x64. NVIDIA uniquement ; les GPU AMD et Intel ne sont pas pris en charge.**
 
+## Fonctionnalités principales
+
+- Surveillance locale de la VRAM, de la charge et de la température des GPU NVIDIA avec graphiques en direct.
+- Mémoire GPU par processus, recherche, tri et export CSV en UTF-8.
+- Régulation de la température et refroidissement au repos.
+- Quatre boutons configurables en un clic liés à des instances précises de processus ; la fermeture d’urgence facultative est DÉSACTIVÉE à chaque lancement.
+- Historique VRAM sur 24 heures et classement des 10 principales applications sur 30 jours.
+- 12 langues, deux thèmes, zone de notification et démarrage facultatif avec Windows.
+
 Version **1.14** · [Installation Windows](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — thème graphite](images/dashboard-graphite.png)

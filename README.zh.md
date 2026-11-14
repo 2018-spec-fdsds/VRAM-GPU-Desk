@@ -4,6 +4,15 @@
 
 **适用于 Windows x64 的本地 NVIDIA GPU 显存监控与温度控制工具。仅支持 NVIDIA，不支持 AMD 或 Intel GPU。**
 
+## 主要功能
+
+- 本地监控 NVIDIA GPU 的显存、负载和温度，并显示实时曲线。
+- 查看各进程的 GPU 内存，支持搜索、排序和 UTF-8 CSV 导出。
+- 温度控制与空闲散热。
+- 四个可配置的一键按钮，绑定到确切的进程实例；紧急终止功能须单独启用，每次启动时均为关闭状态。
+- 24 小时显存历史记录与 30 天应用前十排行榜。
+- 12 种语言、两种主题、系统托盘和可选的 Windows 开机启动。
+
 [下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — 石墨深色主题](images/dashboard-graphite.png)
