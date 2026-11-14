@@ -1,9 +1,9 @@
 # Distribution
 
-Current version: **1.14**, Windows x64.
+Current version: **1.15**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 
@@ -18,6 +18,14 @@ If a verified target copy is running, setup asks whether to close it normally. W
 The final **Launch VRAM GPU Desk** checkbox is checked by default and can be cleared. A fixed native gate verifies normal rights and the same interactive user before starting the app. If the required normal context is unavailable, launch it with the normal Start menu shortcut. Silent setup neither closes a running application automatically nor launches the app afterward. This checkbox preserves the separate saved Windows startup choice.
 
 GPU temperature control requires one UAC confirmation when installing the control component. Subsequent enabling of temperature control and cooling uses that installed channel without further UAC prompts. Monitoring itself does not require UAC.
+
+## NVIDIA panels and recovery
+
+NVIDIA GPUs only; AMD and Intel controls are unsupported. Model/driver capabilities still determine available controls. Two supported NVIDIA GPUs use independent panels and settings; control of the second NVIDIA GPU is experimental. One NVIDIA plus AMD/Intel uses one NVIDIA panel. The process/history GPU filter does not retarget either controller.
+
+Control loss shows a warning and manual Retry. Force control recovery is OFF by default, saved per GPU, and uses 5/10/30/60-second backoff after confirmed teardown and fresh same-GPU data. It retains native safety checks and cannot provide exclusive control against MSI Afterburner. Both emergency options remain OFF at each launch. See the feature descriptions in the [English README](README.md).
+
+The current package contains 167 manifest files and 93 Java classes. One-GPU minimum is 1200×900; two panels require 1600×950.
 
 ## Package integrity
 

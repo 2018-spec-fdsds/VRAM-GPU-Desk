@@ -12,12 +12,14 @@
 - Vier konfigurierbare Ein-Klick-Schaltflächen für exakt gebundene Prozessinstanzen; die optionale Notfallbeendigung ist bei jedem Start AUS.
 - 24-Stunden-VRAM-Verlauf und die Top 10 der Anwendungen über 30 Tage.
 - 12 Sprachen, zwei Designs, Infobereich und optionaler Start mit Windows.
+- Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
+- Warnung bei Steuerungsverlust und manuelle Wiederholung; erzwungene Wiederherstellung ist standardmäßig AUS.
 
-Version **1.14** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
+Version **1.15** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
 
-Der aktivierte Zustand dient nur der Illustration. Diese Notfalloption ist bei jedem Start AUS.
+Synthetische Demonstrationsdaten und simulierte Reglerzustände. Beide Notfalloptionen sind bei jedem Start AUS; erzwungene Wiederherstellung ist standardmäßig AUS.
 
 
 > **GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter erfordert eine einmalige UAC-Bestätigung bei der Installation der Steuerungskomponente. Danach lassen sich Temperatursteuerung und Kühlung ohne weitere UAC-Abfragen einschalten. Die reine Überwachung benötigt kein UAC.
@@ -25,9 +27,17 @@ Der aktivierte Zustand dient nur der Illustration. Diese Notfalloption ist bei j
 > **Gleichzeitige GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter kann mit anderen Programmen kollidieren, die gleichzeitig Leistungsgrenzen, Taktraten oder Lüfterdrehzahlen ändern, beispielsweise MSI Afterburner. Verwenden Sie nur einen aktiven Regler für diese Einstellungen. Gemeint sind gleichzeitige Änderungen, nicht die passive Überwachung.
 
 
-## Geplante Unterstützung für zwei GPUs — experimentell
+## Neu in 1.15: unabhängige NVIDIA-Bereiche und Wiederherstellung der Steuerung
 
-Für 1.15 in Entwicklung: getrennte Bereiche für zwei unterstützte NVIDIA-GPUs mit unabhängigen Einstellungen und Messwerten. Die Steuerung der zweiten NVIDIA-GPU ist experimentell. Bei unterschiedlichen GPU-Herstellern wird ein NVIDIA-Bereich verwendet. Die Downloadlinks auf dieser Seite verweisen weiterhin auf die veröffentlichte Version 1.14; dieser Ausblick kündigt keine Veröffentlichung von 1.15 an.
+Zwei unterstützte NVIDIA-GPUs erhalten eigene Messwerte, jeweils vier Diagramme und unabhängige Einstellungen. **Die Steuerung der zweiten NVIDIA-GPU ist experimentell.** Eine NVIDIA-GPU zusammen mit AMD/Intel verwendet einen NVIDIA-Bereich. Die GPU-Auswahl filtert die gemeinsame Prozessliste und den Verlauf; sie bindet keinen Regler um.
+
+**Vier kompakte Schnellaktionstasten bleiben in einer horizontalen Reihe.** Das gemeinsame Menü `⋮` bietet für jeden Platz Zuweisen/Neu zuweisen, Umbenennen und Zurücksetzen, auch bei verschwundenen Zielen. Eigene Namen lassen sich ohne neue Bindung ändern; Beschriftungen passen sich der Breite an, der Tooltip enthält den vollständigen Namen. PID, Erstellungszeit und Pfad werden weiterhin exakt geprüft.
+
+**Bei Steuerungsverlust erscheinen eine Warnung und eine manuelle Wiederholen-Aktion. Erzwungene Wiederherstellung ist standardmäßig AUS und wird je GPU gespeichert.** Aktiviert folgen Versuche nach 5/10/30/60 Sekunden, bestätigtem Ende des alten Clients und frischen Daten derselben GPU. Native Lease-, Besitz-, Rücklese- und Sicherheitsprüfungen bleiben verpflichtend. MSI Afterburner oder andere Regler lassen sich damit nicht exklusiv sperren. Gespeichertes manuelles AUS bleibt erhalten; beide Notfalloptionen sind bei jedem Start AUS.
+
+Für 1.15 geprüft: **2262 UI-Prüfungen**, **215 native Prüfungen**, **61 Client-Lebenszyklus-/I/O-Prüfungen**, **48 Wiederherstellungsprüfungen**, **167 Paketdateien** und **93 Java-Klassen**. Minimum: eine GPU **1200×900**, zwei Bereiche **1600×950**. Das Beenden mit Zustimmung im Installer und der standardmäßig aktivierte abschließende Start aus 1.14 bleiben erhalten.
+
+![NVIDIA GPU panels — demonstration](images/dual-gpu-graphite.png)
 
 ## Neu in 1.14
 

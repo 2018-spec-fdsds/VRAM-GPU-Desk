@@ -12,12 +12,14 @@
 - Bốn nút một lần nhấp có thể cấu hình, gắn với đúng phiên bản tiến trình; tính năng kết thúc khẩn cấp tùy chọn luôn TẮT khi khởi động ứng dụng.
 - Lịch sử VRAM trong 24 giờ và 10 ứng dụng đứng đầu trong 30 ngày.
 - 12 ngôn ngữ, hai giao diện, khay hệ thống và tùy chọn khởi động cùng Windows.
+- Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
+- Cảnh báo mất điều khiển và thử lại thủ công; khôi phục cưỡng bức mặc định TẮT.
 
-Phiên bản **1.14** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
+Phiên bản **1.15** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
 
-Trạng thái bật chỉ để minh họa. Tùy chọn khẩn cấp này tắt ở mỗi lần khởi động.
+Dữ liệu minh họa tổng hợp và trạng thái điều khiển mô phỏng. Cả hai tùy chọn khẩn cấp đều TẮT mỗi lần mở; khôi phục cưỡng bức mặc định TẮT.
 
 
 > **Điều khiển GPU:** Điều khiển các tham số nhiệt độ GPU cần xác nhận UAC một lần khi cài thành phần điều khiển. Sau đó, bật điều khiển nhiệt độ và làm mát không yêu cầu UAC lần nữa. Chỉ giám sát thì không cần UAC.
@@ -25,9 +27,17 @@ Trạng thái bật chỉ để minh họa. Tùy chọn khẩn cấp này tắt 
 > **Điều khiển GPU đồng thời:** Điều khiển các tham số nhiệt độ GPU có thể xung đột với chương trình khác đồng thời thay đổi công suất, xung nhịp hoặc tốc độ quạt, chẳng hạn MSI Afterburner. Chỉ sử dụng một bộ điều khiển đang hoạt động cho các tham số này. Cảnh báo này nói về việc thay đổi cài đặt đồng thời, không phải giám sát thụ động.
 
 
-## Hỗ trợ hai GPU theo kế hoạch — thử nghiệm
+## Điểm mới trong 1.15: bảng NVIDIA độc lập và khôi phục điều khiển
 
-Đang phát triển cho 1.15: hai bảng riêng cho hai GPU NVIDIA được hỗ trợ, với thiết lập và chỉ số độc lập. Điều khiển GPU NVIDIA thứ hai là tính năng thử nghiệm. Cấu hình gồm nhiều hãng dùng một bảng NVIDIA. Các liên kết tải xuống trên trang này vẫn trỏ đến bản 1.14 đã phát hành; lộ trình này không phải thông báo phát hành 1.15.
+Hai GPU NVIDIA được hỗ trợ có số liệu riêng, mỗi GPU bốn biểu đồ và thiết lập điều khiển độc lập. **Điều khiển GPU NVIDIA thứ hai là tính năng thử nghiệm.** Một NVIDIA đi cùng AMD/Intel dùng một bảng NVIDIA. Bộ chọn GPU lọc danh sách tiến trình và lịch sử dùng chung; không đổi GPU mà bộ điều khiển đã gắn.
+
+**Bốn nút nhanh gọn vẫn nằm trên một hàng ngang.** Menu `⋮` chung cho phép Gán/Gán lại, Đổi tên và Xóa từng ô, kể cả khi mục tiêu đã mất. Có thể đổi tên riêng mà không gắn lại; chữ vừa chiều rộng và chú giải giữ tên đầy đủ. Vẫn kiểm tra chính xác PID, thời điểm tạo và đường dẫn EXE.
+
+**Khi mất điều khiển, ứng dụng hiện cảnh báo và thao tác thử lại thủ công. Khôi phục cưỡng bức mặc định TẮT và được lưu riêng cho từng GPU.** Khi bật, ứng dụng thử lại theo nhịp 5/10/30/60 giây, yêu cầu xác nhận máy khách cũ đã kết thúc và số liệu mới từ cùng GPU. Các kiểm tra native về lease, quyền sở hữu, đọc lại và an toàn vẫn bắt buộc. Không thể độc quyền chặn MSI Afterburner hay bộ điều khiển khác. Lựa chọn TẮT thủ công đã lưu được giữ lại; cả hai tùy chọn khẩn cấp đều TẮT mỗi lần mở.
+
+Đã kiểm tra cho 1.15: **2262 kiểm tra UI**, **215 native**, **61 vòng đời/I/O máy khách**, **48 khôi phục**, **167 tệp gói** và **93 lớp Java**. Kích thước tối thiểu: một GPU **1200×900**, hai bảng **1600×950**. Giữ quy trình cài đặt 1.14 đóng bản đang chạy khi được đồng ý và tùy chọn mở ứng dụng sau cài đặt được đánh dấu sẵn.
+
+![NVIDIA GPU panels — demonstration](images/dual-gpu-graphite.png)
 
 ## Điểm mới trong 1.14
 

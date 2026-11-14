@@ -12,12 +12,14 @@
 - Four configurable one-click buttons bound to exact process instances; optional emergency termination is OFF at every launch.
 - 24-hour VRAM history and a 30-day top 10 of applications.
 - 12 languages, two themes, system tray and optional Windows startup.
+- Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
+- Control-loss warning and manual retry; optional forced recovery is OFF by default.
 
-Version **1.14** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
+Version **1.15** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
 
 ![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
 
-The armed state is shown only as an illustration. This emergency option is OFF at every launch.
+Synthetic demonstration data and simulated controller states. Both emergency options are OFF at every launch; forced recovery is OFF by default.
 
 
 > **GPU control:** GPU temperature parameter control requires one UAC confirmation when installing the control component. Subsequent enabling of temperature control and cooling proceeds without further UAC prompts. Monitoring itself does not require UAC.
@@ -26,9 +28,17 @@ The armed state is shown only as an illustration. This emergency option is OFF a
 
 
 
-## Planned dual-GPU support — experimental
+## New in 1.15: independent NVIDIA panels and control recovery
 
-Work in progress for 1.15: separate panels for two supported NVIDIA GPUs, with independent settings and metrics. Control of the second NVIDIA GPU is experimental. A mixed-vendor configuration uses one NVIDIA panel. The download links on this page still point to released 1.14; this roadmap does not announce a 1.15 release.
+Two supported NVIDIA GPUs have separate metrics, four graphs each and independent control settings. **Second NVIDIA GPU control is experimental.** One NVIDIA GPU with AMD/Intel uses one NVIDIA panel. The GPU selector filters the shared process list and history; it does not retarget either controller.
+
+**Four compact quick buttons stay in one horizontal row.** The single `⋮` menu offers Assign/Reassign, Rename and Clear for every slot, including missing targets. A custom name can be edited without rebinding; captions fit the available width and the tooltip keeps the full name. Exact PID, creation-time and path checks remain in force.
+
+**Control loss produces a warning and a manual Retry action. Force control recovery is OFF by default, saved separately for each GPU.** When enabled, retries use 5/10/30/60-second backoff, confirmed teardown and fresh readings from the same GPU. Native lease, ownership, readback and safety checks remain mandatory. This cannot exclusively block MSI Afterburner or another controller. Saved manual OFF choices are preserved; both emergency options remain OFF at every launch.
+
+Verified for 1.15: **2262 UI checks**, **215 native checks**, **61 client lifecycle/I/O checks**, **48 recovery-coordinator checks**, **167 package files** and **93 Java classes**. One-GPU minimum: **1200×900**; two-panel minimum: **1600×950**. The 1.14 consent-based installer shutdown and checked-by-default final launch option are retained.
+
+![NVIDIA GPU panels — demonstration](images/dual-gpu-graphite.png)
 
 ## New in 1.14: compact workspace and easier updates
 

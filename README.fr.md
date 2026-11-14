@@ -12,12 +12,14 @@
 - Quatre boutons configurables en un clic liés à des instances précises de processus ; la fermeture d’urgence facultative est DÉSACTIVÉE à chaque lancement.
 - Historique VRAM sur 24 heures et classement des 10 principales applications sur 30 jours.
 - 12 langues, deux thèmes, zone de notification et démarrage facultatif avec Windows.
+- Deux panneaux NVIDIA avec des réglages indépendants ; le contrôle du second GPU est expérimental.
+- Avertissement de perte de contrôle et nouvelle tentative manuelle ; récupération forcée DÉSACTIVÉE par défaut.
 
-Version **1.14** · [Installation Windows](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
+Version **1.15** · [Installation Windows](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
 
 ![VRAM GPU Desk — thème graphite](images/dashboard-graphite.png)
 
-L’état activé est uniquement illustratif. Cette option d’urgence est désactivée à chaque lancement.
+Données synthétiques de démonstration et états simulés des régulateurs. Les deux options d’urgence sont DÉSACTIVÉES à chaque lancement ; la récupération forcée est DÉSACTIVÉE par défaut.
 
 
 > **Contrôle du GPU:** Le contrôle des paramètres de température du GPU nécessite une confirmation UAC lors de l’installation du composant de contrôle. L’activation ultérieure du contrôle de température et du refroidissement ne demande plus de confirmation UAC. La surveillance seule ne nécessite pas d’UAC.
@@ -25,9 +27,17 @@ L’état activé est uniquement illustratif. Cette option d’urgence est désa
 > **Contrôle simultané du GPU:** Le contrôle des paramètres de température du GPU peut entrer en conflit avec des programmes qui modifient simultanément la puissance, les fréquences ou la vitesse des ventilateurs, par exemple MSI Afterburner. Utilisez un seul régulateur actif pour ces paramètres. Cet avertissement concerne les modifications simultanées, pas la surveillance passive.
 
 
-## Prise en charge prévue de deux GPU — expérimentale
+## Nouveautés de 1.15 : panneaux NVIDIA indépendants et récupération du contrôle
 
-En développement pour 1.15 : des panneaux séparés pour deux GPU NVIDIA pris en charge, avec des réglages et des mesures indépendants. Le contrôle du second GPU NVIDIA est expérimental. Une configuration combinant plusieurs fabricants utilise un seul panneau NVIDIA. Les liens de téléchargement de cette page pointent toujours vers la version publiée 1.14 ; cette feuille de route n’annonce pas la sortie de 1.15.
+Deux GPU NVIDIA pris en charge disposent de mesures propres, de quatre graphiques chacun et de réglages indépendants. **Le contrôle du second GPU NVIDIA est expérimental.** Une NVIDIA associée à AMD/Intel utilise un panneau NVIDIA. Le sélecteur GPU filtre la liste commune des processus et leur historique ; il ne réaffecte aucun régulateur.
+
+**Les quatre boutons rapides compacts restent sur une ligne horizontale.** Le menu commun `⋮` permet Affecter/Réaffecter, Renommer et Effacer pour chaque emplacement, même si la cible a disparu. Un nom personnalisé se modifie sans nouvelle liaison ; le texte tient dans la largeur disponible et le nom complet reste dans l’infobulle. Les vérifications exactes du PID, de la date de création et du chemin sont conservées.
+
+**Une perte de contrôle affiche un avertissement et une action manuelle de nouvelle tentative. La récupération forcée est DÉSACTIVÉE par défaut et enregistrée par GPU.** Une fois activée, elle applique des délais de 5/10/30/60 secondes, exige la fin confirmée de l’ancien client et des mesures récentes du même GPU. Les contrôles natifs de lease, de propriété, de relecture et de sécurité restent obligatoires. Elle ne peut pas bloquer exclusivement MSI Afterburner ou un autre régulateur. Un arrêt manuel enregistré est préservé ; les deux options d’urgence sont DÉSACTIVÉES à chaque lancement.
+
+Vérifié pour 1.15 : **2262 contrôles UI**, **215 natifs**, **61 de cycle de vie/I/O des clients**, **48 de récupération**, **167 fichiers** et **93 classes Java**. Minimum : un GPU **1200×900**, deux panneaux **1600×950**. Le consentement à la fermeture par l’installateur et le lancement final coché par défaut de 1.14 sont conservés.
+
+![NVIDIA GPU panels — demonstration](images/dual-gpu-graphite.png)
 
 ## Nouveautés de la version 1.14
 
