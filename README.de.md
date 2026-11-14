@@ -2,7 +2,7 @@
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
-**Lokale GPU-Speicherüberwachung und Temperaturregelung für Windows x64.**
+**Lokale Speicherüberwachung und Temperaturregelung für NVIDIA-GPUs unter Windows x64. Nur NVIDIA; AMD- und Intel-GPUs werden nicht unterstützt.**
 
 Version **1.14** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
@@ -15,6 +15,10 @@ Der aktivierte Zustand dient nur der Illustration. Diese Notfalloption ist bei j
 
 > **Gleichzeitige GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter kann mit anderen Programmen kollidieren, die gleichzeitig Leistungsgrenzen, Taktraten oder Lüfterdrehzahlen ändern, beispielsweise MSI Afterburner. Verwenden Sie nur einen aktiven Regler für diese Einstellungen. Gemeint sind gleichzeitige Änderungen, nicht die passive Überwachung.
 
+
+## Geplante Unterstützung für zwei GPUs — experimentell
+
+Für 1.15 in Entwicklung: getrennte Bereiche für zwei unterstützte NVIDIA-GPUs mit unabhängigen Einstellungen und Messwerten. Die Steuerung der zweiten NVIDIA-GPU ist experimentell. Bei unterschiedlichen GPU-Herstellern wird ein NVIDIA-Bereich verwendet. Die Downloadlinks auf dieser Seite verweisen weiterhin auf die veröffentlichte Version 1.14; dieser Ausblick kündigt keine Veröffentlichung von 1.15 an.
 
 ## Neu in 1.14
 

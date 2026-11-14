@@ -2,7 +2,7 @@
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
-**Windows x64용 로컬 GPU 메모리 모니터링 및 온도 제어 도구입니다.**
+**Windows x64용 로컬 NVIDIA GPU 메모리 모니터링 및 온도 제어 도구입니다. NVIDIA만 지원하며 AMD 및 Intel GPU는 지원하지 않습니다.**
 
 [Windows 설치 프로그램 다운로드](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [설치 프로그램 ZIP](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
@@ -16,6 +16,10 @@
 > **동시 GPU 제어:** GPU 온도 매개변수 제어는 전력, 클럭 또는 팬 속도를 동시에 변경하는 다른 프로그램(예: MSI Afterburner)과 충돌할 수 있습니다. 이 설정에는 하나의 활성 제어기만 사용하세요. 이 경고는 설정의 동시 변경에 관한 것이며 수동 모니터링은 해당하지 않습니다.
 
 
+
+## 예정된 듀얼 GPU 지원 — 실험 기능
+
+1.15용으로 개발 중: 지원되는 NVIDIA GPU 두 대에 독립적인 설정과 지표를 갖춘 별도 패널을 제공합니다. 두 번째 NVIDIA GPU 제어는 실험 기능입니다. 제조사가 혼합된 구성에서는 NVIDIA 패널 하나를 사용합니다. 이 페이지의 다운로드 링크는 계속 출시된 1.14를 가리키며, 이 계획은 1.15 출시를 알리는 공지가 아닙니다.
 
 ## 1.14의 새 기능: 간결한 작업 공간과 쉬운 업데이트
 

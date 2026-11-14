@@ -2,7 +2,7 @@
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
-**适用于 Windows x64 的本地 GPU 显存监控与温度控制工具。**
+**适用于 Windows x64 的本地 NVIDIA GPU 显存监控与温度控制工具。仅支持 NVIDIA，不支持 AMD 或 Intel GPU。**
 
 [下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
@@ -16,6 +16,10 @@
 > **同时控制 GPU:** GPU 温度参数控制可能与同时更改功率、频率或风扇转速的其他程序发生冲突，例如 MSI Afterburner。请仅使用一个活动控制器来调节这些参数。此警告针对同时修改设置，不针对被动监控。
 
 
+
+## 计划中的双 GPU 支持——实验性功能
+
+正在为 1.15 开发：为两块受支持的 NVIDIA GPU 提供独立面板、设置与指标。第二块 NVIDIA GPU 的控制功能为实验性功能。混合厂商配置使用一个 NVIDIA 面板。本页下载链接仍指向已发布的 1.14；此开发计划并不表示 1.15 已发布。
 
 ## 1.14 新增：紧凑界面与便捷更新
 
