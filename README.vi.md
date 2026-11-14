@@ -4,6 +4,15 @@
 
 **Theo dõi bộ nhớ và điều khiển nhiệt độ GPU NVIDIA cục bộ cho Windows x64. Chỉ hỗ trợ NVIDIA; không hỗ trợ GPU AMD hoặc Intel.**
 
+## Tính năng chính
+
+- Theo dõi VRAM, tải và nhiệt độ GPU NVIDIA cục bộ bằng biểu đồ trực tiếp.
+- Bộ nhớ GPU theo tiến trình, tìm kiếm, sắp xếp và xuất CSV UTF-8.
+- Điều khiển nhiệt độ và làm mát khi nhàn rỗi.
+- Bốn nút một lần nhấp có thể cấu hình, gắn với đúng phiên bản tiến trình; tính năng kết thúc khẩn cấp tùy chọn luôn TẮT khi khởi động ứng dụng.
+- Lịch sử VRAM trong 24 giờ và 10 ứng dụng đứng đầu trong 30 ngày.
+- 12 ngôn ngữ, hai giao diện, khay hệ thống và tùy chọn khởi động cùng Windows.
+
 Phiên bản **1.14** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)

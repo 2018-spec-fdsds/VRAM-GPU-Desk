@@ -4,6 +4,15 @@
 
 **Windows x64용 로컬 NVIDIA GPU 메모리 모니터링 및 온도 제어 도구입니다. NVIDIA만 지원하며 AMD 및 Intel GPU는 지원하지 않습니다.**
 
+## 주요 기능
+
+- 실시간 그래프로 NVIDIA GPU의 VRAM, 부하 및 온도를 로컬에서 모니터링합니다.
+- 프로세스별 GPU 메모리, 검색, 정렬 및 UTF-8 CSV 내보내기를 지원합니다.
+- 온도 제어와 유휴 냉각을 제공합니다.
+- 정확한 프로세스 인스턴스에 연결되는 설정 가능한 원클릭 버튼 4개를 제공합니다. 선택형 긴급 종료 기능은 매번 시작할 때 꺼져 있습니다.
+- 24시간 VRAM 기록과 30일간의 상위 10개 앱을 확인합니다.
+- 12개 언어, 두 가지 테마, 시스템 트레이 및 선택형 Windows 시작 실행을 지원합니다.
+
 [Windows 설치 프로그램 다운로드](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [설치 프로그램 ZIP](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
 ![VRAM GPU Desk — 그래파이트 테마](images/dashboard-graphite.png)
