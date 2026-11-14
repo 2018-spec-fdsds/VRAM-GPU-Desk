@@ -13,13 +13,13 @@
 - 24-Stunden-VRAM-Verlauf und die Top 10 der Anwendungen über 30 Tage.
 - 12 Sprachen, zwei Designs, Infobereich und optionaler Start mit Windows.
 - Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
-- Warnung bei Steuerungsverlust und manuelle Wiederholung; erzwungene Wiederherstellung ist standardmäßig AUS.
+- Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
 
-Version **1.15** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
+Version **1.16** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
 
-Synthetische Demonstrationsdaten und simulierte Reglerzustände. Beide Notfalloptionen sind bei jedem Start AUS; erzwungene Wiederherstellung ist standardmäßig AUS.
+Synthetische Demonstrationsdaten und simulierte Reglerzustände. Beide Notfalloptionen sind bei jedem Start AUS. Wiederherstellung ist für neue Einstellungen EIN; gespeichertes AUS bleibt erhalten.
 
 
 > **GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter erfordert eine einmalige UAC-Bestätigung bei der Installation der Steuerungskomponente. Danach lassen sich Temperatursteuerung und Kühlung ohne weitere UAC-Abfragen einschalten. Die reine Überwachung benötigt kein UAC.
@@ -27,13 +27,21 @@ Synthetische Demonstrationsdaten und simulierte Reglerzustände. Beide Notfallop
 > **Gleichzeitige GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter kann mit anderen Programmen kollidieren, die gleichzeitig Leistungsgrenzen, Taktraten oder Lüfterdrehzahlen ändern, beispielsweise MSI Afterburner. Verwenden Sie nur einen aktiven Regler für diese Einstellungen. Gemeint sind gleichzeitige Änderungen, nicht die passive Überwachung.
 
 
+## Neu in 1.16: zuverlässigere Wiederherstellung und wählbares Minimieren
+
+**Die Wiederherstellung ist bei neuen oder fehlenden Einstellungen eingeschaltet.** Die Wahl wird je GPU gespeichert; ein ausdrücklich gespeichertes AUS bleibt erhalten. Erneute Verbindungen betreffen dieselbe Karte und erfordern Wartezeiten sowie bestätigte Bereinigung. Eine exklusive Sperre gegen MSI Afterburner oder andere Regler entsteht dadurch nicht.
+
+**Das Minimierverhalten ist wählbar.** „In den Infobereich minimieren“ ist standardmäßig eingeschaltet. Ausgeschaltet wird das Fenster wie üblich in die Windows-Taskleiste minimiert. Die Wahl wird gespeichert; der Windows-Autostart bleibt eine unabhängige Einstellung.
+
+**Zuverlässigere Kommunikation und eindeutigere Anzeige.** Die Java-Anfragefrist beträgt jetzt 7 Sekunden und berücksichtigt das 6-Sekunden-Antwortfenster des nativen Kanals mit Reserve. Der native Watchdog zählt erst nach erfolgreicher GPU-Übernahme; seine 6-Sekunden-Schutzgrenze bleibt bestehen. Fehler und alte Messwerte gelten nicht länger als frisch: veraltete Drehzahlen werden ausgeblendet, Verbindungszeitüberschreitungen von bestätigten externen Änderungen unterschieden. Ein begrenztes lokales Protokoll speichert Fehler und Angaben zu langsamen Antworten ohne Verbindungsgeheimnisse.
+
 ## Neu in 1.15: unabhängige NVIDIA-Bereiche und Wiederherstellung der Steuerung
 
 Zwei unterstützte NVIDIA-GPUs erhalten eigene Messwerte, jeweils vier Diagramme und unabhängige Einstellungen. **Die Steuerung der zweiten NVIDIA-GPU ist experimentell.** Eine NVIDIA-GPU zusammen mit AMD/Intel verwendet einen NVIDIA-Bereich. Die GPU-Auswahl filtert die gemeinsame Prozessliste und den Verlauf; sie bindet keinen Regler um.
 
 **Vier kompakte Schnellaktionstasten bleiben in einer horizontalen Reihe.** Das gemeinsame Menü `⋮` bietet für jeden Platz Zuweisen/Neu zuweisen, Umbenennen und Zurücksetzen, auch bei verschwundenen Zielen. Eigene Namen lassen sich ohne neue Bindung ändern; Beschriftungen passen sich der Breite an, der Tooltip enthält den vollständigen Namen. PID, Erstellungszeit und Pfad werden weiterhin exakt geprüft.
 
-**Bei Steuerungsverlust erscheinen eine Warnung und eine manuelle Wiederholen-Aktion. Erzwungene Wiederherstellung ist standardmäßig AUS und wird je GPU gespeichert.** Aktiviert folgen Versuche nach 5/10/30/60 Sekunden, bestätigtem Ende des alten Clients und frischen Daten derselben GPU. Native Lease-, Besitz-, Rücklese- und Sicherheitsprüfungen bleiben verpflichtend. MSI Afterburner oder andere Regler lassen sich damit nicht exklusiv sperren. Gespeichertes manuelles AUS bleibt erhalten; beide Notfalloptionen sind bei jedem Start AUS.
+**Bei Steuerungsverlust erscheinen eine Warnung und eine manuelle Wiederholen-Aktion. In 1.16 ist die Wiederherstellung bei neuen oder fehlenden Einstellungen EIN und wird je GPU gespeichert; gespeichertes AUS bleibt erhalten.** Versuche folgen nach 5/10/30/60 Sekunden und erfordern bestätigte Bereinigung sowie frische Daten derselben GPU. Native Lease-, Besitz-, Rücklese- und Sicherheitsprüfungen bleiben verpflichtend. MSI Afterburner oder andere Regler lassen sich nicht exklusiv sperren. Beide Notfalloptionen sind bei jedem Start AUS.
 
 Für 1.15 geprüft: **2262 UI-Prüfungen**, **215 native Prüfungen**, **61 Client-Lebenszyklus-/I/O-Prüfungen**, **48 Wiederherstellungsprüfungen**, **167 Paketdateien** und **93 Java-Klassen**. Minimum: eine GPU **1200×900**, zwei Bereiche **1600×950**. Das Beenden mit Zustimmung im Installer und der standardmäßig aktivierte abschließende Start aus 1.14 bleiben erhalten.
 
@@ -58,7 +66,7 @@ Verifiziert wurden 107 RM-Fixture-Prüfungen, 17 Starterprüfungen und neun Pasc
 - Zeigt die zehn größten Anwendungen und „Andere“ als normalisierte Anteile der erfassten Prozessspeicherwerte der letzten 30 Tage. Die Summe beträgt 100 %. Dies ist eine historische Messwertverteilung, keine addierbare Aufteilung des physischen VRAM.
 - Zeigt den Anteil der gültig beobachteten Zeit der letzten 24 Stunden mit mehr als 50 % physischer VRAM-Belegung. Überwachungslücken zählen nicht mit.
 - Exportiert UTF-8-CSV-Berichte in einen gewählten lokalen Pfad.
-- Minimiert in den Infobereich, stellt bei erneutem Start das bestehende Fenster wieder her und unterstützt optionalen Windows-Autostart.
+- Bietet die gespeicherte Wahl zwischen Minimieren in den Infobereich und in die Windows-Taskleiste, stellt beim erneuten Start das vorhandene Fenster wieder her und unterstützt optionalen Windows-Autostart.
 - Bietet System- und dunkles Graphitdesign, zwölf Oberflächensprachen und Aktualisierung alle 1–5 Sekunden, standardmäßig 2 Sekunden.
 - Optionale sanfte Temperaturregelung über unterstützte Leistungs-/Kerntaktgrenzen. Der Schutz arbeitet unabhängig vom Aktualisierungsintervall der Oberfläche.
 - Leerlaufkühlung, Lüfterdrehzahlen und animierte Symbole. Neue Einstellungen fordern Temperaturregelung und Leerlaufkühlung eingeschaltet an; gespeichertes manuelles AUS bleibt erhalten. Aktive Regelung wird erst nach bestätigter Verbindung angezeigt.

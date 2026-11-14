@@ -13,13 +13,13 @@
 - 24-hour VRAM history and a 30-day top 10 of applications.
 - 12 languages, two themes, system tray and optional Windows startup.
 - Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
-- Control-loss warning and manual retry; optional forced recovery is OFF by default.
+- Control-loss warning and manual retry; forced recovery is ON for new settings, with saved OFF choices preserved.
 
-Version **1.15** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
+Version **1.16** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
 
 ![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
 
-Synthetic demonstration data and simulated controller states. Both emergency options are OFF at every launch; forced recovery is OFF by default.
+Synthetic demonstration data and simulated controller states. Both emergency options are OFF at every launch. Recovery is ON for new settings; saved OFF choices are preserved.
 
 
 > **GPU control:** GPU temperature parameter control requires one UAC confirmation when installing the control component. Subsequent enabling of temperature control and cooling proceeds without further UAC prompts. Monitoring itself does not require UAC.
@@ -28,13 +28,21 @@ Synthetic demonstration data and simulated controller states. Both emergency opt
 
 
 
+## New in 1.16: reliable control recovery and optional tray minimization
+
+**Control recovery starts enabled for new or missing settings.** Each GPU keeps its own choice; an explicitly saved OFF remains OFF. Recovery reconnects to the same card with backoff and confirmed cleanup. It does not grant exclusive control over MSI Afterburner or other GPU controllers.
+
+**Choose how the window minimizes.** “Minimize to tray” is ON by default. Turn it OFF for ordinary Windows taskbar minimization. This choice is saved; the separate Windows startup setting remains independent.
+
+**More reliable communication and clearer status.** The Java request deadline is now 7 seconds, matching the native channel’s 6-second response window with a margin. The native watchdog starts counting after successful GPU acquisition; its 6-second safety guard remains. Failed or old readings no longer appear fresh: stale RPM is hidden, and connection timeouts are distinguished from confirmed external setting changes. A bounded local journal retains errors and slow-response metadata without connection secrets.
+
 ## New in 1.15: independent NVIDIA panels and control recovery
 
 Two supported NVIDIA GPUs have separate metrics, four graphs each and independent control settings. **Second NVIDIA GPU control is experimental.** One NVIDIA GPU with AMD/Intel uses one NVIDIA panel. The GPU selector filters the shared process list and history; it does not retarget either controller.
 
 **Four compact quick buttons stay in one horizontal row.** The single `⋮` menu offers Assign/Reassign, Rename and Clear for every slot, including missing targets. A custom name can be edited without rebinding; captions fit the available width and the tooltip keeps the full name. Exact PID, creation-time and path checks remain in force.
 
-**Control loss produces a warning and a manual Retry action. Force control recovery is OFF by default, saved separately for each GPU.** When enabled, retries use 5/10/30/60-second backoff, confirmed teardown and fresh readings from the same GPU. Native lease, ownership, readback and safety checks remain mandatory. This cannot exclusively block MSI Afterburner or another controller. Saved manual OFF choices are preserved; both emergency options remain OFF at every launch.
+**Control loss shows a warning and a manual Retry action. In 1.16, forced recovery is ON for new or missing settings and saved separately for each GPU; an explicitly saved OFF is preserved.** Retries use 5/10/30/60-second backoff, confirmed cleanup and fresh readings from the same GPU. Native lease, ownership, readback and safety checks remain mandatory. This cannot exclusively block MSI Afterburner or another controller. Both emergency options remain OFF at every launch.
 
 Verified for 1.15: **2262 UI checks**, **215 native checks**, **61 client lifecycle/I/O checks**, **48 recovery-coordinator checks**, **167 package files** and **93 Java classes**. One-GPU minimum: **1200×900**; two-panel minimum: **1600×950**. The 1.14 consent-based installer shutdown and checked-by-default final launch option are retained.
 
@@ -68,7 +76,7 @@ Verified for 1.11: **40 native CPU checks**, **256 Java/catalog/guard checks**, 
 - Displays the top 10 applications and an “Others” category as normalized shares over the last 30 days of observed samples. Percentages sum to 100%; this is a historical allocation of recorded process-memory readings, not an additive breakdown of physical VRAM.
 - Shows the percentage of valid observed time in the last 24 hours with physical VRAM occupancy above 50%. Monitoring gaps are excluded.
 - Exports a UTF-8 CSV report to a chosen local path.
-- Minimizes to the system tray, restores the existing window on repeat launch, and supports optional Windows startup.
+- Supports a saved choice between minimizing to the system tray and ordinary Windows taskbar minimization, restores the existing window on repeat launch, and offers optional Windows startup.
 - Offers system and dark graphite themes, 12 interface languages, and a configurable 1–5 second UI refresh interval (default: 2 seconds).
 - Provides optional soft GPU temperature control through supported power and core-clock limits; protection runs independently of the UI refresh interval.
 - Provides idle cooling, fan RPM indicators, and animated fan icons. Fresh settings request both temperature control and idle cooling on; a previously saved manual OFF is preserved. Active control is shown only after a confirmed connection.

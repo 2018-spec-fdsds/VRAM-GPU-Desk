@@ -13,13 +13,13 @@
 - Lịch sử VRAM trong 24 giờ và 10 ứng dụng đứng đầu trong 30 ngày.
 - 12 ngôn ngữ, hai giao diện, khay hệ thống và tùy chọn khởi động cùng Windows.
 - Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
-- Cảnh báo mất điều khiển và thử lại thủ công; khôi phục cưỡng bức mặc định TẮT.
+- Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
 
-Phiên bản **1.15** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
+Phiên bản **1.16** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
 
-Dữ liệu minh họa tổng hợp và trạng thái điều khiển mô phỏng. Cả hai tùy chọn khẩn cấp đều TẮT mỗi lần mở; khôi phục cưỡng bức mặc định TẮT.
+Dữ liệu minh họa tổng hợp và trạng thái điều khiển mô phỏng. Cả hai tùy chọn khẩn cấp đều TẮT mỗi lần mở. Khôi phục BẬT cho cài đặt mới; lựa chọn TẮT đã lưu được giữ lại.
 
 
 > **Điều khiển GPU:** Điều khiển các tham số nhiệt độ GPU cần xác nhận UAC một lần khi cài thành phần điều khiển. Sau đó, bật điều khiển nhiệt độ và làm mát không yêu cầu UAC lần nữa. Chỉ giám sát thì không cần UAC.
@@ -27,13 +27,21 @@ Dữ liệu minh họa tổng hợp và trạng thái điều khiển mô phỏn
 > **Điều khiển GPU đồng thời:** Điều khiển các tham số nhiệt độ GPU có thể xung đột với chương trình khác đồng thời thay đổi công suất, xung nhịp hoặc tốc độ quạt, chẳng hạn MSI Afterburner. Chỉ sử dụng một bộ điều khiển đang hoạt động cho các tham số này. Cảnh báo này nói về việc thay đổi cài đặt đồng thời, không phải giám sát thụ động.
 
 
+## Điểm mới trong 1.16: khôi phục tin cậy hơn và tùy chọn thu nhỏ
+
+**Khôi phục điều khiển được bật cho cài đặt mới hoặc khi chưa có mục này.** Lựa chọn được lưu riêng cho từng GPU; trạng thái TẮT đã lưu rõ ràng được giữ nguyên. Ứng dụng kết nối lại cùng card sau khoảng chờ và khi xác nhận máy khách cũ đã kết thúc. Tính năng này không tạo quyền điều khiển độc quyền trước MSI Afterburner hay bộ điều khiển khác.
+
+**Chọn cách thu nhỏ cửa sổ.** “Thu nhỏ vào khay” mặc định bật. Tắt mục này để thu nhỏ bình thường vào thanh tác vụ Windows. Lựa chọn được lưu; khởi động cùng Windows vẫn là cài đặt độc lập.
+
+**Giao tiếp tin cậy hơn và trạng thái rõ hơn.** Thời hạn yêu cầu Java nay là 7 giây, có khoảng đệm cho cửa sổ phản hồi 6 giây của kênh native. Watchdog native bắt đầu tính sau khi nhận quyền điều khiển GPU thành công; bảo vệ 6 giây vẫn giữ nguyên. Lỗi và số đo cũ không còn hiện như dữ liệu mới: RPM cũ được ẩn, thời gian chờ kết nối được phân biệt với thay đổi bên ngoài đã xác nhận. Nhật ký cục bộ có giới hạn lưu lỗi và siêu dữ liệu phản hồi chậm, không chứa bí mật kết nối.
+
 ## Điểm mới trong 1.15: bảng NVIDIA độc lập và khôi phục điều khiển
 
 Hai GPU NVIDIA được hỗ trợ có số liệu riêng, mỗi GPU bốn biểu đồ và thiết lập điều khiển độc lập. **Điều khiển GPU NVIDIA thứ hai là tính năng thử nghiệm.** Một NVIDIA đi cùng AMD/Intel dùng một bảng NVIDIA. Bộ chọn GPU lọc danh sách tiến trình và lịch sử dùng chung; không đổi GPU mà bộ điều khiển đã gắn.
 
 **Bốn nút nhanh gọn vẫn nằm trên một hàng ngang.** Menu `⋮` chung cho phép Gán/Gán lại, Đổi tên và Xóa từng ô, kể cả khi mục tiêu đã mất. Có thể đổi tên riêng mà không gắn lại; chữ vừa chiều rộng và chú giải giữ tên đầy đủ. Vẫn kiểm tra chính xác PID, thời điểm tạo và đường dẫn EXE.
 
-**Khi mất điều khiển, ứng dụng hiện cảnh báo và thao tác thử lại thủ công. Khôi phục cưỡng bức mặc định TẮT và được lưu riêng cho từng GPU.** Khi bật, ứng dụng thử lại theo nhịp 5/10/30/60 giây, yêu cầu xác nhận máy khách cũ đã kết thúc và số liệu mới từ cùng GPU. Các kiểm tra native về lease, quyền sở hữu, đọc lại và an toàn vẫn bắt buộc. Không thể độc quyền chặn MSI Afterburner hay bộ điều khiển khác. Lựa chọn TẮT thủ công đã lưu được giữ lại; cả hai tùy chọn khẩn cấp đều TẮT mỗi lần mở.
+**Khi mất điều khiển, ứng dụng hiện cảnh báo và thao tác thử lại thủ công. Trong 1.16, khôi phục BẬT cho cài đặt mới hoặc khi thiếu mục này, được lưu riêng theo GPU; lựa chọn TẮT đã lưu rõ ràng được giữ lại.** Thử lại theo nhịp 5/10/30/60 giây, yêu cầu máy khách cũ đã kết thúc và số liệu mới từ cùng GPU. Kiểm tra native về lease, quyền sở hữu, đọc lại và an toàn vẫn bắt buộc. Không thể độc quyền chặn MSI Afterburner hay bộ điều khiển khác. Cả hai tùy chọn khẩn cấp đều TẮT mỗi lần mở.
 
 Đã kiểm tra cho 1.15: **2262 kiểm tra UI**, **215 native**, **61 vòng đời/I/O máy khách**, **48 khôi phục**, **167 tệp gói** và **93 lớp Java**. Kích thước tối thiểu: một GPU **1200×900**, hai bảng **1600×950**. Giữ quy trình cài đặt 1.14 đóng bản đang chạy khi được đồng ý và tùy chọn mở ứng dụng sau cài đặt được đánh dấu sẵn.
 
@@ -58,7 +66,7 @@ Hai GPU NVIDIA được hỗ trợ có số liệu riêng, mỗi GPU bốn biể
 - Hiển thị mười ứng dụng đứng đầu và nhóm «Khác» bằng tỷ lệ chuẩn hóa của các mẫu bộ nhớ tiến trình quan sát trong 30 ngày qua. Tổng là 100%; đây là phân bổ lịch sử số đo, không phải các phần VRAM vật lý có thể cộng lại.
 - Hiển thị tỷ lệ thời gian quan sát hợp lệ trong 24 giờ qua có VRAM vật lý sử dụng trên 50%. Không tính khoảng trống giám sát.
 - Xuất báo cáo CSV UTF-8 đến đường dẫn cục bộ đã chọn.
-- Thu nhỏ vào khay hệ thống, khôi phục cửa sổ hiện có khi chạy lại và tùy chọn khởi động cùng Windows.
+- Lưu lựa chọn thu nhỏ vào khay hệ thống hoặc thanh tác vụ Windows thông thường, khôi phục cửa sổ hiện có khi chạy lại và tùy chọn khởi động cùng Windows.
 - Có giao diện hệ thống và graphite tối, mười hai ngôn ngữ, cập nhật mỗi 1–5 giây, mặc định 2 giây.
 - Điều khiển nhiệt độ mềm tùy chọn qua giới hạn công suất và xung nhân được hỗ trợ. Bảo vệ độc lập với chu kỳ cập nhật giao diện.
 - Làm mát nhàn rỗi, số vòng/phút và biểu tượng quạt động. Cấu hình mới yêu cầu bật điều khiển nhiệt độ và làm mát nhàn rỗi; lựa chọn tắt thủ công đã lưu được giữ nguyên. Chỉ hiển thị điều khiển hoạt động sau kết nối đã xác nhận.

@@ -1,9 +1,9 @@
 # Distribution
 
-Current version: **1.15**, Windows x64.
+Current version: **1.16**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 
@@ -23,9 +23,13 @@ GPU temperature control requires one UAC confirmation when installing the contro
 
 NVIDIA GPUs only; AMD and Intel controls are unsupported. Model/driver capabilities still determine available controls. Two supported NVIDIA GPUs use independent panels and settings; control of the second NVIDIA GPU is experimental. One NVIDIA plus AMD/Intel uses one NVIDIA panel. The process/history GPU filter does not retarget either controller.
 
-Control loss shows a warning and manual Retry. Force control recovery is OFF by default, saved per GPU, and uses 5/10/30/60-second backoff after confirmed teardown and fresh same-GPU data. It retains native safety checks and cannot provide exclusive control against MSI Afterburner. Both emergency options remain OFF at each launch. See the feature descriptions in the [English README](README.md).
+Control loss shows a warning and manual Retry. Force control recovery defaults ON for new or missing settings; explicitly saved OFF is preserved. Recovery is saved per GPU and uses 5/10/30/60-second backoff after confirmed teardown and fresh same-GPU data. It retains native safety checks and cannot provide exclusive control against MSI Afterburner. Both emergency options remain OFF at each launch. See the feature descriptions in the [English README](README.md).
 
-The current package contains 167 manifest files and 93 Java classes. One-GPU minimum is 1200×900; two panels require 1600×950.
+The current package contains 167 manifest files and 96 Java classes. One-GPU minimum is 1200×900; two panels require 1600×950.
+
+## Window behavior
+
+The saved **Minimize to tray** checkbox is enabled by default. Turn it off to minimize the window to the Windows taskbar. This does not change the separate Windows startup choice or the close-button behavior.
 
 ## Package integrity
 
