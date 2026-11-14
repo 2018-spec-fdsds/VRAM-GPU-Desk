@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.14
+# VRAM GPU Desk 1.15
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,12 +12,14 @@
 - 四个可配置的一键按钮，绑定到确切的进程实例；紧急终止功能须单独启用，每次启动时均为关闭状态。
 - 24 小时显存历史记录与 30 天应用前十排行榜。
 - 12 种语言、两种主题、系统托盘和可选的 Windows 开机启动。
+- 两个独立设置的 NVIDIA 面板；第二块 GPU 的控制功能为实验性功能。
+- 控制丢失警告与手动重试；强制恢复默认关闭。
 
-[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
+[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
 
 ![VRAM GPU Desk — 石墨深色主题](images/dashboard-graphite.png)
 
-已启用状态仅用于演示。此紧急选项在每次启动时默认关闭。
+合成演示数据与模拟控制器状态。两种紧急选项在每次启动时均关闭；强制恢复默认关闭。
 
 
 > **GPU 控制:** 控制 GPU 温度参数需要在安装控制组件时确认一次 UAC。此后启用温度控制和散热无需再次确认 UAC。仅进行监控不需要 UAC。
@@ -26,9 +28,17 @@
 
 
 
-## 计划中的双 GPU 支持——实验性功能
+## 1.15 新增：独立 NVIDIA 面板与控制恢复
 
-正在为 1.15 开发：为两块受支持的 NVIDIA GPU 提供独立面板、设置与指标。第二块 NVIDIA GPU 的控制功能为实验性功能。混合厂商配置使用一个 NVIDIA 面板。本页下载链接仍指向已发布的 1.14；此开发计划并不表示 1.15 已发布。
+两块受支持的 NVIDIA GPU 各有独立指标、四张图表和控制设置。**第二块 NVIDIA GPU 的控制功能为实验性功能。** 一块 NVIDIA 与 AMD/Intel 混用时，仅显示一个 NVIDIA 面板。GPU 选择器只筛选共享进程表和历史记录，不会更改控制器所绑定的显卡。
+
+**四个紧凑快捷按钮仍位于同一水平行。** 统一的 `⋮` 菜单为每个槽位提供分配/重新分配、重命名和清除，目标进程消失后也可操作。自定义名称可在不重新绑定的情况下修改；文字按可用宽度显示，提示保留完整名称。仍严格核对 PID、创建时间和可执行文件路径。
+
+**失去控制时会显示警告并提供手动重试。强制恢复默认关闭，按 GPU 分别保存。** 启用后按 5/10/30/60 秒间隔重试，必须确认旧客户端已结束，并获得同一 GPU 的新鲜数据。原生 lease、所有权、读回和安全检查仍然有效。它无法独占阻止 MSI Afterburner 或其他控制器。保留手动关闭选择；两种紧急选项在每次启动时均关闭。
+
+1.15 已验证：**2262 项界面检查**、**215 项原生检查**、**61 项客户端生命周期/I/O 检查**、**48 项恢复检查**、**167 个包文件**及 **93 个 Java 类**。单 GPU 最小窗口 **1200×900**，双面板 **1600×950**。保留 1.14 安装程序经同意关闭旧版本的流程，以及默认勾选的安装后启动选项。
+
+![NVIDIA GPU panels — demonstration](images/dual-gpu-graphite.png)
 
 ## 1.14 新增：紧凑界面与便捷更新
 
