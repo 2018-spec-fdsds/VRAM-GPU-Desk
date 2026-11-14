@@ -2,7 +2,7 @@
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
-**Theo dõi bộ nhớ GPU và điều khiển nhiệt độ cục bộ cho Windows x64.**
+**Theo dõi bộ nhớ và điều khiển nhiệt độ GPU NVIDIA cục bộ cho Windows x64. Chỉ hỗ trợ NVIDIA; không hỗ trợ GPU AMD hoặc Intel.**
 
 Phiên bản **1.14** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
@@ -15,6 +15,10 @@ Trạng thái bật chỉ để minh họa. Tùy chọn khẩn cấp này tắt 
 
 > **Điều khiển GPU đồng thời:** Điều khiển các tham số nhiệt độ GPU có thể xung đột với chương trình khác đồng thời thay đổi công suất, xung nhịp hoặc tốc độ quạt, chẳng hạn MSI Afterburner. Chỉ sử dụng một bộ điều khiển đang hoạt động cho các tham số này. Cảnh báo này nói về việc thay đổi cài đặt đồng thời, không phải giám sát thụ động.
 
+
+## Hỗ trợ hai GPU theo kế hoạch — thử nghiệm
+
+Đang phát triển cho 1.15: hai bảng riêng cho hai GPU NVIDIA được hỗ trợ, với thiết lập và chỉ số độc lập. Điều khiển GPU NVIDIA thứ hai là tính năng thử nghiệm. Cấu hình gồm nhiều hãng dùng một bảng NVIDIA. Các liên kết tải xuống trên trang này vẫn trỏ đến bản 1.14 đã phát hành; lộ trình này không phải thông báo phát hành 1.15.
 
 ## Điểm mới trong 1.14
 

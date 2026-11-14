@@ -2,7 +2,7 @@
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
-**Windows x64 向けのローカル GPU メモリ監視・温度制御ツールです。**
+**Windows x64 向けのローカルNVIDIA GPUメモリ監視・温度制御ツールです。NVIDIA専用で、AMDおよびIntel GPUには対応していません。**
 
 [Windows インストーラー](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [インストーラー ZIP](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
@@ -16,6 +16,10 @@
 > **GPU の同時制御:** GPU の温度パラメーター制御は、電力、クロック、ファン速度を同時に変更する他のプログラム（MSI Afterburner など）と競合する場合があります。これらの設定を操作する有効な制御ソフトは一つだけにしてください。この注意は設定の同時変更に関するもので、受動的な監視は対象ではありません。
 
 
+
+## 予定されているデュアルGPU対応 — 実験的機能
+
+1.15向けに開発中：対応する2基のNVIDIA GPUそれぞれに、独立した設定と指標を備えたパネルを用意します。2基目のNVIDIA GPU制御は実験的機能です。メーカーが混在する構成では、NVIDIAのパネルを1つ使用します。このページのダウンロード先は引き続き公開済みの1.14です。この開発予定は1.15のリリース告知ではありません。
 
 ## 1.14 の新機能：コンパクトな画面と簡単な更新
 

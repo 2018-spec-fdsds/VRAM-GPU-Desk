@@ -2,7 +2,7 @@
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
-**Supervisión local de memoria GPU y control de temperatura para Windows x64.**
+**Supervisión local de memoria y control de temperatura de GPU NVIDIA para Windows x64. Solo NVIDIA; las GPU AMD e Intel no son compatibles.**
 
 Versión **1.14** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.14-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.14-Installer.zip)
 
@@ -15,6 +15,10 @@ El estado activado es solo ilustrativo. Esta opción de emergencia está DESACTI
 
 > **Control simultáneo de GPU:** El control de los parámetros de temperatura de la GPU puede entrar en conflicto con otros programas que cambien al mismo tiempo la potencia, las frecuencias o la velocidad de los ventiladores, como MSI Afterburner. Utilice un único controlador activo para estos ajustes. La advertencia se refiere a cambios simultáneos, no a la supervisión pasiva.
 
+
+## Compatibilidad prevista con dos GPU — experimental
+
+En desarrollo para 1.15: paneles separados para dos GPU NVIDIA compatibles, con ajustes y métricas independientes. El control de la segunda GPU NVIDIA es experimental. Una configuración con fabricantes distintos utiliza un panel NVIDIA. Los enlaces de descarga de esta página siguen apuntando a la versión publicada 1.14; este plan no anuncia el lanzamiento de 1.15.
 
 ## Novedades de 1.14
 
