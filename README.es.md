@@ -13,13 +13,13 @@
 - Historial de VRAM de 24 horas y las 10 aplicaciones principales de los últimos 30 días.
 - 12 idiomas, dos temas, bandeja del sistema e inicio opcional con Windows.
 - Dos paneles NVIDIA con ajustes independientes; el control de la segunda GPU es experimental.
-- Aviso de pérdida de control y reintento manual; recuperación forzada DESACTIVADA por defecto.
+- Aviso de pérdida de control y reintento manual; recuperación ACTIVADA para ajustes nuevos, respetando la desactivación guardada.
 
-Versión **1.15** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
+Versión **1.16** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
 
 ![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
 
-Datos sintéticos de demostración y estados simulados de los reguladores. Ambas opciones de emergencia están DESACTIVADAS en cada inicio; la recuperación forzada está DESACTIVADA por defecto.
+Datos sintéticos de demostración y estados simulados de los reguladores. Ambas opciones de emergencia están DESACTIVADAS en cada inicio. La recuperación está ACTIVADA para ajustes nuevos; se respeta la desactivación guardada.
 
 
 > **Control de GPU:** El control de los parámetros de temperatura de la GPU requiere una confirmación UAC al instalar el componente de control. Después, activar el control de temperatura y la refrigeración no genera nuevas solicitudes UAC. La supervisión por sí sola no requiere UAC.
@@ -27,13 +27,21 @@ Datos sintéticos de demostración y estados simulados de los reguladores. Ambas
 > **Control simultáneo de GPU:** El control de los parámetros de temperatura de la GPU puede entrar en conflicto con otros programas que cambien al mismo tiempo la potencia, las frecuencias o la velocidad de los ventiladores, como MSI Afterburner. Utilice un único controlador activo para estos ajustes. La advertencia se refiere a cambios simultáneos, no a la supervisión pasiva.
 
 
+## Novedades de 1.16: recuperación más fiable y minimización opcional en la bandeja
+
+**La recuperación del control empieza activada en ajustes nuevos o sin este parámetro.** Se guarda por GPU y respeta una desactivación explícita anterior. La reconexión se dirige a la misma tarjeta, con pausas y finalización confirmada del cliente anterior. No concede control exclusivo frente a MSI Afterburner u otros reguladores.
+
+**Elija cómo minimizar la ventana.** «Minimizar en la bandeja» está activado por defecto. Desactívelo para minimizar normalmente en la barra de tareas de Windows. La elección se guarda; el inicio con Windows sigue siendo independiente.
+
+**Comunicación más fiable y estado más claro.** El plazo de las solicitudes Java pasa a 7 segundos para cubrir la ventana de respuesta de 6 segundos del canal nativo con un margen. El watchdog nativo empieza después de adquirir correctamente la GPU; mantiene su protección de 6 segundos. Los errores y datos antiguos ya no se muestran como recientes: se ocultan las RPM obsoletas y se distinguen los tiempos de espera de los cambios externos confirmados. Un registro local limitado conserva errores y metadatos de respuestas lentas sin secretos de conexión.
+
 ## Novedades de 1.15: paneles NVIDIA independientes y recuperación del control
 
 Dos GPU NVIDIA compatibles tienen métricas propias, cuatro gráficos por GPU y ajustes independientes. **El control de la segunda GPU NVIDIA es experimental.** Una NVIDIA junto con AMD/Intel utiliza un panel NVIDIA. El selector GPU filtra la lista compartida de procesos y el historial; no cambia el destino de los reguladores.
 
 **Los cuatro botones rápidos compactos siguen en una fila horizontal.** El menú común `⋮` permite asignar/reasignar, renombrar y borrar cada espacio, incluso si el destino ha desaparecido. El nombre personalizado se cambia sin volver a vincular; el texto se adapta al ancho y la ayuda conserva el nombre completo. Se mantienen las comprobaciones exactas de PID, hora de creación y ruta.
 
-**La pérdida del control muestra una advertencia y una acción manual de reintento. La recuperación forzada está DESACTIVADA por defecto y se guarda por GPU.** Si se activa, los reintentos usan intervalos de 5/10/30/60 segundos, finalización confirmada del cliente anterior y datos recientes de la misma GPU. Las comprobaciones nativas de lease, propiedad, lectura y seguridad siguen siendo obligatorias. No puede bloquear exclusivamente MSI Afterburner u otro regulador. Se conserva el apagado manual guardado; ambas opciones de emergencia están DESACTIVADAS en cada inicio.
+**La pérdida del control muestra una advertencia y un reintento manual. En 1.16 la recuperación está ACTIVADA en ajustes nuevos o sin el parámetro y se guarda por GPU; se respeta la desactivación explícita guardada.** Usa intervalos de 5/10/30/60 segundos, finalización confirmada del cliente anterior y datos recientes de la misma GPU. Las comprobaciones nativas de lease, propiedad, lectura y seguridad siguen siendo obligatorias. No puede bloquear exclusivamente MSI Afterburner u otro regulador. Ambas opciones de emergencia están DESACTIVADAS en cada inicio.
 
 Verificado para 1.15: **2262 comprobaciones UI**, **215 nativas**, **61 de ciclo de vida/I/O de clientes**, **48 de recuperación**, **167 archivos** y **93 clases Java**. Mínimo: una GPU **1200×900**, dos paneles **1600×950**. Se conservan el cierre con consentimiento en el instalador y el inicio final marcado por defecto de 1.14.
 
@@ -58,7 +66,7 @@ Se verificaron 107 comprobaciones RM, 17 del lanzador y nueve casos de integraci
 - Muestra las diez aplicaciones principales y «Otras» como porcentajes normalizados de las lecturas de memoria de procesos de los últimos 30 días observados. Suman 100 %; representan lecturas históricas, no un desglose aditivo de VRAM física.
 - Muestra el porcentaje del tiempo observado válido de las últimas 24 horas con ocupación de VRAM física superior al 50 %. Excluye los intervalos sin supervisión.
 - Exporta CSV UTF-8 a una ruta local elegida.
-- Se minimiza en la bandeja, restaura la ventana existente al ejecutarlo de nuevo y permite inicio opcional con Windows.
+- Permite guardar la elección entre minimizar en la bandeja y en la barra de tareas de Windows, restaura la ventana existente al ejecutarlo de nuevo y ofrece inicio opcional con Windows.
 - Ofrece temas del sistema y grafito oscuro, doce idiomas y actualización de 1–5 segundos, por defecto 2 segundos.
 - Control térmico suave opcional mediante límites admitidos de potencia y frecuencia del núcleo. La protección es independiente del refresco de interfaz.
 - Refrigeración en reposo, RPM e iconos animados. Los ajustes nuevos solicitan control térmico y refrigeración en reposo activados; se conserva una desactivación manual guardada. Solo muestra control activo tras confirmar la conexión.

@@ -13,13 +13,13 @@
 - Historique VRAM sur 24 heures et classement des 10 principales applications sur 30 jours.
 - 12 langues, deux thèmes, zone de notification et démarrage facultatif avec Windows.
 - Deux panneaux NVIDIA avec des réglages indépendants ; le contrôle du second GPU est expérimental.
-- Avertissement de perte de contrôle et nouvelle tentative manuelle ; récupération forcée DÉSACTIVÉE par défaut.
+- Avertissement de perte de contrôle et nouvelle tentative manuelle ; récupération ACTIVÉE pour les nouveaux réglages, arrêt enregistré respecté.
 
-Version **1.15** · [Installation Windows](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.15-Installer.zip)
+Version **1.16** · [Installation Windows](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
 
 ![VRAM GPU Desk — thème graphite](images/dashboard-graphite.png)
 
-Données synthétiques de démonstration et états simulés des régulateurs. Les deux options d’urgence sont DÉSACTIVÉES à chaque lancement ; la récupération forcée est DÉSACTIVÉE par défaut.
+Données synthétiques de démonstration et états simulés des régulateurs. Les deux options d’urgence sont DÉSACTIVÉES à chaque lancement. La récupération est ACTIVÉE pour les nouveaux réglages ; un arrêt enregistré est préservé.
 
 
 > **Contrôle du GPU:** Le contrôle des paramètres de température du GPU nécessite une confirmation UAC lors de l’installation du composant de contrôle. L’activation ultérieure du contrôle de température et du refroidissement ne demande plus de confirmation UAC. La surveillance seule ne nécessite pas d’UAC.
@@ -27,13 +27,21 @@ Données synthétiques de démonstration et états simulés des régulateurs. Le
 > **Contrôle simultané du GPU:** Le contrôle des paramètres de température du GPU peut entrer en conflit avec des programmes qui modifient simultanément la puissance, les fréquences ou la vitesse des ventilateurs, par exemple MSI Afterburner. Utilisez un seul régulateur actif pour ces paramètres. Cet avertissement concerne les modifications simultanées, pas la surveillance passive.
 
 
+## Nouveautés de 1.16 : récupération plus fiable et réduction au choix
+
+**La récupération du contrôle est activée pour les réglages nouveaux ou sans ce paramètre.** Le choix est enregistré par GPU ; une désactivation explicite déjà enregistrée est conservée. La reconnexion concerne la même carte, avec des délais et une fin confirmée de l’ancien client. Elle ne garantit pas un contrôle exclusif face à MSI Afterburner ou à un autre régulateur.
+
+**Choisissez comment réduire la fenêtre.** « Réduire dans la zone de notification » est activé par défaut. Désactivez cette option pour une réduction classique dans la barre des tâches Windows. Le choix est conservé ; le démarrage avec Windows reste indépendant.
+
+**Communication plus fiable et état plus clair.** Le délai des requêtes Java passe à 7 secondes pour couvrir la fenêtre de réponse de 6 secondes du canal natif avec une marge. Le watchdog natif commence après la prise en charge réussie du GPU ; sa protection de 6 secondes est conservée. Les erreurs et anciennes mesures ne sont plus présentées comme récentes : les anciennes valeurs RPM sont masquées et les délais de communication distingués des changements externes confirmés. Un journal local limité conserve erreurs et métadonnées des réponses lentes, sans secrets de connexion.
+
 ## Nouveautés de 1.15 : panneaux NVIDIA indépendants et récupération du contrôle
 
 Deux GPU NVIDIA pris en charge disposent de mesures propres, de quatre graphiques chacun et de réglages indépendants. **Le contrôle du second GPU NVIDIA est expérimental.** Une NVIDIA associée à AMD/Intel utilise un panneau NVIDIA. Le sélecteur GPU filtre la liste commune des processus et leur historique ; il ne réaffecte aucun régulateur.
 
 **Les quatre boutons rapides compacts restent sur une ligne horizontale.** Le menu commun `⋮` permet Affecter/Réaffecter, Renommer et Effacer pour chaque emplacement, même si la cible a disparu. Un nom personnalisé se modifie sans nouvelle liaison ; le texte tient dans la largeur disponible et le nom complet reste dans l’infobulle. Les vérifications exactes du PID, de la date de création et du chemin sont conservées.
 
-**Une perte de contrôle affiche un avertissement et une action manuelle de nouvelle tentative. La récupération forcée est DÉSACTIVÉE par défaut et enregistrée par GPU.** Une fois activée, elle applique des délais de 5/10/30/60 secondes, exige la fin confirmée de l’ancien client et des mesures récentes du même GPU. Les contrôles natifs de lease, de propriété, de relecture et de sécurité restent obligatoires. Elle ne peut pas bloquer exclusivement MSI Afterburner ou un autre régulateur. Un arrêt manuel enregistré est préservé ; les deux options d’urgence sont DÉSACTIVÉES à chaque lancement.
+**La perte de contrôle affiche un avertissement et une nouvelle tentative manuelle. Dans 1.16, la récupération est ACTIVÉE pour les réglages nouveaux ou sans ce paramètre et enregistrée par GPU ; un arrêt explicite enregistré est préservé.** Les tentatives utilisent des délais de 5/10/30/60 secondes, une fin confirmée de l’ancien client et des mesures récentes du même GPU. Les contrôles natifs de lease, propriété, relecture et sécurité restent obligatoires. Elle ne peut pas bloquer exclusivement MSI Afterburner ou un autre régulateur. Les deux options d’urgence restent DÉSACTIVÉES à chaque lancement.
 
 Vérifié pour 1.15 : **2262 contrôles UI**, **215 natifs**, **61 de cycle de vie/I/O des clients**, **48 de récupération**, **167 fichiers** et **93 classes Java**. Minimum : un GPU **1200×900**, deux panneaux **1600×950**. Le consentement à la fermeture par l’installateur et le lancement final coché par défaut de 1.14 sont conservés.
 
@@ -58,7 +66,7 @@ La validation couvre 107 contrôles RM, 17 du lanceur et neuf cas d’intégrati
 - Affiche les dix principales applications et « Autres » en parts normalisées des relevés de mémoire des processus observés pendant les 30 derniers jours. Le total vaut 100 % ; c’est une répartition historique des relevés, pas une décomposition additive de la VRAM physique.
 - Indique la proportion du temps d’observation valide des dernières 24 heures où la VRAM physique dépasse 50 %. Les interruptions de surveillance sont exclues.
 - Exporte un rapport CSV UTF-8 vers un emplacement local choisi.
-- Se réduit dans la zone de notification, restaure la fenêtre existante au lancement suivant et propose le démarrage facultatif avec Windows.
+- Enregistre le choix entre réduction dans la zone de notification et réduction classique dans la barre des tâches Windows, restaure la fenêtre existante au lancement suivant et propose le démarrage facultatif avec Windows.
 - Offre thèmes système et graphite sombre, douze langues et rafraîchissement de 1 à 5 secondes, 2 secondes par défaut.
 - Régulation thermique douce facultative par les limites de puissance et de fréquence prises en charge. La protection est indépendante du rafraîchissement de l’interface.
 - Refroidissement au repos, régimes des ventilateurs et icônes animées. Les nouveaux réglages demandent régulation et refroidissement au repos activés ; un arrêt manuel enregistré est conservé. La régulation active n’est affichée qu’après connexion confirmée.

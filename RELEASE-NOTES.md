@@ -1,6 +1,31 @@
 # VRAM GPU Desk — release notes
 
-## 1.15
+## 1.16
+
+[Windows x64 installer](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.16-Installer.zip) · [SHA-256](SHA256SUMS.txt)
+
+### Control recovery and communication
+
+- Force control recovery now defaults **ON** for new or missing settings. Explicitly saved OFF choices remain respected. Recovery is stored separately for each GPU; both emergency termination options remain **OFF at every launch**.
+- The Java request deadline now allows the native channel to finish its bounded response. The operational watchdog starts its heartbeat after successful GPU acquisition; its six-second safety limit remains enforced.
+- Timed-out or cached readings no longer refresh confirmed telemetry. Stale fan readings display as unavailable, and communication loss is explained separately from a confirmed external parameter change.
+- A bounded local metadata journal preserves errors and slow-response timing across reconnections. Connection secrets and user process contents are not recorded in it.
+- Recovery retains GPU identity, lease, ownership, readback and conditional-restore checks. It does not guarantee exclusive control against MSI Afterburner or another active GPU controller.
+
+### Optional ordinary minimization
+
+- The saved **Minimize to tray** checkbox appears in the header. It is enabled by default; turn it off to minimize to the Windows taskbar like a normal application.
+- Compact controls, readable process names, four editable quick buttons, all twelve languages and both themes remain available. One NVIDIA GPU uses one panel; two supported NVIDIA GPUs have independent panels, with **second-GPU control experimental**.
+
+### Distribution
+
+The installer includes Java and preserves preferences and exact-instance quick-button bindings during updates. Installation of the protected control component requires one UAC confirmation; subsequent control uses the installed channel. English remains the main description and Graphite the first demonstration image.
+
+The package contains 167 manifest files and 96 Java classes. Checks cover current communication, settings and UI fixtures, packaged Unicode launch and isolated installation/uninstallation. Licensed under [PolyForm Noncommercial 1.0.0](LICENSE.md); third-party runtime notices are retained. Application sources are not published.
+
+---
+
+## 1.15 (historical defaults; 1.16 changes recovery to ON)
 
 [Windows x64 installer](downloads/VRAM-GPU-Desk-1.15-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.15-Installer.zip) · [SHA-256](SHA256SUMS.txt)
 
