@@ -246,7 +246,7 @@ Windows 10/11 x64, .NET Framework 4.8 और समर्थित NVIDIA ड्
 
 ## परियोजना का समर्थन करें
 
-यदि VRAM GPU Desk आपके काम आता है, तो आप स्वेच्छा से इसके विकास में सहयोग कर सकते हैं।
+यदि VRAM GPU Desk आपके लिए उपयोगी है, तो आप [स्वेच्छा से इसके विकास में सहयोग कर सकते हैं](https://github.com/2018-spec-fdsds/multiroute-downloader/blob/main/docs/support.md)।
 
 <img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 

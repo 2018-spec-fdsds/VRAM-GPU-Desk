@@ -256,7 +256,7 @@ Windows 10/11 x64, .NET Framework 4.8, 지원되는 NVIDIA 드라이버가 필�
 
 ## 프로젝트 후원
 
-VRAM GPU Desk가 도움이 된다면 자발적으로 개발을 후원할 수 있습니다.
+VRAM GPU Desk가 유용하다면 [자발적으로 개발을 후원할 수 있습니다](https://github.com/2018-spec-fdsds/multiroute-downloader/blob/main/docs/support.md).
 
 <img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 

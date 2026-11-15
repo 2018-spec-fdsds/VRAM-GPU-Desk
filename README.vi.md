@@ -255,7 +255,7 @@ Bộ cài không có chữ ký. Phân phối ứng dụng dạng nhị phân đ�
 
 ## Ủng hộ dự án
 
-Nếu VRAM GPU Desk hữu ích với bạn, bạn có thể tự nguyện ủng hộ việc phát triển ứng dụng.
+Nếu VRAM GPU Desk hữu ích với bạn, bạn có thể [tự nguyện ủng hộ việc phát triển ứng dụng](https://github.com/2018-spec-fdsds/multiroute-downloader/blob/main/docs/support.md).
 
 <img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 

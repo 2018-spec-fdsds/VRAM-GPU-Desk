@@ -256,7 +256,7 @@ RAM 按现有刷新间隔更新，无需 UAC。缺失、无效或超过六秒的
 
 ## 支持项目
 
-如果 VRAM GPU Desk 对您有帮助，您可以自愿支持其开发。
+如果 VRAM GPU Desk 对您有帮助，您可以[自愿支持其开发](https://github.com/2018-spec-fdsds/multiroute-downloader/blob/main/docs/support.md)。
 
 <img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 

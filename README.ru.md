@@ -249,7 +249,7 @@ Windows 10/11 x64, .NET Framework 4.8, поддерживаемый драйве
 
 ## Поддержать проект
 
-Если VRAM GPU Desk помогает вам, вы можете добровольно поддержать его разработку.
+Если VRAM GPU Desk полезен вам, вы можете [добровольно поддержать его развитие](https://github.com/2018-spec-fdsds/multiroute-downloader/blob/main/docs/support.md).
 
 <img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 

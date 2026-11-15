@@ -255,7 +255,7 @@ El uso no comercial es gratuito bajo [PolyForm Noncommercial 1.0.0](LICENSE.md),
 
 ## Apoyar el proyecto
 
-Si VRAM GPU Desk le resulta útil, puede apoyar voluntariamente su desarrollo.
+Si VRAM GPU Desk le resulta útil, puede [apoyar voluntariamente su desarrollo](https://github.com/2018-spec-fdsds/multiroute-downloader/blob/main/docs/support.md).
 
 <img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 

@@ -246,7 +246,7 @@
 
 ## دعم المشروع
 
-إذا كان VRAM GPU Desk مفيدًا لك، يمكنك دعم تطويره طوعًا.
+إذا كان VRAM GPU Desk مفيدًا لك، يمكنك [دعم تطويره طوعًا](https://github.com/2018-spec-fdsds/multiroute-downloader/blob/main/docs/support.md).
 
 <img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 
