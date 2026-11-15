@@ -1,13 +1,23 @@
 # Distribution
 
-Current version: **1.20.1**, Windows x64.
+Current version: **1.21**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 
 The ZIP contains the same EXE installer, checksum, instructions and license. Java is included. It is an installer bundle; copying the archive does not register the protected Windows control component.
+
+## Compact dashboard
+
+**More compact dashboard.** The “Time with VRAM > 50%” card has been removed from both single- and dual-GPU layouts. The 30-day application ranking and stored history are retained.
+
+## Optional PSU monitoring
+
+**Optional layout.** When PSU monitoring is OFF or no compatible PSU is detected, the PSU card is hidden and the other cards use the available width, without an empty placeholder. Once a PSU has been detected, temporarily unavailable readings keep its card visible with dashes.
+
+PSU monitoring is OFF by default. Enable the separate setting to show the PSU card. Its protected read-only host is installed with the same one-time UAC setup and uses no GPU control lease. Compatibility is qualified per model; see [PSU compatibility](docs/psu-compatibility.md). Automatic overlay text contrast is ON by default, with manual light/dark text available when disabled.
 
 ## Installation and launch
 
@@ -41,7 +51,7 @@ System RAM shows physical memory used/total in GiB, usage percentage, available 
 
 The CPU card shows overall utilization, physical-core and logical-thread counts, and an instantaneous utilization bar for each physical core. Core bars group their logical threads; overall load is weighted by logical processors. Built-in Windows measurements need no extra UAC prompt, driver or external monitoring application. Missing, invalid or more than six-second-old readings are unavailable: RAM shows a gap in its history graph; CPU shows **—** and unavailable core bars.
 
-With one GPU, all six metric cards remain together at 1200×900. With two supported NVIDIA GPUs, the minimum is 1920×1050: each GPU has a four-card 2×2 block with aligned readings and complete controls. Thin vertical dividers separate the GPU areas and shared right column, with RAM above the taller CPU card. RAM and CPU appear only once, independently of GPU selection. All three fan indicators stay visible by wrapping when needed; fan-control logic is unchanged.
+With one GPU, VRAM usage, GPU load, GPU temperature, system RAM and CPU remain visible together; optional PSU monitoring adds its own card. With two supported NVIDIA GPUs, each GPU has its own three indicators and complete controls. Thin vertical dividers separate the GPU areas and the shared RAM/CPU/optional-PSU area. Shared system indicators appear only once, independently of GPU selection. All three fan indicators stay visible by wrapping when needed; fan-control logic is unchanged.
 
 ## Window behavior
 

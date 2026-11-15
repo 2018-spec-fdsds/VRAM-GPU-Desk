@@ -1,8 +1,10 @@
-# VRAM GPU Desk
+# VRAM GPU Desk 1.21
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
 **Supervisión local de memoria y control de temperatura de GPU NVIDIA para Windows x64. Solo NVIDIA; las GPU AMD e Intel no son compatibles.**
+
+![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
 
 ## Para qué sirve la aplicación
 
@@ -13,18 +15,41 @@
 
 ## Funciones principales
 
+- Potencia de fuente y corriente de hasta dos conectores GPU, según el modelo y los sensores disponibles; desactivado por defecto.
+- Contraste automático del texto activado por defecto; al desactivarlo puede elegir texto claro u oscuro manualmente.
+
 - Supervisión local de VRAM, carga y temperatura NVIDIA, RAM del sistema y utilización de CPU, con gráficos y barras por núcleo.
 - Memoria GPU por proceso, búsqueda, ordenación y exportación CSV en UTF-8.
 - Control de temperatura y refrigeración en reposo adaptados a las capacidades de cada GPU.
 - Cuatro botones configurables de un clic vinculados a instancias concretas de procesos; la finalización de emergencia opcional está DESACTIVADA en cada inicio.
-- Historial de VRAM de 24 horas y las 10 aplicaciones principales de los últimos 30 días.
+- Las 10 aplicaciones principales por uso de VRAM registrado durante 30 días.
 - 12 idiomas, dos temas, bandeja del sistema e inicio opcional con Windows.
 - Dos paneles NVIDIA con ajustes independientes; el control de la segunda GPU es experimental.
 - Aviso de pérdida de control y reintento manual; recuperación ACTIVADA para ajustes nuevos, respetando la desactivación guardada.
 
-Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
+Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
 
-![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
+
+## Novedades de 1.21 — fuente de alimentación opcional y contraste automático
+
+**Diseño opcional.** Si la supervisión está desactivada o no se detecta una fuente compatible, su tarjeta se oculta y las demás aprovechan el ancho disponible, sin dejar un espacio vacío. Una vez detectada la fuente, si las lecturas dejan de estar disponibles temporalmente, su tarjeta permanece con guiones.
+
+**Panel más compacto.** Se ha retirado la tarjeta «Tiempo con VRAM > 50 %» de las vistas de una y dos GPU. Se conservan la clasificación de aplicaciones de 30 días y el historial guardado.
+
+**La supervisión de la fuente está desactivada de forma predeterminada.** Una casilla independiente añade una tarjeta con la potencia de salida disponible y la corriente de hasta dos conectores reales de alimentación de GPU. Los datos ausentes o antiguos muestran —; las corrientes de los raíles no se presentan como corrientes de conectores individuales. El componente protegido de solo lectura se instala con la configuración UAC única de la aplicación y no adquiere el control de la GPU.
+
+**La compatibilidad depende del modelo.** Se verificó la lectura en MSI MPG Ai1300TS. Ai1600TS está cualificada por su protocolo. Algunos Corsair HXi/RMi, Thermaltake DPS G/iRGB PLUS y, adicionalmente, NZXT E superaron pruebas sintéticas; queda pendiente la validación física. Corsair aporta vatios medidos, el total de Thermaltake se marca como calculado y NZXT aporta raíles sin inventar un total. Se investigó be quiet! Dark Power Pro 14 IO; no hay lector cualificado para Seasonic OptiGuard ni ASUS. No se declara compatibilidad universal con seis marcas. Véase [compatibilidad de fuentes](docs/psu-compatibility.md).
+
+**El contraste automático del texto está activado por defecto.** El texto se adapta al fondo; desactive la opción para elegir manualmente texto claro u oscuro. Se conservan la transparencia, indicadores compactos, dos superposiciones NVIDIA independientes, doble clic para abrir la ventana, posiciones y colores/sonidos de temperatura.
+
+Las capturas en grafito utilizan datos sintéticos, incluidos los de la fuente. Se mantienen los ajustes GPU, acciones de procesos, modos de emergencia y preferencias guardadas.
+
+
+Dos GPU NVIDIA: con datos de la fuente / sin fuente compatible.
+
+![Con datos de la fuente](images/dual-with-psu.png)
+
+![Sin fuente compatible](images/dual-without-psu.png)
 
 ## 1.20.1
 
@@ -111,7 +136,6 @@ Se verificaron 107 comprobaciones RM, 17 del lanzador y nueve casos de integraci
 - Muestra VRAM física ocupada/libre, uso y temperatura GPU con gráficos históricos compactos.
 - Enumera aplicaciones y servicios locales que usan memoria GPU, con búsqueda, ordenación y filtro opcional **más de 0,5 GiB**.
 - Muestra las diez aplicaciones principales y «Otras» como porcentajes normalizados de las lecturas de memoria de procesos de los últimos 30 días observados. Suman 100 %; representan lecturas históricas, no un desglose aditivo de VRAM física.
-- Muestra el porcentaje del tiempo observado válido de las últimas 24 horas con ocupación de VRAM física superior al 50 %. Excluye los intervalos sin supervisión.
 - Exporta CSV UTF-8 a una ruta local elegida.
 - Permite guardar la elección entre minimizar en la bandeja y en la barra de tareas de Windows, restaura la ventana existente al ejecutarlo de nuevo y ofrece inicio opcional con Windows.
 - Ofrece temas del sistema y grafito oscuro, doce idiomas y actualización de 1–5 segundos, por defecto 2 segundos.
@@ -154,7 +178,7 @@ La temperatura de reposo **no** es el límite bajo carga sostenida. Ambiente, fi
 
 ## Hardware y requisitos
 
-Para NVIDIA GeForce **RTX 5000 Series**. Supervisión y controles dependen de GPU y controlador; las funciones no compatibles quedan no disponibles, sin simularlas.
+Para NVIDIA GeForce **RTX 30 / 40 / 50**. Supervisión y controles dependen de GPU y controlador; las funciones no compatibles quedan no disponibles, sin simularlas.
 
 Windows 10/11 x64, .NET Framework 4.8 y controlador NVIDIA compatible. Java viene incluido, sin instalación separada. El usuario Windows conectado debe ser administrador con token de escritorio filtrado normal. El instalador solicita UAC una vez y coloca el componente en una carpeta Program Files fija y protegida; no admite credenciales de otro administrador. Dos tareas protegidas, solo bajo demanda, usan lanzadores fijos y comunicación local tipada. El canal instalado está diseñado para iniciar control sin más UAC; si no se autentica, queda no disponible sin intentar otra elevación.
 

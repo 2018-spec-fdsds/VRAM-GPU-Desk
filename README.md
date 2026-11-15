@@ -1,8 +1,10 @@
-# VRAM GPU Desk
+# VRAM GPU Desk 1.21
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
 **Local NVIDIA GPU memory monitoring and temperature control for Windows x64. NVIDIA GPUs only; AMD and Intel GPUs are not supported.**
+
+![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
 
 ## What this application is for
 
@@ -13,18 +15,43 @@
 
 ## Key features
 
+- Optional, model-qualified PSU power and currents for up to two GPU power connectors when reported; OFF by default.
+- Automatic overlay text contrast is ON by default, with manual light/dark text available when disabled.
+
 - Local NVIDIA VRAM, GPU load and temperature monitoring, plus system RAM and CPU utilization, with graphs and per-core bars.
 - Per-process GPU memory, search, sorting and UTF-8 CSV export.
 - Temperature control and idle cooling adapted to each GPU’s reported capabilities.
 - Four configurable one-click buttons bound to exact process instances; optional emergency termination is OFF at every launch.
-- 24-hour VRAM history and a 30-day top 10 of applications.
+- A 30-day top 10 of applications by recorded VRAM usage.
 - 12 languages, two themes, system tray and optional Windows startup.
 - Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
 - Control-loss warning and manual retry; forced recovery is ON for new settings, with saved OFF choices preserved.
 
-Version **1.20.1** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
+Version **1.21** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
 
-![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
+
+## New in 1.21 — optional PSU telemetry and automatic overlay contrast
+
+**Optional layout.** When PSU monitoring is OFF or no compatible PSU is detected, the PSU card is hidden and the other cards use the available width, without an empty placeholder. Once a PSU has been detected, temporarily unavailable readings keep its card visible with dashes.
+
+[PSU shown](images/with-psu-strip.png) · [PSU hidden; other cards expanded](images/without-psu-strip.png)
+
+**More compact dashboard.** The “Time with VRAM > 50%” card has been removed from both single- and dual-GPU layouts. The 30-day application ranking and stored history are retained.
+
+**Optional PSU monitoring is OFF by default.** Enable it with the separate settings checkbox to add a PSU card beside the existing indicators. It shows available output power and up to two actual GPU power-connector current groups. Missing or stale measurements display —; rail currents are not presented as individual GPU connector readings. Read-only PSU queries use a separate protected component installed with the application's one-time UAC setup; they do not acquire GPU control.
+
+**Compatibility is model-specific.** Read-only telemetry was verified on an MSI MPG Ai1300TS. Ai1600TS is protocol-qualified. Selected Corsair HXi/RMi, Thermaltake DPS G/iRGB PLUS and additional NZXT E-series readers passed synthetic protocol checks; their physical hardware validation is pending. Corsair provides measured output watts; Thermaltake's rail-derived total is explicitly marked calculated; NZXT provides rail data without inventing a total. be quiet! Dark Power Pro 14 IO is researched; Seasonic OptiGuard and ASUS products have no qualified reader in this release. This is not universal support for six brands. See [PSU compatibility](docs/psu-compatibility.md).
+
+**Automatic overlay text contrast is ON by default.** Text adapts to the background; turn the option off to retain manual light/dark text selection. Transparent backgrounds, compact gauges, separate overlays for two NVIDIA GPUs, double-click to open the main window, saved positions and temperature colors/alarms are retained.
+
+The graphite screenshots below use synthetic demonstration readings, including PSU values. GPU settings, process actions, emergency modes and existing saved choices retain their behavior.
+
+
+Two NVIDIA GPUs: with PSU telemetry / without a compatible PSU.
+
+![With PSU telemetry](images/dual-with-psu.png)
+
+![Without a compatible PSU](images/dual-without-psu.png)
 
 ## 1.20.1
 
@@ -121,7 +148,6 @@ Verified for 1.11: **40 native CPU checks**, **256 Java/catalog/guard checks**, 
 - Shows physical VRAM used/free, GPU utilization and GPU temperature, with compact history graphs.
 - Lists local applications and services using GPU memory, with search, sorting and an optional **over 0.5 GiB** filter.
 - Displays the top 10 applications and an “Others” category as normalized shares over the last 30 days of observed samples. Percentages sum to 100%; this is a historical allocation of recorded process-memory readings, not an additive breakdown of physical VRAM.
-- Shows the percentage of valid observed time in the last 24 hours with physical VRAM occupancy above 50%. Monitoring gaps are excluded.
 - Exports a UTF-8 CSV report to a chosen local path.
 - Supports a saved choice between minimizing to the system tray and ordinary Windows taskbar minimization, restores the existing window on repeat launch, and offers optional Windows startup.
 - Offers system and dark graphite themes, 12 interface languages, and a configurable 1–5 second UI refresh interval (default: 2 seconds).
@@ -155,9 +181,9 @@ Idle temperature is **not** the temperature limit under sustained load. Ambient 
 
 ## Hardware and requirements
 
-For NVIDIA GeForce **RTX 5000 Series** GPUs. Monitoring and available controls depend on the GPU and driver; unsupported controls remain unavailable rather than being simulated.
+For NVIDIA GeForce **RTX 30 / 40 / 50** GPUs. Monitoring and available controls depend on the GPU and driver; unsupported controls remain unavailable rather than being simulated.
 
-Windows 10/11 x64, .NET Framework 4.8 and a supported NVIDIA driver. The installer includes its Java runtime, so a separate Java installation is not required. The signed-in Windows user must be an administrator using a normal filtered desktop token. Setup requests UAC once and installs the control component in a fixed protected Program Files directory; entering credentials for a different administrator is not supported. Two protected, demand-only tasks use fixed control launchers and typed local communication. The installed channel is designed to start control without a further UAC prompt; if it cannot be authenticated, control stays unavailable instead of falling back to another elevation prompt. Driver versions and DLL hashes are not allowlisted. The installed system NVML library must pass offline Windows signature verification with a verified NVIDIA Corporation signer, safe-path checks and the required API checks. Driver updates do not require adding a new version or hash. Offline trust verification can fail when required trust data is not available locally; no certificates or drivers are downloaded by the application.
+Windows 10/11 x64, .NET Framework 4.8 and a supported NVIDIA driver. The installer includes its Java runtime, so a separate Java installation is not required. The signed-in Windows user must be an administrator using a normal filtered desktop token. Setup requests UAC once and installs the control component in a fixed protected Program Files directory; entering credentials for a different administrator is not supported. Two GPU-control tasks and a separate read-only PSU task use protected, demand-only fixed launchers and typed local communication. The installed channel is designed to start control without a further UAC prompt; if it cannot be authenticated, control stays unavailable instead of falling back to another elevation prompt. Driver versions and DLL hashes are not allowlisted. The installed system NVML library must pass offline Windows signature verification with a verified NVIDIA Corporation signer, safe-path checks and the required API checks. Driver updates do not require adding a new version or hash. Offline trust verification can fail when required trust data is not available locally; no certificates or drivers are downloaded by the application.
 
 ## Installation and privacy
 

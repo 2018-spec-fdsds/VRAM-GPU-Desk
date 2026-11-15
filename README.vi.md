@@ -1,8 +1,10 @@
-# VRAM GPU Desk
+# VRAM GPU Desk 1.21
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
 **Theo dõi bộ nhớ và điều khiển nhiệt độ GPU NVIDIA cục bộ cho Windows x64. Chỉ hỗ trợ NVIDIA; không hỗ trợ GPU AMD hoặc Intel.**
+
+![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
 
 ## Ứng dụng dùng để làm gì
 
@@ -13,18 +15,41 @@
 
 ## Tính năng chính
 
+- Tùy chọn công suất nguồn và dòng điện của tối đa hai đầu nối GPU theo mẫu và cảm biến hỗ trợ; mặc định TẮT.
+- Tương phản chữ lớp phủ tự động mặc định BẬT; khi tắt có thể chọn chữ sáng hoặc tối thủ công.
+
 - Giám sát cục bộ VRAM, tải và nhiệt độ NVIDIA, RAM hệ thống và mức dùng CPU, với biểu đồ và thanh theo lõi.
 - Bộ nhớ GPU theo tiến trình, tìm kiếm, sắp xếp và xuất CSV UTF-8.
 - Điều khiển nhiệt độ và làm mát nhàn rỗi theo khả năng được từng GPU báo cáo.
 - Bốn nút một lần nhấp có thể cấu hình, gắn với đúng phiên bản tiến trình; tính năng kết thúc khẩn cấp tùy chọn luôn TẮT khi khởi động ứng dụng.
-- Lịch sử VRAM trong 24 giờ và 10 ứng dụng đứng đầu trong 30 ngày.
+- 10 ứng dụng đứng đầu theo mức sử dụng VRAM đã ghi trong 30 ngày.
 - 12 ngôn ngữ, hai giao diện, khay hệ thống và tùy chọn khởi động cùng Windows.
 - Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
 - Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
 
-Phiên bản **1.20.1** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
+Phiên bản **1.20.1** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
 
-![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
+
+## Mới trong 1.21 — giám sát bộ nguồn tùy chọn và tương phản tự động
+
+**Bố cục tùy chọn.** Khi giám sát nguồn TẮT hoặc không phát hiện nguồn tương thích, thẻ nguồn được ẩn và các thẻ khác dùng chiều rộng khả dụng, không để ô trống. Sau khi phát hiện nguồn, nếu số liệu tạm thời không khả dụng, thẻ vẫn hiển thị với dấu gạch ngang.
+
+**Bảng điều khiển gọn hơn.** Đã bỏ thẻ “Thời gian VRAM > 50%” khỏi cả bố cục một và hai GPU. Giữ lại xếp hạng ứng dụng 30 ngày và lịch sử đã lưu.
+
+**Giám sát bộ nguồn mặc định TẮT.** Một ô chọn riêng thêm thẻ nguồn bên cạnh các chỉ số hiện có, hiển thị công suất đầu ra khả dụng và dòng điện của tối đa hai đầu nối nguồn GPU thực tế. Dữ liệu thiếu hoặc cũ hiển thị —; dòng của đường nguồn không được coi là dòng của từng đầu nối. Thành phần chỉ đọc được bảo vệ được cài cùng lần thiết lập UAC duy nhất của ứng dụng, không giành quyền điều khiển GPU.
+
+**Tương thích phụ thuộc từng mẫu.** Đã xác minh việc đọc cảm biến trên MSI MPG Ai1300TS. Ai1600TS đã được xác nhận về giao thức. Một số Corsair HXi/RMi, Thermaltake DPS G/iRGB PLUS và NZXT E bổ sung đã qua kiểm tra tổng hợp; kiểm chứng trên phần cứng thật còn chờ. Corsair cung cấp công suất đo được; tổng từ các đường nguồn Thermaltake được ghi rõ là tính toán; NZXT chỉ cung cấp dữ liệu đường nguồn, không tạo tổng giả. Đã nghiên cứu be quiet! Dark Power Pro 14 IO; chưa có bộ đọc đủ điều kiện cho Seasonic OptiGuard hoặc ASUS. Không tuyên bố hỗ trợ toàn bộ sáu thương hiệu. Xem [tương thích bộ nguồn](docs/psu-compatibility.md).
+
+**Tương phản chữ tự động mặc định BẬT.** Chữ thích ứng với nền; tắt tùy chọn để chọn chữ sáng hoặc tối thủ công. Vẫn giữ nền trong suốt, chỉ báo nhỏ gọn, hai lớp phủ NVIDIA độc lập, nhấp đúp mở cửa sổ chính, vị trí và màu/âm thanh nhiệt độ.
+
+Ảnh giao diện graphite bên dưới dùng dữ liệu trình diễn tổng hợp, gồm cả nguồn. Các thiết lập GPU, thao tác tiến trình, chế độ khẩn cấp và lựa chọn đã lưu giữ nguyên hành vi.
+
+
+Hai GPU NVIDIA: có số liệu nguồn / không có nguồn tương thích.
+
+![Có số liệu nguồn](images/dual-with-psu.png)
+
+![Không có nguồn tương thích](images/dual-without-psu.png)
 
 ## 1.20.1
 
@@ -111,7 +136,6 @@ Hai GPU NVIDIA được hỗ trợ có số liệu riêng, mỗi GPU bốn biể
 - Hiển thị VRAM vật lý đã dùng/còn trống, mức sử dụng GPU và nhiệt độ cùng biểu đồ lịch sử nhỏ.
 - Liệt kê ứng dụng và dịch vụ cục bộ dùng bộ nhớ GPU, có tìm kiếm, sắp xếp và bộ lọc tùy chọn **trên 0,5 GiB**.
 - Hiển thị mười ứng dụng đứng đầu và nhóm «Khác» bằng tỷ lệ chuẩn hóa của các mẫu bộ nhớ tiến trình quan sát trong 30 ngày qua. Tổng là 100%; đây là phân bổ lịch sử số đo, không phải các phần VRAM vật lý có thể cộng lại.
-- Hiển thị tỷ lệ thời gian quan sát hợp lệ trong 24 giờ qua có VRAM vật lý sử dụng trên 50%. Không tính khoảng trống giám sát.
 - Xuất báo cáo CSV UTF-8 đến đường dẫn cục bộ đã chọn.
 - Lưu lựa chọn thu nhỏ vào khay hệ thống hoặc thanh tác vụ Windows thông thường, khôi phục cửa sổ hiện có khi chạy lại và tùy chọn khởi động cùng Windows.
 - Có giao diện hệ thống và graphite tối, mười hai ngôn ngữ, cập nhật mỗi 1–5 giây, mặc định 2 giây.
@@ -154,7 +178,7 @@ Nhiệt độ nhàn rỗi **không phải** giới hạn khi tải kéo dài. M�
 
 ## Phần cứng và yêu cầu
 
-Dành cho NVIDIA GeForce **RTX 5000 Series**. Theo dõi và điều khiển phụ thuộc GPU và driver; chức năng không được hỗ trợ sẽ không khả dụng thay vì được mô phỏng.
+Dành cho NVIDIA GeForce **RTX 30 / 40 / 50**. Theo dõi và điều khiển phụ thuộc GPU và driver; chức năng không được hỗ trợ sẽ không khả dụng thay vì được mô phỏng.
 
 Windows 10/11 x64, .NET Framework 4.8 và driver NVIDIA phù hợp. Có sẵn Java runtime, không cần cài Java riêng. Người dùng Windows đang đăng nhập phải là quản trị viên với token desktop được lọc thông thường. Bộ cài yêu cầu UAC một lần, đặt thành phần điều khiển trong thư mục Program Files cố định được bảo vệ; không hỗ trợ thông tin quản trị viên khác. Hai tác vụ được bảo vệ, chỉ theo yêu cầu, dùng trình khởi chạy cố định và giao tiếp cục bộ có kiểu dữ liệu. Kênh đã cài được thiết kế để khởi động điều khiển không hỏi UAC lần nữa; nếu không xác thực được, điều khiển không khả dụng thay vì yêu cầu nâng quyền khác.
 
