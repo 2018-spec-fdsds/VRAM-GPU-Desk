@@ -22,9 +22,13 @@
 - 独立設定を持つ2つの NVIDIA パネル。2基目の GPU 制御は実験的機能です。
 - 制御喪失の警告と手動再試行。新しい設定では復旧が有効になり、明示的に保存した無効設定は維持されます。
 
-[Windows インストーラー](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [インストーラー ZIP](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
+[Windows インストーラー](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [インストーラー ZIP](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
 
 ![VRAM GPU Desk — グラファイトテーマ](images/dashboard-graphite.png)
+
+## 1.20.1
+
+オーバーレイをダブルクリックするとメイン画面が開きます。
 
 ## 1.20 — GPU フローティングモニター
 

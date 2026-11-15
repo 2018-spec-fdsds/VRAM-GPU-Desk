@@ -1,9 +1,9 @@
 # Distribution
 
-Current version: **1.20**, Windows x64.
+Current version: **1.20.1**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 

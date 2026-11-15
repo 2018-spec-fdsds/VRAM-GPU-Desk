@@ -1,3 +1,7 @@
+# VRAM GPU Desk 1.20.1
+
+Double-click either GPU overlay with the left mouse button to open the main application, including from the tray or minimized state. Works with locked and unlocked overlays; dragging does not trigger opening. Existing settings, controls and quick buttons are preserved. The overlay settings dialog includes localized guidance in all12languages.
+
 # VRAM GPU Desk 1.20
 
 - Compact transparent GPU overlay: three filling gauges for VRAM occupancy, GPU load and temperature. No background panel; above ordinary Windows windows without taking keyboard focus.

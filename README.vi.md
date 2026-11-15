@@ -22,9 +22,13 @@
 - Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
 - Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
 
-Phiên bản **1.20** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
+Phiên bản **1.20.1** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
+
+## 1.20.1
+
+Nhấp đúp vào lớp phủ để mở cửa sổ chính.
 
 ## 1.20 — Bộ theo dõi GPU nổi
 

@@ -22,9 +22,13 @@
 - 两个独立设置的 NVIDIA 面板；第二块 GPU 的控制功能为实验性功能。
 - 控制丢失警告与手动重试；新设置默认开启恢复，保留已明确保存的关闭选择。
 
-[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
+[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
 
 ![VRAM GPU Desk — 石墨深色主题](images/dashboard-graphite.png)
+
+## 1.20.1
+
+双击悬浮指示器可打开应用主窗口。
 
 ## 1.20 — GPU 悬浮监视器
 

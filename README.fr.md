@@ -22,9 +22,13 @@
 - Deux panneaux NVIDIA avec des réglages indépendants ; le contrôle du second GPU est expérimental.
 - Avertissement de perte de contrôle et nouvelle tentative manuelle ; récupération ACTIVÉE pour les nouveaux réglages, arrêt enregistré respecté.
 
-Version **1.20** · [Installation Windows](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
+Version **1.20.1** · [Installation Windows](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
 
 ![VRAM GPU Desk — thème graphite](images/dashboard-graphite.png)
+
+## 1.20.1
+
+Double-cliquez sur l’indicateur pour ouvrir la fenêtre principale.
 
 ## 1.20 — Moniteur GPU flottant
 

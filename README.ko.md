@@ -22,9 +22,13 @@
 - 독립 설정을 갖춘 NVIDIA 패널 두 개; 두 번째 GPU 제어는 실험 기능입니다.
 - 제어 손실 경고와 수동 재시도; 새 설정은 복구가 켜지며 명시적으로 저장한 끄기는 유지됩니다.
 
-[Windows 설치 프로그램 다운로드](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [설치 프로그램 ZIP](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
+[Windows 설치 프로그램 다운로드](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [설치 프로그램 ZIP](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
 
 ![VRAM GPU Desk — 그래파이트 테마](images/dashboard-graphite.png)
+
+## 1.20.1
+
+오버레이를 두 번 클릭하면 기본 창이 열립니다.
 
 ## 1.20 — GPU 플로팅 모니터
 

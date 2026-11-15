@@ -22,9 +22,13 @@
 - Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
 - Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
 
-Version **1.20** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
+Version **1.20.1** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
+
+## 1.20.1
+
+Ein Doppelklick auf die Anzeige öffnet das Hauptfenster.
 
 ## 1.20 — Schwebende GPU-Anzeige
 

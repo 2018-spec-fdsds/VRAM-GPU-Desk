@@ -22,9 +22,13 @@
 - स्वतंत्र सेटिंग वाले दो NVIDIA पैनल; दूसरे GPU का नियंत्रण प्रयोगात्मक है।
 - नियंत्रण खोने की चेतावनी और मैन्युअल पुनः प्रयास; नई सेटिंग में बहाली ON, पहले से सहेजा गया OFF बरकरार।
 
-[Windows इंस्टॉलर डाउनलोड करें](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [इंस्टॉलर ZIP](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
+[Windows इंस्टॉलर डाउनलोड करें](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [इंस्टॉलर ZIP](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
 
 ![VRAM GPU Desk — Graphite थीम](images/dashboard-graphite.png)
+
+## 1.20.1
+
+मुख्य विंडो खोलने के लिए ओवरले पर डबल-क्लिक करें।
 
 ## 1.20 — GPU फ्लोटिंग मॉनिटर
 

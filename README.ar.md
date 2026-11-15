@@ -22,9 +22,13 @@
 - لوحتا NVIDIA بإعدادات مستقلة؛ التحكم في GPU الثانية تجريبي.
 - تحذير عند فقدان التحكم وإعادة محاولة يدوية؛ الاستعادة مفعّلة للإعدادات الجديدة مع حفظ اختيار التعطيل السابق.
 
-[تنزيل برنامج التثبيت](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [حزمة ZIP للتثبيت](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
+[تنزيل برنامج التثبيت](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [حزمة ZIP للتثبيت](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
 
 ![VRAM GPU Desk — السمة الغرافيتية](images/dashboard-graphite.png)
+
+## 1.20.1
+
+انقر نقرًا مزدوجًا على المؤشر لفتح النافذة الرئيسية.
 
 ## 1.20 — مؤشر GPU العائم
 

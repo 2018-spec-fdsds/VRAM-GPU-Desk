@@ -22,9 +22,13 @@
 - Due pannelli NVIDIA con impostazioni indipendenti; il controllo della seconda GPU è sperimentale.
 - Avviso di perdita del controllo e nuovo tentativo manuale; ripristino ATTIVO per le nuove impostazioni, disattivazione salvata rispettata.
 
-Versione **1.20** · [Installer Windows](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
+Versione **1.20.1** · [Installer Windows](downloads/VRAM-GPU-Desk-1.20.1-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.20.1-Installer.zip)
 
 ![VRAM GPU Desk — tema grafite](images/dashboard-graphite.png)
+
+## 1.20.1
+
+Fai doppio clic sull’indicatore per aprire la finestra principale.
 
 ## 1.20 — Monitor GPU mobile
 
