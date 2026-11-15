@@ -252,3 +252,13 @@ Bộ cài không có chữ ký. Phân phối ứng dụng dạng nhị phân đ�
 [Nền sáng](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**
+
+## Ủng hộ dự án
+
+Nếu VRAM GPU Desk hữu ích với bạn, bạn có thể tự nguyện ủng hộ việc phát triển ứng dụng.
+
+**USDT · Ethereum (ERC-20)**
+
+<img src="images/support-usdt-erc20.png" width="160" alt="Mã QR ủng hộ USDT trên mạng Ethereum ERC-20">
+
+Quét mã QR bằng ví tương thích.

@@ -252,3 +252,13 @@ L’uso non commerciale è gratuito secondo [PolyForm Noncommercial 1.0.0](LICEN
 [Sfondo chiaro](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**
+
+## Sostieni il progetto
+
+Se VRAM GPU Desk ti è utile, puoi sostenere volontariamente il suo sviluppo.
+
+**USDT · Ethereum (ERC-20)**
+
+<img src="images/support-usdt-erc20.png" width="160" alt="Codice QR per sostenere in USDT su Ethereum ERC-20">
+
+Scansiona il codice QR con un portafoglio compatibile.

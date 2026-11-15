@@ -253,3 +253,13 @@ Windows 10/11 x64、.NET Framework 4.8、対応する NVIDIA ドライバーが�
 [明るい背景](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**
+
+## プロジェクトを支援する
+
+VRAM GPU Deskがお役に立てば、任意で開発をご支援いただけます。
+
+**USDT · Ethereum (ERC-20)**
+
+<img src="images/support-usdt-erc20.png" width="160" alt="Ethereum ERC-20のUSDT支援用QRコード">
+
+対応するウォレットでQRコードを読み取ってください。

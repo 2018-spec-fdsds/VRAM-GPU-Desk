@@ -243,3 +243,13 @@ Windows 10/11 x64, .NET Framework 4.8 और समर्थित NVIDIA ड्
 [हल्की पृष्ठभूमि](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**
+
+## परियोजना का समर्थन करें
+
+यदि VRAM GPU Desk आपके काम आता है, तो आप स्वेच्छा से इसके विकास में सहयोग कर सकते हैं।
+
+**USDT · Ethereum (ERC-20)**
+
+<img src="images/support-usdt-erc20.png" width="160" alt="Ethereum ERC-20 नेटवर्क पर USDT सहयोग का QR कोड">
+
+संगत वॉलेट से QR कोड स्कैन करें।

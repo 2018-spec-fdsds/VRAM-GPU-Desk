@@ -243,3 +243,13 @@
 [خلفية فاتحة](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**
+
+## دعم المشروع
+
+إذا كان VRAM GPU Desk مفيدًا لك، يمكنك دعم تطويره طوعًا.
+
+**USDT · Ethereum (ERC-20)**
+
+<img src="images/support-usdt-erc20.png" width="160" alt="رمز QR لدعم USDT على شبكة Ethereum ERC-20">
+
+امسح رمز QR بمحفظة متوافقة.
