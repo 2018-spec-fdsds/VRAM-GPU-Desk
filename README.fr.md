@@ -22,9 +22,19 @@
 - Deux panneaux NVIDIA avec des réglages indépendants ; le contrôle du second GPU est expérimental.
 - Avertissement de perte de contrôle et nouvelle tentative manuelle ; récupération ACTIVÉE pour les nouveaux réglages, arrêt enregistré respecté.
 
-Version **1.19** · [Installation Windows](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
+Version **1.20** · [Installation Windows](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
 
 ![VRAM GPU Desk — thème graphite](images/dashboard-graphite.png)
+
+## 1.20 — Moniteur GPU flottant
+
+Moniteur compact transparent au-dessus des fenêtres Windows ordinaires, sans panneau de fond. Une fenêtre indépendante de ≈164 × 114 pixels physiques par GPU NVIDIA, pour deux cartes au maximum. Position séparée enregistrée, déplacement, verrouillage, échelle et contraste réglables. Affichage masqué par défaut ; son activé par défaut et désactivable séparément. Utilise la télémétrie existante sans contrôle GPU supplémentaire.
+
+Occupation VRAM et charge GPU ; température : ≤40 vert, 41–75 jaune, 76–81 orange, 82–86 rouge, ≥87 clignotant. Son dès 88 °C.
+
+![ Moniteur GPU flottant ](images/floating-monitor-transparent.png)
+
+
 
 Données synthétiques de démonstration et états simulés des régulateurs. Les deux options d’urgence sont DÉSACTIVÉES à chaque lancement. La récupération est ACTIVÉE pour les nouveaux réglages ; un arrêt enregistré est préservé.
 
@@ -174,3 +184,8 @@ Les captures sont synthétiques avec régulation simulée.
 ## Licence
 
 L’utilisation non commerciale est gratuite sous [PolyForm Noncommercial 1.0.0](LICENSE.md), dans le respect de ses conditions et obligations de notification. L’usage commercial nécessite une autorisation distincte. Il ne s’agit pas d’une licence open source ; le code source de l’application n’est pas publié. Les licences des runtimes tiers restent inchangées.
+
+
+![GPU × 2](images/dual-floating-monitors.png)
+
+**1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

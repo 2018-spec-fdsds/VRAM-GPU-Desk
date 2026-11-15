@@ -1,9 +1,9 @@
 # Distribution
 
-Current version: **1.19**, Windows x64.
+Current version: **1.20**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 
@@ -29,7 +29,7 @@ One-GPU minimum is 1200×900; the current two-GPU workspace requires 1920×1050.
 
 ## Per-device NVIDIA capabilities
 
-Version 1.19 adapts power and optional clock control to the actual device rather than a fixed model wattage. Every session captures its starting power limit as the session ceiling and restoration baseline, not the factory default. Acquiring the session performs no initial power or clock write. Power changes scale at 1% of the starting session limit per second, bounded by the GPU’s reported range and session ceiling; clocks use a validated supported range.
+Version 1.20 adapts power and optional clock control to the actual device rather than a fixed model wattage. Every session captures its starting power limit as the session ceiling and restoration baseline, not the factory default. Acquiring the session performs no initial power or clock write. Power changes scale at 1% of the starting session limit per second, bounded by the GPU’s reported range and session ceiling; clocks use a validated supported range.
 
 Supported power-only regulation remains available when clock control is unsupported. A valid temperature can still drive power-only regulation if GPU utilization is unknown. Targets above reported hardware temperature limits are blocked; missing limits remain unknown. Unsupported features stay visible as unavailable. Fan recovery is independent of power-client recovery. Available operations depend on BIOS, OEM, driver and laptop restrictions, separately for each GPU.
 

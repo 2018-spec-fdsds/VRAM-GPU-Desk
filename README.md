@@ -22,9 +22,19 @@
 - Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
 - Control-loss warning and manual retry; forced recovery is ON for new settings, with saved OFF choices preserved.
 
-Version **1.19** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
+Version **1.20** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
 
 ![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
+
+## 1.20 — Floating GPU monitor
+
+Optional compact transparent monitor above ordinary Windows windows, without a background panel. One separate ≈164 × 114 physical-pixel overlay per NVIDIA GPU; up to two cards. Move each independently, lock its position, adjust scale and text contrast. Display is off by default; sound is on by default and can be disabled independently. Preferences persist. Existing telemetry is reused; no additional GPU control is requested.
+
+VRAM and GPU load; temperature: ≤40 green, 41–75 yellow, 76–81 orange, 82–86 red, ≥87 blinking. Sound starts at 88 °C.
+
+![ Floating GPU monitor ](images/floating-monitor-transparent.png)
+
+
 
 Synthetic demonstration data and simulated controller states. Both emergency options are OFF at every launch. Recovery is ON for new settings; saved OFF choices are preserved.
 
@@ -173,3 +183,8 @@ Screenshots use synthetic demonstration data and simulated controller state, wit
 ## License
 
 Free for noncommercial use under [PolyForm Noncommercial 1.0.0](LICENSE.md), subject to its terms and notice requirements. Commercial use requires separate permission. This is not an open-source license; application source code is not published. Third-party runtime licenses remain unchanged.
+
+
+![GPU × 2](images/dual-floating-monitors.png)
+
+**1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

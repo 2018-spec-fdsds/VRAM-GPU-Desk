@@ -22,9 +22,19 @@
 - 독립 설정을 갖춘 NVIDIA 패널 두 개; 두 번째 GPU 제어는 실험 기능입니다.
 - 제어 손실 경고와 수동 재시도; 새 설정은 복구가 켜지며 명시적으로 저장한 끄기는 유지됩니다.
 
-[Windows 설치 프로그램 다운로드](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [설치 프로그램 ZIP](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
+[Windows 설치 프로그램 다운로드](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [설치 프로그램 ZIP](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
 
 ![VRAM GPU Desk — 그래파이트 테마](images/dashboard-graphite.png)
+
+## 1.20 — GPU 플로팅 모니터
+
+일반 Windows 창 위에 표시되는 작고 투명한 모니터로 전체 배경 패널이 없습니다. NVIDIA GPU마다 ≈164 × 114 물리 픽셀의 별도 오버레이를 표시하며 최대 두 카드를 지원합니다. 위치를 개별 저장하고 이동, 고정, 배율 및 글자 대비를 조절할 수 있습니다. 기본 표시 꺼짐, 소리는 기본 켜짐이며 별도로 끌 수 있습니다. 기존 측정값을 사용하며 GPU 제어를 추가로 요청하지 않습니다.
+
+VRAM 사용량 및 GPU 부하; 온도: ≤40 초록, 41–75 노랑, 76–81 주황, 82–86 빨강, ≥87 깜박임. 88 °C부터 경고음.
+
+![ GPU 플로팅 모니터 ](images/floating-monitor-transparent.png)
+
+
 
 합성 데모 데이터와 모의 제어 상태입니다. 두 비상 옵션은 실행할 때마다 꺼집니다. 새 설정은 복구가 켜지며 저장한 끄기 선택은 유지됩니다.
 
@@ -175,3 +185,8 @@ Windows 10/11 x64, .NET Framework 4.8, 지원되는 NVIDIA 드라이버가 필�
 ## 라이선스
 
 [PolyForm Noncommercial 1.0.0](LICENSE.md)의 조건과 고지 의무를 준수하는 비상업적 사용은 무료입니다. 상업적 사용에는 별도 허가가 필요합니다. 오픈 소스 라이선스가 아니며 앱 소스 코드는 공개하지 않습니다. 타사 런타임 라이선스는 변경되지 않습니다.
+
+
+![GPU × 2](images/dual-floating-monitors.png)
+
+**1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

@@ -22,9 +22,19 @@
 - Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
 - Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
 
-Version **1.19** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
+Version **1.20** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
+
+## 1.20 — Schwebende GPU-Anzeige
+
+Optionale kompakte transparente Anzeige über normalen Windows-Fenstern, ohne Hintergrundfläche. Pro NVIDIA-GPU eine eigene Anzeige mit ≈164 × 114 physischen Pixeln; bis zu zwei Karten. Positionen separat verschieben, sperren und speichern; Skalierung und Textkontrast anpassen. Anzeige standardmäßig aus, Ton standardmäßig an und separat abschaltbar. Nutzt vorhandene Telemetrie ohne zusätzliche GPU-Steuerung.
+
+VRAM-Belegung und GPU-Auslastung; Temperatur: ≤40 grün, 41–75 gelb, 76–81 orange, 82–86 rot, ≥87 blinkend. Signalton ab 88 °C.
+
+![ Schwebende GPU-Anzeige ](images/floating-monitor-transparent.png)
+
+
 
 Synthetische Demonstrationsdaten und simulierte Reglerzustände. Beide Notfalloptionen sind bei jedem Start AUS. Wiederherstellung ist für neue Einstellungen EIN; gespeichertes AUS bleibt erhalten.
 
@@ -174,3 +184,8 @@ Screenshots sind synthetische Demonstrationen mit simuliertem Reglerstatus.
 ## Lizenz
 
 Die nichtkommerzielle Nutzung ist unter [PolyForm Noncommercial 1.0.0](LICENSE.md) kostenlos, sofern deren Bedingungen und Hinweispflichten eingehalten werden. Kommerzielle Nutzung erfordert eine gesonderte Erlaubnis. Dies ist keine Open-Source-Lizenz; der Anwendungsquellcode wird nicht veröffentlicht. Lizenzen der Laufzeitkomponenten Dritter bleiben unverändert.
+
+
+![GPU × 2](images/dual-floating-monitors.png)
+
+**1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

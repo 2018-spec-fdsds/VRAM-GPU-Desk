@@ -22,9 +22,19 @@
 - Due pannelli NVIDIA con impostazioni indipendenti; il controllo della seconda GPU è sperimentale.
 - Avviso di perdita del controllo e nuovo tentativo manuale; ripristino ATTIVO per le nuove impostazioni, disattivazione salvata rispettata.
 
-Versione **1.19** · [Installer Windows](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
+Versione **1.20** · [Installer Windows](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
 
 ![VRAM GPU Desk — tema grafite](images/dashboard-graphite.png)
+
+## 1.20 — Monitor GPU mobile
+
+Monitor compatto trasparente sopra le normali finestre Windows, senza pannello di sfondo. Una finestra indipendente di ≈164 × 114 pixel fisici per GPU NVIDIA, fino a due schede. Posizioni salvate separatamente, spostamento, blocco, scala e contrasto regolabili. Nascosto per impostazione predefinita; audio attivo e disattivabile separatamente. Riutilizza la telemetria esistente senza ulteriore controllo GPU.
+
+Uso VRAM e carico GPU; temperatura: ≤40 verde, 41–75 giallo, 76–81 arancione, 82–86 rosso, ≥87 lampeggiante. Suono da 88 °C.
+
+![ Monitor GPU mobile ](images/floating-monitor-transparent.png)
+
+
 
 Dati dimostrativi sintetici e stati simulati dei regolatori. Entrambe le opzioni di emergenza sono DISATTIVATE a ogni avvio. Il ripristino è ATTIVO per le nuove impostazioni; una disattivazione salvata viene mantenuta.
 
@@ -174,3 +184,8 @@ Le schermate sono sintetiche con controllo simulato.
 ## Licenza
 
 L’uso non commerciale è gratuito secondo [PolyForm Noncommercial 1.0.0](LICENSE.md), rispettandone condizioni e obblighi di avviso. L’uso commerciale richiede un’autorizzazione separata. Non è una licenza open source; il codice sorgente dell’applicazione non viene pubblicato. Le licenze dei runtime di terze parti rimangono invariate.
+
+
+![GPU × 2](images/dual-floating-monitors.png)
+
+**1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

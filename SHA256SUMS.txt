@@ -15,3 +15,6 @@ b4f2a99a21557c60abeae251ce1715d076eebd10fd12b38f6538eb81b53d2ca8  downloads/VRAM
 d7f68ea2174cddf46cdfaae97ac8c08e413bfa32028d7d1cd857b93bd3fb1001  downloads/VRAM-GPU-Desk-1.18-Installer.zip
 c0f017f6efe9186e5ae3070bc43dd837e5ea2f6b35156c25301dc4fcfb736abf  downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe
 75b33efe85f40e734c235e3daf6e724cc951b005abefa08e90c785aa8cb40699  downloads/VRAM-GPU-Desk-1.19-Installer.zip
+
+cd0dddea8323cea8132555b3d0912ffbe013650cfc28cb9c2db5f0e778ec5f22  downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe
+b02be03cb7adb086fcb24924cda71e1b47bf0f17f44d9f573b089c5a48866088  downloads/VRAM-GPU-Desk-1.20-Installer.zip

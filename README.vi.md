@@ -22,9 +22,19 @@
 - Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
 - Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
 
-Phiên bản **1.19** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
+Phiên bản **1.20** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
+
+## 1.20 — Bộ theo dõi GPU nổi
+
+Bộ theo dõi nhỏ trong suốt trên cửa sổ Windows thông thường, không có bảng nền chung. Mỗi GPU NVIDIA có một lớp phủ riêng ≈164 × 114 pixel vật lý, tối đa hai card. Lưu vị trí riêng, cho phép kéo, khóa, đổi tỷ lệ và độ tương phản chữ. Mặc định ẩn, âm thanh bật và có thể tắt riêng. Dùng dữ liệu đo hiện có, không điều khiển GPU thêm.
+
+Mức dùng VRAM và tải GPU; nhiệt độ: ≤40 xanh lá, 41–75 vàng, 76–81 cam, 82–86 đỏ, ≥87 nhấp nháy. Có âm báo từ 88 °C.
+
+![ Bộ theo dõi GPU nổi ](images/floating-monitor-transparent.png)
+
+
 
 Dữ liệu minh họa tổng hợp và trạng thái điều khiển mô phỏng. Cả hai tùy chọn khẩn cấp đều TẮT mỗi lần mở. Khôi phục BẬT cho cài đặt mới; lựa chọn TẮT đã lưu được giữ lại.
 
@@ -174,3 +184,8 @@ Bộ cài không có chữ ký. Phân phối ứng dụng dạng nhị phân đ�
 ## Giấy phép
 
 Được sử dụng miễn phí cho mục đích phi thương mại theo [PolyForm Noncommercial 1.0.0](LICENSE.md), với điều kiện tuân thủ các điều khoản và yêu cầu thông báo. Sử dụng thương mại cần được cho phép riêng. Đây không phải giấy phép mã nguồn mở; mã nguồn ứng dụng không được công bố. Giấy phép của runtime bên thứ ba không thay đổi.
+
+
+![GPU × 2](images/dual-floating-monitors.png)
+
+**1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

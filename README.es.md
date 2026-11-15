@@ -22,9 +22,19 @@
 - Dos paneles NVIDIA con ajustes independientes; el control de la segunda GPU es experimental.
 - Aviso de pérdida de control y reintento manual; recuperación ACTIVADA para ajustes nuevos, respetando la desactivación guardada.
 
-Versión **1.19** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
+Versión **1.20** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
 
 ![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
+
+## 1.20 — Monitor flotante de GPU
+
+Monitor compacto y transparente sobre las ventanas normales de Windows, sin panel de fondo. Una superposición independiente de ≈164 × 114 píxeles físicos por GPU NVIDIA; hasta dos tarjetas. Posición independiente guardada, bloqueo, escala y contraste ajustables. Monitor oculto por defecto; sonido activado por defecto y desactivable por separado. Utiliza la telemetría existente sin control adicional de GPU.
+
+Uso de VRAM y carga de GPU; temperatura: ≤40 verde, 41–75 amarillo, 76–81 naranja, 82–86 rojo, ≥87 parpadeo. Sonido desde 88 °C.
+
+![ Monitor flotante de GPU ](images/floating-monitor-transparent.png)
+
+
 
 Datos sintéticos de demostración y estados simulados de los reguladores. Ambas opciones de emergencia están DESACTIVADAS en cada inicio. La recuperación está ACTIVADA para ajustes nuevos; se respeta la desactivación guardada.
 
@@ -174,3 +184,8 @@ Las capturas son sintéticas con control simulado.
 ## Licencia
 
 El uso no comercial es gratuito bajo [PolyForm Noncommercial 1.0.0](LICENSE.md), respetando sus condiciones y avisos obligatorios. El uso comercial requiere un permiso independiente. No es una licencia de código abierto; el código fuente de la aplicación no se publica. Las licencias del runtime de terceros no cambian.
+
+
+![GPU × 2](images/dual-floating-monitors.png)
+
+**1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

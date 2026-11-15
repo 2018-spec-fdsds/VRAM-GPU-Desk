@@ -22,9 +22,19 @@
 - 独立設定を持つ2つの NVIDIA パネル。2基目の GPU 制御は実験的機能です。
 - 制御喪失の警告と手動再試行。新しい設定では復旧が有効になり、明示的に保存した無効設定は維持されます。
 
-[Windows インストーラー](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [インストーラー ZIP](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
+[Windows インストーラー](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [インストーラー ZIP](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
 
 ![VRAM GPU Desk — グラファイトテーマ](images/dashboard-graphite.png)
+
+## 1.20 — GPU フローティングモニター
+
+通常の Windows ウィンドウの手前に表示する小型の透明モニターで、共通背景パネルはありません。NVIDIA GPU ごとに独立した ≈164 × 114 物理ピクセルの窓を表示し、最大2枚に対応します。位置を個別に保存し、移動、固定、倍率、文字コントラストを調整できます。初期状態は非表示、音は有効で個別に無効化できます。既存テレメトリーを再利用し追加 GPU 制御は要求しません。
+
+VRAM 使用率と GPU 負荷。温度：40 以下は緑、41–75 は黄、76–81 はオレンジ、82–86 は赤、87 以上は点滅。88 °C から警告音。
+
+![ GPU フローティングモニター ](images/floating-monitor-transparent.png)
+
+
 
 合成デモデータとシミュレーションによる制御状態です。2つの緊急オプションは起動のたびに無効です。新しい設定では復旧が有効になり、保存済みの無効設定は維持されます。
 
@@ -175,3 +185,8 @@ Windows 10/11 x64、.NET Framework 4.8、対応する NVIDIA ドライバーが�
 ## ライセンス
 
 [PolyForm Noncommercial 1.0.0](LICENSE.md) の条件と通知要件を守る非商用利用は無料です。商用利用には別途許可が必要です。オープンソースライセンスではなく、アプリのソースコードは公開されていません。第三者ランタイムのライセンスは変更されません。
+
+
+![GPU × 2](images/dual-floating-monitors.png)
+
+**1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

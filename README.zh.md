@@ -22,9 +22,19 @@
 - 两个独立设置的 NVIDIA 面板；第二块 GPU 的控制功能为实验性功能。
 - 控制丢失警告与手动重试；新设置默认开启恢复，保留已明确保存的关闭选择。
 
-[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
+[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.20-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.20-Installer.zip)
 
 ![VRAM GPU Desk — 石墨深色主题](images/dashboard-graphite.png)
+
+## 1.20 — GPU 悬浮监视器
+
+透明紧凑监视器位于普通 Windows 窗口上方，没有整体背景面板。每张 NVIDIA 显卡对应一个独立的 ≈164 × 114 物理像素悬浮窗口，最多支持两张卡。分别保存位置，可拖动、锁定、调整缩放和文字对比度。默认不显示，声音默认开启且可单独关闭。复用已有遥测，不请求额外 GPU 控制。
+
+显存占用和 GPU 负载；温度：≤40 为绿色，41–75 为黄色，76–81 为橙色，82–86 为红色，≥87 时闪烁。88 °C 起发出声音。
+
+![ GPU 悬浮监视器 ](images/floating-monitor-transparent.png)
+
+
 
 合成演示数据与模拟控制器状态。两种紧急选项在每次启动时均关闭。新设置默认开启恢复；已保存的关闭选择保持不变。
 
@@ -175,3 +185,8 @@ RAM 按现有刷新间隔更新，无需 UAC。缺失、无效或超过六秒的
 ## 许可证
 
 依据 [PolyForm Noncommercial 1.0.0](LICENSE.md)，在遵守其条款和通知要求的前提下，可免费用于非商业目的。商业使用须另行获得许可。这不是开源许可证；应用程序源代码不公开。第三方运行时的许可证保持不变。
+
+
+![GPU × 2](images/dual-floating-monitors.png)
+
+**1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**
