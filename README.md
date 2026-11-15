@@ -6,7 +6,7 @@
 
 ## Key features
 
-- Local NVIDIA VRAM, GPU load and temperature monitoring, plus system RAM usage, with live graphs.
+- Local NVIDIA VRAM, GPU load and temperature monitoring, plus system RAM and CPU utilization, with graphs and per-core bars.
 - Per-process GPU memory, search, sorting and UTF-8 CSV export.
 - Temperature control and idle cooling.
 - Four configurable one-click buttons bound to exact process instances; optional emergency termination is OFF at every launch.
@@ -15,7 +15,7 @@
 - Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
 - Control-loss warning and manual retry; forced recovery is ON for new settings, with saved OFF choices preserved.
 
-Version **1.17** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
+Version **1.18** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
 
 ![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
 
@@ -27,6 +27,14 @@ Synthetic demonstration data and simulated controller states. Both emergency opt
 > **Concurrent GPU control:** GPU temperature parameter control may conflict with other programs that change power limits, clocks or fan speeds at the same time, such as MSI Afterburner. Use only one active controller for these settings. This warning concerns simultaneous changes to settings, not passive monitoring.
 
 
+
+## New in 1.18: CPU utilization and a clearer two-GPU workspace
+
+**CPU load beside system RAM.** The CPU card shows overall utilization, physical-core and logical-thread counts, and an instantaneous utilization bar for each physical core. Each core bar groups its logical threads; the overall percentage is weighted by logical processors. Built-in Windows measurements require no additional UAC prompt, driver or monitoring application. Missing, invalid or more than six-second-old readings show **—**, with unavailable core bars.
+
+**One GPU: six cards at 1200×900.** The four GPU cards, system RAM and CPU load remain visible together. **Two NVIDIA GPUs: minimum 1920×1050.** Each GPU has its own four-card 2×2 block, aligned readings and complete controls. Thin vertical dividers separate the GPU areas from the shared column on the right, with RAM above the taller CPU card. System RAM and CPU appear only once and do not follow GPU selection. Second-GPU control remains experimental.
+
+All three fan indicators remain visible through wrapping when space is limited. This improves the display without changing fan-control logic. Compact quick buttons, process readability and all existing settings are retained.
 
 ## New in 1.17: system RAM at a glance
 

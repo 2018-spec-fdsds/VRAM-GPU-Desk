@@ -6,7 +6,7 @@
 
 ## Fonctionnalités principales
 
-- Suivi local de la VRAM, de la charge et de la température NVIDIA, ainsi que de la RAM système, avec graphiques en direct.
+- Suivi local de la VRAM, de la charge et de la température NVIDIA, de la RAM système et de la charge CPU, avec graphiques et barres par cœur.
 - Mémoire GPU par processus, recherche, tri et export CSV en UTF-8.
 - Régulation de la température et refroidissement au repos.
 - Quatre boutons configurables en un clic liés à des instances précises de processus ; la fermeture d’urgence facultative est DÉSACTIVÉE à chaque lancement.
@@ -15,7 +15,7 @@
 - Deux panneaux NVIDIA avec des réglages indépendants ; le contrôle du second GPU est expérimental.
 - Avertissement de perte de contrôle et nouvelle tentative manuelle ; récupération ACTIVÉE pour les nouveaux réglages, arrêt enregistré respecté.
 
-Version **1.17** · [Installation Windows](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
+Version **1.18** · [Installation Windows](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
 
 ![VRAM GPU Desk — thème graphite](images/dashboard-graphite.png)
 
@@ -26,6 +26,14 @@ Données synthétiques de démonstration et états simulés des régulateurs. Le
 
 > **Contrôle simultané du GPU:** Le contrôle des paramètres de température du GPU peut entrer en conflit avec des programmes qui modifient simultanément la puissance, les fréquences ou la vitesse des ventilateurs, par exemple MSI Afterburner. Utilisez un seul régulateur actif pour ces paramètres. Cet avertissement concerne les modifications simultanées, pas la surveillance passive.
 
+
+## Nouveautés de 1.18 : charge CPU et espace plus clair pour deux GPU
+
+**La charge CPU à côté de la RAM système.** La carte CPU affiche la charge globale, les nombres de cœurs physiques et de threads logiques et une barre de charge instantanée par cœur physique. Chaque barre regroupe les threads logiques de son cœur ; le pourcentage global est pondéré par les processeurs logiques. Les mesures intégrées à Windows ne demandent ni UAC supplémentaire, ni pilote, ni autre application de surveillance. Les mesures absentes, invalides ou vieilles de plus de six secondes affichent **—** et des barres de cœur indisponibles.
+
+**Un GPU : six cartes à 1200×900.** Les quatre cartes GPU, la RAM et la charge CPU restent visibles ensemble. **Deux GPU NVIDIA : minimum 1920×1050.** Chaque GPU dispose de son bloc 2×2 de quatre cartes, de mesures alignées et de toutes ses commandes. De fines séparations verticales délimitent les zones GPU et la colonne commune à droite : RAM en haut, carte CPU plus haute en dessous. RAM et CPU n’apparaissent qu’une fois et ne dépendent pas du GPU sélectionné. Le contrôle du second GPU reste expérimental.
+
+Les trois indicateurs de ventilateur restent visibles grâce au retour à la ligne lorsque l’espace manque. La logique de commande des ventilateurs reste inchangée. Les boutons rapides compacts, la lisibilité des processus et tous les réglages précédents sont conservés.
 
 ## Nouveautés de 1.17 : la RAM système en un coup d’œil
 

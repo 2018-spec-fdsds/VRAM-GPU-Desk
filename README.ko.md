@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.17
+# VRAM GPU Desk 1.18
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -6,7 +6,7 @@
 
 ## 주요 기능
 
-- 실시간 그래프로 NVIDIA VRAM, GPU 부하와 온도 및 시스템 RAM 사용량을 로컬에서 모니터링합니다.
+- 실시간 그래프로 NVIDIA VRAM, GPU 부하와 온도, 시스템 RAM을 모니터링하고 코어별 막대로 CPU 사용률을 표시합니다.
 - 프로세스별 GPU 메모리, 검색, 정렬 및 UTF-8 CSV 내보내기를 지원합니다.
 - 온도 제어와 유휴 냉각을 제공합니다.
 - 정확한 프로세스 인스턴스에 연결되는 설정 가능한 원클릭 버튼 4개를 제공합니다. 선택형 긴급 종료 기능은 매번 시작할 때 꺼져 있습니다.
@@ -15,7 +15,7 @@
 - 독립 설정을 갖춘 NVIDIA 패널 두 개; 두 번째 GPU 제어는 실험 기능입니다.
 - 제어 손실 경고와 수동 재시도; 새 설정은 복구가 켜지며 명시적으로 저장한 끄기는 유지됩니다.
 
-[Windows 설치 프로그램 다운로드](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [설치 프로그램 ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
+[Windows 설치 프로그램 다운로드](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [설치 프로그램 ZIP](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
 
 ![VRAM GPU Desk — 그래파이트 테마](images/dashboard-graphite.png)
 
@@ -27,6 +27,14 @@
 > **동시 GPU 제어:** GPU 온도 매개변수 제어는 전력, 클럭 또는 팬 속도를 동시에 변경하는 다른 프로그램(예: MSI Afterburner)과 충돌할 수 있습니다. 이 설정에는 하나의 활성 제어기만 사용하세요. 이 경고는 설정의 동시 변경에 관한 것이며 수동 모니터링은 해당하지 않습니다.
 
 
+
+## 1.18의 새 기능: CPU 사용률과 더 명확한 듀얼 GPU 작업 공간
+
+**시스템 RAM 옆에서 CPU 부하를 확인합니다.** CPU 카드는 전체 사용률, 물리 코어와 논리 스레드 수, 물리 코어별 순간 사용률 막대를 표시합니다. 각 막대는 해당 코어의 논리 스레드를 묶으며 전체 사용률은 논리 프로세서 수에 따라 가중됩니다. Windows 내장 측정값을 사용하므로 추가 UAC, 드라이버 또는 별도 모니터링 앱이 필요하지 않습니다. 누락되었거나 잘못되었거나 6초가 지난 값은 **—**와 사용할 수 없는 코어 막대로 표시합니다.
+
+**단일 GPU: 1200×900에서 카드 여섯 개.** 네 개의 GPU 카드와 시스템 RAM, CPU 부하를 함께 볼 수 있습니다. **NVIDIA GPU 두 개: 최소 1920×1050.** 각 GPU는 2×2로 배치된 카드 네 개, 정렬된 측정값과 모든 제어 항목을 가집니다. 얇은 세로 구분선이 GPU 영역과 오른쪽 공용 열을 나누며, 위에는 RAM, 아래에는 더 높은 CPU 카드가 있습니다. 시스템 RAM과 CPU는 한 번만 표시되고 GPU 선택과 무관합니다. 두 번째 GPU 제어는 계속 실험적입니다.
+
+공간이 부족하면 줄바꿈하여 팬 표시기 세 개를 모두 보여 줍니다. 팬 제어 로직은 바뀌지 않습니다. 간결한 빠른 버튼, 읽기 쉬운 프로세스 이름과 기존 설정은 유지됩니다.
 
 ## 1.17의 새 기능: 시스템 RAM을 한눈에
 

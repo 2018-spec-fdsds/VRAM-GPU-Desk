@@ -6,7 +6,7 @@
 
 ## Wichtigste Funktionen
 
-- Lokale Überwachung von NVIDIA-VRAM, GPU-Auslastung und Temperatur sowie System-RAM mit Live-Diagrammen.
+- Lokale Überwachung von NVIDIA-VRAM, GPU-Auslastung und Temperatur sowie System-RAM und CPU-Auslastung mit Diagrammen und Kernbalken.
 - GPU-Speicher je Prozess, Suche, Sortierung und CSV-Export in UTF-8.
 - Temperaturregelung und Kühlung im Leerlauf.
 - Vier konfigurierbare Ein-Klick-Schaltflächen für exakt gebundene Prozessinstanzen; die optionale Notfallbeendigung ist bei jedem Start AUS.
@@ -15,7 +15,7 @@
 - Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
 - Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
 
-Version **1.17** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
+Version **1.18** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
 
@@ -26,6 +26,14 @@ Synthetische Demonstrationsdaten und simulierte Reglerzustände. Beide Notfallop
 
 > **Gleichzeitige GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter kann mit anderen Programmen kollidieren, die gleichzeitig Leistungsgrenzen, Taktraten oder Lüfterdrehzahlen ändern, beispielsweise MSI Afterburner. Verwenden Sie nur einen aktiven Regler für diese Einstellungen. Gemeint sind gleichzeitige Änderungen, nicht die passive Überwachung.
 
+
+## Neu in 1.18: CPU-Auslastung und übersichtlicherer Zwei-GPU-Arbeitsbereich
+
+**CPU-Auslastung neben System-RAM.** Die CPU-Karte zeigt Gesamtauslastung, Anzahl physischer Kerne und logischer Threads und einen Balken der momentanen Auslastung je physischem Kern. Ein Kernbalken fasst seine logischen Threads zusammen; der Gesamtwert wird nach logischen Prozessoren gewichtet. Die integrierten Windows-Messungen benötigen keine zusätzliche UAC-Abfrage, Treiber oder Monitoring-Anwendung. Fehlende, ungültige oder über sechs Sekunden alte Werte erscheinen als **—** und nicht verfügbare Kernbalken.
+
+**Eine GPU: sechs Karten bei 1200×900.** Vier GPU-Karten, System-RAM und CPU-Auslastung bleiben gemeinsam sichtbar. **Zwei NVIDIA-GPUs: mindestens 1920×1050.** Jede GPU besitzt einen eigenen 2×2-Block mit vier Karten, ausgerichteten Messwerten und vollständigen Steuerelementen. Dünne vertikale Trennlinien grenzen die GPU-Bereiche von der gemeinsamen rechten Spalte ab: RAM oben, die höhere CPU-Karte darunter. System-RAM und CPU erscheinen nur einmal und hängen nicht von der GPU-Auswahl ab. Die Steuerung der zweiten GPU bleibt experimentell.
+
+Alle drei Lüfteranzeigen bleiben durch Zeilenumbruch bei Platzmangel sichtbar. Die Lüfterregelung selbst bleibt unverändert. Kompakte Schnellaktionen, lesbare Prozessnamen und alle bisherigen Einstellungen bleiben erhalten.
 
 ## Neu in 1.17: System-RAM auf einen Blick
 

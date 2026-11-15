@@ -1,5 +1,32 @@
 # VRAM GPU Desk — release notes
 
+## 1.18
+
+[Windows x64 installer](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.18-Installer.zip) · [SHA-256](SHA256SUMS.txt)
+
+### CPU utilization and physical-core bars
+
+- The CPU card shows total utilization, physical-core and logical-thread counts, and an instantaneous utilization bar for each physical core.
+- Core bars group their logical threads. Overall utilization is weighted by logical processors, rather than an unweighted mean of core groups.
+- Uses built-in Windows CPU measurements without another UAC prompt, driver or provider application. Missing, invalid or more than six-second-old CPU readings show **—** and unavailable core bars.
+
+### Aligned two-GPU workspace
+
+- A single GPU retains six metric cards at 1200×900: four GPU cards, system RAM and CPU.
+- The two-NVIDIA-GPU minimum is now **1920×1050**. Each GPU has a four-card **2×2** block, aligned readings and all its controls. Thin vertical dividers separate the GPU areas from the shared right column.
+- RAM appears above a taller CPU card in that shared column. Both are system-wide, appear only once and are independent of GPU selection. Second-GPU control remains experimental.
+- All three fan indicators remain visible by wrapping when space is limited. Fan-control logic is unchanged.
+
+The verified 1.18 package contains 167 manifest files and 106 Java classes.
+
+### Retained features and distribution
+
+All twelve languages, Graphite and System themes, readable process rows, compact editable quick buttons and existing controls remain available. Recovery defaults ON for new or missing settings; explicitly saved OFF is respected. Both emergency options remain OFF at each launch. Optional tray minimization still allows ordinary Windows taskbar minimization.
+
+The protected NVIDIA control component requires one UAC approval at installation. CPU and RAM monitoring require no additional elevation. Concurrent GPU parameter changes may conflict with MSI Afterburner or another controller. English remains the main description and Graphite the first screenshot. Application sources are not published; use remains governed by [PolyForm Noncommercial 1.0.0](LICENSE.md).
+
+---
+
 ## 1.17
 
 [Windows x64 installer](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip) · [SHA-256](SHA256SUMS.txt)

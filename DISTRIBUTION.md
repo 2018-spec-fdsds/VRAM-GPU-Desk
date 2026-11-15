@@ -1,9 +1,9 @@
 # Distribution
 
-Current version: **1.17**, Windows x64.
+Current version: **1.18**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 
@@ -25,13 +25,15 @@ NVIDIA GPUs only; AMD and Intel controls are unsupported. Model/driver capabilit
 
 Control loss shows a warning and manual Retry. Force control recovery defaults ON for new or missing settings; explicitly saved OFF is preserved. Recovery is saved per GPU and uses 5/10/30/60-second backoff after confirmed teardown and fresh same-GPU data. It retains native safety checks and cannot provide exclusive control against MSI Afterburner. Both emergency options remain OFF at each launch. See the feature descriptions in the [English README](README.md).
 
-The verified 1.17 package contains 167 manifest files and 98 Java classes. One-GPU minimum is 1200×900; two panels require 1600×950.
+The verified 1.18 package contains 167 manifest files and 106 Java classes. One-GPU minimum is 1200×900; the current two-GPU workspace requires 1920×1050.
 
-## System RAM dashboard
+## Shared RAM and CPU dashboard
 
-Version 1.17 adds a fifth System RAM card showing physical memory used/total in GiB, usage percentage, available memory and a five-minute graph. The total is physical RAM usable by Windows, not VRAM or page-file commit.
+System RAM shows physical memory used/total in GiB, usage percentage, available memory and a five-minute graph. Its total is physical RAM usable by Windows, separate from VRAM and page-file commit.
 
-System RAM is independent of GPU selection and appears only once: the primary NVIDIA panel has five cards, while a second panel retains its four GPU cards. Existing GPU controls remain available. Updates use the existing refresh interval without UAC. Missing, invalid or more than six-second-old readings show an unavailable value and a graph gap.
+The CPU card shows overall utilization, physical-core and logical-thread counts, and an instantaneous utilization bar for each physical core. Core bars group their logical threads; overall load is weighted by logical processors. Built-in Windows measurements need no extra UAC prompt, driver or external monitoring application. Missing, invalid or more than six-second-old readings are unavailable: RAM shows a gap in its history graph; CPU shows **—** and unavailable core bars.
+
+With one GPU, all six metric cards remain together at 1200×900. With two supported NVIDIA GPUs, the minimum is 1920×1050: each GPU has a four-card 2×2 block with aligned readings and complete controls. Thin vertical dividers separate the GPU areas and shared right column, with RAM above the taller CPU card. RAM and CPU appear only once, independently of GPU selection. All three fan indicators stay visible by wrapping when needed; fan-control logic is unchanged.
 
 ## Window behavior
 

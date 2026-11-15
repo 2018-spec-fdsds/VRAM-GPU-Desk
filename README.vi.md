@@ -6,7 +6,7 @@
 
 ## Tính năng chính
 
-- Giám sát cục bộ VRAM, tải và nhiệt độ NVIDIA cùng mức dùng RAM hệ thống, với biểu đồ trực tiếp.
+- Giám sát cục bộ VRAM, tải và nhiệt độ NVIDIA, RAM hệ thống và mức dùng CPU, với biểu đồ và thanh theo lõi.
 - Bộ nhớ GPU theo tiến trình, tìm kiếm, sắp xếp và xuất CSV UTF-8.
 - Điều khiển nhiệt độ và làm mát khi nhàn rỗi.
 - Bốn nút một lần nhấp có thể cấu hình, gắn với đúng phiên bản tiến trình; tính năng kết thúc khẩn cấp tùy chọn luôn TẮT khi khởi động ứng dụng.
@@ -15,7 +15,7 @@
 - Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
 - Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
 
-Phiên bản **1.17** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
+Phiên bản **1.18** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
 
@@ -26,6 +26,14 @@ Dữ liệu minh họa tổng hợp và trạng thái điều khiển mô phỏn
 
 > **Điều khiển GPU đồng thời:** Điều khiển các tham số nhiệt độ GPU có thể xung đột với chương trình khác đồng thời thay đổi công suất, xung nhịp hoặc tốc độ quạt, chẳng hạn MSI Afterburner. Chỉ sử dụng một bộ điều khiển đang hoạt động cho các tham số này. Cảnh báo này nói về việc thay đổi cài đặt đồng thời, không phải giám sát thụ động.
 
+
+## Điểm mới trong 1.18: mức dùng CPU và bố cục hai GPU rõ ràng hơn
+
+**Tải CPU bên cạnh RAM hệ thống.** Thẻ CPU hiển thị mức dùng tổng thể, số lõi vật lý và luồng logic, và một thanh mức dùng tức thời cho mỗi lõi vật lý. Mỗi thanh gộp các luồng logic thuộc lõi đó; phần trăm tổng được tính có trọng số theo bộ xử lý logic. Số đo tích hợp của Windows không cần UAC bổ sung, trình điều khiển hay ứng dụng giám sát khác. Số đo thiếu, không hợp lệ hoặc cũ hơn sáu giây hiển thị **—** cùng các thanh lõi không khả dụng.
+
+**Một GPU: sáu thẻ ở 1200×900.** Bốn thẻ GPU, RAM hệ thống và tải CPU cùng hiện trên màn hình. **Hai GPU NVIDIA: tối thiểu 1920×1050.** Mỗi GPU có khối bốn thẻ 2×2 riêng, số đo thẳng hàng và đầy đủ điều khiển. Các đường phân cách dọc mảnh ngăn vùng GPU với cột chung bên phải: RAM ở trên, thẻ CPU cao hơn ở dưới. RAM và CPU hệ thống chỉ xuất hiện một lần, không phụ thuộc lựa chọn GPU. Điều khiển GPU thứ hai vẫn mang tính thử nghiệm.
+
+Cả ba chỉ báo quạt luôn thấy được nhờ xuống dòng khi thiếu chỗ. Logic điều khiển quạt không thay đổi. Giữ nguyên nút nhanh gọn, tên tiến trình dễ đọc và mọi cài đặt hiện có.
 
 ## Điểm mới trong 1.17: RAM hệ thống trong tầm mắt
 

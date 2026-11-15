@@ -6,7 +6,7 @@
 
 ## Funciones principales
 
-- Supervisión local de VRAM, carga y temperatura de NVIDIA, además de la RAM del sistema, con gráficos en tiempo real.
+- Supervisión local de VRAM, carga y temperatura NVIDIA, RAM del sistema y utilización de CPU, con gráficos y barras por núcleo.
 - Memoria GPU por proceso, búsqueda, ordenación y exportación CSV en UTF-8.
 - Control de temperatura y refrigeración en reposo.
 - Cuatro botones configurables de un clic vinculados a instancias concretas de procesos; la finalización de emergencia opcional está DESACTIVADA en cada inicio.
@@ -15,7 +15,7 @@
 - Dos paneles NVIDIA con ajustes independientes; el control de la segunda GPU es experimental.
 - Aviso de pérdida de control y reintento manual; recuperación ACTIVADA para ajustes nuevos, respetando la desactivación guardada.
 
-Versión **1.17** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
+Versión **1.18** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
 
 ![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
 
@@ -26,6 +26,14 @@ Datos sintéticos de demostración y estados simulados de los reguladores. Ambas
 
 > **Control simultáneo de GPU:** El control de los parámetros de temperatura de la GPU puede entrar en conflicto con otros programas que cambien al mismo tiempo la potencia, las frecuencias o la velocidad de los ventiladores, como MSI Afterburner. Utilice un único controlador activo para estos ajustes. La advertencia se refiere a cambios simultáneos, no a la supervisión pasiva.
 
+
+## Novedades de 1.18: utilización de CPU y espacio más claro para dos GPU
+
+**Carga de CPU junto a la RAM del sistema.** La tarjeta CPU muestra utilización total, número de núcleos físicos e hilos lógicos y una barra de utilización instantánea por núcleo físico. Cada barra agrupa los hilos lógicos de su núcleo; el porcentaje global se pondera por procesadores lógicos. Las mediciones integradas de Windows no necesitan UAC adicional, controladores ni otra aplicación de supervisión. Las lecturas ausentes, inválidas o de más de seis segundos muestran **—** y barras de núcleo no disponibles.
+
+**Una GPU: seis tarjetas a 1200×900.** Las cuatro tarjetas GPU, la RAM y la carga de CPU permanecen visibles juntas. **Dos GPU NVIDIA: mínimo 1920×1050.** Cada GPU tiene su bloque 2×2 de cuatro tarjetas, mediciones alineadas y todos sus controles. Separadores verticales finos delimitan las áreas GPU y la columna compartida de la derecha: RAM arriba y una tarjeta CPU más alta debajo. RAM y CPU aparecen una sola vez y no dependen de la selección de GPU. El control de la segunda GPU sigue siendo experimental.
+
+Los tres indicadores de ventilador siguen visibles mediante el ajuste a otra línea cuando falta espacio. La lógica de control de ventiladores no cambia. Se conservan los botones rápidos compactos, la legibilidad de los procesos y todos los ajustes anteriores.
 
 ## Novedades de 1.17: RAM del sistema de un vistazo
 

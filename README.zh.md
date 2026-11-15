@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.17
+# VRAM GPU Desk 1.18
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -6,7 +6,7 @@
 
 ## 主要功能
 
-- 本地监控 NVIDIA VRAM、GPU 负载与温度，以及系统 RAM 使用情况，并提供实时图表。
+- 本地监控 NVIDIA VRAM、GPU 负载与温度、系统 RAM 和 CPU 利用率，并提供图表与核心使用条。
 - 查看各进程的 GPU 内存，支持搜索、排序和 UTF-8 CSV 导出。
 - 温度控制与空闲散热。
 - 四个可配置的一键按钮，绑定到确切的进程实例；紧急终止功能须单独启用，每次启动时均为关闭状态。
@@ -15,7 +15,7 @@
 - 两个独立设置的 NVIDIA 面板；第二块 GPU 的控制功能为实验性功能。
 - 控制丢失警告与手动重试；新设置默认开启恢复，保留已明确保存的关闭选择。
 
-[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
+[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
 
 ![VRAM GPU Desk — 石墨深色主题](images/dashboard-graphite.png)
 
@@ -27,6 +27,14 @@
 > **同时控制 GPU:** GPU 温度参数控制可能与同时更改功率、频率或风扇转速的其他程序发生冲突，例如 MSI Afterburner。请仅使用一个活动控制器来调节这些参数。此警告针对同时修改设置，不针对被动监控。
 
 
+
+## 1.18 新增：CPU 利用率与更清晰的双 GPU 工作区
+
+**在系统 RAM 旁查看 CPU 负载。** CPU 卡片显示总利用率、物理核心数和逻辑线程数、每个物理核心的即时利用率条。每个核心条汇总该核心的逻辑线程；总百分比按逻辑处理器加权。使用 Windows 内置测量，无需额外 UAC、驱动或其他监控程序。缺失、无效或超过六秒的读数显示 **—**，核心条表示数据不可用。
+
+**单 GPU：1200×900 下显示六张卡片。** 四张 GPU 卡片、系统 RAM 和 CPU 负载同时可见。**双 NVIDIA GPU：最低 1920×1050。** 每张 GPU 各有一个 2×2 的四卡片区域、对齐的读数及完整控制项。细竖线分隔 GPU 区域和右侧共享列：上方是 RAM，下方是更高的 CPU 卡片。系统 RAM 和 CPU 只显示一次，不受 GPU 选择影响。第二张 GPU 的控制仍属实验性。
+
+空间不足时，三个风扇指示器会换行，确保全部可见；风扇控制逻辑不变。紧凑快速按钮、进程文字可读性和原有设置均保留。
 
 ## 1.17 新增：一眼查看系统 RAM
 
