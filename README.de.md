@@ -4,6 +4,13 @@
 
 **Lokale Speicherüberwachung und Temperaturregelung für NVIDIA-GPUs unter Windows x64. Nur NVIDIA; AMD- und Intel-GPUs werden nicht unterstützt.**
 
+## Wozu die Anwendung dient
+
+- **NVIDIA-VRAM unter Windows überwachen und freigeben.** Anwendungen gezielt zwangsweise schließen, um VRAM freizugeben — auch über konfigurierbare Ein-Klick-Schnellaktionen für die exakt ausgewählte Prozessinstanz.
+- **VRAM-Konkurrenz im Blick behalten.** Für mehrere gleichzeitig laufende Anwendungen: lokale Modelle zur Codegenerierung, Bild- und Videogenerierung, Transkription und Datenanalyse.
+- **Schonende Temperatur- und Kühlungsregelung.** Die GPU-Temperatur flexibel über unterstützte Leistungs- und Taktgrenzen regeln und die GPU unter Last sowie im Leerlauf kühlen.
+- **Notfallmodus bei Überhitzung.** Ein optionaler Modus kann GPU-intensive Anwendungen zwangsweise schließen, um die Last zu senken. Er ist bei jedem Start AUS; das erzwungene Schließen kann zum Verlust ungespeicherter Arbeit führen.
+
 ## Wichtigste Funktionen
 
 - Lokale Überwachung von NVIDIA-VRAM, GPU-Auslastung und Temperatur sowie System-RAM und CPU-Auslastung mit Diagrammen und Kernbalken.

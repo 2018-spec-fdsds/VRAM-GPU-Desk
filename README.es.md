@@ -4,6 +4,13 @@
 
 **Supervisión local de memoria y control de temperatura de GPU NVIDIA para Windows x64. Solo NVIDIA; las GPU AMD e Intel no son compatibles.**
 
+## Para qué sirve la aplicación
+
+- **Supervisar y liberar VRAM de NVIDIA en Windows.** Forzar el cierre de aplicaciones para liberar VRAM, también mediante botones rápidos configurables de un clic vinculados a la instancia exacta seleccionada.
+- **Gestionar aplicaciones que compiten por la VRAM.** Para varias tareas simultáneas: modelos locales de generación de código, generación de imágenes y vídeo, transcripción y análisis de datos.
+- **Control gradual de temperatura y refrigeración.** Regular la temperatura de la GPU de forma flexible mediante los límites de potencia y frecuencia admitidos, y refrigerarla tanto bajo carga como en reposo.
+- **Modo de emergencia ante sobrecalentamiento.** Un modo opcional puede forzar el cierre de aplicaciones con alta carga de GPU para reducir la carga. Está DESACTIVADO en cada inicio; el cierre forzado puede causar pérdida de trabajo sin guardar.
+
 ## Funciones principales
 
 - Supervisión local de VRAM, carga y temperatura NVIDIA, RAM del sistema y utilización de CPU, con gráficos y barras por núcleo.

@@ -4,6 +4,13 @@
 
 **Theo dõi bộ nhớ và điều khiển nhiệt độ GPU NVIDIA cục bộ cho Windows x64. Chỉ hỗ trợ NVIDIA; không hỗ trợ GPU AMD hoặc Intel.**
 
+## Ứng dụng dùng để làm gì
+
+- **Theo dõi và giải phóng VRAM NVIDIA trên Windows.** Buộc đóng ứng dụng để giải phóng VRAM, kể cả bằng các nút nhanh một lần nhấp có thể cấu hình, gắn với đúng phiên tiến trình đã chọn.
+- **Quản lý các ứng dụng cùng tranh VRAM.** Dành cho nhiều tác vụ đồng thời: mô hình cục bộ sinh mã, tạo ảnh và video, phiên âm và phân tích dữ liệu.
+- **Điều chỉnh nhiệt độ và làm mát từ từ.** Điều chỉnh nhiệt độ GPU linh hoạt qua các giới hạn công suất và xung nhịp được hỗ trợ, đồng thời làm mát GPU khi tải nặng lẫn nhàn rỗi.
+- **Chế độ khẩn cấp khi quá nhiệt.** Một chế độ tùy chọn có thể buộc đóng ứng dụng tải nặng GPU để giảm tải. Chế độ này TẮT ở mỗi lần mở; việc buộc đóng có thể làm mất công việc chưa lưu.
+
 ## Tính năng chính
 
 - Giám sát cục bộ VRAM, tải và nhiệt độ NVIDIA, RAM hệ thống và mức dùng CPU, với biểu đồ và thanh theo lõi.
