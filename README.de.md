@@ -32,7 +32,7 @@ Optionale kompakte transparente Anzeige über normalen Windows-Fenstern, ohne Hi
 
 VRAM-Belegung und GPU-Auslastung; Temperatur: ≤40 grün, 41–75 gelb, 76–81 orange, 82–86 rot, ≥87 blinkend. Signalton ab 88 °C.
 
-![ Schwebende GPU-Anzeige ](images/floating-monitor-transparent.png)
+![ Schwebende GPU-Anzeige ](images/floating-monitor-dark.png)
 
 
 
@@ -186,6 +186,8 @@ Screenshots sind synthetische Demonstrationen mit simuliertem Reglerstatus.
 Die nichtkommerzielle Nutzung ist unter [PolyForm Noncommercial 1.0.0](LICENSE.md) kostenlos, sofern deren Bedingungen und Hinweispflichten eingehalten werden. Kommerzielle Nutzung erfordert eine gesonderte Erlaubnis. Dies ist keine Open-Source-Lizenz; der Anwendungsquellcode wird nicht veröffentlicht. Lizenzen der Laufzeitkomponenten Dritter bleiben unverändert.
 
 
-![GPU × 2](images/dual-floating-monitors.png)
+![GPU × 2](images/dual-floating-monitors-dark.png)
+
+[Heller Hintergrund](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

@@ -32,7 +32,7 @@ Monitor compacto y transparente sobre las ventanas normales de Windows, sin pane
 
 Uso de VRAM y carga de GPU; temperatura: ≤40 verde, 41–75 amarillo, 76–81 naranja, 82–86 rojo, ≥87 parpadeo. Sonido desde 88 °C.
 
-![ Monitor flotante de GPU ](images/floating-monitor-transparent.png)
+![ Monitor flotante de GPU ](images/floating-monitor-dark.png)
 
 
 
@@ -186,6 +186,8 @@ Las capturas son sintéticas con control simulado.
 El uso no comercial es gratuito bajo [PolyForm Noncommercial 1.0.0](LICENSE.md), respetando sus condiciones y avisos obligatorios. El uso comercial requiere un permiso independiente. No es una licencia de código abierto; el código fuente de la aplicación no se publica. Las licencias del runtime de terceros no cambian.
 
 
-![GPU × 2](images/dual-floating-monitors.png)
+![GPU × 2](images/dual-floating-monitors-dark.png)
+
+[Fondo claro](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

@@ -32,7 +32,7 @@ Optional compact transparent monitor above ordinary Windows windows, without a b
 
 VRAM and GPU load; temperature: ≤40 green, 41–75 yellow, 76–81 orange, 82–86 red, ≥87 blinking. Sound starts at 88 °C.
 
-![ Floating GPU monitor ](images/floating-monitor-transparent.png)
+![ Floating GPU monitor ](images/floating-monitor-dark.png)
 
 
 
@@ -185,6 +185,8 @@ Screenshots use synthetic demonstration data and simulated controller state, wit
 Free for noncommercial use under [PolyForm Noncommercial 1.0.0](LICENSE.md), subject to its terms and notice requirements. Commercial use requires separate permission. This is not an open-source license; application source code is not published. Third-party runtime licenses remain unchanged.
 
 
-![GPU × 2](images/dual-floating-monitors.png)
+![GPU × 2](images/dual-floating-monitors-dark.png)
+
+[Light background](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

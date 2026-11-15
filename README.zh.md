@@ -32,7 +32,7 @@
 
 显存占用和 GPU 负载；温度：≤40 为绿色，41–75 为黄色，76–81 为橙色，82–86 为红色，≥87 时闪烁。88 °C 起发出声音。
 
-![ GPU 悬浮监视器 ](images/floating-monitor-transparent.png)
+![ GPU 悬浮监视器 ](images/floating-monitor-dark.png)
 
 
 
@@ -187,6 +187,8 @@ RAM 按现有刷新间隔更新，无需 UAC。缺失、无效或超过六秒的
 依据 [PolyForm Noncommercial 1.0.0](LICENSE.md)，在遵守其条款和通知要求的前提下，可免费用于非商业目的。商业使用须另行获得许可。这不是开源许可证；应用程序源代码不公开。第三方运行时的许可证保持不变。
 
 
-![GPU × 2](images/dual-floating-monitors.png)
+![GPU × 2](images/dual-floating-monitors-dark.png)
+
+[浅色背景](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

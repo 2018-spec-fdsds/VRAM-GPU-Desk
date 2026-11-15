@@ -32,7 +32,7 @@ Bộ theo dõi nhỏ trong suốt trên cửa sổ Windows thông thường, kh�
 
 Mức dùng VRAM và tải GPU; nhiệt độ: ≤40 xanh lá, 41–75 vàng, 76–81 cam, 82–86 đỏ, ≥87 nhấp nháy. Có âm báo từ 88 °C.
 
-![ Bộ theo dõi GPU nổi ](images/floating-monitor-transparent.png)
+![ Bộ theo dõi GPU nổi ](images/floating-monitor-dark.png)
 
 
 
@@ -186,6 +186,8 @@ Bộ cài không có chữ ký. Phân phối ứng dụng dạng nhị phân đ�
 Được sử dụng miễn phí cho mục đích phi thương mại theo [PolyForm Noncommercial 1.0.0](LICENSE.md), với điều kiện tuân thủ các điều khoản và yêu cầu thông báo. Sử dụng thương mại cần được cho phép riêng. Đây không phải giấy phép mã nguồn mở; mã nguồn ứng dụng không được công bố. Giấy phép của runtime bên thứ ba không thay đổi.
 
 
-![GPU × 2](images/dual-floating-monitors.png)
+![GPU × 2](images/dual-floating-monitors-dark.png)
+
+[Nền sáng](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

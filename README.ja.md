@@ -32,7 +32,7 @@
 
 VRAM 使用率と GPU 負荷。温度：40 以下は緑、41–75 は黄、76–81 はオレンジ、82–86 は赤、87 以上は点滅。88 °C から警告音。
 
-![ GPU フローティングモニター ](images/floating-monitor-transparent.png)
+![ GPU フローティングモニター ](images/floating-monitor-dark.png)
 
 
 
@@ -187,6 +187,8 @@ Windows 10/11 x64、.NET Framework 4.8、対応する NVIDIA ドライバーが�
 [PolyForm Noncommercial 1.0.0](LICENSE.md) の条件と通知要件を守る非商用利用は無料です。商用利用には別途許可が必要です。オープンソースライセンスではなく、アプリのソースコードは公開されていません。第三者ランタイムのライセンスは変更されません。
 
 
-![GPU × 2](images/dual-floating-monitors.png)
+![GPU × 2](images/dual-floating-monitors-dark.png)
+
+[明るい背景](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

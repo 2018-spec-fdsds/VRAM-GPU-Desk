@@ -32,7 +32,7 @@
 
 VRAM उपयोग और GPU लोड; तापमान: ≤40 हरा, 41–75 पीला, 76–81 नारंगी, 82–86 लाल, ≥87 पर झिलमिलाहट। 88 °C से ध्वनि।
 
-![ GPU फ्लोटिंग मॉनिटर ](images/floating-monitor-transparent.png)
+![ GPU फ्लोटिंग मॉनिटर ](images/floating-monitor-dark.png)
 
 
 
@@ -177,6 +177,8 @@ Windows 10/11 x64, .NET Framework 4.8 और समर्थित NVIDIA ड्
 [PolyForm Noncommercial 1.0.0](LICENSE.md) की शर्तों और आवश्यक सूचनाओं का पालन करते हुए गैर-व्यावसायिक उपयोग निःशुल्क है। व्यावसायिक उपयोग के लिए अलग अनुमति चाहिए। यह open-source लाइसेंस नहीं है; ऐप का source code प्रकाशित नहीं है। तृतीय-पक्ष runtime लाइसेंस अपरिवर्तित हैं।
 
 
-![GPU × 2](images/dual-floating-monitors.png)
+![GPU × 2](images/dual-floating-monitors-dark.png)
+
+[हल्की पृष्ठभूमि](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

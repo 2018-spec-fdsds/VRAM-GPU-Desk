@@ -32,7 +32,7 @@
 
 Занятость VRAM и загрузка GPU; температура: ≤40 — зелёный, 41–75 — жёлтый, 76–81 — оранжевый, 82–86 — красный, ≥87 — мигание. Звук от 88 °C.
 
-![ Плавающий индикатор GPU ](images/floating-monitor-transparent.png)
+![ Плавающий индикатор GPU ](images/floating-monitor-dark.png)
 
 
 
@@ -180,6 +180,8 @@ Windows 10/11 x64, .NET Framework 4.8, поддерживаемый драйве
 Бесплатное некоммерческое использование разрешено по [PolyForm Noncommercial 1.0.0](LICENSE.md) с соблюдением её условий и требований к уведомлениям. Для коммерческого использования требуется отдельное разрешение. Это не open-source лицензия; исходники приложения не публикуются. Лицензии стороннего runtime остаются без изменений.
 
 
-![GPU × 2](images/dual-floating-monitors.png)
+![GPU × 2](images/dual-floating-monitors-dark.png)
+
+[Светлый фон](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

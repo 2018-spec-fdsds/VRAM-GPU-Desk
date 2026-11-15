@@ -32,7 +32,7 @@
 
 VRAM 사용량 및 GPU 부하; 온도: ≤40 초록, 41–75 노랑, 76–81 주황, 82–86 빨강, ≥87 깜박임. 88 °C부터 경고음.
 
-![ GPU 플로팅 모니터 ](images/floating-monitor-transparent.png)
+![ GPU 플로팅 모니터 ](images/floating-monitor-dark.png)
 
 
 
@@ -187,6 +187,8 @@ Windows 10/11 x64, .NET Framework 4.8, 지원되는 NVIDIA 드라이버가 필�
 [PolyForm Noncommercial 1.0.0](LICENSE.md)의 조건과 고지 의무를 준수하는 비상업적 사용은 무료입니다. 상업적 사용에는 별도 허가가 필요합니다. 오픈 소스 라이선스가 아니며 앱 소스 코드는 공개하지 않습니다. 타사 런타임 라이선스는 변경되지 않습니다.
 
 
-![GPU × 2](images/dual-floating-monitors.png)
+![GPU × 2](images/dual-floating-monitors-dark.png)
+
+[밝은 배경](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**

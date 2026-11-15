@@ -32,7 +32,7 @@
 
 استخدام VRAM وحمل GPU؛ الحرارة: ≤40 أخضر، 41–75 أصفر، 76–81 برتقالي، 82–86 أحمر، ≥87 وميض. يبدأ الصوت عند 88 °C.
 
-![ مؤشر GPU العائم ](images/floating-monitor-transparent.png)
+![ مؤشر GPU العائم ](images/floating-monitor-dark.png)
 
 
 
@@ -177,6 +177,8 @@
 الاستخدام غير التجاري مجاني بموجب [PolyForm Noncommercial 1.0.0](LICENSE.md)، مع الالتزام بشروطها ومتطلبات الإشعار. يتطلب الاستخدام التجاري إذناً منفصلاً. ليست رخصة مفتوحة المصدر؛ لا تنشر الشيفرة المصدرية للتطبيق. تبقى تراخيص runtime التابعة للغير دون تغيير.
 
 
-![GPU × 2](images/dual-floating-monitors.png)
+![GPU × 2](images/dual-floating-monitors-dark.png)
+
+[خلفية فاتحة](images/floating-monitor-light.png) · [GPU × 2](images/dual-floating-monitors-light.png)
 
 **1080p → ≈122 × 86 px · 1440p → ≈164 × 114 px · 2160p / 4K → ≈245 × 171 px**
