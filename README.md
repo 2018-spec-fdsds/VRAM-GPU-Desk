@@ -8,14 +8,14 @@
 
 - Local NVIDIA VRAM, GPU load and temperature monitoring, plus system RAM and CPU utilization, with graphs and per-core bars.
 - Per-process GPU memory, search, sorting and UTF-8 CSV export.
-- Temperature control and idle cooling.
+- Temperature control and idle cooling adapted to each GPU’s reported capabilities.
 - Four configurable one-click buttons bound to exact process instances; optional emergency termination is OFF at every launch.
 - 24-hour VRAM history and a 30-day top 10 of applications.
 - 12 languages, two themes, system tray and optional Windows startup.
 - Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
 - Control-loss warning and manual retry; forced recovery is ON for new settings, with saved OFF choices preserved.
 
-Version **1.18** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
+Version **1.19** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
 
 ![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
 
@@ -27,6 +27,16 @@ Synthetic demonstration data and simulated controller states. Both emergency opt
 > **Concurrent GPU control:** GPU temperature parameter control may conflict with other programs that change power limits, clocks or fan speeds at the same time, such as MSI Afterburner. Use only one active controller for these settings. This warning concerns simultaneous changes to settings, not passive monitoring.
 
 
+
+## New in 1.19: per-device adaptation for NVIDIA RTX 30, 40 and 50
+
+**Actual device limits, not a fixed wattage preset.** Each control session reads that GPU’s power bounds and captures its starting limit as the session ceiling and restoration baseline, rather than using the factory default. Acquiring the session does not issue an initial power or clock write. Power changes scale at **1% of the session baseline per second**, within the reported bounds and session ceiling. Clock adjustments are relative to a validated supported range.
+
+**Use only available controls.** If clock control is unsupported, supported power-only regulation remains available. Valid temperature readings can support power-only control even when GPU utilization is unknown. A target above a reported hardware temperature limit is blocked; missing limits stay unknown. Unsupported features remain visible as unavailable. Fan recovery is independent of power-client recovery. BIOS, OEM, driver and laptop restrictions can change which controls work; each GPU is assessed separately.
+
+**Reference data is separate from control commands.** The [RTX 30-and-newer reference](docs/nvidia-rtx30-plus/README.md) and [UTF-8 CSV](docs/nvidia-rtx30-plus/REFERENCE-GPUS.csv) cover **45 model/variant groups: 27 desktop and 18 laptop**. These are documentary reference groups, not 45 hardware tests, and published board power or laptop TGP values are not executable presets. The RTX 3060 Ti 200 W row is a reference specification, not a limit asserted for every GDDR6X or OEM variant.
+
+**Compact CPU area with two GPUs.** The CPU card now ends level with the adjacent idle-cooling panel, above the emergency and recovery rows. RAM stays above it; CPU load and physical-core bars remain visible. The single-GPU six-card layout is unchanged.
 
 ## New in 1.18: CPU utilization and a clearer two-GPU workspace
 

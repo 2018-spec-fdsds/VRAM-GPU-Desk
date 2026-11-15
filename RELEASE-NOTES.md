@@ -1,5 +1,33 @@
 # VRAM GPU Desk — release notes
 
+## 1.19
+
+[Windows x64 installer](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.19-Installer.zip) · [SHA-256](SHA256SUMS.txt)
+
+### Per-device control for NVIDIA RTX 30, 40 and 50
+
+- Capture each GPU’s actual power bounds and starting limit independently. The session ceiling and restoration baseline use that starting limit, not a factory default or reference board wattage.
+- Acquiring control performs no initial power or clock write. Power adjustment scales at 1% of the session baseline per second, within actual bounds and the session ceiling.
+- Optional clock control uses a validated supported range. Unsupported clocks do not remove independently supported power-only control; valid temperature can support power-only regulation even with unknown GPU utilization.
+- Block targets above reported hardware temperature limits and leave missing limits unknown. Unsupported operations remain visible as unavailable, with per-device reasons.
+- Recover fans independently of the power client. BIOS, OEM, driver and laptop differences still determine supported operations; second-GPU control remains experimental.
+
+### Compact CPU area with two GPUs
+
+The CPU card’s bottom now aligns with the adjacent idle-cooling panel, above the emergency and recovery rows. RAM remains at the top, while CPU utilization and physical-core bars remain visible. This changes only the dual-GPU CPU area; the single-GPU six-card layout is unchanged.
+
+### Published reference data
+
+The [reference documentation](docs/nvidia-rtx30-plus/README.md) and [UTF-8 CSV](docs/nvidia-rtx30-plus/REFERENCE-GPUS.csv) contain 45 model/variant groups: 27 desktop and 18 laptop. These are documentary reference groups, not 45 hardware tests. Published board power and laptop TGP are not executable control presets. The RTX 3060 Ti 200 W row is explicitly a reference specification, not a claim covering every GDDR6X or OEM variant. Official NVIDIA sources are linked in the reference document.
+
+### Retained workspace and safeguards
+
+Keep system RAM’s five-minute graph, CPU’s instantaneous physical-core bars, six single-GPU cards and the aligned two-GPU workspace. Both emergency options remain OFF at every launch; new or missing recovery settings default ON while saved OFF remains respected. Optional tray minimization, all twelve languages and both themes remain available.
+
+The protected control component requires one UAC approval at installation. Concurrent GPU parameter changes may conflict with MSI Afterburner or another active controller; exclusive ownership is not guaranteed. English remains the main description, Graphite the first screenshot. Application sources are not published and use remains governed by [PolyForm Noncommercial 1.0.0](LICENSE.md).
+
+---
+
 ## 1.18
 
 [Windows x64 installer](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.18-Installer.zip) · [SHA-256](SHA256SUMS.txt)

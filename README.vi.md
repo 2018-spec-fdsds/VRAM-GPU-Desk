@@ -8,14 +8,14 @@
 
 - Giám sát cục bộ VRAM, tải và nhiệt độ NVIDIA, RAM hệ thống và mức dùng CPU, với biểu đồ và thanh theo lõi.
 - Bộ nhớ GPU theo tiến trình, tìm kiếm, sắp xếp và xuất CSV UTF-8.
-- Điều khiển nhiệt độ và làm mát khi nhàn rỗi.
+- Điều khiển nhiệt độ và làm mát nhàn rỗi theo khả năng được từng GPU báo cáo.
 - Bốn nút một lần nhấp có thể cấu hình, gắn với đúng phiên bản tiến trình; tính năng kết thúc khẩn cấp tùy chọn luôn TẮT khi khởi động ứng dụng.
 - Lịch sử VRAM trong 24 giờ và 10 ứng dụng đứng đầu trong 30 ngày.
 - 12 ngôn ngữ, hai giao diện, khay hệ thống và tùy chọn khởi động cùng Windows.
 - Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
 - Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
 
-Phiên bản **1.18** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
+Phiên bản **1.19** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
 
@@ -26,6 +26,16 @@ Dữ liệu minh họa tổng hợp và trạng thái điều khiển mô phỏn
 
 > **Điều khiển GPU đồng thời:** Điều khiển các tham số nhiệt độ GPU có thể xung đột với chương trình khác đồng thời thay đổi công suất, xung nhịp hoặc tốc độ quạt, chẳng hạn MSI Afterburner. Chỉ sử dụng một bộ điều khiển đang hoạt động cho các tham số này. Cảnh báo này nói về việc thay đổi cài đặt đồng thời, không phải giám sát thụ động.
 
+
+## Điểm mới trong 1.19: thích ứng từng thiết bị NVIDIA RTX 30, 40 và 50
+
+**Dùng giới hạn thực tế, không đặt sẵn một mức watt cố định.** Mỗi phiên đọc giới hạn công suất của GPU đó và lưu giới hạn lúc bắt đầu làm trần phiên cùng mốc khôi phục, thay vì dùng mặc định nhà máy. Việc nhận phiên không ghi công suất hay xung nhịp ban đầu. Thay đổi công suất theo **1% giới hạn đầu phiên mỗi giây**, trong phạm vi thiết bị và trần phiên. Điều chỉnh xung nhịp dựa trên phạm vi hỗ trợ đã xác thực.
+
+**Chỉ dùng điều khiển khả dụng.** Nếu không hỗ trợ điều khiển xung nhịp, chế độ chỉ điều chỉnh công suất vẫn có thể dùng nếu được hỗ trợ. Khi nhiệt độ hợp lệ, chế độ này có thể tiếp tục dù chưa biết tải GPU. Mục tiêu vượt giới hạn nhiệt phần cứng được báo cáo sẽ bị chặn; giới hạn thiếu vẫn là chưa biết. Tính năng không hỗ trợ vẫn hiện là không khả dụng. Khôi phục quạt độc lập với khôi phục máy khách công suất. BIOS, OEM, trình điều khiển và hạn chế của laptop có thể thay đổi khả năng; từng GPU được đánh giá riêng.
+
+**Dữ liệu tham khảo không phải lệnh điều khiển.** [Tài liệu RTX 30 trở lên](docs/nvidia-rtx30-plus/README.md) và [CSV UTF-8](docs/nvidia-rtx30-plus/REFERENCE-GPUS.csv) gồm **45 nhóm mẫu/biến thể: 27 máy bàn và 18 laptop**. Đây là nhóm tài liệu tham khảo, không phải 45 phép thử phần cứng; công suất bo mạch và TGP laptop được công bố không phải thiết lập để thực thi. Dòng RTX 3060 Ti 200 W là thông số tham chiếu, không áp dụng cho mọi biến thể GDDR6X hoặc OEM.
+
+**Vùng CPU gọn hơn khi có hai GPU.** Cạnh dưới thẻ CPU nay ngang với cạnh dưới bảng làm mát nhàn rỗi bên cạnh, phía trên các hàng khẩn cấp và khôi phục. RAM vẫn ở trên; tải CPU và thanh lõi vật lý vẫn hiển thị. Bố cục sáu thẻ cho một GPU không thay đổi.
 
 ## Điểm mới trong 1.18: mức dùng CPU và bố cục hai GPU rõ ràng hơn
 

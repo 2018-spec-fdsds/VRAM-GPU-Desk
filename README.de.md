@@ -8,14 +8,14 @@
 
 - Lokale Überwachung von NVIDIA-VRAM, GPU-Auslastung und Temperatur sowie System-RAM und CPU-Auslastung mit Diagrammen und Kernbalken.
 - GPU-Speicher je Prozess, Suche, Sortierung und CSV-Export in UTF-8.
-- Temperaturregelung und Kühlung im Leerlauf.
+- Temperatursteuerung und Leerlaufkühlung anhand der gemeldeten Fähigkeiten jeder GPU.
 - Vier konfigurierbare Ein-Klick-Schaltflächen für exakt gebundene Prozessinstanzen; die optionale Notfallbeendigung ist bei jedem Start AUS.
 - 24-Stunden-VRAM-Verlauf und die Top 10 der Anwendungen über 30 Tage.
 - 12 Sprachen, zwei Designs, Infobereich und optionaler Start mit Windows.
 - Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
 - Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
 
-Version **1.18** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
+Version **1.19** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
 
@@ -26,6 +26,16 @@ Synthetische Demonstrationsdaten und simulierte Reglerzustände. Beide Notfallop
 
 > **Gleichzeitige GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter kann mit anderen Programmen kollidieren, die gleichzeitig Leistungsgrenzen, Taktraten oder Lüfterdrehzahlen ändern, beispielsweise MSI Afterburner. Verwenden Sie nur einen aktiven Regler für diese Einstellungen. Gemeint sind gleichzeitige Änderungen, nicht die passive Überwachung.
 
+
+## Neu in 1.19: gerätespezifische Anpassung für NVIDIA RTX 30, 40 und 50
+
+**Tatsächliche Gerätegrenzen statt fester Wattvorgabe.** Jede Sitzung liest die Leistungsgrenzen ihrer GPU und übernimmt den anfänglichen Grenzwert als Sitzungsobergrenze und Wiederherstellungsbasis, nicht den Werksstandard. Die Übernahme der Sitzung schreibt weder Leistung noch Takt. Leistungsänderungen skalieren mit **1 % des Sitzungsanfangswerts pro Sekunde**, innerhalb der gemeldeten Grenzen und Sitzungsobergrenze. Taktanpassungen richten sich nach einem validierten unterstützten Bereich.
+
+**Nur verfügbare Steuerfunktionen verwenden.** Wird Taktsteuerung nicht unterstützt, bleibt eine unterstützte reine Leistungsregelung verfügbar. Bei gültiger Temperatur ist sie auch mit unbekannter GPU-Auslastung möglich. Ein Ziel oberhalb einer gemeldeten Hardware-Temperaturgrenze wird gesperrt; fehlende Grenzen bleiben unbekannt. Nicht unterstützte Funktionen bleiben als nicht verfügbar sichtbar. Die Lüfterwiederherstellung ist von der Wiederherstellung des Leistungsclients unabhängig. BIOS, OEM, Treiber und Laptop-Beschränkungen beeinflussen die Verfügbarkeit; jede GPU wird separat bewertet.
+
+**Referenzdaten sind keine Steuerbefehle.** Die [RTX-30-und-neuer-Referenz](docs/nvidia-rtx30-plus/README.md) und [UTF-8-CSV](docs/nvidia-rtx30-plus/REFERENCE-GPUS.csv) enthalten **45 Modell-/Variantengruppen: 27 Desktop und 18 Laptop**. Dies sind Referenzgruppen, keine 45 Hardwaretests; veröffentlichte Kartenleistungen oder Laptop-TGP-Werte sind keine ausführbaren Vorgaben. Die 200-W-Zeile der RTX 3060 Ti beschreibt die Referenzspezifikation, nicht sämtliche GDDR6X- oder OEM-Varianten.
+
+**Kompakter CPU-Bereich bei zwei GPUs.** Die CPU-Karte endet jetzt auf Höhe der benachbarten Leerlaufkühlung, oberhalb der Notfall- und Wiederherstellungszeilen. RAM bleibt darüber; CPU-Auslastung und physische Kernbalken bleiben sichtbar. Die Sechs-Karten-Ansicht für eine GPU bleibt unverändert.
 
 ## Neu in 1.18: CPU-Auslastung und übersichtlicherer Zwei-GPU-Arbeitsbereich
 

@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.18
+# VRAM GPU Desk 1.19
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -8,14 +8,14 @@
 
 - 本地监控 NVIDIA VRAM、GPU 负载与温度、系统 RAM 和 CPU 利用率，并提供图表与核心使用条。
 - 查看各进程的 GPU 内存，支持搜索、排序和 UTF-8 CSV 导出。
-- 温度控制与空闲散热。
+- 温度控制与空闲散热按每张 GPU 报告的能力进行适配。
 - 四个可配置的一键按钮，绑定到确切的进程实例；紧急终止功能须单独启用，每次启动时均为关闭状态。
 - 24 小时显存历史记录与 30 天应用前十排行榜。
 - 12 种语言、两种主题、系统托盘和可选的 Windows 开机启动。
 - 两个独立设置的 NVIDIA 面板；第二块 GPU 的控制功能为实验性功能。
 - 控制丢失警告与手动重试；新设置默认开启恢复，保留已明确保存的关闭选择。
 
-[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
+[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
 
 ![VRAM GPU Desk — 石墨深色主题](images/dashboard-graphite.png)
 
@@ -27,6 +27,16 @@
 > **同时控制 GPU:** GPU 温度参数控制可能与同时更改功率、频率或风扇转速的其他程序发生冲突，例如 MSI Afterburner。请仅使用一个活动控制器来调节这些参数。此警告针对同时修改设置，不针对被动监控。
 
 
+
+## 1.19 新增：针对 NVIDIA RTX 30、40、50 的逐卡适配
+
+**使用设备实际限制，而非固定瓦数预设。** 每个控制会话读取该 GPU 的功耗边界，并将会话初始限制保存为上限及恢复基准，而不是使用出厂默认值。取得会话本身不会立即写入功耗或频率。功耗变化按**每秒会话初始限制的 1%**缩放，且不超出设备边界和会话上限。频率调整相对于已验证的支持范围计算。
+
+**只使用可用的控制方式。** 不支持频率控制时，仍可使用受支持的纯功耗调节。只要温度有效，即使 GPU 利用率未知，也可以继续纯功耗控制。高于已报告硬件温度上限的目标会被阻止；缺失上限仍保持未知。不支持的功能继续显示为不可用。风扇恢复独立于功耗客户端恢复。BIOS、OEM、驱动及笔记本限制会影响可用功能；每张 GPU 单独评估。
+
+**参考数据不是控制命令。** [RTX 30 及更新系列参考](docs/nvidia-rtx30-plus/README.md)与 [UTF-8 CSV](docs/nvidia-rtx30-plus/REFERENCE-GPUS.csv)包含**45 个型号/变体组：27 个桌面组、18 个笔记本组**。这些是文档参考组，不代表 45 次硬件测试；公布的板卡功耗与笔记本 TGP 不是可执行预设。RTX 3060 Ti 的 200 W 行指参考规格，不适用于所有 GDDR6X 或 OEM 变体。
+
+**双 GPU 下更紧凑的 CPU 区域。** CPU 卡片底部现在与旁边的空闲散热面板底部对齐，位于紧急操作和恢复选项行的上方。RAM 仍在上方，CPU 负载与物理核心条保持可见。单 GPU 的六卡片布局不变。
 
 ## 1.18 新增：CPU 利用率与更清晰的双 GPU 工作区
 

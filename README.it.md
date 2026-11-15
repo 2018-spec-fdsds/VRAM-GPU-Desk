@@ -8,14 +8,14 @@
 
 - Monitoraggio locale di VRAM, carico e temperatura NVIDIA, RAM di sistema e utilizzo CPU, con grafici e barre per core.
 - Memoria GPU per processo, ricerca, ordinamento ed esportazione CSV in UTF-8.
-- Controllo della temperatura e raffreddamento in inattività.
+- Controllo della temperatura e raffreddamento in inattività adattati alle capacità di ogni GPU.
 - Quattro pulsanti configurabili con un clic associati a istanze precise dei processi; la terminazione di emergenza facoltativa è DISATTIVATA a ogni avvio.
 - Cronologia VRAM di 24 ore e classifica delle 10 applicazioni principali su 30 giorni.
 - 12 lingue, due temi, area di notifica e avvio facoltativo con Windows.
 - Due pannelli NVIDIA con impostazioni indipendenti; il controllo della seconda GPU è sperimentale.
 - Avviso di perdita del controllo e nuovo tentativo manuale; ripristino ATTIVO per le nuove impostazioni, disattivazione salvata rispettata.
 
-Versione **1.18** · [Installer Windows](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
+Versione **1.19** · [Installer Windows](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
 
 ![VRAM GPU Desk — tema grafite](images/dashboard-graphite.png)
 
@@ -26,6 +26,16 @@ Dati dimostrativi sintetici e stati simulati dei regolatori. Entrambe le opzioni
 
 > **Controllo simultaneo della GPU:** Il controllo dei parametri di temperatura della GPU può entrare in conflitto con altri programmi che modificano contemporaneamente potenza, frequenze o velocità delle ventole, ad esempio MSI Afterburner. Usare un solo regolatore attivo per questi parametri. L’avviso riguarda le modifiche simultanee, non il monitoraggio passivo.
 
+
+## Novità della 1.19: adattamento per dispositivo NVIDIA RTX 30, 40 e 50
+
+**Limiti effettivi della GPU, non una potenza fissa.** Ogni sessione legge i limiti di potenza della propria GPU e conserva il limite iniziale come tetto di sessione e base di ripristino, anziché usare il valore di fabbrica. L’acquisizione della sessione non scrive inizialmente potenza o frequenza. Le variazioni di potenza scalano dell’**1% del valore iniziale di sessione al secondo**, entro i limiti rilevati e il tetto di sessione. Le regolazioni delle frequenze sono relative a un intervallo supportato e validato.
+
+**Solo controlli disponibili.** Se il controllo delle frequenze non è supportato, resta disponibile la regolazione supportata della sola potenza. Una temperatura valida consente questa modalità anche con utilizzo GPU sconosciuto. Un obiettivo superiore a un limite termico hardware comunicato viene bloccato; i limiti mancanti restano sconosciuti. Le funzioni non supportate restano visibili come indisponibili. Il ripristino delle ventole è indipendente da quello del client di potenza. BIOS, OEM, driver e restrizioni dei portatili possono variare le capacità; ogni GPU viene valutata separatamente.
+
+**I riferimenti non sono comandi di controllo.** Il [riferimento RTX 30 e successive](docs/nvidia-rtx30-plus/README.md) e il [CSV UTF-8](docs/nvidia-rtx30-plus/REFERENCE-GPUS.csv) comprendono **45 gruppi di modelli/varianti: 27 desktop e 18 portatili**. Sono gruppi documentali, non 45 prove hardware; potenze pubblicate e TGP non sono preimpostazioni eseguibili. La riga RTX 3060 Ti da 200 W indica la specifica di riferimento, non tutte le varianti GDDR6X o OEM.
+
+**Area CPU compatta con due GPU.** Il bordo inferiore della scheda CPU è ora allineato al pannello adiacente di raffreddamento in inattività, sopra le righe di emergenza e ripristino. La RAM resta sopra; carico CPU e barre dei core fisici rimangono visibili. La vista a sei schede per una sola GPU non cambia.
 
 ## Novità della 1.18: utilizzo CPU e spazio più chiaro per due GPU
 

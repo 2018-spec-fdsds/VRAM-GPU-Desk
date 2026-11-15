@@ -1,9 +1,9 @@
 # Distribution
 
-Current version: **1.18**, Windows x64.
+Current version: **1.19**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.18-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.18-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.19-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.19-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 
@@ -25,7 +25,15 @@ NVIDIA GPUs only; AMD and Intel controls are unsupported. Model/driver capabilit
 
 Control loss shows a warning and manual Retry. Force control recovery defaults ON for new or missing settings; explicitly saved OFF is preserved. Recovery is saved per GPU and uses 5/10/30/60-second backoff after confirmed teardown and fresh same-GPU data. It retains native safety checks and cannot provide exclusive control against MSI Afterburner. Both emergency options remain OFF at each launch. See the feature descriptions in the [English README](README.md).
 
-The verified 1.18 package contains 167 manifest files and 106 Java classes. One-GPU minimum is 1200×900; the current two-GPU workspace requires 1920×1050.
+One-GPU minimum is 1200×900; the current two-GPU workspace requires 1920×1050.
+
+## Per-device NVIDIA capabilities
+
+Version 1.19 adapts power and optional clock control to the actual device rather than a fixed model wattage. Every session captures its starting power limit as the session ceiling and restoration baseline, not the factory default. Acquiring the session performs no initial power or clock write. Power changes scale at 1% of the starting session limit per second, bounded by the GPU’s reported range and session ceiling; clocks use a validated supported range.
+
+Supported power-only regulation remains available when clock control is unsupported. A valid temperature can still drive power-only regulation if GPU utilization is unknown. Targets above reported hardware temperature limits are blocked; missing limits remain unknown. Unsupported features stay visible as unavailable. Fan recovery is independent of power-client recovery. Available operations depend on BIOS, OEM, driver and laptop restrictions, separately for each GPU.
+
+The [NVIDIA RTX 30-and-newer reference](docs/nvidia-rtx30-plus/README.md) and [UTF-8 CSV](docs/nvidia-rtx30-plus/REFERENCE-GPUS.csv) contain 45 documentary model/variant groups: 27 desktop and 18 laptop. They are not 45 hardware tests or executable TGP presets. The RTX 3060 Ti 200 W row describes the reference specification, not all GDDR6X or OEM variants.
 
 ## Shared RAM and CPU dashboard
 
