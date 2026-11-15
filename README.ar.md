@@ -248,8 +248,6 @@
 
 إذا كان VRAM GPU Desk مفيدًا لك، يمكنك دعم تطويره طوعًا.
 
-**USDT · Ethereum (ERC-20)**
-
-<img src="images/support-usdt-erc20.png" width="160" alt="رمز QR لدعم USDT على شبكة Ethereum ERC-20">
+<img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 
 امسح رمز QR بمحفظة متوافقة.

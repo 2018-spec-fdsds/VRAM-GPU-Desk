@@ -257,8 +257,6 @@ L’utilisation non commerciale est gratuite sous [PolyForm Noncommercial 1.0.0]
 
 Si VRAM GPU Desk vous est utile, vous pouvez soutenir volontairement son développement.
 
-**USDT · Ethereum (ERC-20)**
-
-<img src="images/support-usdt-erc20.png" width="160" alt="Code QR de soutien en USDT sur Ethereum ERC-20">
+<img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 
 Scannez le code QR avec un portefeuille compatible.

@@ -258,8 +258,6 @@ Windows 10/11 x64、.NET Framework 4.8、対応する NVIDIA ドライバーが�
 
 VRAM GPU Deskがお役に立てば、任意で開発をご支援いただけます。
 
-**USDT · Ethereum (ERC-20)**
-
-<img src="images/support-usdt-erc20.png" width="160" alt="Ethereum ERC-20のUSDT支援用QRコード">
+<img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 
 対応するウォレットでQRコードを読み取ってください。

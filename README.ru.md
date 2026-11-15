@@ -251,8 +251,6 @@ Windows 10/11 x64, .NET Framework 4.8, поддерживаемый драйве
 
 Если VRAM GPU Desk помогает вам, вы можете добровольно поддержать его разработку.
 
-**USDT · Ethereum (ERC-20)**
-
-<img src="images/support-usdt-erc20.png" width="160" alt="QR-код поддержки в USDT в сети Ethereum ERC-20">
+<img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 
 Отсканируйте QR-код совместимым кошельком.

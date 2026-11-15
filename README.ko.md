@@ -258,8 +258,6 @@ Windows 10/11 x64, .NET Framework 4.8, 지원되는 NVIDIA 드라이버가 필�
 
 VRAM GPU Desk가 도움이 된다면 자발적으로 개발을 후원할 수 있습니다.
 
-**USDT · Ethereum (ERC-20)**
-
-<img src="images/support-usdt-erc20.png" width="160" alt="Ethereum ERC-20 네트워크의 USDT 후원 QR 코드">
+<img src="images/support-usdt-erc20.png" width="160" alt="QR code">
 
 호환되는 지갑으로 QR 코드를 스캔하세요.
