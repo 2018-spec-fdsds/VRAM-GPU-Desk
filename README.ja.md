@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.16
+# VRAM GPU Desk 1.17
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -6,7 +6,7 @@
 
 ## 主な機能
 
-- NVIDIA GPUのVRAM・負荷・温度をローカル監視し、リアルタイムグラフで表示します。
+- NVIDIAのVRAM、GPU負荷、温度に加え、システムRAMの使用状況をライブグラフでローカル監視します。
 - プロセス別GPUメモリ、検索、並べ替え、UTF-8 CSV出力に対応します。
 - 温度制御とアイドル時の冷却を備えています。
 - 特定のプロセスインスタンスに紐づく、設定可能なワンクリックボタンを4個用意しています。任意の緊急終了機能は起動するたびにOFFになります。
@@ -15,7 +15,7 @@
 - 独立設定を持つ2つの NVIDIA パネル。2基目の GPU 制御は実験的機能です。
 - 制御喪失の警告と手動再試行。新しい設定では復旧が有効になり、明示的に保存した無効設定は維持されます。
 
-[Windows インストーラー](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [インストーラー ZIP](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
+[Windows インストーラー](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [インストーラー ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
 
 ![VRAM GPU Desk — グラファイトテーマ](images/dashboard-graphite.png)
 
@@ -27,6 +27,14 @@
 > **GPU の同時制御:** GPU の温度パラメーター制御は、電力、クロック、ファン速度を同時に変更する他のプログラム（MSI Afterburner など）と競合する場合があります。これらの設定を操作する有効な制御ソフトは一つだけにしてください。この注意は設定の同時変更に関するもので、受動的な監視は対象ではありません。
 
 
+
+## 1.17の新機能：システムRAMをひと目で確認
+
+5枚目の**システムRAM**カードに、使用中/合計の物理メモリ（GiB）、使用率、利用可能メモリ、5分間のグラフを表示します。合計はWindowsが使用できる物理RAMであり、VRAMやページファイルを含むコミット上限とは別の値です。
+
+RAMの値はコンピューター全体のもので、選択したGPUに依存しません。NVIDIAの2パネル構成では、主パネルは5枚、2つ目は従来のGPUカード4枚を表示し、システムRAMは1か所だけに表示します。既存のGPU制御項目は引き続き利用できます。
+
+RAMは既存の更新間隔で取得し、UACを必要としません。欠落、無効、または6秒を超えて古い値は **—** と表示し、グラフには架空の値を補わず空白を残します。
 
 ## 1.16の新機能：制御復旧の改善と最小化方法の選択
 

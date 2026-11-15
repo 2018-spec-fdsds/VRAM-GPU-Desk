@@ -6,7 +6,7 @@
 
 ## Wichtigste Funktionen
 
-- Lokale Überwachung von NVIDIA-VRAM, GPU-Auslastung und Temperatur mit Live-Diagrammen.
+- Lokale Überwachung von NVIDIA-VRAM, GPU-Auslastung und Temperatur sowie System-RAM mit Live-Diagrammen.
 - GPU-Speicher je Prozess, Suche, Sortierung und CSV-Export in UTF-8.
 - Temperaturregelung und Kühlung im Leerlauf.
 - Vier konfigurierbare Ein-Klick-Schaltflächen für exakt gebundene Prozessinstanzen; die optionale Notfallbeendigung ist bei jedem Start AUS.
@@ -15,7 +15,7 @@
 - Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
 - Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
 
-Version **1.16** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
+Version **1.17** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
 
@@ -26,6 +26,14 @@ Synthetische Demonstrationsdaten und simulierte Reglerzustände. Beide Notfallop
 
 > **Gleichzeitige GPU-Steuerung:** Die Steuerung der GPU-Temperaturparameter kann mit anderen Programmen kollidieren, die gleichzeitig Leistungsgrenzen, Taktraten oder Lüfterdrehzahlen ändern, beispielsweise MSI Afterburner. Verwenden Sie nur einen aktiven Regler für diese Einstellungen. Gemeint sind gleichzeitige Änderungen, nicht die passive Überwachung.
 
+
+## Neu in 1.17: System-RAM auf einen Blick
+
+Eine fünfte Karte **„System-RAM“** zeigt belegten/gesamten physischen Speicher in GiB, Auslastung in Prozent, verfügbaren Speicher und ein Fünf-Minuten-Diagramm. Die Gesamtmenge ist der von Windows nutzbare physische RAM; sie ist unabhängig von VRAM und dem Commit-Limit einschließlich Auslagerungsdatei.
+
+RAM-Werte gelten für den gesamten Computer und hängen nicht von der gewählten GPU ab. Bei zwei NVIDIA-Bereichen hat der primäre Bereich fünf Karten, der zweite behält seine vier GPU-Karten; System-RAM erscheint nur einmal. Die bisherigen GPU-Steuerelemente bleiben verfügbar.
+
+RAM wird im bestehenden Aktualisierungsintervall erfasst und benötigt keine UAC-Abfrage. Fehlende, ungültige oder über sechs Sekunden alte Werte erscheinen als **—**; das Diagramm zeigt eine Lücke statt eines erfundenen Werts.
 
 ## Neu in 1.16: zuverlässigere Wiederherstellung und wählbares Minimieren
 

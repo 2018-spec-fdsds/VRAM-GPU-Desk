@@ -6,7 +6,7 @@
 
 ## Tính năng chính
 
-- Theo dõi VRAM, tải và nhiệt độ GPU NVIDIA cục bộ bằng biểu đồ trực tiếp.
+- Giám sát cục bộ VRAM, tải và nhiệt độ NVIDIA cùng mức dùng RAM hệ thống, với biểu đồ trực tiếp.
 - Bộ nhớ GPU theo tiến trình, tìm kiếm, sắp xếp và xuất CSV UTF-8.
 - Điều khiển nhiệt độ và làm mát khi nhàn rỗi.
 - Bốn nút một lần nhấp có thể cấu hình, gắn với đúng phiên bản tiến trình; tính năng kết thúc khẩn cấp tùy chọn luôn TẮT khi khởi động ứng dụng.
@@ -15,7 +15,7 @@
 - Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
 - Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
 
-Phiên bản **1.16** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
+Phiên bản **1.17** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
 
@@ -26,6 +26,14 @@ Dữ liệu minh họa tổng hợp và trạng thái điều khiển mô phỏn
 
 > **Điều khiển GPU đồng thời:** Điều khiển các tham số nhiệt độ GPU có thể xung đột với chương trình khác đồng thời thay đổi công suất, xung nhịp hoặc tốc độ quạt, chẳng hạn MSI Afterburner. Chỉ sử dụng một bộ điều khiển đang hoạt động cho các tham số này. Cảnh báo này nói về việc thay đổi cài đặt đồng thời, không phải giám sát thụ động.
 
+
+## Điểm mới trong 1.17: RAM hệ thống trong tầm mắt
+
+Thẻ thứ năm **RAM hệ thống** hiển thị bộ nhớ vật lý đã dùng/tổng cộng theo GiB, phần trăm sử dụng, bộ nhớ khả dụng và biểu đồ năm phút. Tổng dung lượng là RAM vật lý Windows có thể dùng; đây là bộ nhớ hệ thống, khác với VRAM và giới hạn commit có tính tệp hoán trang.
+
+Số đo RAM thuộc toàn bộ máy tính, không phụ thuộc GPU được chọn. Với hai bảng NVIDIA, bảng chính có năm thẻ còn bảng thứ hai giữ bốn thẻ GPU; RAM hệ thống chỉ xuất hiện một lần. Các điều khiển GPU hiện có vẫn được giữ lại.
+
+RAM cập nhật theo chu kỳ làm mới hiện tại và không cần UAC. Số đo thiếu, không hợp lệ hoặc cũ hơn sáu giây hiển thị **—**, để trống đoạn biểu đồ thay vì tạo một giá trị giả.
 
 ## Điểm mới trong 1.16: khôi phục tin cậy hơn và tùy chọn thu nhỏ
 

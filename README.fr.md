@@ -6,7 +6,7 @@
 
 ## Fonctionnalités principales
 
-- Surveillance locale de la VRAM, de la charge et de la température des GPU NVIDIA avec graphiques en direct.
+- Suivi local de la VRAM, de la charge et de la température NVIDIA, ainsi que de la RAM système, avec graphiques en direct.
 - Mémoire GPU par processus, recherche, tri et export CSV en UTF-8.
 - Régulation de la température et refroidissement au repos.
 - Quatre boutons configurables en un clic liés à des instances précises de processus ; la fermeture d’urgence facultative est DÉSACTIVÉE à chaque lancement.
@@ -15,7 +15,7 @@
 - Deux panneaux NVIDIA avec des réglages indépendants ; le contrôle du second GPU est expérimental.
 - Avertissement de perte de contrôle et nouvelle tentative manuelle ; récupération ACTIVÉE pour les nouveaux réglages, arrêt enregistré respecté.
 
-Version **1.16** · [Installation Windows](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
+Version **1.17** · [Installation Windows](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
 
 ![VRAM GPU Desk — thème graphite](images/dashboard-graphite.png)
 
@@ -26,6 +26,14 @@ Données synthétiques de démonstration et états simulés des régulateurs. Le
 
 > **Contrôle simultané du GPU:** Le contrôle des paramètres de température du GPU peut entrer en conflit avec des programmes qui modifient simultanément la puissance, les fréquences ou la vitesse des ventilateurs, par exemple MSI Afterburner. Utilisez un seul régulateur actif pour ces paramètres. Cet avertissement concerne les modifications simultanées, pas la surveillance passive.
 
+
+## Nouveautés de 1.17 : la RAM système en un coup d’œil
+
+Une cinquième carte **RAM système** affiche la mémoire physique utilisée/totale en GiB, le pourcentage utilisé, la mémoire disponible et un graphique sur cinq minutes. Le total correspond à la RAM physique utilisable par Windows ; il s’agit de mémoire système, distincte de la VRAM et de la limite d’engagement incluant le fichier d’échange.
+
+Les mesures de RAM concernent tout l’ordinateur et ne dépendent pas du GPU sélectionné. Avec deux panneaux NVIDIA, le principal affiche cinq cartes et le second conserve ses quatre cartes GPU ; la RAM système n’apparaît qu’une fois. Les commandes GPU existantes restent disponibles.
+
+La RAM utilise l’intervalle de rafraîchissement existant et ne demande pas d’UAC. Les mesures absentes, invalides ou vieilles de plus de six secondes affichent **—**, avec une interruption du graphique plutôt qu’une valeur inventée.
 
 ## Nouveautés de 1.16 : récupération plus fiable et réduction au choix
 

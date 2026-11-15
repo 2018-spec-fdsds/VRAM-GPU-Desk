@@ -1,9 +1,9 @@
 # Distribution
 
-Current version: **1.16**, Windows x64.
+Current version: **1.17**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 
@@ -25,7 +25,13 @@ NVIDIA GPUs only; AMD and Intel controls are unsupported. Model/driver capabilit
 
 Control loss shows a warning and manual Retry. Force control recovery defaults ON for new or missing settings; explicitly saved OFF is preserved. Recovery is saved per GPU and uses 5/10/30/60-second backoff after confirmed teardown and fresh same-GPU data. It retains native safety checks and cannot provide exclusive control against MSI Afterburner. Both emergency options remain OFF at each launch. See the feature descriptions in the [English README](README.md).
 
-The current package contains 167 manifest files and 96 Java classes. One-GPU minimum is 1200×900; two panels require 1600×950.
+The verified 1.17 package contains 167 manifest files and 98 Java classes. One-GPU minimum is 1200×900; two panels require 1600×950.
+
+## System RAM dashboard
+
+Version 1.17 adds a fifth System RAM card showing physical memory used/total in GiB, usage percentage, available memory and a five-minute graph. The total is physical RAM usable by Windows, not VRAM or page-file commit.
+
+System RAM is independent of GPU selection and appears only once: the primary NVIDIA panel has five cards, while a second panel retains its four GPU cards. Existing GPU controls remain available. Updates use the existing refresh interval without UAC. Missing, invalid or more than six-second-old readings show an unavailable value and a graph gap.
 
 ## Window behavior
 

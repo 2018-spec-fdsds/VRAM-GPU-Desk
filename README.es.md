@@ -6,7 +6,7 @@
 
 ## Funciones principales
 
-- Supervisión local de VRAM, carga y temperatura de GPU NVIDIA con gráficos en tiempo real.
+- Supervisión local de VRAM, carga y temperatura de NVIDIA, además de la RAM del sistema, con gráficos en tiempo real.
 - Memoria GPU por proceso, búsqueda, ordenación y exportación CSV en UTF-8.
 - Control de temperatura y refrigeración en reposo.
 - Cuatro botones configurables de un clic vinculados a instancias concretas de procesos; la finalización de emergencia opcional está DESACTIVADA en cada inicio.
@@ -15,7 +15,7 @@
 - Dos paneles NVIDIA con ajustes independientes; el control de la segunda GPU es experimental.
 - Aviso de pérdida de control y reintento manual; recuperación ACTIVADA para ajustes nuevos, respetando la desactivación guardada.
 
-Versión **1.16** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
+Versión **1.17** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
 
 ![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
 
@@ -26,6 +26,14 @@ Datos sintéticos de demostración y estados simulados de los reguladores. Ambas
 
 > **Control simultáneo de GPU:** El control de los parámetros de temperatura de la GPU puede entrar en conflicto con otros programas que cambien al mismo tiempo la potencia, las frecuencias o la velocidad de los ventiladores, como MSI Afterburner. Utilice un único controlador activo para estos ajustes. La advertencia se refiere a cambios simultáneos, no a la supervisión pasiva.
 
+
+## Novedades de 1.17: RAM del sistema de un vistazo
+
+Una quinta tarjeta **RAM del sistema** muestra memoria física usada/total en GiB, porcentaje de uso, memoria disponible y un gráfico de cinco minutos. El total corresponde a la RAM física utilizable por Windows; es memoria del sistema, separada de la VRAM y del límite de memoria comprometida con el archivo de paginación.
+
+Las lecturas de RAM corresponden a todo el equipo y no dependen de la GPU seleccionada. Con dos paneles NVIDIA, el principal tiene cinco tarjetas y el secundario conserva sus cuatro tarjetas GPU; la RAM aparece una sola vez. Los controles GPU existentes siguen disponibles.
+
+La RAM se actualiza con el intervalo existente y no requiere UAC. Las lecturas ausentes, inválidas o de más de seis segundos muestran **—**, dejando un hueco en el gráfico en lugar de un valor inventado.
 
 ## Novedades de 1.16: recuperación más fiable y minimización opcional en la bandeja
 

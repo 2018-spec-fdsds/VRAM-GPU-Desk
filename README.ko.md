@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.16
+# VRAM GPU Desk 1.17
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -6,7 +6,7 @@
 
 ## 주요 기능
 
-- 실시간 그래프로 NVIDIA GPU의 VRAM, 부하 및 온도를 로컬에서 모니터링합니다.
+- 실시간 그래프로 NVIDIA VRAM, GPU 부하와 온도 및 시스템 RAM 사용량을 로컬에서 모니터링합니다.
 - 프로세스별 GPU 메모리, 검색, 정렬 및 UTF-8 CSV 내보내기를 지원합니다.
 - 온도 제어와 유휴 냉각을 제공합니다.
 - 정확한 프로세스 인스턴스에 연결되는 설정 가능한 원클릭 버튼 4개를 제공합니다. 선택형 긴급 종료 기능은 매번 시작할 때 꺼져 있습니다.
@@ -15,7 +15,7 @@
 - 독립 설정을 갖춘 NVIDIA 패널 두 개; 두 번째 GPU 제어는 실험 기능입니다.
 - 제어 손실 경고와 수동 재시도; 새 설정은 복구가 켜지며 명시적으로 저장한 끄기는 유지됩니다.
 
-[Windows 설치 프로그램 다운로드](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [설치 프로그램 ZIP](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
+[Windows 설치 프로그램 다운로드](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [설치 프로그램 ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
 
 ![VRAM GPU Desk — 그래파이트 테마](images/dashboard-graphite.png)
 
@@ -27,6 +27,14 @@
 > **동시 GPU 제어:** GPU 온도 매개변수 제어는 전력, 클럭 또는 팬 속도를 동시에 변경하는 다른 프로그램(예: MSI Afterburner)과 충돌할 수 있습니다. 이 설정에는 하나의 활성 제어기만 사용하세요. 이 경고는 설정의 동시 변경에 관한 것이며 수동 모니터링은 해당하지 않습니다.
 
 
+
+## 1.17의 새 기능: 시스템 RAM을 한눈에
+
+다섯 번째 **시스템 RAM** 카드는 사용 중/전체 물리 메모리(GiB), 사용률, 사용 가능한 메모리와 5분 그래프를 표시합니다. 전체 용량은 Windows가 사용할 수 있는 물리 RAM이며, VRAM이나 페이지 파일을 포함하는 커밋 한도와는 다릅니다.
+
+RAM 값은 컴퓨터 전체에 해당하며 선택한 GPU와 무관합니다. NVIDIA 패널이 두 개일 때 기본 패널에는 카드 다섯 개가 있고, 두 번째 패널에는 기존 GPU 카드 네 개가 유지됩니다. 시스템 RAM은 한 번만 표시되며 기존 GPU 제어 항목은 그대로 사용할 수 있습니다.
+
+RAM은 기존 새로 고침 주기로 갱신되며 UAC가 필요하지 않습니다. 누락되었거나 잘못되었거나 6초가 지난 값은 **—**로 표시하고, 그래프에는 임의의 값 대신 빈 구간을 남깁니다.
 
 ## 1.16의 새 기능: 안정적인 제어 복구와 최소화 방식 선택
 

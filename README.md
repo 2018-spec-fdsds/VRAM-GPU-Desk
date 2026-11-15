@@ -6,7 +6,7 @@
 
 ## Key features
 
-- Local NVIDIA VRAM, GPU load and temperature monitoring with live graphs.
+- Local NVIDIA VRAM, GPU load and temperature monitoring, plus system RAM usage, with live graphs.
 - Per-process GPU memory, search, sorting and UTF-8 CSV export.
 - Temperature control and idle cooling.
 - Four configurable one-click buttons bound to exact process instances; optional emergency termination is OFF at every launch.
@@ -15,7 +15,7 @@
 - Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
 - Control-loss warning and manual retry; forced recovery is ON for new settings, with saved OFF choices preserved.
 
-Version **1.16** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.16-Installer.zip)
+Version **1.17** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip)
 
 ![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
 
@@ -27,6 +27,14 @@ Synthetic demonstration data and simulated controller states. Both emergency opt
 > **Concurrent GPU control:** GPU temperature parameter control may conflict with other programs that change power limits, clocks or fan speeds at the same time, such as MSI Afterburner. Use only one active controller for these settings. This warning concerns simultaneous changes to settings, not passive monitoring.
 
 
+
+## New in 1.17: system RAM at a glance
+
+A fifth **System RAM** card shows physical memory used/total in GiB, usage percentage, available memory and a five-minute graph. Its total is the physical RAM usable by Windows; this is system memory, separate from VRAM and page-file commit.
+
+RAM readings describe the whole computer and are independent of the selected GPU. With two NVIDIA panels, the primary panel has five cards and the secondary retains its four GPU cards; system RAM appears only once. Existing GPU controls remain available.
+
+RAM updates at the existing refresh interval and needs no UAC prompt. Missing, invalid or more than six-second-old readings display **—**, with a gap in the graph instead of a fabricated value.
 
 ## New in 1.16: reliable control recovery and optional tray minimization
 

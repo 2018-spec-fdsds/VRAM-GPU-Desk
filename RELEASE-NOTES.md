@@ -1,5 +1,27 @@
 # VRAM GPU Desk — release notes
 
+## 1.17
+
+[Windows x64 installer](downloads/VRAM-GPU-Desk-1.17-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.17-Installer.zip) · [SHA-256](SHA256SUMS.txt)
+
+### System RAM alongside GPU metrics
+
+- A fifth **System RAM** card shows used/total physical memory in GiB, usage percentage, available memory and a five-minute history graph.
+- The total is the physical RAM usable by Windows. It is separate from VRAM and page-file commit, and does not change when another GPU is selected.
+- With two NVIDIA panels, system RAM appears once in the primary five-card panel. The second panel retains its four GPU cards, independent settings and experimental control status.
+- Missing, invalid or more than six-second-old readings display **—** and leave a gap in the graph. RAM uses the existing refresh interval and needs no UAC prompt.
+- Compact process rows, all GPU controls, quick-button management, all twelve languages and both themes remain available.
+
+The verified 1.17 package contains 167 manifest files and 98 Java classes.
+
+### Retained behavior
+
+Force control recovery defaults ON for new or missing settings, while an explicitly saved OFF is respected. Both emergency termination options remain OFF at each launch. The saved Minimize to tray choice still supports ordinary Windows taskbar minimization when disabled.
+
+The NVIDIA control component requires one UAC approval at installation; RAM monitoring does not require elevation. Simultaneous power, clock or fan control may conflict with MSI Afterburner or another active controller. Second-NVIDIA-GPU control remains experimental. English is the main description, Graphite is the first demonstration image, and the application remains licensed under [PolyForm Noncommercial 1.0.0](LICENSE.md).
+
+---
+
 ## 1.16
 
 [Windows x64 installer](downloads/VRAM-GPU-Desk-1.16-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.16-Installer.zip) · [SHA-256](SHA256SUMS.txt)
