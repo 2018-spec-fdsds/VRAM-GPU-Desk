@@ -4,6 +4,30 @@
 
 **Local NVIDIA GPU memory monitoring and temperature control for Windows x64. NVIDIA GPUs only; AMD and Intel GPUs are not supported.**
 
+## What this application is for
+
+- **Monitor and free NVIDIA video memory in Windows.** See which applications use VRAM and force-close selected applications to reclaim it, including through configurable one-click quick buttons.
+- **Manage applications competing for VRAM.** Useful when running one or several workloads at once: local code-generation models, image or video generation, transcription and data analysis.
+- **Gentle temperature and cooling control.** Flexible regulation of supported GPU temperature-related settings and cooling, both under load and while idle.
+- **Emergency mode for overheating.** An optional mode can force-close GPU-intensive applications to reduce load when overheating is detected. It is OFF at every launch; forced closure can lose unsaved work.
+
+## Key features
+
+- Optional, model-qualified PSU power and currents for up to two GPU power connectors when reported; OFF by default.
+- Automatic overlay text contrast is ON by default, with manual light/dark text available when disabled.
+
+- Local NVIDIA VRAM, GPU load and temperature monitoring, plus system RAM and CPU utilization, with graphs and per-core bars.
+- Per-process GPU memory, search, sorting and UTF-8 CSV export.
+- Temperature control and idle cooling adapted to each GPU’s reported capabilities.
+- Four configurable one-click buttons bound to exact process instances; optional emergency termination is OFF at every launch.
+- A 30-day top 10 of applications by recorded VRAM usage.
+- 12 languages, two themes, system tray and optional Windows startup.
+- Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
+- Control-loss warning and manual retry; forced recovery is ON for new settings, with saved OFF choices preserved.
+
+Version **1.21** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+
+
 **RAM, CPU and optional smart/AI PSU monitoring**
 
 - System RAM: used/total GiB, available memory and a five-minute graph.
@@ -38,30 +62,6 @@ With two NVIDIA GPUs, RAM, CPU and PSU indicators are shared and appear only onc
 | NZXT E500 / E650 / E850 | Additional partial reader: rail sensors only; no measured total output W or physical GPU-port currents for the PSU card. Synthetic checks passed; not full PSU-card support. |
 
 Research only: be quiet! Dark Power Pro 14 IO 1300W/1600W has no adapter in 1.21. Seasonic and ASUS have no qualified reader in 1.21. An “AI” label does not establish compatibility.
-
-## What this application is for
-
-- **Monitor and free NVIDIA video memory in Windows.** See which applications use VRAM and force-close selected applications to reclaim it, including through configurable one-click quick buttons.
-- **Manage applications competing for VRAM.** Useful when running one or several workloads at once: local code-generation models, image or video generation, transcription and data analysis.
-- **Gentle temperature and cooling control.** Flexible regulation of supported GPU temperature-related settings and cooling, both under load and while idle.
-- **Emergency mode for overheating.** An optional mode can force-close GPU-intensive applications to reduce load when overheating is detected. It is OFF at every launch; forced closure can lose unsaved work.
-
-## Key features
-
-- Optional, model-qualified PSU power and currents for up to two GPU power connectors when reported; OFF by default.
-- Automatic overlay text contrast is ON by default, with manual light/dark text available when disabled.
-
-- Local NVIDIA VRAM, GPU load and temperature monitoring, plus system RAM and CPU utilization, with graphs and per-core bars.
-- Per-process GPU memory, search, sorting and UTF-8 CSV export.
-- Temperature control and idle cooling adapted to each GPU’s reported capabilities.
-- Four configurable one-click buttons bound to exact process instances; optional emergency termination is OFF at every launch.
-- A 30-day top 10 of applications by recorded VRAM usage.
-- 12 languages, two themes, system tray and optional Windows startup.
-- Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
-- Control-loss warning and manual retry; forced recovery is ON for new settings, with saved OFF choices preserved.
-
-Version **1.21** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
-
 
 ## New in 1.21 — optional PSU telemetry and automatic overlay contrast
 

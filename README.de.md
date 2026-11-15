@@ -4,6 +4,30 @@
 
 **Lokale Speicherüberwachung und Temperaturregelung für NVIDIA-GPUs unter Windows x64. Nur NVIDIA; AMD- und Intel-GPUs werden nicht unterstützt.**
 
+## Wozu die Anwendung dient
+
+- **NVIDIA-VRAM unter Windows überwachen und freigeben.** Anwendungen gezielt zwangsweise schließen, um VRAM freizugeben — auch über konfigurierbare Ein-Klick-Schnellaktionen für die exakt ausgewählte Prozessinstanz.
+- **VRAM-Konkurrenz im Blick behalten.** Für mehrere gleichzeitig laufende Anwendungen: lokale Modelle zur Codegenerierung, Bild- und Videogenerierung, Transkription und Datenanalyse.
+- **Schonende Temperatur- und Kühlungsregelung.** Die GPU-Temperatur flexibel über unterstützte Leistungs- und Taktgrenzen regeln und die GPU unter Last sowie im Leerlauf kühlen.
+- **Notfallmodus bei Überhitzung.** Ein optionaler Modus kann GPU-intensive Anwendungen zwangsweise schließen, um die Last zu senken. Er ist bei jedem Start AUS; das erzwungene Schließen kann zum Verlust ungespeicherter Arbeit führen.
+
+## Wichtigste Funktionen
+
+- Optionale, modellabhängige Netzteilleistung und Ströme von bis zu zwei GPU-Stromanschlüssen, soweit gemeldet; standardmäßig AUS.
+- Automatischer Overlay-Textkontrast ist standardmäßig EIN; bei deaktivierter Option lässt sich helle/dunkle Schrift manuell wählen.
+
+- Lokale Überwachung von NVIDIA-VRAM, GPU-Auslastung und Temperatur sowie System-RAM und CPU-Auslastung mit Diagrammen und Kernbalken.
+- GPU-Speicher je Prozess, Suche, Sortierung und CSV-Export in UTF-8.
+- Temperatursteuerung und Leerlaufkühlung anhand der gemeldeten Fähigkeiten jeder GPU.
+- Vier konfigurierbare Ein-Klick-Schaltflächen für exakt gebundene Prozessinstanzen; die optionale Notfallbeendigung ist bei jedem Start AUS.
+- Top 10 der Anwendungen nach aufgezeichneter VRAM-Nutzung über 30 Tage.
+- 12 Sprachen, zwei Designs, Infobereich und optionaler Start mit Windows.
+- Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
+- Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
+
+Version **1.21** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+
+
 **RAM, CPU und optionale Überwachung intelligenter/AI-Netzteile**
 
 - System-RAM: belegt/gesamt in GiB, verfügbarer Speicher und Fünf-Minuten-Verlauf.
@@ -38,30 +62,6 @@ Bei zwei NVIDIA-GPUs erscheinen die gemeinsamen RAM-, CPU- und Netzteilanzeigen 
 | NZXT E500 / E650 / E850 | Zusätzlicher Teilleser: Schienensensoren, keine gemessene Gesamtausgangsleistung und keine physischen GPU-Anschlussströme für die Netzteilkarte. Synthetisch geprüft; keine vollständige Kartenunterstützung. |
 
 Nur erforscht: Für be quiet! Dark Power Pro 14 IO 1300W/1600W gibt es in 1.21 keinen Adapter. Seasonic und ASUS haben keinen qualifizierten Leser in 1.21. Ein „AI“-Label beweist keine Kompatibilität.
-
-## Wozu die Anwendung dient
-
-- **NVIDIA-VRAM unter Windows überwachen und freigeben.** Anwendungen gezielt zwangsweise schließen, um VRAM freizugeben — auch über konfigurierbare Ein-Klick-Schnellaktionen für die exakt ausgewählte Prozessinstanz.
-- **VRAM-Konkurrenz im Blick behalten.** Für mehrere gleichzeitig laufende Anwendungen: lokale Modelle zur Codegenerierung, Bild- und Videogenerierung, Transkription und Datenanalyse.
-- **Schonende Temperatur- und Kühlungsregelung.** Die GPU-Temperatur flexibel über unterstützte Leistungs- und Taktgrenzen regeln und die GPU unter Last sowie im Leerlauf kühlen.
-- **Notfallmodus bei Überhitzung.** Ein optionaler Modus kann GPU-intensive Anwendungen zwangsweise schließen, um die Last zu senken. Er ist bei jedem Start AUS; das erzwungene Schließen kann zum Verlust ungespeicherter Arbeit führen.
-
-## Wichtigste Funktionen
-
-- Optionale, modellabhängige Netzteilleistung und Ströme von bis zu zwei GPU-Stromanschlüssen, soweit gemeldet; standardmäßig AUS.
-- Automatischer Overlay-Textkontrast ist standardmäßig EIN; bei deaktivierter Option lässt sich helle/dunkle Schrift manuell wählen.
-
-- Lokale Überwachung von NVIDIA-VRAM, GPU-Auslastung und Temperatur sowie System-RAM und CPU-Auslastung mit Diagrammen und Kernbalken.
-- GPU-Speicher je Prozess, Suche, Sortierung und CSV-Export in UTF-8.
-- Temperatursteuerung und Leerlaufkühlung anhand der gemeldeten Fähigkeiten jeder GPU.
-- Vier konfigurierbare Ein-Klick-Schaltflächen für exakt gebundene Prozessinstanzen; die optionale Notfallbeendigung ist bei jedem Start AUS.
-- Top 10 der Anwendungen nach aufgezeichneter VRAM-Nutzung über 30 Tage.
-- 12 Sprachen, zwei Designs, Infobereich und optionaler Start mit Windows.
-- Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
-- Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
-
-Version **1.21** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
-
 
 ## Neu in 1.21 — optionale Netzteilüberwachung und automatischer Overlay-Kontrast
 

@@ -4,6 +4,30 @@
 
 **Supervisión local de memoria y control de temperatura de GPU NVIDIA para Windows x64. Solo NVIDIA; las GPU AMD e Intel no son compatibles.**
 
+## Para qué sirve la aplicación
+
+- **Supervisar y liberar VRAM de NVIDIA en Windows.** Forzar el cierre de aplicaciones para liberar VRAM, también mediante botones rápidos configurables de un clic vinculados a la instancia exacta seleccionada.
+- **Gestionar aplicaciones que compiten por la VRAM.** Para varias tareas simultáneas: modelos locales de generación de código, generación de imágenes y vídeo, transcripción y análisis de datos.
+- **Control gradual de temperatura y refrigeración.** Regular la temperatura de la GPU de forma flexible mediante los límites de potencia y frecuencia admitidos, y refrigerarla tanto bajo carga como en reposo.
+- **Modo de emergencia ante sobrecalentamiento.** Un modo opcional puede forzar el cierre de aplicaciones con alta carga de GPU para reducir la carga. Está DESACTIVADO en cada inicio; el cierre forzado puede causar pérdida de trabajo sin guardar.
+
+## Funciones principales
+
+- Potencia de fuente y corriente de hasta dos conectores GPU, según el modelo y los sensores disponibles; desactivado por defecto.
+- Contraste automático del texto activado por defecto; al desactivarlo puede elegir texto claro u oscuro manualmente.
+
+- Supervisión local de VRAM, carga y temperatura NVIDIA, RAM del sistema y utilización de CPU, con gráficos y barras por núcleo.
+- Memoria GPU por proceso, búsqueda, ordenación y exportación CSV en UTF-8.
+- Control de temperatura y refrigeración en reposo adaptados a las capacidades de cada GPU.
+- Cuatro botones configurables de un clic vinculados a instancias concretas de procesos; la finalización de emergencia opcional está DESACTIVADA en cada inicio.
+- Las 10 aplicaciones principales por uso de VRAM registrado durante 30 días.
+- 12 idiomas, dos temas, bandeja del sistema e inicio opcional con Windows.
+- Dos paneles NVIDIA con ajustes independientes; el control de la segunda GPU es experimental.
+- Aviso de pérdida de control y reintento manual; recuperación ACTIVADA para ajustes nuevos, respetando la desactivación guardada.
+
+Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+
+
 **RAM, CPU y supervisión opcional de fuentes inteligentes/AI**
 
 - RAM: usada/total en GiB, memoria disponible y gráfico de cinco minutos.
@@ -38,30 +62,6 @@ Con dos GPU NVIDIA, RAM, CPU y fuente son indicadores compartidos que aparecen u
 | NZXT E500 / E650 / E850 | Lector parcial adicional: sensores de raíles; sin salida total medida ni corrientes físicas de puertos para la tarjeta PSU. Pruebas sintéticas superadas; no es soporte completo de la tarjeta. |
 
 Solo investigación: be quiet! Dark Power Pro 14 IO 1300W/1600W no tiene adaptador en 1.21. Seasonic y ASUS no tienen lector cualificado en 1.21. La etiqueta «AI» no garantiza compatibilidad.
-
-## Para qué sirve la aplicación
-
-- **Supervisar y liberar VRAM de NVIDIA en Windows.** Forzar el cierre de aplicaciones para liberar VRAM, también mediante botones rápidos configurables de un clic vinculados a la instancia exacta seleccionada.
-- **Gestionar aplicaciones que compiten por la VRAM.** Para varias tareas simultáneas: modelos locales de generación de código, generación de imágenes y vídeo, transcripción y análisis de datos.
-- **Control gradual de temperatura y refrigeración.** Regular la temperatura de la GPU de forma flexible mediante los límites de potencia y frecuencia admitidos, y refrigerarla tanto bajo carga como en reposo.
-- **Modo de emergencia ante sobrecalentamiento.** Un modo opcional puede forzar el cierre de aplicaciones con alta carga de GPU para reducir la carga. Está DESACTIVADO en cada inicio; el cierre forzado puede causar pérdida de trabajo sin guardar.
-
-## Funciones principales
-
-- Potencia de fuente y corriente de hasta dos conectores GPU, según el modelo y los sensores disponibles; desactivado por defecto.
-- Contraste automático del texto activado por defecto; al desactivarlo puede elegir texto claro u oscuro manualmente.
-
-- Supervisión local de VRAM, carga y temperatura NVIDIA, RAM del sistema y utilización de CPU, con gráficos y barras por núcleo.
-- Memoria GPU por proceso, búsqueda, ordenación y exportación CSV en UTF-8.
-- Control de temperatura y refrigeración en reposo adaptados a las capacidades de cada GPU.
-- Cuatro botones configurables de un clic vinculados a instancias concretas de procesos; la finalización de emergencia opcional está DESACTIVADA en cada inicio.
-- Las 10 aplicaciones principales por uso de VRAM registrado durante 30 días.
-- 12 idiomas, dos temas, bandeja del sistema e inicio opcional con Windows.
-- Dos paneles NVIDIA con ajustes independientes; el control de la segunda GPU es experimental.
-- Aviso de pérdida de control y reintento manual; recuperación ACTIVADA para ajustes nuevos, respetando la desactivación guardada.
-
-Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
-
 
 ## Novedades de 1.21 — fuente de alimentación opcional y contraste automático
 

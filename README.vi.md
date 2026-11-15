@@ -4,6 +4,30 @@
 
 **Theo dõi bộ nhớ và điều khiển nhiệt độ GPU NVIDIA cục bộ cho Windows x64. Chỉ hỗ trợ NVIDIA; không hỗ trợ GPU AMD hoặc Intel.**
 
+## Ứng dụng dùng để làm gì
+
+- **Theo dõi và giải phóng VRAM NVIDIA trên Windows.** Buộc đóng ứng dụng để giải phóng VRAM, kể cả bằng các nút nhanh một lần nhấp có thể cấu hình, gắn với đúng phiên tiến trình đã chọn.
+- **Quản lý các ứng dụng cùng tranh VRAM.** Dành cho nhiều tác vụ đồng thời: mô hình cục bộ sinh mã, tạo ảnh và video, phiên âm và phân tích dữ liệu.
+- **Điều chỉnh nhiệt độ và làm mát từ từ.** Điều chỉnh nhiệt độ GPU linh hoạt qua các giới hạn công suất và xung nhịp được hỗ trợ, đồng thời làm mát GPU khi tải nặng lẫn nhàn rỗi.
+- **Chế độ khẩn cấp khi quá nhiệt.** Một chế độ tùy chọn có thể buộc đóng ứng dụng tải nặng GPU để giảm tải. Chế độ này TẮT ở mỗi lần mở; việc buộc đóng có thể làm mất công việc chưa lưu.
+
+## Tính năng chính
+
+- Tùy chọn công suất nguồn và dòng điện của tối đa hai đầu nối GPU theo mẫu và cảm biến hỗ trợ; mặc định TẮT.
+- Tương phản chữ lớp phủ tự động mặc định BẬT; khi tắt có thể chọn chữ sáng hoặc tối thủ công.
+
+- Giám sát cục bộ VRAM, tải và nhiệt độ NVIDIA, RAM hệ thống và mức dùng CPU, với biểu đồ và thanh theo lõi.
+- Bộ nhớ GPU theo tiến trình, tìm kiếm, sắp xếp và xuất CSV UTF-8.
+- Điều khiển nhiệt độ và làm mát nhàn rỗi theo khả năng được từng GPU báo cáo.
+- Bốn nút một lần nhấp có thể cấu hình, gắn với đúng phiên bản tiến trình; tính năng kết thúc khẩn cấp tùy chọn luôn TẮT khi khởi động ứng dụng.
+- 10 ứng dụng đứng đầu theo mức sử dụng VRAM đã ghi trong 30 ngày.
+- 12 ngôn ngữ, hai giao diện, khay hệ thống và tùy chọn khởi động cùng Windows.
+- Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
+- Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
+
+Phiên bản **1.20.1** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+
+
 **RAM, CPU và giám sát nguồn thông minh/AI tùy chọn**
 
 - RAM: đã dùng/tổng GiB, bộ nhớ khả dụng và biểu đồ năm phút.
@@ -38,30 +62,6 @@ Với hai GPU NVIDIA, các chỉ số RAM, CPU và nguồn dùng chung và chỉ
 | NZXT E500 / E650 / E850 | Bộ đọc bổ sung một phần: cảm biến đường nguồn, không có tổng W đo được hay dòng cổng vật lý cho thẻ PSU. Kiểm tra tổng hợp đạt; không hỗ trợ thẻ đầy đủ. |
 
 Chỉ nghiên cứu: chưa có bộ đọc 1.21 cho be quiet! Dark Power Pro 14 IO 1300W/1600W. Seasonic và ASUS chưa có bộ đọc đủ điều kiện. Nhãn “AI” không bảo đảm tương thích.
-
-## Ứng dụng dùng để làm gì
-
-- **Theo dõi và giải phóng VRAM NVIDIA trên Windows.** Buộc đóng ứng dụng để giải phóng VRAM, kể cả bằng các nút nhanh một lần nhấp có thể cấu hình, gắn với đúng phiên tiến trình đã chọn.
-- **Quản lý các ứng dụng cùng tranh VRAM.** Dành cho nhiều tác vụ đồng thời: mô hình cục bộ sinh mã, tạo ảnh và video, phiên âm và phân tích dữ liệu.
-- **Điều chỉnh nhiệt độ và làm mát từ từ.** Điều chỉnh nhiệt độ GPU linh hoạt qua các giới hạn công suất và xung nhịp được hỗ trợ, đồng thời làm mát GPU khi tải nặng lẫn nhàn rỗi.
-- **Chế độ khẩn cấp khi quá nhiệt.** Một chế độ tùy chọn có thể buộc đóng ứng dụng tải nặng GPU để giảm tải. Chế độ này TẮT ở mỗi lần mở; việc buộc đóng có thể làm mất công việc chưa lưu.
-
-## Tính năng chính
-
-- Tùy chọn công suất nguồn và dòng điện của tối đa hai đầu nối GPU theo mẫu và cảm biến hỗ trợ; mặc định TẮT.
-- Tương phản chữ lớp phủ tự động mặc định BẬT; khi tắt có thể chọn chữ sáng hoặc tối thủ công.
-
-- Giám sát cục bộ VRAM, tải và nhiệt độ NVIDIA, RAM hệ thống và mức dùng CPU, với biểu đồ và thanh theo lõi.
-- Bộ nhớ GPU theo tiến trình, tìm kiếm, sắp xếp và xuất CSV UTF-8.
-- Điều khiển nhiệt độ và làm mát nhàn rỗi theo khả năng được từng GPU báo cáo.
-- Bốn nút một lần nhấp có thể cấu hình, gắn với đúng phiên bản tiến trình; tính năng kết thúc khẩn cấp tùy chọn luôn TẮT khi khởi động ứng dụng.
-- 10 ứng dụng đứng đầu theo mức sử dụng VRAM đã ghi trong 30 ngày.
-- 12 ngôn ngữ, hai giao diện, khay hệ thống và tùy chọn khởi động cùng Windows.
-- Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
-- Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
-
-Phiên bản **1.20.1** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
-
 
 ## Mới trong 1.21 — giám sát bộ nguồn tùy chọn và tương phản tự động
 
