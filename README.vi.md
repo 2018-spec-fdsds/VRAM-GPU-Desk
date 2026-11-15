@@ -4,7 +4,40 @@
 
 **Theo dõi bộ nhớ và điều khiển nhiệt độ GPU NVIDIA cục bộ cho Windows x64. Chỉ hỗ trợ NVIDIA; không hỗ trợ GPU AMD hoặc Intel.**
 
+**RAM, CPU và giám sát nguồn thông minh/AI tùy chọn**
+
+- RAM: đã dùng/tổng GiB, bộ nhớ khả dụng và biểu đồ năm phút.
+- CPU: tải tổng thể và thanh tải mỗi nhân vật lý; không có nhiệt độ CPU.
+- Nguồn thông minh/AI tương thích: watt đầu ra và dòng tối đa hai cổng nguồn GPU vật lý khi có dữ liệu; mặc định TẮT.
+
+Tương thích: cảm biến MSI MPG Ai1300TS đã được xác minh trên phần cứng; Ai1600TS và một số Corsair HXi/RMi, Thermaltake DPS G/iRGB PLUS có bộ đọc giao thức đủ điều kiện nhưng chưa kiểm chứng phần cứng.
+
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
+
+## Chỉ số RAM, CPU và bộ nguồn thông minh/AI
+
+- **RAM hệ thống:** bộ nhớ vật lý đã dùng/tổng cộng theo GiB, phần trăm sử dụng, bộ nhớ khả dụng và biểu đồ lịch sử năm phút.
+- **CPU:** phần trăm sử dụng tổng thể, số nhân vật lý và luồng logic, cùng thanh tải cho từng nhân vật lý. Chỉ hiển thị tải CPU, không hiển thị nhiệt độ CPU.
+- **Bộ nguồn USB kỹ thuật số/thông minh/AI tương thích:** truy vấn cảm biến chỉ đọc hiển thị công suất đầu ra đo được khi thiết bị cung cấp và dòng điện của tối đa hai cổng nguồn GPU vật lý, gồm sáu dòng điện tiếp điểm mỗi cổng nếu hỗ trợ. Đã xác minh việc đọc cảm biến trên **MSI MPG Ai1300TS**. Giá trị tính toán được ghi riêng; dòng đường nguồn không phải dòng của một đầu nối riêng lẻ.
+
+Giám sát nguồn có ô chọn riêng và **mặc định TẮT**. Khi tắt hoặc không phát hiện nguồn tương thích, thẻ nguồn được ẩn và các thẻ khác lấp đầy chiều rộng, không để ô trống. Sau khi phát hiện nguồn, nếu số liệu tạm thời không khả dụng, thẻ vẫn giữ lại với dấu gạch ngang.
+
+Với hai GPU NVIDIA, các chỉ số RAM, CPU và nguồn dùng chung và chỉ xuất hiện một lần. Nhãn “AI” hay tên tiếp thị không bảo đảm tương thích; cần xác định đúng mẫu và giao thức. Xem [tương thích bộ nguồn](docs/psu-compatibility.md). Hình dùng giá trị trình diễn tổng hợp, không phải kết quả đo phần cứng.
+
+![RAM, CPU và chỉ số nguồn tùy chọn](images/with-psu-strip.png)
+
+[Không có nguồn: các thẻ khác mở rộng](images/without-psu-strip.png)
+
+### Tương thích những bộ nguồn nào?
+
+| Mẫu / định danh đủ điều kiện | Dữ liệu và kiểm chứng |
+| --- | --- |
+| MSI MPG Ai1300TS PCIE5 / Ai1600TS PCIE5 | Ai1300TS: cảm biến xác minh trên phần cứng, W đầu ra đo được và hai cổng với sáu dòng tiếp điểm mỗi cổng. Ai1600TS: bộ đọc và giao thức đủ điều kiện; chưa thử phần cứng. |
+| Corsair HX750i, HX850i, HX1000i, HX1200i, HX1500i; RM650i, RM750i, RM850i, RM1000i | W đầu ra đo được; không có dòng từng cổng GPU. Bộ đọc đã triển khai, kiểm tra tổng hợp đạt; kiểm chứng phần cứng còn chờ. Chỉ các định danh USB trong danh sách đầy đủ. |
+| Thermaltake DPS G / iRGB PLUS | Chỉ 264A:2329. Đầu ra ≈W được tính từ điện áp×dòng đường nguồn; không có dòng từng cổng GPU. Kiểm tra tổng hợp đạt; kiểm chứng phần cứng còn chờ. |
+| NZXT E500 / E650 / E850 | Bộ đọc bổ sung một phần: cảm biến đường nguồn, không có tổng W đo được hay dòng cổng vật lý cho thẻ PSU. Kiểm tra tổng hợp đạt; không hỗ trợ thẻ đầy đủ. |
+
+Chỉ nghiên cứu: chưa có bộ đọc 1.21 cho be quiet! Dark Power Pro 14 IO 1300W/1600W. Seasonic và ASUS chưa có bộ đọc đủ điều kiện. Nhãn “AI” không bảo đảm tương thích.
 
 ## Ứng dụng dùng để làm gì
 

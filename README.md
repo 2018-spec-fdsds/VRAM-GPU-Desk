@@ -4,7 +4,40 @@
 
 **Local NVIDIA GPU memory monitoring and temperature control for Windows x64. NVIDIA GPUs only; AMD and Intel GPUs are not supported.**
 
+**RAM, CPU and optional smart/AI PSU monitoring**
+
+- System RAM: used/total GiB, available memory and a five-minute graph.
+- CPU: overall utilization and load bars for each physical core; no CPU temperature.
+- Optional compatible smart/AI PSU: output watts and currents for up to two physical GPU power ports when available; OFF by default.
+
+Compatibility: MSI MPG Ai1300TS sensor reads verified on hardware; Ai1600TS, selected Corsair HXi/RMi and Thermaltake DPS G/iRGB PLUS have qualified readers, with physical validation still pending for those models.
+
 ![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
+
+## System RAM, CPU and smart/AI PSU indicators
+
+- **System RAM:** physical memory used/total in GiB, usage percentage, available memory and a five-minute history graph.
+- **CPU:** overall utilization percentage, physical-core and logical-thread counts, plus a load bar for each physical core. CPU indicators show utilization only, without CPU temperature.
+- **Compatible USB digital/smart/AI power supplies:** read-only PSU telemetry shows measured output watts when reported and currents for up to two physical GPU power ports, including six pin-current readings per port where available. Read-only sensor queries have been verified on **MSI MPG Ai1300TS**. Calculated values are identified separately; a rail current is not an individual connector measurement.
+
+PSU monitoring has a separate checkbox and is **OFF by default**. If it is OFF or no compatible PSU is found, its card is hidden and the remaining cards fill the available width, without an empty placeholder. Once a PSU has been detected, temporarily unavailable readings retain its card with dashes.
+
+With two NVIDIA GPUs, RAM, CPU and PSU indicators are shared and appear only once. “AI” or another marketing label alone does not guarantee compatibility: support depends on the exact model and protocol. See [PSU compatibility](docs/psu-compatibility.md). The image uses synthetic demonstration values; the displayed readings are not hardware-test results.
+
+![System RAM, CPU and optional PSU indicators](images/with-psu-strip.png)
+
+[Without PSU: remaining cards expanded](images/without-psu-strip.png)
+
+### Which power supplies are compatible?
+
+| Models / qualified identity | Available readings and validation |
+| --- | --- |
+| MSI MPG Ai1300TS PCIE5 / Ai1600TS PCIE5 | Ai1300TS: read-only sensor queries verified on hardware, measured output W and two ports with six pin-current readings each. Ai1600TS: implemented reader and qualified protocol; no physical hardware test. |
+| Corsair HX750i, HX850i, HX1000i, HX1200i, HX1500i; RM650i, RM750i, RM850i, RM1000i | Measured output W; no individual GPU-port currents. Implemented reader, synthetic checks passed; physical hardware validation pending. Only the qualified USB identities in the full list are covered. |
+| Thermaltake DPS G / iRGB PLUS | 264A:2329 only. Output ≈W is calculated from rail voltage × current; no individual GPU-port currents. Implemented reader with synthetic checks; physical validation pending. |
+| NZXT E500 / E650 / E850 | Additional partial reader: rail sensors only; no measured total output W or physical GPU-port currents for the PSU card. Synthetic checks passed; not full PSU-card support. |
+
+Research only: be quiet! Dark Power Pro 14 IO 1300W/1600W has no adapter in 1.21. Seasonic and ASUS have no qualified reader in 1.21. An “AI” label does not establish compatibility.
 
 ## What this application is for
 

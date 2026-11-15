@@ -4,7 +4,40 @@
 
 **Lokale Speicherüberwachung und Temperaturregelung für NVIDIA-GPUs unter Windows x64. Nur NVIDIA; AMD- und Intel-GPUs werden nicht unterstützt.**
 
+**RAM, CPU und optionale Überwachung intelligenter/AI-Netzteile**
+
+- System-RAM: belegt/gesamt in GiB, verfügbarer Speicher und Fünf-Minuten-Verlauf.
+- CPU: Gesamtauslastung und Lastbalken je physischem Kern; keine CPU-Temperatur.
+- Kompatibles intelligentes/AI-Netzteil: Ausgangswatt und Ströme von bis zu zwei physischen GPU-Stromanschlüssen, soweit verfügbar; standardmäßig AUS.
+
+Kompatibilität: Sensorabfragen mit MSI MPG Ai1300TS an Hardware geprüft; für Ai1600TS, ausgewählte Corsair HXi/RMi und Thermaltake DPS G/iRGB PLUS sind Protokollleser implementiert, deren Hardwareprüfung noch aussteht.
+
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
+
+## System-RAM, CPU und intelligente/AI-Netzteile im Überblick
+
+- **System-RAM:** belegter/gesamter physischer Speicher in GiB, Auslastung in Prozent, verfügbarer Speicher und ein Fünf-Minuten-Verlauf.
+- **CPU:** Gesamtauslastung in Prozent, Anzahl physischer Kerne und logischer Threads sowie ein Auslastungsbalken je physischem Kern. Angezeigt wird nur die Auslastung, keine CPU-Temperatur.
+- **Kompatible digitale/intelligente/AI-Netzteile mit USB:** Die reine Sensorabfrage zeigt gemessene Ausgangsleistung, soweit gemeldet, und Ströme von bis zu zwei physischen GPU-Stromanschlüssen, gegebenenfalls mit sechs Kontaktströmen je Anschluss. Das Auslesen wurde mit **MSI MPG Ai1300TS** geprüft. Berechnete Werte sind getrennt gekennzeichnet; ein Schienenstrom ist kein einzelner Anschlussstrom.
+
+Die Netzteilüberwachung hat ein separates Kontrollkästchen und ist **standardmäßig AUS**. Ist sie aus oder wird kein kompatibles Netzteil erkannt, bleibt die Karte verborgen; die anderen Karten nutzen die Breite ohne leeren Platzhalter. Nach einer Erkennung bleibt die Karte bei vorübergehend fehlenden Messwerten mit Strichen sichtbar.
+
+Bei zwei NVIDIA-GPUs erscheinen die gemeinsamen RAM-, CPU- und Netzteilanzeigen nur einmal. Ein „AI“- oder anderes Marketinglabel garantiert keine Kompatibilität; entscheidend sind Modell und Protokoll. Siehe [Netzteilkompatibilität](docs/psu-compatibility.md). Das Bild verwendet synthetische Demonstrationswerte, keine Hardware-Messergebnisse.
+
+![System-RAM, CPU und optionale Netzteilanzeigen](images/with-psu-strip.png)
+
+[Ohne Netzteil: andere Karten verbreitert](images/without-psu-strip.png)
+
+### Welche Netzteile sind kompatibel?
+
+| Modelle / qualifizierte Identität | Messwerte und Prüfstatus |
+| --- | --- |
+| MSI MPG Ai1300TS PCIE5 / Ai1600TS PCIE5 | Ai1300TS: Sensorabfragen an Hardware geprüft, gemessene Ausgangswatt und zwei Anschlüsse mit je sechs Kontaktströmen. Ai1600TS: Leser und Protokoll qualifiziert; kein Hardwaretest. |
+| Corsair HX750i, HX850i, HX1000i, HX1200i, HX1500i; RM650i, RM750i, RM850i, RM1000i | Gemessene Ausgangswatt; keine einzelnen GPU-Anschlussströme. Leser implementiert, synthetisch geprüft; Hardwareprüfung ausstehend. Nur die USB-Identitäten der vollständigen Liste sind abgedeckt. |
+| Thermaltake DPS G / iRGB PLUS | Nur 264A:2329. Ausgangsleistung ≈W wird aus Schienenspannung × Strom berechnet; keine einzelnen GPU-Anschlussströme. Leser synthetisch geprüft; Hardwareprüfung ausstehend. |
+| NZXT E500 / E650 / E850 | Zusätzlicher Teilleser: Schienensensoren, keine gemessene Gesamtausgangsleistung und keine physischen GPU-Anschlussströme für die Netzteilkarte. Synthetisch geprüft; keine vollständige Kartenunterstützung. |
+
+Nur erforscht: Für be quiet! Dark Power Pro 14 IO 1300W/1600W gibt es in 1.21 keinen Adapter. Seasonic und ASUS haben keinen qualifizierten Leser in 1.21. Ein „AI“-Label beweist keine Kompatibilität.
 
 ## Wozu die Anwendung dient
 

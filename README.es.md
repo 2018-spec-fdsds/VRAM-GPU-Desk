@@ -4,7 +4,40 @@
 
 **Supervisión local de memoria y control de temperatura de GPU NVIDIA para Windows x64. Solo NVIDIA; las GPU AMD e Intel no son compatibles.**
 
+**RAM, CPU y supervisión opcional de fuentes inteligentes/AI**
+
+- RAM: usada/total en GiB, memoria disponible y gráfico de cinco minutos.
+- CPU: carga total y barras por núcleo físico; sin temperatura de CPU.
+- Fuente inteligente/AI compatible: vatios de salida y corrientes de hasta dos puertos físicos GPU cuando estén disponibles; desactivado por defecto.
+
+Compatibilidad: lectura de sensores MSI MPG Ai1300TS verificada en hardware; Ai1600TS y algunos Corsair HXi/RMi y Thermaltake DPS G/iRGB PLUS disponen de lectores cualificados, aún sin validación física.
+
 ![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
+
+## Indicadores de RAM, CPU y fuentes inteligentes/AI
+
+- **RAM del sistema:** memoria física usada/total en GiB, porcentaje de uso, memoria disponible y gráfico de cinco minutos.
+- **CPU:** porcentaje total de utilización, número de núcleos físicos e hilos lógicos y una barra de carga por núcleo físico. Solo se muestra la carga de CPU, sin temperatura.
+- **Fuentes digitales/inteligentes/AI compatibles por USB:** consultas de solo lectura muestran la potencia de salida medida, cuando se comunica, y las corrientes de hasta dos puertos físicos de alimentación GPU, con seis lecturas de corriente de contactos por puerto cuando existen. Se ha verificado la lectura en **MSI MPG Ai1300TS**. Los valores calculados se identifican por separado; la corriente de un raíl no equivale a la de un conector individual.
+
+La supervisión de la fuente tiene una casilla independiente y está **desactivada por defecto**. Si está desactivada o no se detecta una fuente compatible, su tarjeta se oculta y las demás ocupan el ancho sin dejar un espacio vacío. Tras detectar una fuente, las lecturas temporalmente no disponibles mantienen su tarjeta con guiones.
+
+Con dos GPU NVIDIA, RAM, CPU y fuente son indicadores compartidos que aparecen una sola vez. Una etiqueta «AI» u otro nombre comercial no garantiza compatibilidad: depende del modelo y del protocolo. Consulte [compatibilidad de fuentes](docs/psu-compatibility.md). La imagen utiliza valores sintéticos de demostración, no resultados de mediciones de hardware.
+
+![RAM, CPU e indicadores opcionales de la fuente](images/with-psu-strip.png)
+
+[Sin fuente: otras tarjetas ampliadas](images/without-psu-strip.png)
+
+### ¿Qué fuentes son compatibles?
+
+| Modelos / identidad cualificada | Datos y validación |
+| --- | --- |
+| MSI MPG Ai1300TS PCIE5 / Ai1600TS PCIE5 | Ai1300TS: sensores verificados en hardware, W medidos y dos puertos con seis corrientes de contactos cada uno. Ai1600TS: lector implementado y protocolo cualificado; sin prueba física. |
+| Corsair HX750i, HX850i, HX1000i, HX1200i, HX1500i; RM650i, RM750i, RM850i, RM1000i | W de salida medidos; sin corriente por puerto GPU. Lector implementado y pruebas sintéticas superadas; validación física pendiente. Solo las identidades USB de la lista completa. |
+| Thermaltake DPS G / iRGB PLUS | Solo 264A:2329. Salida ≈W calculada con voltaje × corriente de raíles; sin corriente por puerto GPU. Pruebas sintéticas superadas; validación física pendiente. |
+| NZXT E500 / E650 / E850 | Lector parcial adicional: sensores de raíles; sin salida total medida ni corrientes físicas de puertos para la tarjeta PSU. Pruebas sintéticas superadas; no es soporte completo de la tarjeta. |
+
+Solo investigación: be quiet! Dark Power Pro 14 IO 1300W/1600W no tiene adaptador en 1.21. Seasonic y ASUS no tienen lector cualificado en 1.21. La etiqueta «AI» no garantiza compatibilidad.
 
 ## Para qué sirve la aplicación
 

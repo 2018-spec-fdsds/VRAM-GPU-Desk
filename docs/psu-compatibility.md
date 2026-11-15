@@ -4,6 +4,10 @@ Research snapshot: 2026-11-15. English is the primary language of this document.
 
 Compatibility is qualified by model, USB identity and protocol, not by a vendor logo or an "AI", "digital" or "smart" product name. A rail measures an electrical supply group; it does not necessarily measure one physical GPU connector. GPU board power reported by NVIDIA is also different from total PSU power.
 
+## NZXT E-series: additional partial reader
+
+NZXT E500, E650 and E850 have an implemented rail-sensor reader with synthetic protocol checks only. Their protocol does not provide direct measured total output watts or individual physical GPU-port currents to this release’s PSU card. This is partial reader coverage, not full PSU-card support; missing totals are not fabricated.
+
 ## Six priority brands
 
 | Priority | Brand and qualified scope | Available or documented telemetry | GPU socket / pin telemetry | Implementation and validation status |

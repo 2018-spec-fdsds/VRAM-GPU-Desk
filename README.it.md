@@ -4,7 +4,40 @@
 
 **Monitoraggio locale della memoria e controllo della temperatura delle GPU NVIDIA per Windows x64. Solo NVIDIA; le GPU AMD e Intel non sono supportate.**
 
+**RAM, CPU e monitoraggio opzionale di alimentatori intelligenti/AI**
+
+- RAM: usata/totale in GiB, memoria disponibile e grafico di cinque minuti.
+- CPU: utilizzo complessivo e barre per core fisico; senza temperatura CPU.
+- Alimentatore intelligente/AI compatibile: watt in uscita e correnti di massimo due porte GPU fisiche quando disponibili; disattivato per impostazione predefinita.
+
+Compatibilità: sensori MSI MPG Ai1300TS verificati su hardware reale; lettori qualificati per Ai1600TS e alcuni Corsair HXi/RMi e Thermaltake DPS G/iRGB PLUS, con verifica fisica ancora da effettuare.
+
 ![VRAM GPU Desk — tema grafite](images/dashboard-graphite.png)
+
+## Indicatori di RAM, CPU e alimentatori intelligenti/AI
+
+- **RAM di sistema:** memoria fisica usata/totale in GiB, percentuale di utilizzo, memoria disponibile e grafico di cinque minuti.
+- **CPU:** percentuale complessiva di utilizzo, numero di core fisici e thread logici, più una barra di carico per ciascun core fisico. Si mostra solo il carico, senza temperatura CPU.
+- **Alimentatori USB digitali/intelligenti/AI compatibili:** lettura dei sensori con potenza di uscita misurata, quando comunicata, e correnti di un massimo di due porte fisiche di alimentazione GPU, comprese sei letture di corrente dei contatti per porta se disponibili. La lettura è stata verificata su **MSI MPG Ai1300TS**. I valori calcolati sono indicati separatamente; la corrente di una linea non è quella di un singolo connettore.
+
+Il monitoraggio dell’alimentatore ha una casella separata ed è **disattivato per impostazione predefinita**. Se disattivato o senza un alimentatore compatibile rilevato, la scheda è nascosta e le altre sfruttano la larghezza senza spazi vuoti. Dopo il rilevamento, la scheda rimane con trattini quando le letture sono temporaneamente indisponibili.
+
+Con due GPU NVIDIA, gli indicatori RAM, CPU e alimentatore sono condivisi e compaiono una sola volta. Un’etichetta «AI» o commerciale non garantisce compatibilità: contano modello e protocollo. Vedere [compatibilità degli alimentatori](docs/psu-compatibility.md). L’immagine usa valori dimostrativi sintetici, non risultati di misurazioni hardware.
+
+![RAM, CPU e indicatori opzionali dell’alimentatore](images/with-psu-strip.png)
+
+[Senza alimentatore: altre schede allargate](images/without-psu-strip.png)
+
+### Quali alimentatori sono compatibili?
+
+| Modelli / identità qualificata | Dati e verifica |
+| --- | --- |
+| MSI MPG Ai1300TS PCIE5 / Ai1600TS PCIE5 | Ai1300TS: sensori verificati su hardware reale, uscita W misurata e due porte con sei correnti di contatto ciascuna. Ai1600TS: lettore implementato e protocollo qualificato; nessuna prova fisica. |
+| Corsair HX750i, HX850i, HX1000i, HX1200i, HX1500i; RM650i, RM750i, RM850i, RM1000i | W in uscita misurati; nessuna corrente per singola porta GPU. Lettore implementato, test sintetici superati; verifica fisica da effettuare. Solo le identità USB nell’elenco completo. |
+| Thermaltake DPS G / iRGB PLUS | Solo 264A:2329. Uscita ≈W calcolata da tensione × corrente delle linee; nessuna corrente per porta GPU. Test sintetici superati; verifica fisica da effettuare. |
+| NZXT E500 / E650 / E850 | Lettore parziale aggiuntivo: sensori delle linee, senza uscita totale misurata né correnti delle porte fisiche per la scheda PSU. Test sintetici superati; supporto della scheda non completo. |
+
+Solo ricerca: nessun adattatore 1.21 per be quiet! Dark Power Pro 14 IO 1300W/1600W. Seasonic e ASUS non hanno lettori qualificati in 1.21. L’etichetta «AI» non garantisce compatibilità.
 
 ## A cosa serve l’applicazione
 
