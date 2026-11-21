@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.22
+# VRAM GPU Desk 1.23
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **过热应急模式。** 可选模式可在检测到过热时强制关闭高 GPU 负载应用，以降低负载。每次启动时均为关闭状态；强制关闭可能导致未保存的数据丢失。
 
 ## 主要功能
+
+- 七个数值输入框采用统一的紧凑 −/+ 控件、内置单位和细彩色边线；主题颜色自动反转，较高的温度设定值以红色显示。
 
 - 控制丢失后持续尝试安全恢复，恢复确认后自动关闭警告；应用日志记录控制事件、复选框状态和 78 °C 起的温度变化。电源接口电流明确区分触点最大值与接口总电流。
 
@@ -27,7 +29,7 @@
 - 两个独立设置的 NVIDIA 面板；第二块 GPU 的控制功能为实验性功能。
 - 控制丢失警告与手动重试；新设置默认开启恢复，保留已明确保存的关闭选择。
 
-[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
 
 
 **RAM、CPU 与可选智能/AI 电源监测**
@@ -39,6 +41,20 @@
 兼容性：MSI MPG Ai1300TS 已通过实机传感器读取验证；Ai1600TS、部分 Corsair HXi/RMi 与 Thermaltake DPS G/iRGB PLUS 已有经过协议确认的读取模块，尚待实机验证。
 
 ![VRAM GPU Desk — 石墨深色主题](images/dashboard-graphite.png)
+
+## 1.23 新增：统一的紧凑输入控件与温度设定值颜色
+
+**统一的紧凑控件。** 七个数值输入框均使用 −/+ 按钮、框内 °C 或 % 等单位标识及细彩色边线：温度目标、过热警告阈值、空闲散热温度、最低风扇转速百分比、GPU 应急负载百分比、刷新间隔和悬浮窗缩放。键盘操作与硬件动态报告的上下限保持不变。语言、主题和 GPU 下拉框，以及搜索框和快捷按钮编辑器，也采用相同的彩色强调风格。
+
+**与主题一致的对比度。** System 主题采用白色输入框和深色文字；Graphite 主题采用深色输入框和浅色文字。禁用、焦点、选中内容及下拉弹出菜单同样匹配主题。
+
+**红色表示温度设定值。** 配置的温度目标 **高于 80 °C（81 °C 起）** 时，数值文字变红；配置的过热警告阈值 **达到 86 °C** 时，数值文字变红。这是对设置值的视觉提示，不是实时 GPU 温度告警。控制算法、默认目标 **78 °C**、默认警告阈值 **85 °C** 和已保存的偏好不变；1.22 的控制恢复、日志和电源电流功能均保留。
+
+![浅色主题中的温度输入框](images/temperature-fields-light.png)
+
+![深色主题中的温度输入框](images/temperature-fields-dark.png)
+
+
 
 
 ## 1.22 新增：持续恢复控制、应用日志和明确的电流类型

@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.22
+# VRAM GPU Desk 1.23
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Chế độ khẩn cấp khi quá nhiệt.** Một chế độ tùy chọn có thể buộc đóng ứng dụng tải nặng GPU để giảm tải. Chế độ này TẮT ở mỗi lần mở; việc buộc đóng có thể làm mất công việc chưa lưu.
 
 ## Tính năng chính
+
+- Bảy ô số dùng nút −/+ nhỏ gọn, đơn vị ngay trong ô và viền nhấn màu mảnh; đổi tương phản theo giao diện và hiển thị giá trị nhiệt độ đặt cao bằng chữ đỏ.
 
 - Liên tục thử khôi phục điều khiển an toàn và tự đóng cảnh báo sau khi xác nhận phục hồi; nhật ký ghi sự kiện điều khiển, trạng thái ô chọn và thay đổi nhiệt độ từ 78 °C. Dòng nguồn phân biệt giá trị lớn nhất ở chân với tổng của đầu nối.
 
@@ -27,7 +29,7 @@
 - Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
 - Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
 
-Phiên bản **1.22** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+Phiên bản **1.23** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
 
 
 **RAM, CPU và giám sát nguồn thông minh/AI tùy chọn**
@@ -39,6 +41,20 @@ Phiên bản **1.22** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.22-Setup-
 Tương thích: cảm biến MSI MPG Ai1300TS đã được xác minh trên phần cứng; Ai1600TS và một số Corsair HXi/RMi, Thermaltake DPS G/iRGB PLUS có bộ đọc giao thức đủ điều kiện nhưng chưa kiểm chứng phần cứng.
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
+
+## Mới trong 1.23: ô nhập nhỏ gọn đồng nhất và màu cho giá trị nhiệt độ đã đặt
+
+**Điều khiển nhỏ gọn, đồng nhất.** Cả bảy ô số đều có nút −/+, đơn vị như °C hoặc % ngay trong ô và đường nhấn màu mảnh: nhiệt độ mục tiêu, ngưỡng cảnh báo quá nhiệt, nhiệt độ làm mát nhàn rỗi, phần trăm tốc độ quạt tối thiểu, phần trăm tải GPU cho chế độ khẩn cấp, chu kỳ làm mới và tỷ lệ lớp phủ. Thao tác bàn phím và giới hạn mô hình động do phần cứng báo cáo được giữ nguyên. Hộp chọn ngôn ngữ, giao diện và GPU, ô tìm kiếm và trình sửa nút nhanh cũng dùng cùng kiểu nhấn màu.
+
+**Tương phản theo giao diện.** System dùng ô trắng với chữ tối; Graphite dùng ô tối với chữ sáng. Trạng thái vô hiệu hóa, tiêu điểm, vùng chọn và danh sách thả xuống cũng khớp giao diện.
+
+**Chữ đỏ biểu thị giá trị nhiệt độ đã đặt.** Nhiệt độ mục tiêu được cấu hình **trên 80 °C, tức từ 81 °C**, có chữ số đỏ. Ngưỡng cảnh báo quá nhiệt được cấu hình **từ 86 °C** cũng có chữ số đỏ. Đây là chỉ dẫn trực quan cho giá trị cài đặt, không phải cảnh báo nhiệt độ GPU tức thời. Thuật toán điều khiển, mục tiêu mặc định **78 °C**, ngưỡng cảnh báo mặc định **85 °C** và lựa chọn đã lưu không đổi. Các tính năng khôi phục điều khiển, nhật ký và dòng nguồn của 1.22 được giữ lại.
+
+![Ô nhiệt độ trong giao diện sáng](images/temperature-fields-light.png)
+
+![Ô nhiệt độ trong giao diện tối](images/temperature-fields-dark.png)
+
+
 
 
 ## Mới trong 1.22: khôi phục điều khiển liên tục, nhật ký ứng dụng và loại dòng điện rõ ràng

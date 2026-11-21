@@ -1,3 +1,19 @@
+# VRAM GPU Desk 1.23
+
+## Mới trong 1.23: ô nhập nhỏ gọn đồng nhất và màu cho giá trị nhiệt độ đã đặt
+
+**Điều khiển nhỏ gọn, đồng nhất.** Cả bảy ô số đều có nút −/+, đơn vị như °C hoặc % ngay trong ô và đường nhấn màu mảnh: nhiệt độ mục tiêu, ngưỡng cảnh báo quá nhiệt, nhiệt độ làm mát nhàn rỗi, phần trăm tốc độ quạt tối thiểu, phần trăm tải GPU cho chế độ khẩn cấp, chu kỳ làm mới và tỷ lệ lớp phủ. Thao tác bàn phím và giới hạn mô hình động do phần cứng báo cáo được giữ nguyên. Hộp chọn ngôn ngữ, giao diện và GPU, ô tìm kiếm và trình sửa nút nhanh cũng dùng cùng kiểu nhấn màu.
+
+**Tương phản theo giao diện.** System dùng ô trắng với chữ tối; Graphite dùng ô tối với chữ sáng. Trạng thái vô hiệu hóa, tiêu điểm, vùng chọn và danh sách thả xuống cũng khớp giao diện.
+
+**Chữ đỏ biểu thị giá trị nhiệt độ đã đặt.** Nhiệt độ mục tiêu được cấu hình **trên 80 °C, tức từ 81 °C**, có chữ số đỏ. Ngưỡng cảnh báo quá nhiệt được cấu hình **từ 86 °C** cũng có chữ số đỏ. Đây là chỉ dẫn trực quan cho giá trị cài đặt, không phải cảnh báo nhiệt độ GPU tức thời. Thuật toán điều khiển, mục tiêu mặc định **78 °C**, ngưỡng cảnh báo mặc định **85 °C** và lựa chọn đã lưu không đổi. Các tính năng khôi phục điều khiển, nhật ký và dòng nguồn của 1.22 được giữ lại.
+
+![Ô nhiệt độ trong giao diện sáng](images/temperature-fields-light.png)
+
+![Ô nhiệt độ trong giao diện tối](images/temperature-fields-dark.png)
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+
 # VRAM GPU Desk 1.22
 
 ## Mới trong 1.22: khôi phục điều khiển liên tục, nhật ký ứng dụng và loại dòng điện rõ ràng

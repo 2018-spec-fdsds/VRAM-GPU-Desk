@@ -1,13 +1,19 @@
 # Distribution
 
-Current version: **1.22**, Windows x64.
+Current version: **1.23**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 
 The ZIP contains the same EXE installer, checksum, instructions and license. Java is included. It is an installer bundle; copying the archive does not register the protected Windows control component.
+
+## Input design in 1.23
+
+All seven numeric editors use horizontal minus/plus buttons, inline units and thin color accents. Language/theme/GPU selectors, search and quick-button editing use matching text fields. Theme inversion applies throughout: System has white fields and dark text; Graphite has dark fields and light text. Popup, focus, selection and disabled states follow the selected theme.
+
+Configured target-temperature digits become red above 80 °C (from 81 °C); configured overheat-warning digits become red at 86 °C or higher. This marks the configured values, not the current GPU temperature alarm. Keyboard entry, dynamic hardware bounds, saved values, defaults of 78/85 °C and control algorithms are retained.
 
 ## New in 1.22
 

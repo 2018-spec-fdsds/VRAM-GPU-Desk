@@ -1,3 +1,17 @@
+# VRAM GPU Desk 1.23
+
+## Novità della versione 1.23 — campi numerici compatti e contrasto coerente
+
+**Sette campi numerici con pulsanti orizzontali −/+.** Temperatura obiettivo, soglia di avviso di surriscaldamento, obiettivo di raffreddamento in inattività, percentuale minima delle ventole, soglia di carico GPU di emergenza, intervallo di aggiornamento e scala dell’overlay usano campi compatti con unità integrate e un sottile accento di colore. Restano disponibili l’inserimento da tastiera e i limiti dinamici del modello, compresi i limiti hardware comunicati.
+
+**Campi coerenti in entrambi i temi.** I selettori di lingua, tema e GPU, la ricerca e l’editor dei pulsanti rapidi seguono lo stesso stile. System usa campi bianchi con testo scuro; Graphite campi scuri con testo chiaro. Gli stati attivo, selezionato e disabilitato, nonché gli elenchi a discesa, seguono il tema corrente.
+
+**Le soglie configurate più alte risaltano.** La temperatura obiettivo della regolazione graduale appare in rosso **oltre 80 °C, quindi da 81 °C**; la soglia di avviso di surriscaldamento, **da 86 °C**. Il colore descrive la **soglia configurata**, non la temperatura attuale della GPU o un allarme termico in corso. Algoritmi di controllo, valori predefiniti obiettivo/avviso di 78/85 °C e preferenze salvate rimangono invariati. Sono mantenuti il ripristino continuo, il registro e le etichette della corrente massima del contatto o totale del connettore introdotti in 1.22.
+
+[System — campi chiari](images/temperature-fields-light.png) · [Graphite — campi scuri](images/temperature-fields-dark.png)
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+
 # VRAM GPU Desk 1.22
 
 ## Novità della versione 1.22 — ripristino continuo, registro e correnti dell’alimentatore più chiare

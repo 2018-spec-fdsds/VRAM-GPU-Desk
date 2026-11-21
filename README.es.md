@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.22
+# VRAM GPU Desk 1.23
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Modo de emergencia ante sobrecalentamiento.** Un modo opcional puede forzar el cierre de aplicaciones con alta carga de GPU para reducir la carga. Está DESACTIVADO en cada inicio; el cierre forzado puede causar pérdida de trabajo sin guardar.
 
 ## Funciones principales
+
+- Controles horizontales −/+ compactos, unidades integradas y contraste coherente en ambos temas; los umbrales de temperatura configurados más altos aparecen en rojo.
 
 - Intentos continuos de recuperación, registro con marcas de tiempo y etiquetas explícitas para corriente máxima de contacto o total del conector.
 
@@ -27,7 +29,7 @@
 - Dos paneles NVIDIA con ajustes independientes; el control de la segunda GPU es experimental.
 - Aviso de pérdida de control y reintento manual; recuperación ACTIVADA para ajustes nuevos, respetando la desactivación guardada.
 
-Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
 
 
 **RAM, CPU y supervisión opcional de fuentes inteligentes/AI**
@@ -39,6 +41,17 @@ Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.22-Setup-x
 Compatibilidad: lectura de sensores MSI MPG Ai1300TS verificada en hardware; Ai1600TS y algunos Corsair HXi/RMi y Thermaltake DPS G/iRGB PLUS disponen de lectores cualificados, aún sin validación física.
 
 ![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
+
+## Novedades de 1.23 — campos numéricos compactos y contraste coherente
+
+**Siete campos numéricos con botones horizontales −/+.** Objetivo de temperatura, umbral de aviso de sobrecalentamiento, objetivo de refrigeración en reposo, porcentaje mínimo de ventiladores, umbral de carga GPU de emergencia, intervalo de actualización y escala del overlay comparten campos compactos con unidades integradas y un fino acento de color. Se conservan la entrada por teclado y los límites dinámicos del modelo, incluidos los límites comunicados por el hardware.
+
+**Entradas coherentes en ambos temas.** Los selectores de idioma, tema y GPU, la búsqueda y el editor de botones rápidos siguen el mismo estilo. System usa fondo blanco y texto oscuro en los campos; Graphite usa fondo oscuro y texto claro. El foco, los estados seleccionado y desactivado y las listas desplegables siguen el tema activo.
+
+**Umbrales configurados más altos, más visibles.** El objetivo de temperatura gradual se muestra en rojo **por encima de 80 °C, desde 81 °C**; el umbral de aviso de sobrecalentamiento, **desde 86 °C**. El color describe el **umbral configurado**, no la temperatura actual de la GPU ni una alarma de temperatura activa. No cambian los algoritmos de control, los valores predeterminados de objetivo/aviso de 78/85 °C ni las preferencias guardadas. Se conservan la recuperación continua, el registro y las etiquetas de corriente máxima de contacto o total del conector de la versión 1.22.
+
+[System — campos claros](images/temperature-fields-light.png) · [Graphite — campos oscuros](images/temperature-fields-dark.png)
+
 
 
 ## Novedades de 1.22 — recuperación continua, registro y corriente de fuente más clara

@@ -1,3 +1,17 @@
+# VRAM GPU Desk 1.23
+
+## New in 1.23 — compact numeric controls and consistent theme contrast
+
+**Seven numeric fields use horizontal −/+ controls.** Temperature target, overheat-warning threshold, idle-cooling target, minimum fan percentage, emergency GPU-load percentage, refresh interval and overlay scale share compact controls with inline units and a thin color accent. Keyboard entry and dynamic model limits, including reported hardware bounds, are retained.
+
+**Matching inputs in both themes.** The language, theme and GPU selectors, search field and quick-button editor follow the same accent style. The System theme uses white input backgrounds with dark text; Graphite uses dark input backgrounds with light text. Focused, selected and disabled states and dropdown popups follow the active theme.
+
+**Higher configured thresholds stand out.** The soft temperature target uses red text when set **above 80 °C (81 °C and higher)**; the overheat-warning threshold uses red text from **86 °C**. These colors describe the **configured threshold**, not the current GPU temperature or a live temperature alarm. Control algorithms, the 78/85 °C default target/warning values and saved preferences are unchanged. Persistent recovery, the application log and maximum-pin/total PSU-current labels from 1.22 are retained.
+
+[System theme — light fields](images/temperature-fields-light.png) · [Graphite theme — dark fields](images/temperature-fields-dark.png)
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+
 # VRAM GPU Desk 1.22
 
 ## New in 1.22 — persistent recovery, application log and clearer PSU current

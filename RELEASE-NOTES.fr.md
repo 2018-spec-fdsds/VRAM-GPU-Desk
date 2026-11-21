@@ -1,3 +1,17 @@
+# VRAM GPU Desk 1.23
+
+## Nouveautés de la version 1.23 — champs numériques compacts et contraste cohérent
+
+**Sept champs numériques avec boutons −/+ horizontaux.** La température cible, le seuil d’avertissement de surchauffe, la cible de refroidissement au repos, le pourcentage minimal des ventilateurs, le seuil de charge GPU d’urgence, l’intervalle d’actualisation et l’échelle de l’overlay utilisent des champs compacts avec unités intégrées et un fin accent de couleur. La saisie au clavier et les limites dynamiques du modèle, y compris les limites matérielles signalées, sont conservées.
+
+**Des champs cohérents dans les deux thèmes.** Les sélecteurs de langue, de thème et de GPU, la recherche et l’éditeur de boutons rapides adoptent le même style. System utilise des champs blancs avec texte sombre ; Graphite, des champs sombres avec texte clair. Les états de focus, de sélection et de désactivation ainsi que les listes déroulantes suivent le thème actif.
+
+**Les seuils configurés plus élevés sont mis en évidence.** La température cible de régulation progressive s’affiche en rouge **au-dessus de 80 °C, donc dès 81 °C** ; le seuil d’avertissement de surchauffe, **dès 86 °C**. Cette couleur décrit le **seuil configuré**, et non la température actuelle du GPU ou une alarme thermique en cours. Les algorithmes de contrôle, les valeurs cible/avertissement par défaut de 78/85 °C et les préférences enregistrées ne changent pas. La récupération continue, le journal et les libellés de courant maximal d’une broche ou total du connecteur de la version 1.22 sont conservés.
+
+[System — champs clairs](images/temperature-fields-light.png) · [Graphite — champs sombres](images/temperature-fields-dark.png)
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+
 # VRAM GPU Desk 1.22
 
 ## Nouveautés de la version 1.22 — récupération continue, journal et courants d’alimentation explicites

@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.22
+# VRAM GPU Desk 1.23
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Emergency mode for overheating.** An optional mode can force-close GPU-intensive applications to reduce load when overheating is detected. It is OFF at every launch; forced closure can lose unsaved work.
 
 ## Key features
+
+- Compact horizontal −/+ controls, inline units and consistent light/dark input contrast, with red text for higher configured temperature thresholds.
 
 - Persistent control recovery, a timestamped application log, and explicit maximum-pin or total PSU-current labels.
 
@@ -27,7 +29,7 @@
 - Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
 - Control-loss warning and manual retry; forced recovery is ON for new settings, with saved OFF choices preserved.
 
-Version **1.22** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+Version **1.23** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
 
 
 **RAM, CPU and optional smart/AI PSU monitoring**
@@ -39,6 +41,17 @@ Version **1.22** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.22-Se
 Compatibility: MSI MPG Ai1300TS sensor reads verified on hardware; Ai1600TS, selected Corsair HXi/RMi and Thermaltake DPS G/iRGB PLUS have qualified readers, with physical validation still pending for those models.
 
 ![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
+
+## New in 1.23 — compact numeric controls and consistent theme contrast
+
+**Seven numeric fields use horizontal −/+ controls.** Temperature target, overheat-warning threshold, idle-cooling target, minimum fan percentage, emergency GPU-load percentage, refresh interval and overlay scale share compact controls with inline units and a thin color accent. Keyboard entry and dynamic model limits, including reported hardware bounds, are retained.
+
+**Matching inputs in both themes.** The language, theme and GPU selectors, search field and quick-button editor follow the same accent style. The System theme uses white input backgrounds with dark text; Graphite uses dark input backgrounds with light text. Focused, selected and disabled states and dropdown popups follow the active theme.
+
+**Higher configured thresholds stand out.** The soft temperature target uses red text when set **above 80 °C (81 °C and higher)**; the overheat-warning threshold uses red text from **86 °C**. These colors describe the **configured threshold**, not the current GPU temperature or a live temperature alarm. Control algorithms, the 78/85 °C default target/warning values and saved preferences are unchanged. Persistent recovery, the application log and maximum-pin/total PSU-current labels from 1.22 are retained.
+
+[System theme — light fields](images/temperature-fields-light.png) · [Graphite theme — dark fields](images/temperature-fields-dark.png)
+
 
 
 ## New in 1.22 — persistent recovery, application log and clearer PSU current

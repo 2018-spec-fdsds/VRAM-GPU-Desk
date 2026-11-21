@@ -1,3 +1,17 @@
+# VRAM GPU Desk 1.23
+
+## Neu in 1.23 — kompakte Zahlenfelder und einheitlicher Designkontrast
+
+**Sieben Zahlenfelder mit horizontalen −/+-Tasten.** Temperaturziel, Überhitzungswarnschwelle, Leerlauf-Kühlziel, Mindestlüfterprozent, GPU-Lastschwelle für den Notfall, Aktualisierungsintervall und Overlay-Skalierung verwenden kompakte Felder mit integrierten Einheiten und einem schmalen Farbakzent. Tastatureingabe und dynamische Modellgrenzen einschließlich gemeldeter Hardwaregrenzen bleiben erhalten.
+
+**Passende Eingaben in beiden Designs.** Sprach-, Design- und GPU-Auswahl, Suchfeld und Schnellaktionseditor folgen demselben Akzentstil. System verwendet weiße Eingabeflächen mit dunkler Schrift, Graphite dunkle Eingabeflächen mit heller Schrift. Fokus, Auswahl, deaktivierte Zustände und aufklappende Listen folgen dem aktiven Design.
+
+**Höhere eingestellte Grenzen hervorheben.** Das sanfte Temperaturziel erscheint bei **mehr als 80 °C, also ab 81 °C**, in roter Schrift; die Überhitzungswarnschwelle **ab 86 °C**. Die Farbe kennzeichnet den **eingestellten Grenzwert**, nicht die aktuelle GPU-Temperatur oder einen laufenden Temperaturalarm. Regelalgorithmen, Standardwerte von 78/85 °C für Ziel/Warnung und gespeicherte Einstellungen bleiben unverändert. Fortlaufende Wiederherstellung, Anwendungsprotokoll und die Anzeigen für maximalen Kontaktstrom bzw. Anschlussgesamtstrom aus 1.22 bleiben erhalten.
+
+[System — helle Felder](images/temperature-fields-light.png) · [Graphite — dunkle Felder](images/temperature-fields-dark.png)
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+
 # VRAM GPU Desk 1.22
 
 ## Neu in 1.22 — dauerhafte Wiederherstellung, Anwendungsprotokoll und eindeutige Netzteilströme

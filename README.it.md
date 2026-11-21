@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.22
+# VRAM GPU Desk 1.23
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Modalità di emergenza per surriscaldamento.** Una modalità facoltativa può forzare la chiusura di applicazioni che caricano molto la GPU per ridurne il carico. È DISATTIVATA a ogni avvio; la chiusura forzata può causare la perdita del lavoro non salvato.
 
 ## Funzionalità principali
+
+- Campi orizzontali −/+ compatti, unità integrate e contrasto chiaro/scuro coerente; le soglie di temperatura configurate più alte sono evidenziate in rosso.
 
 - Tentativi continui di ripristino, registro con data e ora ed etichette distinte per corrente massima del contatto o totale del connettore.
 
@@ -27,7 +29,7 @@
 - Due pannelli NVIDIA con impostazioni indipendenti; il controllo della seconda GPU è sperimentale.
 - Avviso di perdita del controllo e nuovo tentativo manuale; ripristino ATTIVO per le nuove impostazioni, disattivazione salvata rispettata.
 
-Versione **1.20.1** · [Installer Windows](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+Versione **1.20.1** · [Installer Windows](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
 
 
 **RAM, CPU e monitoraggio opzionale di alimentatori intelligenti/AI**
@@ -39,6 +41,17 @@ Versione **1.20.1** · [Installer Windows](downloads/VRAM-GPU-Desk-1.22-Setup-x6
 Compatibilità: sensori MSI MPG Ai1300TS verificati su hardware reale; lettori qualificati per Ai1600TS e alcuni Corsair HXi/RMi e Thermaltake DPS G/iRGB PLUS, con verifica fisica ancora da effettuare.
 
 ![VRAM GPU Desk — tema grafite](images/dashboard-graphite.png)
+
+## Novità della versione 1.23 — campi numerici compatti e contrasto coerente
+
+**Sette campi numerici con pulsanti orizzontali −/+.** Temperatura obiettivo, soglia di avviso di surriscaldamento, obiettivo di raffreddamento in inattività, percentuale minima delle ventole, soglia di carico GPU di emergenza, intervallo di aggiornamento e scala dell’overlay usano campi compatti con unità integrate e un sottile accento di colore. Restano disponibili l’inserimento da tastiera e i limiti dinamici del modello, compresi i limiti hardware comunicati.
+
+**Campi coerenti in entrambi i temi.** I selettori di lingua, tema e GPU, la ricerca e l’editor dei pulsanti rapidi seguono lo stesso stile. System usa campi bianchi con testo scuro; Graphite campi scuri con testo chiaro. Gli stati attivo, selezionato e disabilitato, nonché gli elenchi a discesa, seguono il tema corrente.
+
+**Le soglie configurate più alte risaltano.** La temperatura obiettivo della regolazione graduale appare in rosso **oltre 80 °C, quindi da 81 °C**; la soglia di avviso di surriscaldamento, **da 86 °C**. Il colore descrive la **soglia configurata**, non la temperatura attuale della GPU o un allarme termico in corso. Algoritmi di controllo, valori predefiniti obiettivo/avviso di 78/85 °C e preferenze salvate rimangono invariati. Sono mantenuti il ripristino continuo, il registro e le etichette della corrente massima del contatto o totale del connettore introdotti in 1.22.
+
+[System — campi chiari](images/temperature-fields-light.png) · [Graphite — campi scuri](images/temperature-fields-dark.png)
+
 
 
 ## Novità della versione 1.22 — ripristino continuo, registro e correnti dell’alimentatore più chiare

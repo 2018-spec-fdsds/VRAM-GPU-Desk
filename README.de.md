@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.22
+# VRAM GPU Desk 1.23
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Notfallmodus bei Überhitzung.** Ein optionaler Modus kann GPU-intensive Anwendungen zwangsweise schließen, um die Last zu senken. Er ist bei jedem Start AUS; das erzwungene Schließen kann zum Verlust ungespeicherter Arbeit führen.
 
 ## Wichtigste Funktionen
+
+- Kompakte horizontale −/+-Felder mit integrierten Einheiten und einheitlichem Hell-/Dunkel-Kontrast; höhere eingestellte Temperaturgrenzen erscheinen rot.
 
 - Fortlaufende Wiederherstellung, ein Anwendungsprotokoll mit Zeitstempeln und eindeutige Anzeigen für maximalen Kontaktstrom oder Anschlussgesamtstrom.
 
@@ -27,7 +29,7 @@
 - Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
 - Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
 
-Version **1.22** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+Version **1.23** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
 
 
 **RAM, CPU und optionale Überwachung intelligenter/AI-Netzteile**
@@ -39,6 +41,17 @@ Version **1.22** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.22-Setup-x64.e
 Kompatibilität: Sensorabfragen mit MSI MPG Ai1300TS an Hardware geprüft; für Ai1600TS, ausgewählte Corsair HXi/RMi und Thermaltake DPS G/iRGB PLUS sind Protokollleser implementiert, deren Hardwareprüfung noch aussteht.
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
+
+## Neu in 1.23 — kompakte Zahlenfelder und einheitlicher Designkontrast
+
+**Sieben Zahlenfelder mit horizontalen −/+-Tasten.** Temperaturziel, Überhitzungswarnschwelle, Leerlauf-Kühlziel, Mindestlüfterprozent, GPU-Lastschwelle für den Notfall, Aktualisierungsintervall und Overlay-Skalierung verwenden kompakte Felder mit integrierten Einheiten und einem schmalen Farbakzent. Tastatureingabe und dynamische Modellgrenzen einschließlich gemeldeter Hardwaregrenzen bleiben erhalten.
+
+**Passende Eingaben in beiden Designs.** Sprach-, Design- und GPU-Auswahl, Suchfeld und Schnellaktionseditor folgen demselben Akzentstil. System verwendet weiße Eingabeflächen mit dunkler Schrift, Graphite dunkle Eingabeflächen mit heller Schrift. Fokus, Auswahl, deaktivierte Zustände und aufklappende Listen folgen dem aktiven Design.
+
+**Höhere eingestellte Grenzen hervorheben.** Das sanfte Temperaturziel erscheint bei **mehr als 80 °C, also ab 81 °C**, in roter Schrift; die Überhitzungswarnschwelle **ab 86 °C**. Die Farbe kennzeichnet den **eingestellten Grenzwert**, nicht die aktuelle GPU-Temperatur oder einen laufenden Temperaturalarm. Regelalgorithmen, Standardwerte von 78/85 °C für Ziel/Warnung und gespeicherte Einstellungen bleiben unverändert. Fortlaufende Wiederherstellung, Anwendungsprotokoll und die Anzeigen für maximalen Kontaktstrom bzw. Anschlussgesamtstrom aus 1.22 bleiben erhalten.
+
+[System — helle Felder](images/temperature-fields-light.png) · [Graphite — dunkle Felder](images/temperature-fields-dark.png)
+
 
 
 ## Neu in 1.22 — dauerhafte Wiederherstellung, Anwendungsprotokoll und eindeutige Netzteilströme
