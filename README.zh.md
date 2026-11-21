@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.21
+# VRAM GPU Desk 1.22
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -13,6 +13,8 @@
 
 ## 主要功能
 
+- 控制丢失后持续尝试安全恢复，恢复确认后自动关闭警告；应用日志记录控制事件、复选框状态和 78 °C 起的温度变化。电源接口电流明确区分触点最大值与接口总电流。
+
 - 可选电源功率及最多两个 GPU 供电接口电流，取决于具体型号和传感器支持；默认关闭。
 - 悬浮窗文字自动对比度默认开启；关闭后可手动选择浅色或深色文字。
 
@@ -25,7 +27,7 @@
 - 两个独立设置的 NVIDIA 面板；第二块 GPU 的控制功能为实验性功能。
 - 控制丢失警告与手动重试；新设置默认开启恢复，保留已明确保存的关闭选择。
 
-[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+[下载 Windows 安装程序](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [安装程序 ZIP 包](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
 
 
 **RAM、CPU 与可选智能/AI 电源监测**
@@ -37,6 +39,21 @@
 兼容性：MSI MPG Ai1300TS 已通过实机传感器读取验证；Ai1600TS、部分 Corsair HXi/RMi 与 Thermaltake DPS G/iRGB PLUS 已有经过协议确认的读取模块，尚待实机验证。
 
 ![VRAM GPU Desk — 石墨深色主题](images/dashboard-graphite.png)
+
+
+## 1.22 新增：持续恢复控制、应用日志和明确的电流类型
+
+**持续恢复控制。** 启用“强制恢复控制”时，先按 5、10、30 秒间隔重试，此后每 60 秒继续尝试，不限制次数。已保存的关闭选择保持不变。只有收到新的有效遥测并确认控制恢复后，非模态警告窗口才会自动关闭。停止和重新启动期间会保留用户最后一次勾选或取消勾选的意图。旧控制器必须确认完成退出，才可创建新控制器；硬件身份、所有权和安全检查仍然有效。这不能阻止 MSI Afterburner 或其他控制软件访问显卡。
+
+**应用日志。** 新增日志按钮。日志按 GPU 记录控制丢失、恢复、重试、所有控制相关复选框的状态，以及从 **78 °C** 起每次整数温度变化和返回 78 °C 以下的事件。每条记录含 UTC 与本地时间戳。日志以 UTF-8 保存在 `%LOCALAPPDATA%/VRAMDeskJava/logs/application.log`；单文件上限 2 MiB，保留五个轮转归档。查看器显示当前会话最近 500 条事件，日志文件夹按钮可打开包含此前会话日志的目录。
+
+**电源电流：最大值或总值。** 每个实际 GPU 供电接口只要有至少一个有效触点读数，就显示所有可用触点中的最大电流，即使其他触点的数据缺失。没有触点明细时，才使用实测接口总电流。标签明确写出“最大”或“总计”；缺失值显示横线，真实零值仍为有效读数。提示信息保留可用的各触点读数及接口总值，供电轨电流不会冒充接口电流。
+
+**从旧版 1.9 升级。** 即使 1.22 已正确安装到 Program Files，LocalAppData 中的旧版 1.9 仍可能继续运行，使托盘和界面显示旧版本及较少设置。安装前先在旧版托盘菜单中选择“退出”，随后安装，并使用当前“开始”菜单快捷方式启动。检查主窗口显示 **v1.22**；不建议强制终止进程。
+
+
+
+![应用日志](images/application-log.png)
 
 ## 系统内存、CPU 与智能/AI 电源指标
 

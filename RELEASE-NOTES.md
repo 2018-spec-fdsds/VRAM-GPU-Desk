@@ -1,3 +1,17 @@
+# VRAM GPU Desk 1.22
+
+## New in 1.22 — persistent recovery, application log and clearer PSU current
+
+**Persistent control recovery.** While Force control recovery is enabled, checked retries continue without a retry-count limit: after 5, 10, 30, then every 60 seconds. The latest ON/OFF choice is retained through controller stop and restart. A nonmodal loss warning closes automatically only after fresh telemetry confirms recovery. Native ownership, teardown and hardware-limit checks remain in force; this does not provide exclusive control over MSI Afterburner or another controller.
+
+**Application log.** A separate button opens a log of per-GPU control loss, recovery and retry events, plus initial states and changes of all control-related checkboxes. Each record includes UTC and local timestamps. Temperature logging starts at **78 °C**, records subsequent whole-degree changes, and marks the return below 78 °C. The viewer shows up to 500 events from the current session. UTF-8 files persist locally at `%LOCALAPPDATA%/VRAMDeskJava/logs/application.log`, rotating at 2 MiB with five archives.
+
+**Maximum pin current or connector total.** For each of up to two physical PSU GPU-power ports, the card shows the maximum of the available individual pin-current readings if at least one is known, including incomplete pin data. If no individual readings are available, it shows the measured connector total instead. Labels explicitly distinguish **max** and **total**. Unknown sensors remain —; a measured zero stays zero. Tooltips retain individual pin readings and the total when available. A rail current is not substituted for a connector measurement.
+
+**Updating from an old 1.9 installation.** An older copy under LocalAppData can remain running even when 1.22 has installed correctly in Program Files, making the old interface appear to lack newer settings. Before setup, exit the old copy through its tray menu; after setup, use the current Start menu shortcut and check **v1.22**. If a shortcut still points to the old folder, use the installed Program Files copy and correct that shortcut. An old running window does not mean the new controls were removed.
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+
 # VRAM GPU Desk 1.21
 
 ## New in 1.21 — optional PSU telemetry and automatic overlay contrast

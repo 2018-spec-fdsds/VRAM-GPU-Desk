@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.21
+# VRAM GPU Desk 1.22
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -13,6 +13,8 @@
 
 ## Wichtigste Funktionen
 
+- Fortlaufende Wiederherstellung, ein Anwendungsprotokoll mit Zeitstempeln und eindeutige Anzeigen für maximalen Kontaktstrom oder Anschlussgesamtstrom.
+
 - Optionale, modellabhängige Netzteilleistung und Ströme von bis zu zwei GPU-Stromanschlüssen, soweit gemeldet; standardmäßig AUS.
 - Automatischer Overlay-Textkontrast ist standardmäßig EIN; bei deaktivierter Option lässt sich helle/dunkle Schrift manuell wählen.
 
@@ -25,7 +27,7 @@
 - Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
 - Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
 
-Version **1.21** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+Version **1.22** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
 
 
 **RAM, CPU und optionale Überwachung intelligenter/AI-Netzteile**
@@ -37,6 +39,20 @@ Version **1.21** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.21-Setup-x64.e
 Kompatibilität: Sensorabfragen mit MSI MPG Ai1300TS an Hardware geprüft; für Ai1600TS, ausgewählte Corsair HXi/RMi und Thermaltake DPS G/iRGB PLUS sind Protokollleser implementiert, deren Hardwareprüfung noch aussteht.
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
+
+
+## Neu in 1.22 — dauerhafte Wiederherstellung, Anwendungsprotokoll und eindeutige Netzteilströme
+
+**Fortlaufende Wiederherstellung.** Solange die erzwungene Wiederherstellung aktiviert ist, werden geprüfte Versuche ohne Begrenzung ihrer Anzahl fortgesetzt: nach 5, 10, 30 und danach alle 60 Sekunden. Die zuletzt gewählte EIN/AUS-Einstellung bleibt beim Stoppen und Neustarten des Controllers erhalten. Die nichtmodale Verlustwarnung schließt automatisch erst, wenn frische Telemetrie die Wiederherstellung bestätigt. Prüfungen zu Eigentümerschaft, abgeschlossenem Abbau und Hardwaregrenzen bleiben bestehen; dies gewährt keine exklusive Kontrolle gegenüber MSI Afterburner oder anderen Reglern.
+
+**Anwendungsprotokoll.** Eine eigene Schaltfläche öffnet das Protokoll für Steuerungsverlust, Wiederherstellung und Wiederholungsversuche je GPU sowie Anfangszustände und Änderungen aller steuerungsbezogenen Kontrollkästchen. Jeder Eintrag enthält UTC und Ortszeit. Die Temperaturaufzeichnung beginnt bei **78 °C**, erfasst weitere Änderungen in ganzen Grad und die Rückkehr unter 78 °C. Das Fenster zeigt bis zu 500 Ereignisse der aktuellen Sitzung. UTF-8-Dateien bleiben lokal unter `%LOCALAPPDATA%/VRAMDeskJava/logs/application.log`; Rotation bei 2 MiB mit fünf Archiven.
+
+**Maximaler Kontaktstrom oder Anschlussgesamtstrom.** Für jeden von bis zu zwei physischen GPU-Stromanschlüssen am Netzteil zeigt die Karte den höchsten verfügbaren Einzelkontaktstrom, sobald mindestens ein Wert bekannt ist, auch bei unvollständigen Kontaktdaten. Fehlen Einzelwerte, erscheint stattdessen der gemessene Gesamtstrom des Anschlusses. Die Beschriftungen unterscheiden ausdrücklich **Maximum** und **Gesamtstrom**. Unbekannte Sensoren bleiben —; eine gemessene Null bleibt Null. Tooltips behalten Einzelkontakte und den Gesamtstrom, soweit verfügbar. Ein Schienenstrom wird nicht als Anschlussmessung ausgegeben.
+
+**Aktualisierung einer alten Installation 1.9.** Eine alte Kopie unter LocalAppData kann weiterlaufen, obwohl 1.22 korrekt in Program Files installiert ist; dadurch erscheint die alte Oberfläche ohne neuere Einstellungen. Beenden Sie die alte Kopie vor der Installation über ihr Tray-Menü. Verwenden Sie danach die aktuelle Startmenü-Verknüpfung und prüfen Sie **v1.22**. Verweist eine Verknüpfung noch auf den alten Ordner, öffnen Sie die installierte Kopie in Program Files und korrigieren Sie die Verknüpfung. Ein altes laufendes Fenster bedeutet nicht, dass neue Einstellungen entfernt wurden.
+
+
+![Anwendungsprotokoll](images/application-log.png)
 
 ## System-RAM, CPU und intelligente/AI-Netzteile im Überblick
 

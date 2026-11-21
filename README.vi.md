@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.21
+# VRAM GPU Desk 1.22
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -13,6 +13,8 @@
 
 ## Tính năng chính
 
+- Liên tục thử khôi phục điều khiển an toàn và tự đóng cảnh báo sau khi xác nhận phục hồi; nhật ký ghi sự kiện điều khiển, trạng thái ô chọn và thay đổi nhiệt độ từ 78 °C. Dòng nguồn phân biệt giá trị lớn nhất ở chân với tổng của đầu nối.
+
 - Tùy chọn công suất nguồn và dòng điện của tối đa hai đầu nối GPU theo mẫu và cảm biến hỗ trợ; mặc định TẮT.
 - Tương phản chữ lớp phủ tự động mặc định BẬT; khi tắt có thể chọn chữ sáng hoặc tối thủ công.
 
@@ -25,7 +27,7 @@
 - Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
 - Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
 
-Phiên bản **1.20.1** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+Phiên bản **1.22** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
 
 
 **RAM, CPU và giám sát nguồn thông minh/AI tùy chọn**
@@ -37,6 +39,21 @@ Phiên bản **1.20.1** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.21-Setu
 Tương thích: cảm biến MSI MPG Ai1300TS đã được xác minh trên phần cứng; Ai1600TS và một số Corsair HXi/RMi, Thermaltake DPS G/iRGB PLUS có bộ đọc giao thức đủ điều kiện nhưng chưa kiểm chứng phần cứng.
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
+
+
+## Mới trong 1.22: khôi phục điều khiển liên tục, nhật ký ứng dụng và loại dòng điện rõ ràng
+
+**Khôi phục điều khiển liên tục.** Khi bật khôi phục điều khiển cưỡng bức, ứng dụng thử sau 5, 10, 30 giây rồi tiếp tục mỗi 60 giây, không giới hạn số lần. Lựa chọn TẮT đã lưu được giữ nguyên. Cửa sổ cảnh báo không chặn chỉ tự đóng khi dữ liệu đo mới, hợp lệ xác nhận điều khiển đã phục hồi. Lựa chọn ô chọn cuối cùng được giữ qua quá trình dừng và khởi động lại. Chỉ tạo trình điều khiển mới sau khi xác nhận trình cũ đã dừng; các kiểm tra nhận dạng phần cứng, quyền sở hữu và an toàn vẫn bắt buộc. Điều này không ngăn MSI Afterburner hay bộ điều khiển khác truy cập GPU.
+
+**Nhật ký ứng dụng.** Nút nhật ký mới ghi theo từng GPU: mất điều khiển, khôi phục, thử lại và trạng thái mọi ô chọn liên quan đến điều khiển. Nhật ký ghi mỗi thay đổi nhiệt độ nguyên từ **78 °C** trở lên và sự kiện trở về dưới 78 °C. Mỗi mục có dấu thời gian UTC và giờ địa phương. Tệp UTF-8 nằm tại `%LOCALAPPDATA%/VRAMDeskJava/logs/application.log`, tối đa 2 MiB mỗi tệp và năm tệp lưu trữ xoay vòng. Trình xem hiển thị 500 sự kiện gần nhất của phiên hiện tại; nút thư mục nhật ký mở nơi lưu cả các phiên trước.
+
+**Dòng nguồn: lớn nhất hoặc tổng.** Với mỗi đầu nối nguồn GPU vật lý, chỉ cần một chân có số đo hợp lệ, ứng dụng hiển thị giá trị lớn nhất trong các chân đã biết, kể cả khi thiếu dữ liệu các chân còn lại. Khi không có thông tin từng chân, mới dùng tổng dòng đo được của đầu nối. Nhãn ghi rõ ‘lớn nhất’ hoặc ‘tổng’; số liệu chưa biết là dấu gạch ngang, số 0 thực vẫn hợp lệ. Chú giải giữ các giá trị chân có sẵn và tổng đầu nối; dòng đường nguồn không được coi là dòng của đầu nối.
+
+**Nâng cấp từ 1.9.** Bản 1.9 cũ trong LocalAppData có thể vẫn đang chạy dù 1.22 đã cài đúng vào Program Files, khiến khay và giao diện hiển thị bản cũ cùng ít thiết lập hơn. Trước khi cài, hãy thoát bản cũ bằng menu khay, rồi cài và mở bằng lối tắt Start hiện tại. Kiểm tra **v1.22** trong cửa sổ chính; không khuyến nghị buộc kết thúc tiến trình.
+
+
+
+![Nhật ký ứng dụng](images/application-log.png)
 
 ## Chỉ số RAM, CPU và bộ nguồn thông minh/AI
 

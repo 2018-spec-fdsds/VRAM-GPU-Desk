@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.21
+# VRAM GPU Desk 1.22
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -13,6 +13,8 @@
 
 ## Funciones principales
 
+- Intentos continuos de recuperación, registro con marcas de tiempo y etiquetas explícitas para corriente máxima de contacto o total del conector.
+
 - Potencia de fuente y corriente de hasta dos conectores GPU, según el modelo y los sensores disponibles; desactivado por defecto.
 - Contraste automático del texto activado por defecto; al desactivarlo puede elegir texto claro u oscuro manualmente.
 
@@ -25,7 +27,7 @@
 - Dos paneles NVIDIA con ajustes independientes; el control de la segunda GPU es experimental.
 - Aviso de pérdida de control y reintento manual; recuperación ACTIVADA para ajustes nuevos, respetando la desactivación guardada.
 
-Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
 
 
 **RAM, CPU y supervisión opcional de fuentes inteligentes/AI**
@@ -37,6 +39,20 @@ Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x
 Compatibilidad: lectura de sensores MSI MPG Ai1300TS verificada en hardware; Ai1600TS y algunos Corsair HXi/RMi y Thermaltake DPS G/iRGB PLUS disponen de lectores cualificados, aún sin validación física.
 
 ![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
+
+
+## Novedades de 1.22 — recuperación continua, registro y corriente de fuente más clara
+
+**Recuperación continua del control.** Mientras esté activada la recuperación forzada, los intentos comprobados continúan sin límite de cantidad: tras 5, 10, 30 y después cada 60 segundos. La última elección ACTIVADO/DESACTIVADO se conserva durante la parada y el reinicio del controlador. El aviso no modal de pérdida se cierra automáticamente solo cuando la telemetría reciente confirma la recuperación. Se mantienen las comprobaciones de propiedad, cierre del cliente anterior y límites del hardware; esto no proporciona control exclusivo frente a MSI Afterburner u otros reguladores.
+
+**Registro de la aplicación.** Un botón independiente abre los eventos de pérdida, recuperación e intentos de control por GPU, junto con los estados iniciales y cambios de todas las casillas relacionadas con el control. Cada entrada incluye hora UTC y local. La temperatura se registra desde **78 °C**, con los cambios posteriores en grados enteros y el regreso por debajo de 78 °C. El visor muestra hasta 500 eventos de la sesión actual. Los archivos UTF-8 permanecen en `%LOCALAPPDATA%/VRAMDeskJava/logs/application.log`, con rotación a 2 MiB y cinco archivos de respaldo.
+
+**Corriente máxima de contacto o total del conector.** Para cada uno de hasta dos puertos físicos de alimentación GPU de la fuente, la tarjeta muestra el máximo de las corrientes individuales disponibles si se conoce al menos una, incluso con datos incompletos. Si no hay lecturas individuales, muestra la corriente total medida del conector. Las etiquetas distinguen explícitamente **máximo** y **total**. Los sensores desconocidos siguen mostrando —; un cero medido sigue siendo cero. Las ayudas conservan las lecturas individuales y el total disponibles. La corriente de un raíl no sustituye la medición de un conector.
+
+**Actualización desde una instalación antigua 1.9.** Una copia en LocalAppData puede seguir ejecutándose aunque 1.22 esté instalada correctamente en Program Files, mostrando la interfaz antigua sin opciones nuevas. Antes de instalar, salga de la copia antigua mediante el menú de la bandeja; después use el acceso directo actual del menú Inicio y compruebe **v1.22**. Si un acceso directo aún apunta a la carpeta antigua, abra la copia instalada en Program Files y corríjalo. Una ventana antigua abierta no significa que se hayan eliminado las opciones nuevas.
+
+
+![Registro de la aplicación](images/application-log.png)
 
 ## Indicadores de RAM, CPU y fuentes inteligentes/AI
 

@@ -4,6 +4,10 @@ Research snapshot: 2026-11-15. English is the primary language of this document.
 
 Compatibility is qualified by model, USB identity and protocol, not by a vendor logo or an "AI", "digital" or "smart" product name. A rail measures an electrical supply group; it does not necessarily measure one physical GPU connector. GPU board power reported by NVIDIA is also different from total PSU power.
 
+## Current display in 1.22
+
+For each of up to two physical GPU-power ports, the dashboard displays the maximum of known individual pin-current readings when at least one is available, including incomplete pin arrays. If no pin currents are reported, it displays the measured connector total. Explicit max/total labels distinguish these values. Tooltips retain pin positions and the total when available. Missing readings are not zero; actual zero is valid. A rail current is never substituted for a physical connector measurement.
+
 ## NZXT E-series: additional partial reader
 
 NZXT E500, E650 and E850 have an implemented rail-sensor reader with synthetic protocol checks only. Their protocol does not provide direct measured total output watts or individual physical GPU-port currents to this release’s PSU card. This is partial reader coverage, not full PSU-card support; missing totals are not fabricated.

@@ -1,3 +1,17 @@
+# VRAM GPU Desk 1.22
+
+## Novità della versione 1.22 — ripristino continuo, registro e correnti dell’alimentatore più chiare
+
+**Ripristino continuo del controllo.** Finché il ripristino forzato è attivo, i tentativi verificati continuano senza limite di numero: dopo 5, 10, 30 e poi ogni 60 secondi. L’ultima scelta ATTIVO/DISATTIVO viene conservata durante l’arresto e il riavvio del controller. L’avviso non modale di perdita del controllo si chiude automaticamente solo dopo la conferma da telemetria recente. Restano attivi i controlli di proprietà, arresto completo del client precedente e limiti hardware; ciò non fornisce controllo esclusivo rispetto a MSI Afterburner o altri regolatori.
+
+**Registro dell’applicazione.** Un pulsante dedicato apre gli eventi di perdita, ripristino e nuovo tentativo per ogni GPU, oltre agli stati iniziali e alle modifiche di tutte le caselle relative al controllo. Ogni voce contiene ora UTC e locale. La temperatura viene registrata da **78 °C**, con le successive variazioni in gradi interi e il ritorno sotto 78 °C. Il visualizzatore mostra fino a 500 eventi della sessione corrente. I file UTF-8 restano locali in `%LOCALAPPDATA%/VRAMDeskJava/logs/application.log`, con rotazione a 2 MiB e cinque archivi.
+
+**Corrente massima del contatto o totale del connettore.** Per ciascuna delle due porte fisiche di alimentazione GPU al massimo, la scheda mostra la maggiore corrente individuale disponibile se almeno una lettura è nota, anche con dati parziali. In assenza di letture individuali mostra invece la corrente totale misurata del connettore. Le etichette distinguono esplicitamente **massimo** e **totale**. I sensori sconosciuti restano —; uno zero misurato resta zero. Le descrizioni conservano le letture dei contatti e il totale disponibili. La corrente di un rail non sostituisce una misura del connettore.
+
+**Aggiornamento da una vecchia installazione 1.9.** Una copia in LocalAppData può restare in esecuzione anche se 1.22 è correttamente installata in Program Files, mostrando l’interfaccia precedente senza le nuove opzioni. Prima dell’installazione, esci dalla vecchia copia tramite il menu nell’area di notifica; dopo usa il collegamento attuale del menu Start e verifica **v1.22**. Se un collegamento punta ancora alla vecchia cartella, apri la copia installata in Program Files e correggilo. Una vecchia finestra ancora aperta non significa che le nuove impostazioni siano state eliminate.
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+
 # VRAM GPU Desk 1.21
 
 ## Novità 1.21 — alimentatore opzionale e contrasto automatico

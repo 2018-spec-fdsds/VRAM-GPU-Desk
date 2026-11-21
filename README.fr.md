@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.21
+# VRAM GPU Desk 1.22
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -13,6 +13,8 @@
 
 ## Fonctionnalités principales
 
+- Tentatives continues de récupération, journal horodaté et libellés distincts pour le courant maximal d’une broche ou le total du connecteur.
+
 - Puissance de l’alimentation et courants de deux connecteurs GPU au maximum, selon le modèle et les capteurs ; option désactivée par défaut.
 - Contraste automatique du texte activé par défaut ; sa désactivation permet de choisir manuellement un texte clair ou sombre.
 
@@ -25,7 +27,7 @@
 - Deux panneaux NVIDIA avec des réglages indépendants ; le contrôle du second GPU est expérimental.
 - Avertissement de perte de contrôle et nouvelle tentative manuelle ; récupération ACTIVÉE pour les nouveaux réglages, arrêt enregistré respecté.
 
-Version **1.21** · [Installation Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+Version **1.22** · [Installation Windows](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
 
 
 **RAM, CPU et surveillance facultative des alimentations intelligentes/AI**
@@ -37,6 +39,20 @@ Version **1.21** · [Installation Windows](downloads/VRAM-GPU-Desk-1.21-Setup-x6
 Compatibilité : capteurs MSI MPG Ai1300TS vérifiés sur matériel réel ; lecteurs qualifiés pour Ai1600TS et certains Corsair HXi/RMi et Thermaltake DPS G/iRGB PLUS, dont la validation matérielle reste à faire.
 
 ![VRAM GPU Desk — thème graphite](images/dashboard-graphite.png)
+
+
+## Nouveautés de la version 1.22 — récupération continue, journal et courants d’alimentation explicites
+
+**Récupération continue du contrôle.** Tant que la récupération forcée est activée, les tentatives vérifiées se poursuivent sans limite de nombre : après 5, 10, 30, puis toutes les 60 secondes. Le dernier choix ACTIVÉ/DÉSACTIVÉ est conservé pendant l’arrêt et le redémarrage du contrôleur. L’avertissement non modal de perte de contrôle se ferme automatiquement uniquement après confirmation par une télémétrie récente. Les vérifications de propriété, d’arrêt complet du client précédent et des limites matérielles restent actives ; cela ne garantit pas un contrôle exclusif face à MSI Afterburner ou à un autre régulateur.
+
+**Journal de l’application.** Un bouton dédié ouvre les événements de perte, récupération et nouvelle tentative par GPU, ainsi que les états initiaux et modifications de toutes les cases liées au contrôle. Chaque entrée comprend les heures UTC et locale. Les températures sont enregistrées à partir de **78 °C**, à chaque changement ultérieur en degrés entiers, puis lors du retour sous 78 °C. La fenêtre affiche jusqu’à 500 événements de la session en cours. Les fichiers UTF-8 restent locaux dans `%LOCALAPPDATA%/VRAMDeskJava/logs/application.log`, avec rotation à 2 MiB et cinq archives.
+
+**Courant maximal d’une broche ou total du connecteur.** Pour chacun des deux ports physiques d’alimentation GPU au maximum, la carte affiche le plus élevé des courants individuels disponibles dès qu’au moins une valeur est connue, même avec des données partielles. Sans lecture individuelle, elle affiche le courant total mesuré du connecteur. Les libellés distinguent explicitement **maximum** et **total**. Les capteurs inconnus restent à — ; un zéro mesuré reste zéro. Les infobulles conservent les valeurs individuelles et le total lorsqu’ils sont disponibles. Le courant d’un rail ne remplace pas une mesure de connecteur.
+
+**Mise à jour d’une ancienne installation 1.9.** Une copie située dans LocalAppData peut continuer de fonctionner alors que 1.22 est correctement installée dans Program Files : l’ancienne interface semble alors dépourvue des nouvelles options. Avant l’installation, quittez l’ancienne copie par son menu de notification ; ensuite, utilisez le raccourci actuel du menu Démarrer et vérifiez **v1.22**. Si un raccourci vise encore l’ancien dossier, ouvrez la copie installée dans Program Files et corrigez le raccourci. Une ancienne fenêtre encore ouverte ne signifie pas que les nouveaux paramètres ont été supprimés.
+
+
+![Journal de l’application](images/application-log.png)
 
 ## Indicateurs RAM, CPU et alimentations intelligentes/AI
 

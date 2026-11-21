@@ -1,13 +1,23 @@
 # Distribution
 
-Current version: **1.21**, Windows x64.
+Current version: **1.22**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 
 The ZIP contains the same EXE installer, checksum, instructions and license. Java is included. It is an installer bundle; copying the archive does not register the protected Windows control component.
+
+## New in 1.22
+
+- Persistent checked control recovery at 5/10/30/60-second intervals while enabled, without a retry-count cutoff. Loss warnings close after fresh confirmation of recovery.
+- Application log with UTC/local timestamps, per-GPU control events, checkbox states and temperature changes from 78 °C; local UTF-8 files with rotation.
+- Each PSU connector shows maximum available individual pin current, otherwise measured connector total, with explicit max/total labels. At least one valid pin sensor is sufficient; missing readings remain unknown.
+
+### Upgrading from a running 1.9 copy
+
+Exit the old copy using its tray **Exit** command before running setup. A legacy instance under LocalAppData can remain active even after 1.22 is installed correctly in Program Files, displaying the older interface and fewer controls. After installation use the current Start menu shortcut and check **v1.22**. Correct any shortcut that still targets the old LocalAppData folder. Setup's normal shutdown prompt covers the verified target installation, so an older copy in another folder should be exited separately.
 
 ## Compact dashboard
 
