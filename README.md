@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.23
+# VRAM GPU Desk 1.24
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [简体中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Emergency mode for overheating.** An optional mode can force-close GPU-intensive applications to reduce load when overheating is detected. It is OFF at every launch; forced closure can lose unsaved work.
 
 ## Key features
+
+- A 60-day period from first launch of an activation-enabled edition, followed by localized activation reminders; all features remain available.
 
 - Compact horizontal −/+ controls, inline units and consistent light/dark input contrast, with red text for higher configured temperature thresholds.
 
@@ -29,7 +31,7 @@
 - Two NVIDIA GPU panels with independent settings; second GPU control is experimental.
 - Control-loss warning and manual retry; forced recovery is ON for new settings, with saved OFF choices preserved.
 
-Version **1.23** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+Version **1.24** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
 
 
 **RAM, CPU and optional smart/AI PSU monitoring**
@@ -41,6 +43,25 @@ Version **1.23** · [Download Windows installer](downloads/VRAM-GPU-Desk-1.23-Se
 Compatibility: MSI MPG Ai1300TS sensor reads verified on hardware; Ai1600TS, selected Corsair HXi/RMi and Thermaltake DPS G/iRGB PLUS have qualified readers, with physical validation still pending for those models.
 
 ![VRAM GPU Desk — graphite theme](images/dashboard-graphite.png)
+
+## New in 1.24 — 60-day activation period and offline device activation
+
+**Protected-state path and control startup fixed.** Activation state now resolves through the canonical Windows machine-wide data folder, including scheduled-task launches with a minimal environment. This prevents a relative-path/permissions error from blocking native GPU control startup. Ownership, access-control and recovery checks remain enabled; this does not give exclusive control over other GPU utilities.
+
+**60 days from the first supported launch on this computer.** The period starts when an activation-enabled edition first runs on the machine, not from older, unverified usage records. Its protected local anchor is retained through ordinary application updates and uninstall/reinstall. Updating alone does not restart the 60 days or stop reminders after expiry.
+
+**Reminders without functional restrictions.** After the period, every feature remains available. A localized, nonmodal reminder appears at least once an hour while the application runs and is kept above ordinary Windows windows. The Activation checkbox becomes visible after the period. Opening or closing the activation dialog does not disable GPU control, cooling, monitoring or process actions.
+
+**20-character offline request and response.** Open Activation, generate a device request and save the 20-character code as a UTF-8 TXT file. The owner uses a private generator to produce a matching 20-character response tied to that device identity. Enter the response in the application; a valid response stops the reminders. If the machine identity changes, a new response may be required; the original trial period is not restarted.
+
+**Local state and a private issuer.** The request is an opaque device-derived code, with no online HWID upload by the activation flow. The generator and owner master-key file are not published. Compact offline verification is not a guarantee against reverse engineering or application tampering. Existing saved settings, temperature/cooling behavior and the System/Graphite input inversion are retained.
+
+[Activation privacy and local data](PRIVACY.md).
+
+![Activation reminder — demonstration](images/activation-reminder.png)
+
+![Offline activation dialog — demonstration](images/activation-dialog.png)
+
 
 ## New in 1.23 — compact numeric controls and consistent theme contrast
 

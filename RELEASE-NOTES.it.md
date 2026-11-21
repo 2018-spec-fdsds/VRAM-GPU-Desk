@@ -1,3 +1,19 @@
+# VRAM GPU Desk 1.24
+
+## Novità della versione 1.24 — periodo di 60 giorni e attivazione offline del dispositivo
+
+**Corretti il percorso dello stato protetto e l’avvio del controllo.** Lo stato di attivazione usa la cartella canonica dei dati Windows condivisi dal computer, anche con attività pianificate in un ambiente minimo. Si evita così un errore di percorso relativo e autorizzazioni che poteva bloccare l’avvio del controllo GPU nativo. Restano attive le verifiche di proprietario, accesso e ripristino; non viene garantito il controllo esclusivo rispetto ad altre utilità GPU.
+
+**60 giorni dal primo avvio supportato su questo computer.** Il periodo inizia quando un’edizione con attivazione viene eseguita per la prima volta sul dispositivo, senza utilizzare vecchi registri non verificati. La data iniziale locale protetta viene conservata durante gli aggiornamenti ordinari e la disinstallazione/reinstallazione. Il solo aggiornamento non riavvia i 60 giorni e non interrompe i promemoria dopo la scadenza.
+
+**Promemoria senza limitazioni funzionali.** Al termine del periodo tutte le funzioni restano disponibili. Mentre l’applicazione è in esecuzione compare almeno una volta all’ora un promemoria localizzato e non modale sopra le normali finestre di Windows. A quel punto diventa visibile la casella Attivazione. Aprire o chiudere il dialogo non disattiva controllo GPU, raffreddamento, monitoraggio o azioni sui processi.
+
+**Richiesta e risposta offline di 20 caratteri.** Apri Attivazione, genera una richiesta del dispositivo e salva il codice di 20 caratteri in un TXT UTF-8. Il proprietario usa un generatore privato per creare una risposta di 20 caratteri legata a quell’identità. Inseriscila nell’applicazione: una risposta valida interrompe i promemoria. Se cambia l’identità del computer, potrebbe servire una nuova risposta; il periodo originale non ricomincia.
+
+**Stato locale ed emittente privato.** La richiesta è un codice opaco derivato dal dispositivo; la procedura di attivazione non carica l’HWID su Internet. Il generatore e il file della chiave principale del proprietario non vengono pubblicati. La verifica offline compatta non garantisce protezione da ingegneria inversa o modifiche dell’applicazione. Restano invariati impostazioni salvate, regolazione termica e del raffreddamento e inversione dei campi System/Graphite.
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe) · [ZIP](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
+
 # VRAM GPU Desk 1.23
 
 ## Novità della versione 1.23 — campi numerici compatti e contrasto coerente
@@ -10,7 +26,7 @@
 
 [System — campi chiari](images/temperature-fields-light.png) · [Graphite — campi scuri](images/temperature-fields-dark.png)
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+Windows x64 EXE — `VRAM-GPU-Desk-1.23-Setup-x64.exe` · Installer ZIP — `VRAM-GPU-Desk-1.23-Installer.zip`
 
 # VRAM GPU Desk 1.22
 
@@ -24,7 +40,7 @@
 
 **Aggiornamento da una vecchia installazione 1.9.** Una copia in LocalAppData può restare in esecuzione anche se 1.22 è correttamente installata in Program Files, mostrando l’interfaccia precedente senza le nuove opzioni. Prima dell’installazione, esci dalla vecchia copia tramite il menu nell’area di notifica; dopo usa il collegamento attuale del menu Start e verifica **v1.22**. Se un collegamento punta ancora alla vecchia cartella, apri la copia installata in Program Files e correggilo. Una vecchia finestra ancora aperta non significa che le nuove impostazioni siano state eliminate.
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+Windows x64 EXE — `VRAM-GPU-Desk-1.22-Setup-x64.exe` · Installer ZIP — `VRAM-GPU-Desk-1.22-Installer.zip`
 
 # VRAM GPU Desk 1.21
 
@@ -42,4 +58,4 @@
 
 Le immagini in grafite usano dati dimostrativi sintetici, alimentatore incluso. Restano invariati impostazioni GPU, azioni sui processi, modalità di emergenza e preferenze salvate.
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+Windows x64 EXE — `VRAM-GPU-Desk-1.21-Setup-x64.exe` · Installer ZIP — `VRAM-GPU-Desk-1.21-Installer.zip`

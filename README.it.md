@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.23
+# VRAM GPU Desk 1.24
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Modalità di emergenza per surriscaldamento.** Una modalità facoltativa può forzare la chiusura di applicazioni che caricano molto la GPU per ridurne il carico. È DISATTIVATA a ogni avvio; la chiusura forzata può causare la perdita del lavoro non salvato.
 
 ## Funzionalità principali
+
+- 60 giorni dal primo avvio di un’edizione con attivazione, poi promemoria localizzati; tutte le funzioni restano disponibili.
 
 - Campi orizzontali −/+ compatti, unità integrate e contrasto chiaro/scuro coerente; le soglie di temperatura configurate più alte sono evidenziate in rosso.
 
@@ -29,7 +31,7 @@
 - Due pannelli NVIDIA con impostazioni indipendenti; il controllo della seconda GPU è sperimentale.
 - Avviso di perdita del controllo e nuovo tentativo manuale; ripristino ATTIVO per le nuove impostazioni, disattivazione salvata rispettata.
 
-Versione **1.20.1** · [Installer Windows](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+Versione **1.20.1** · [Installer Windows](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe) · [ZIP di installazione](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
 
 
 **RAM, CPU e monitoraggio opzionale di alimentatori intelligenti/AI**
@@ -41,6 +43,23 @@ Versione **1.20.1** · [Installer Windows](downloads/VRAM-GPU-Desk-1.23-Setup-x6
 Compatibilità: sensori MSI MPG Ai1300TS verificati su hardware reale; lettori qualificati per Ai1600TS e alcuni Corsair HXi/RMi e Thermaltake DPS G/iRGB PLUS, con verifica fisica ancora da effettuare.
 
 ![VRAM GPU Desk — tema grafite](images/dashboard-graphite.png)
+
+## Novità della versione 1.24 — periodo di 60 giorni e attivazione offline del dispositivo
+
+**Corretti il percorso dello stato protetto e l’avvio del controllo.** Lo stato di attivazione usa la cartella canonica dei dati Windows condivisi dal computer, anche con attività pianificate in un ambiente minimo. Si evita così un errore di percorso relativo e autorizzazioni che poteva bloccare l’avvio del controllo GPU nativo. Restano attive le verifiche di proprietario, accesso e ripristino; non viene garantito il controllo esclusivo rispetto ad altre utilità GPU.
+
+**60 giorni dal primo avvio supportato su questo computer.** Il periodo inizia quando un’edizione con attivazione viene eseguita per la prima volta sul dispositivo, senza utilizzare vecchi registri non verificati. La data iniziale locale protetta viene conservata durante gli aggiornamenti ordinari e la disinstallazione/reinstallazione. Il solo aggiornamento non riavvia i 60 giorni e non interrompe i promemoria dopo la scadenza.
+
+**Promemoria senza limitazioni funzionali.** Al termine del periodo tutte le funzioni restano disponibili. Mentre l’applicazione è in esecuzione compare almeno una volta all’ora un promemoria localizzato e non modale sopra le normali finestre di Windows. A quel punto diventa visibile la casella Attivazione. Aprire o chiudere il dialogo non disattiva controllo GPU, raffreddamento, monitoraggio o azioni sui processi.
+
+**Richiesta e risposta offline di 20 caratteri.** Apri Attivazione, genera una richiesta del dispositivo e salva il codice di 20 caratteri in un TXT UTF-8. Il proprietario usa un generatore privato per creare una risposta di 20 caratteri legata a quell’identità. Inseriscila nell’applicazione: una risposta valida interrompe i promemoria. Se cambia l’identità del computer, potrebbe servire una nuova risposta; il periodo originale non ricomincia.
+
+**Stato locale ed emittente privato.** La richiesta è un codice opaco derivato dal dispositivo; la procedura di attivazione non carica l’HWID su Internet. Il generatore e il file della chiave principale del proprietario non vengono pubblicati. La verifica offline compatta non garantisce protezione da ingegneria inversa o modifiche dell’applicazione. Restano invariati impostazioni salvate, regolazione termica e del raffreddamento e inversione dei campi System/Graphite.
+
+![Promemoria di attivazione — dimostrazione](images/activation-reminder.png)
+
+![Dialogo di attivazione offline — dimostrazione](images/activation-dialog.png)
+
 
 ## Novità della versione 1.23 — campi numerici compatti e contrasto coerente
 

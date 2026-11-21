@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.23
+# VRAM GPU Desk 1.24
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Chế độ khẩn cấp khi quá nhiệt.** Một chế độ tùy chọn có thể buộc đóng ứng dụng tải nặng GPU để giảm tải. Chế độ này TẮT ở mỗi lần mở; việc buộc đóng có thể làm mất công việc chưa lưu.
 
 ## Tính năng chính
+
+- Thời gian sử dụng đầy đủ 60 ngày bắt đầu khi chạy lần đầu phiên bản có kích hoạt trên máy này; sau đó mọi chức năng vẫn hoạt động, chỉ có lời nhắc định kỳ được gỡ bằng mã kích hoạt thiết bị ngoại tuyến.
 
 - Bảy ô số dùng nút −/+ nhỏ gọn, đơn vị ngay trong ô và viền nhấn màu mảnh; đổi tương phản theo giao diện và hiển thị giá trị nhiệt độ đặt cao bằng chữ đỏ.
 
@@ -29,7 +31,7 @@
 - Hai bảng NVIDIA với thiết lập độc lập; điều khiển GPU thứ hai là tính năng thử nghiệm.
 - Cảnh báo mất điều khiển và thử lại thủ công; khôi phục BẬT cho cài đặt mới, giữ lựa chọn TẮT đã lưu.
 
-Phiên bản **1.23** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+Phiên bản **1.24** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe) · [ZIP bộ cài](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
 
 
 **RAM, CPU và giám sát nguồn thông minh/AI tùy chọn**
@@ -41,6 +43,23 @@ Phiên bản **1.23** · [Bộ cài Windows](downloads/VRAM-GPU-Desk-1.23-Setup-
 Tương thích: cảm biến MSI MPG Ai1300TS đã được xác minh trên phần cứng; Ai1600TS và một số Corsair HXi/RMi, Thermaltake DPS G/iRGB PLUS có bộ đọc giao thức đủ điều kiện nhưng chưa kiểm chứng phần cứng.
 
 ![VRAM GPU Desk — giao diện graphite](images/dashboard-graphite.png)
+
+## Mới trong 1.24: 60 ngày sử dụng đầy đủ và kích hoạt thiết bị ngoại tuyến
+
+**Đã sửa đường dẫn trạng thái được bảo vệ và khởi động điều khiển.** Trạng thái kích hoạt dùng thư mục dữ liệu chung chuẩn của Windows cho toàn máy, kể cả khi chạy bằng tác vụ đã lên lịch với môi trường tối giản. Điều này khắc phục lỗi đường dẫn tương đối và quyền truy cập có thể chặn bộ điều khiển GPU gốc khởi động. Các kiểm tra chủ sở hữu, quyền truy cập và khôi phục vẫn được giữ; không bảo đảm quyền điều khiển độc quyền trước tiện ích GPU khác.
+
+**Tính từ lần chạy đầu trên máy tính này.** Phiên bản có cơ chế kích hoạt bắt đầu thời hạn sử dụng đầy đủ 60 ngày khi được chạy lần đầu trên máy. Mốc bắt đầu cục bộ được bảo vệ và giữ lại qua các lần cập nhật, gỡ cài đặt thông thường. Cập nhật ứng dụng không bắt đầu lại 60 ngày và không tự gỡ lời nhắc kích hoạt.
+
+**Hết thời hạn vẫn dùng được mọi chức năng.** Sau 60 ngày, chức năng giám sát, điều khiển nhiệt độ và làm mát, nút nhanh cùng chế độ khẩn cấp vẫn hoạt động. Khi ứng dụng đang chạy, lời nhắc không khóa cửa sổ xuất hiện bằng ngôn ngữ đã chọn ít nhất mỗi giờ một lần, phía trên các cửa sổ Windows thông thường. Lời nhắc không tạm dừng điều khiển GPU và sẽ dừng khi kích hoạt thành công.
+
+**Yêu cầu 20 ký tự và mã trả lời ngoại tuyến 20 ký tự.** Ô chọn kích hoạt xuất hiện trong giao diện sau khi hết thời hạn. Trong cửa sổ kích hoạt, chọn ‘Tạo yêu cầu’ để tạo mã 20 ký tự gắn với HWID của máy rồi lưu vào TXT UTF-8. Nhập mã trả lời 20 ký tự do chủ sở hữu cung cấp và kích hoạt. Việc kiểm tra diễn ra cục bộ; ứng dụng không tự tải HWID lên và không cần dịch vụ kích hoạt trực tuyến.
+
+**Ràng buộc thiết bị và phạm vi bảo vệ.** Thay đổi định danh phần cứng làm mất hiệu lực kích hoạt cũ nhưng không khởi động lại thời hạn. Yêu cầu chứa mã dẫn xuất, không phải định danh phần cứng thô. Bộ tạo mã riêng và khóa chủ do chủ sở hữu giữ kín, không nằm trong bộ cài hay kho công khai. Cơ chế ngoại tuyến ngắn gọn đã chọn không phải DRM bất khả xâm phạm: bí mật kiểm tra trong chương trình có thể bị trích xuất bằng phân tích ngược và không thể ngăn tuyệt đối việc can thiệp của quản trị viên.
+
+![Ví dụ lời nhắc hết thời hạn](images/activation-reminder.png)
+
+![Ví dụ cửa sổ kích hoạt ngoại tuyến](images/activation-dialog.png)
+
 
 ## Mới trong 1.23: ô nhập nhỏ gọn đồng nhất và màu cho giá trị nhiệt độ đã đặt
 

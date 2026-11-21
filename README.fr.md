@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.23
+# VRAM GPU Desk 1.24
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Mode d’urgence en cas de surchauffe.** Un mode facultatif peut forcer la fermeture d’applications sollicitant fortement le GPU pour réduire la charge. Il est DÉSACTIVÉ à chaque lancement ; la fermeture forcée peut faire perdre du travail non enregistré.
 
 ## Fonctionnalités principales
+
+- 60 jours dès le premier lancement d’une édition avec activation, puis des rappels localisés ; toutes les fonctions restent disponibles.
 
 - Champs horizontaux −/+ compacts, unités intégrées et contraste clair/sombre cohérent ; les seuils thermiques configurés plus élevés s’affichent en rouge.
 
@@ -29,7 +31,7 @@
 - Deux panneaux NVIDIA avec des réglages indépendants ; le contrôle du second GPU est expérimental.
 - Avertissement de perte de contrôle et nouvelle tentative manuelle ; récupération ACTIVÉE pour les nouveaux réglages, arrêt enregistré respecté.
 
-Version **1.23** · [Installation Windows](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+Version **1.24** · [Installation Windows](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe) · [ZIP d’installation](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
 
 
 **RAM, CPU et surveillance facultative des alimentations intelligentes/AI**
@@ -41,6 +43,23 @@ Version **1.23** · [Installation Windows](downloads/VRAM-GPU-Desk-1.23-Setup-x6
 Compatibilité : capteurs MSI MPG Ai1300TS vérifiés sur matériel réel ; lecteurs qualifiés pour Ai1600TS et certains Corsair HXi/RMi et Thermaltake DPS G/iRGB PLUS, dont la validation matérielle reste à faire.
 
 ![VRAM GPU Desk — thème graphite](images/dashboard-graphite.png)
+
+## Nouveautés de la version 1.24 — période de 60 jours et activation hors ligne de l’appareil
+
+**Chemin de l’état protégé et démarrage du contrôle corrigés.** L’état d’activation utilise le dossier Windows canonique des données communes à l’ordinateur, même lors du lancement par une tâche planifiée avec un environnement minimal. Cela corrige une erreur de chemin relatif et de droits pouvant bloquer le contrôle natif du GPU. Les vérifications de propriétaire, d’accès et de récupération restent actives ; cela ne donne pas de contrôle exclusif face aux autres utilitaires GPU.
+
+**60 jours à partir du premier lancement pris en charge sur cet ordinateur.** La période débute lorsqu’une édition intégrant l’activation est exécutée pour la première fois sur l’appareil, sans utiliser d’anciens journaux non vérifiés. La date de départ locale protégée est conservée lors des mises à jour ordinaires et des désinstallations/réinstallations. Une mise à jour seule ne relance pas les 60 jours et n’arrête pas les rappels après expiration.
+
+**Des rappels sans restrictions fonctionnelles.** Après la période, toutes les fonctions restent disponibles. Lorsque l’application fonctionne, un rappel localisé et non modal apparaît au moins une fois par heure au-dessus des fenêtres Windows ordinaires. La case Activation devient alors visible. Ouvrir ou fermer le dialogue ne désactive ni le contrôle GPU, ni le refroidissement, ni la surveillance, ni les actions sur les processus.
+
+**Demande et réponse hors ligne de 20 caractères.** Ouvrez Activation, générez une demande pour l’appareil et enregistrez son code de 20 caractères dans un fichier TXT UTF-8. Le propriétaire utilise un générateur privé pour produire une réponse de 20 caractères liée à cette identité. Saisissez-la dans l’application : une réponse valide arrête les rappels. Un changement d’identité de l’ordinateur peut nécessiter une nouvelle réponse, sans recommencer la période initiale.
+
+**État local et émetteur privé.** La demande est un code opaque dérivé de l’appareil ; le processus d’activation n’envoie pas le HWID sur Internet. Le générateur et le fichier de clé maître du propriétaire ne sont pas publiés. La vérification hors ligne compacte ne garantit pas une protection contre l’ingénierie inverse ou la modification de l’application. Les réglages sauvegardés, la régulation thermique et du refroidissement et l’inversion des champs System/Graphite sont conservés.
+
+![Rappel d’activation — démonstration](images/activation-reminder.png)
+
+![Dialogue d’activation hors ligne — démonstration](images/activation-dialog.png)
+
 
 ## Nouveautés de la version 1.23 — champs numériques compacts et contraste cohérent
 

@@ -1,13 +1,23 @@
 # Distribution
 
-Current version: **1.23**, Windows x64.
+Current version: **1.24**, Windows x64.
 
-- [EXE installer](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe)
-- [Installer ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+- [EXE installer](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe)
+- [Installer ZIP](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
 - [SHA-256 index](SHA256SUMS.txt)
 - [Release notes](RELEASE-NOTES.md)
 
 The ZIP contains the same EXE installer, checksum, instructions and license. Java is included. It is an installer bundle; copying the archive does not register the protected Windows control component.
+
+## Activation in 1.24
+
+All features remain available during and after the 60-day period. The period begins with the first supported launch of an activation-enabled edition on this computer; it is not inferred from older usage records. After expiry, localized nonmodal reminders appear at least hourly while the application runs, above ordinary Windows windows. The Activation control becomes available after the period. A valid device-bound response stops the reminders without changing monitoring or GPU-control features.
+
+The activation dialog generates a 20-character device request and can save it as a UTF-8 TXT file. The owner uses a private, separately held generator to produce the matching 20-character offline response. Enter that response in the application. The generator, owner master-key file and application sources are not included in the public distribution.
+
+A separate protected, demand-only licensing task stores the local first-launch and activation state. Setup reserves its protected ProgramData folder, but does not start the trial. The first supported application query initializes it. Ordinary updates and uninstall/reinstall preserve the anchor; an update does not restart the period. Hardware-identity changes can require a new response without restarting the original period. The compact offline verifier is not a guarantee against reverse engineering or administrator tampering.
+
+See [Activation privacy and local data](PRIVACY.md). Older installer binaries have been removed from the published reachable history. The descriptive release history is retained; archived releases are not offered as downloads. Previously downloaded copies and old GitHub caches are outside this removal's control.
 
 ## Input design in 1.23
 
@@ -23,7 +33,7 @@ Configured target-temperature digits become red above 80 °C (from 81 °C); conf
 
 ### Upgrading from a running 1.9 copy
 
-Exit the old copy using its tray **Exit** command before running setup. A legacy instance under LocalAppData can remain active even after 1.22 is installed correctly in Program Files, displaying the older interface and fewer controls. After installation use the current Start menu shortcut and check **v1.22**. Correct any shortcut that still targets the old LocalAppData folder. Setup's normal shutdown prompt covers the verified target installation, so an older copy in another folder should be exited separately.
+Exit the old copy using its tray **Exit** command before running setup. A legacy instance under LocalAppData can remain active even after 1.24 is installed correctly in Program Files, displaying the older interface and fewer controls. After installation use the current Start menu shortcut and check **v1.24**. Correct any shortcut that still targets the old LocalAppData folder. Setup's normal shutdown prompt covers the verified target installation, so an older copy in another folder should be exited separately.
 
 ## Compact dashboard
 
@@ -79,5 +89,5 @@ Compare the downloaded file's SHA-256 with [SHA256SUMS.txt](SHA256SUMS.txt) or i
 
 ## License and contents
 
-The repository distributes compiled application binaries, documentation and synthetic demonstration screenshots. Application sources are not published. Use is governed by [PolyForm Noncommercial 1.0.0](LICENSE.md); commercial use requires separate permission. Preserve the terms and notices. Third-party components retain their own runtime license notices.
+The repository distributes the current compiled application binaries, documentation and synthetic demonstration screenshots. Application sources are not published. Use is governed by [PolyForm Noncommercial 1.0.0](LICENSE.md); commercial use requires separate permission. Preserve the terms and notices. Third-party components retain their own runtime license notices.
 

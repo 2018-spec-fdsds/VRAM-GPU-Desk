@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.23
+# VRAM GPU Desk 1.24
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Notfallmodus bei Überhitzung.** Ein optionaler Modus kann GPU-intensive Anwendungen zwangsweise schließen, um die Last zu senken. Er ist bei jedem Start AUS; das erzwungene Schließen kann zum Verlust ungespeicherter Arbeit führen.
 
 ## Wichtigste Funktionen
+
+- 60 Tage ab dem ersten Start einer aktivierungsfähigen Ausgabe, danach lokalisierte Aktivierungshinweise; alle Funktionen bleiben verfügbar.
 
 - Kompakte horizontale −/+-Felder mit integrierten Einheiten und einheitlichem Hell-/Dunkel-Kontrast; höhere eingestellte Temperaturgrenzen erscheinen rot.
 
@@ -29,7 +31,7 @@
 - Zwei NVIDIA-Bereiche mit unabhängigen Einstellungen; die Steuerung der zweiten GPU ist experimentell.
 - Warnung bei Steuerungsverlust und manuelle Wiederholung; Wiederherstellung ist für neue Einstellungen EIN, gespeichertes AUS bleibt erhalten.
 
-Version **1.23** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+Version **1.24** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe) · [Installations-ZIP](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
 
 
 **RAM, CPU und optionale Überwachung intelligenter/AI-Netzteile**
@@ -41,6 +43,23 @@ Version **1.23** · [Windows-Installer](downloads/VRAM-GPU-Desk-1.23-Setup-x64.e
 Kompatibilität: Sensorabfragen mit MSI MPG Ai1300TS an Hardware geprüft; für Ai1600TS, ausgewählte Corsair HXi/RMi und Thermaltake DPS G/iRGB PLUS sind Protokollleser implementiert, deren Hardwareprüfung noch aussteht.
 
 ![VRAM GPU Desk — Graphitdesign](images/dashboard-graphite.png)
+
+## Neu in 1.24 — 60 Tage Aktivierungszeitraum und Offline-Geräteaktivierung
+
+**Pfad des geschützten Zustands und Steuerungsstart korrigiert.** Der Aktivierungszustand verwendet jetzt den kanonischen Windows-Ordner für rechnerweite Daten, auch bei geplanten Aufgaben mit minimaler Umgebung. Damit wird ein Fehler bei relativen Pfaden und Berechtigungen behoben, der den Start der nativen GPU-Steuerung blockieren konnte. Eigentümer-, Zugriffs- und Wiederherstellungsprüfungen bleiben aktiv; andere GPU-Werkzeuge werden nicht exklusiv ausgesperrt.
+
+**60 Tage ab dem ersten unterstützten Start auf diesem Computer.** Der Zeitraum beginnt, wenn eine Ausgabe mit Aktivierung erstmals auf dem Gerät läuft, nicht anhand älterer, ungeprüfter Nutzungsdaten. Der geschützte lokale Startzeitpunkt bleibt bei gewöhnlichen Updates sowie Deinstallation und Neuinstallation erhalten. Ein Update allein startet keine neuen 60 Tage und beendet nach Ablauf keine Hinweise.
+
+**Hinweise ohne Funktionseinschränkungen.** Nach Ablauf bleiben sämtliche Funktionen verfügbar. Während die Anwendung läuft, erscheint mindestens einmal pro Stunde ein lokalisierter, nichtmodaler Hinweis über gewöhnlichen Windows-Fenstern. Danach wird das Kontrollkästchen Aktivierung sichtbar. Das Öffnen oder Schließen des Aktivierungsdialogs deaktiviert weder GPU-Steuerung noch Kühlung, Überwachung oder Prozessaktionen.
+
+**Offline-Anfrage und Antwort mit jeweils 20 Zeichen.** Öffnen Sie die Aktivierung, erstellen Sie eine Geräteanfrage und speichern Sie den 20-stelligen Code als UTF-8-TXT-Datei. Der Eigentümer erstellt mit einem privaten Generator einen passenden, an die Geräteidentität gebundenen Antwortschlüssel mit 20 Zeichen. Geben Sie ihn in der Anwendung ein; eine gültige Antwort beendet die Hinweise. Ändert sich die Computeridentität, kann eine neue Antwort erforderlich sein; der ursprüngliche Zeitraum beginnt dabei nicht erneut.
+
+**Lokaler Zustand und privater Aussteller.** Die Anfrage ist ein undurchsichtiger, vom Gerät abgeleiteter Code; der Aktivierungsvorgang lädt keine HWID ins Internet hoch. Generator und Master-Schlüsseldatei des Eigentümers werden nicht veröffentlicht. Die kompakte Offline-Prüfung garantiert keinen Schutz vor Reverse Engineering oder Manipulation der Anwendung. Gespeicherte Einstellungen, Temperatur-/Kühlungsregelung und der Hell-Dunkel-Kontrast von System/Graphite bleiben erhalten.
+
+![Aktivierungshinweis — Demonstration](images/activation-reminder.png)
+
+![Offline-Aktivierungsdialog — Demonstration](images/activation-dialog.png)
+
 
 ## Neu in 1.23 — kompakte Zahlenfelder und einheitlicher Designkontrast
 

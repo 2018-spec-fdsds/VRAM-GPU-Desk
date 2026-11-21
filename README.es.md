@@ -1,4 +1,4 @@
-# VRAM GPU Desk 1.23
+# VRAM GPU Desk 1.24
 
 [English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Tiếng Việt](README.vi.md)
 
@@ -12,6 +12,8 @@
 - **Modo de emergencia ante sobrecalentamiento.** Un modo opcional puede forzar el cierre de aplicaciones con alta carga de GPU para reducir la carga. Está DESACTIVADO en cada inicio; el cierre forzado puede causar pérdida de trabajo sin guardar.
 
 ## Funciones principales
+
+- 60 días desde el primer inicio de una edición con activación, seguidos de avisos localizados; todas las funciones siguen disponibles.
 
 - Controles horizontales −/+ compactos, unidades integradas y contraste coherente en ambos temas; los umbrales de temperatura configurados más altos aparecen en rojo.
 
@@ -29,7 +31,7 @@
 - Dos paneles NVIDIA con ajustes independientes; el control de la segunda GPU es experimental.
 - Aviso de pérdida de control y reintento manual; recuperación ACTIVADA para ajustes nuevos, respetando la desactivación guardada.
 
-Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe) · [ZIP del instalador](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
 
 
 **RAM, CPU y supervisión opcional de fuentes inteligentes/AI**
@@ -41,6 +43,23 @@ Versión **1.20.1** · [Instalador Windows](downloads/VRAM-GPU-Desk-1.23-Setup-x
 Compatibilidad: lectura de sensores MSI MPG Ai1300TS verificada en hardware; Ai1600TS y algunos Corsair HXi/RMi y Thermaltake DPS G/iRGB PLUS disponen de lectores cualificados, aún sin validación física.
 
 ![VRAM GPU Desk — tema grafito](images/dashboard-graphite.png)
+
+## Novedades de 1.24 — período de 60 días y activación del dispositivo sin conexión
+
+**Corregidos la ruta del estado protegido y el inicio del control.** El estado de activación usa la carpeta canónica de datos de Windows para todo el equipo, también al iniciarse mediante una tarea programada con un entorno mínimo. Se evita así un error de ruta relativa y permisos que podía bloquear el control nativo de la GPU. Se mantienen las comprobaciones de propietario, acceso y recuperación; no se obtiene control exclusivo frente a otras utilidades de GPU.
+
+**60 días desde el primer inicio compatible en este equipo.** El período comienza cuando una edición con activación se ejecuta por primera vez en el dispositivo; no se basa en registros antiguos no verificados. La fecha inicial local protegida se conserva en las actualizaciones normales y al desinstalar y reinstalar. Actualizar por sí solo no reinicia los 60 días ni detiene los avisos tras el vencimiento.
+
+**Avisos sin restricciones funcionales.** Al terminar el período, todas las funciones siguen disponibles. Mientras se ejecuta la aplicación aparece, al menos una vez por hora, un aviso localizado y no modal sobre las ventanas normales de Windows. Entonces se muestra la casilla Activación. Abrir o cerrar el diálogo no desactiva el control de GPU, la refrigeración, la supervisión ni las acciones sobre procesos.
+
+**Solicitud y respuesta sin conexión de 20 caracteres.** Abre Activación, genera una solicitud del dispositivo y guarda el código de 20 caracteres en un TXT UTF-8. El propietario utiliza un generador privado para crear una respuesta de 20 caracteres vinculada a esa identidad. Introduce la respuesta en la aplicación: una clave válida detiene los avisos. Si cambia la identidad del equipo, puede ser necesaria otra respuesta; el período original no se reinicia.
+
+**Estado local y emisor privado.** La solicitud es un código opaco derivado del dispositivo; el proceso de activación no sube el HWID a Internet. El generador y el archivo de clave maestra del propietario no se publican. La verificación compacta sin conexión no garantiza protección contra ingeniería inversa o modificación de la aplicación. Se conservan los ajustes guardados, el control térmico y de refrigeración y la inversión de campos System/Graphite.
+
+![Aviso de activación — demostración](images/activation-reminder.png)
+
+![Diálogo de activación sin conexión — demostración](images/activation-dialog.png)
+
 
 ## Novedades de 1.23 — campos numéricos compactos y contraste coherente
 

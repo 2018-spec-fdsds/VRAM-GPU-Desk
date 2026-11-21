@@ -1,3 +1,19 @@
+# VRAM GPU Desk 1.24
+
+## New in 1.24 — 60-day activation period and offline device activation
+
+**Protected-state path and control startup fixed.** Activation state now resolves through the canonical Windows machine-wide data folder, including scheduled-task launches with a minimal environment. This prevents a relative-path/permissions error from blocking native GPU control startup. Ownership, access-control and recovery checks remain enabled; this does not give exclusive control over other GPU utilities.
+
+**60 days from the first supported launch on this computer.** The period starts when an activation-enabled edition first runs on the machine, not from older, unverified usage records. Its protected local anchor is retained through ordinary application updates and uninstall/reinstall. Updating alone does not restart the 60 days or stop reminders after expiry.
+
+**Reminders without functional restrictions.** After the period, every feature remains available. A localized, nonmodal reminder appears at least once an hour while the application runs and is kept above ordinary Windows windows. The Activation checkbox becomes visible after the period. Opening or closing the activation dialog does not disable GPU control, cooling, monitoring or process actions.
+
+**20-character offline request and response.** Open Activation, generate a device request and save the 20-character code as a UTF-8 TXT file. The owner uses a private generator to produce a matching 20-character response tied to that device identity. Enter the response in the application; a valid response stops the reminders. If the machine identity changes, a new response may be required; the original trial period is not restarted.
+
+**Local state and a private issuer.** The request is an opaque device-derived code, with no online HWID upload by the activation flow. The generator and owner master-key file are not published. Compact offline verification is not a guarantee against reverse engineering or application tampering. Existing saved settings, temperature/cooling behavior and the System/Graphite input inversion are retained.
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe) · [ZIP](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
+
 # VRAM GPU Desk 1.23
 
 ## New in 1.23 — compact numeric controls and consistent theme contrast
@@ -10,7 +26,7 @@
 
 [System theme — light fields](images/temperature-fields-light.png) · [Graphite theme — dark fields](images/temperature-fields-dark.png)
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+Windows x64 EXE — `VRAM-GPU-Desk-1.23-Setup-x64.exe` · Installer ZIP — `VRAM-GPU-Desk-1.23-Installer.zip`
 
 # VRAM GPU Desk 1.22
 
@@ -24,7 +40,7 @@
 
 **Updating from an old 1.9 installation.** An older copy under LocalAppData can remain running even when 1.22 has installed correctly in Program Files, making the old interface appear to lack newer settings. Before setup, exit the old copy through its tray menu; after setup, use the current Start menu shortcut and check **v1.22**. If a shortcut still points to the old folder, use the installed Program Files copy and correct that shortcut. An old running window does not mean the new controls were removed.
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+Windows x64 EXE — `VRAM-GPU-Desk-1.22-Setup-x64.exe` · Installer ZIP — `VRAM-GPU-Desk-1.22-Installer.zip`
 
 # VRAM GPU Desk 1.21
 
@@ -42,7 +58,7 @@
 
 The graphite screenshots below use synthetic demonstration readings, including PSU values. GPU settings, process actions, emergency modes and existing saved choices retain their behavior.
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+Windows x64 EXE — `VRAM-GPU-Desk-1.21-Setup-x64.exe` · Installer ZIP — `VRAM-GPU-Desk-1.21-Installer.zip`
 
 # VRAM GPU Desk 1.20.1
 

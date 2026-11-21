@@ -1,3 +1,23 @@
+# VRAM GPU Desk 1.24
+
+## 1.24 新增：60 天完整使用期与离线设备激活
+
+**修复受保护状态路径和控制启动。** 激活状态现通过 Windows 标准计算机共享数据目录定位，包括使用最小环境的计划任务启动。此修复避免相对路径和权限错误阻止原生 GPU 控制启动。所有权、访问权限和恢复检查仍然启用；这不提供对其他 GPU 工具的独占控制。
+
+**从本机首次启动开始计时。** 启用激活机制的版本在这台电脑上首次运行时，开始计算 60 天完整使用期。受保护的本地起始记录会在普通更新和卸载后保留。更新应用不会重新开始 60 天，也不会自动取消激活提醒。
+
+**到期后保留全部功能。** 60 天结束后，应用仍提供监控、温度与散热控制、快捷按钮及应急功能。应用运行期间，按当前选择的语言至少每小时显示一次非模态提醒，并将其置于普通 Windows 窗口上方。提醒不会暂停 GPU 控制；激活成功后停止提醒。
+
+**20 字符请求与20 字符离线响应。** 使用期结束后，界面显示激活复选框。打开激活窗口，选择“生成请求”，即可得到与本机 HWID 绑定的 20 字符请求，并可将其保存为 UTF-8 TXT 文本。将所有者提供的 20 字符响应密钥输入响应栏并激活。应用在本地验证；不会自动上传 HWID，也不需要在线激活服务。
+
+**设备绑定与保护范围。** 硬件标识改变会使原激活失效，但不会重新开始使用期。请求使用设备标识的派生代码，不是原始硬件标识。专用生成器和主密钥由所有者私下保存，不在公开安装包或仓库中发布。所选的紧凑离线方案并非不可破解的 DRM：程序中的验证秘密可能通过逆向分析提取，管理员篡改也不能被绝对阻止。
+
+![使用期结束后的提醒示例](images/activation-reminder.png)
+
+![离线激活窗口示例](images/activation-dialog.png)
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe) · [ZIP](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
+
 # VRAM GPU Desk 1.23
 
 ## 1.23 新增：统一的紧凑输入控件与温度设定值颜色
@@ -12,7 +32,7 @@
 
 ![深色主题中的温度输入框](images/temperature-fields-dark.png)
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+Windows x64 EXE · ZIP
 
 # VRAM GPU Desk 1.22
 
@@ -26,7 +46,7 @@
 
 **从旧版 1.9 升级。** 即使 1.22 已正确安装到 Program Files，LocalAppData 中的旧版 1.9 仍可能继续运行，使托盘和界面显示旧版本及较少设置。安装前先在旧版托盘菜单中选择“退出”，随后安装，并使用当前“开始”菜单快捷方式启动。检查主窗口显示 **v1.22**；不建议强制终止进程。
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+Windows x64 EXE · ZIP
 
 # VRAM GPU Desk 1.21
 
@@ -44,4 +64,4 @@
 
 下方石墨主题截图使用合成演示数据，包括电源数值。GPU 设置、进程操作、紧急模式和已保存选择保持原有行为。
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+Windows x64 EXE · Installer ZIP

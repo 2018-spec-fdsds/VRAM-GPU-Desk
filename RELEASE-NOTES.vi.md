@@ -1,3 +1,23 @@
+# VRAM GPU Desk 1.24
+
+## Mới trong 1.24: 60 ngày sử dụng đầy đủ và kích hoạt thiết bị ngoại tuyến
+
+**Đã sửa đường dẫn trạng thái được bảo vệ và khởi động điều khiển.** Trạng thái kích hoạt dùng thư mục dữ liệu chung chuẩn của Windows cho toàn máy, kể cả khi chạy bằng tác vụ đã lên lịch với môi trường tối giản. Điều này khắc phục lỗi đường dẫn tương đối và quyền truy cập có thể chặn bộ điều khiển GPU gốc khởi động. Các kiểm tra chủ sở hữu, quyền truy cập và khôi phục vẫn được giữ; không bảo đảm quyền điều khiển độc quyền trước tiện ích GPU khác.
+
+**Tính từ lần chạy đầu trên máy tính này.** Phiên bản có cơ chế kích hoạt bắt đầu thời hạn sử dụng đầy đủ 60 ngày khi được chạy lần đầu trên máy. Mốc bắt đầu cục bộ được bảo vệ và giữ lại qua các lần cập nhật, gỡ cài đặt thông thường. Cập nhật ứng dụng không bắt đầu lại 60 ngày và không tự gỡ lời nhắc kích hoạt.
+
+**Hết thời hạn vẫn dùng được mọi chức năng.** Sau 60 ngày, chức năng giám sát, điều khiển nhiệt độ và làm mát, nút nhanh cùng chế độ khẩn cấp vẫn hoạt động. Khi ứng dụng đang chạy, lời nhắc không khóa cửa sổ xuất hiện bằng ngôn ngữ đã chọn ít nhất mỗi giờ một lần, phía trên các cửa sổ Windows thông thường. Lời nhắc không tạm dừng điều khiển GPU và sẽ dừng khi kích hoạt thành công.
+
+**Yêu cầu 20 ký tự và mã trả lời ngoại tuyến 20 ký tự.** Ô chọn kích hoạt xuất hiện trong giao diện sau khi hết thời hạn. Trong cửa sổ kích hoạt, chọn ‘Tạo yêu cầu’ để tạo mã 20 ký tự gắn với HWID của máy rồi lưu vào TXT UTF-8. Nhập mã trả lời 20 ký tự do chủ sở hữu cung cấp và kích hoạt. Việc kiểm tra diễn ra cục bộ; ứng dụng không tự tải HWID lên và không cần dịch vụ kích hoạt trực tuyến.
+
+**Ràng buộc thiết bị và phạm vi bảo vệ.** Thay đổi định danh phần cứng làm mất hiệu lực kích hoạt cũ nhưng không khởi động lại thời hạn. Yêu cầu chứa mã dẫn xuất, không phải định danh phần cứng thô. Bộ tạo mã riêng và khóa chủ do chủ sở hữu giữ kín, không nằm trong bộ cài hay kho công khai. Cơ chế ngoại tuyến ngắn gọn đã chọn không phải DRM bất khả xâm phạm: bí mật kiểm tra trong chương trình có thể bị trích xuất bằng phân tích ngược và không thể ngăn tuyệt đối việc can thiệp của quản trị viên.
+
+![Ví dụ lời nhắc hết thời hạn](images/activation-reminder.png)
+
+![Ví dụ cửa sổ kích hoạt ngoại tuyến](images/activation-dialog.png)
+
+[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.24-Setup-x64.exe) · [ZIP](downloads/VRAM-GPU-Desk-1.24-Installer.zip)
+
 # VRAM GPU Desk 1.23
 
 ## Mới trong 1.23: ô nhập nhỏ gọn đồng nhất và màu cho giá trị nhiệt độ đã đặt
@@ -12,7 +32,7 @@
 
 ![Ô nhiệt độ trong giao diện tối](images/temperature-fields-dark.png)
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.23-Setup-x64.exe) · [ZIP](downloads/VRAM-GPU-Desk-1.23-Installer.zip)
+Windows x64 EXE · ZIP
 
 # VRAM GPU Desk 1.22
 
@@ -26,7 +46,7 @@
 
 **Nâng cấp từ 1.9.** Bản 1.9 cũ trong LocalAppData có thể vẫn đang chạy dù 1.22 đã cài đúng vào Program Files, khiến khay và giao diện hiển thị bản cũ cùng ít thiết lập hơn. Trước khi cài, hãy thoát bản cũ bằng menu khay, rồi cài và mở bằng lối tắt Start hiện tại. Kiểm tra **v1.22** trong cửa sổ chính; không khuyến nghị buộc kết thúc tiến trình.
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.22-Setup-x64.exe) · [ZIP](downloads/VRAM-GPU-Desk-1.22-Installer.zip)
+Windows x64 EXE · ZIP
 
 # VRAM GPU Desk 1.21
 
@@ -44,4 +64,4 @@
 
 Ảnh giao diện graphite bên dưới dùng dữ liệu trình diễn tổng hợp, gồm cả nguồn. Các thiết lập GPU, thao tác tiến trình, chế độ khẩn cấp và lựa chọn đã lưu giữ nguyên hành vi.
 
-[Windows x64 EXE](downloads/VRAM-GPU-Desk-1.21-Setup-x64.exe) · [Installer ZIP](downloads/VRAM-GPU-Desk-1.21-Installer.zip)
+Windows x64 EXE · Installer ZIP
